@@ -39,8 +39,8 @@
       throw new Error('Invalid count');
     }
 
-    // Load rules bundle
-    const rulesResponse = await fetch('/pick-bot-name/data/rules-bundle.json');
+    // Load rules bundle - use relative path to work in both dev and prod
+    const rulesResponse = await fetch('../../data/rules-bundle.json');
     const rulesBundle = await rulesResponse.json();
     const rules = rulesBundle.rules || [];
 
