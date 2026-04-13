@@ -1,0 +1,92 @@
+{
+  "id": "cute-zh-animals",
+  "version": "1.0.0",
+  "name": {
+    "en": "Cute Chinese Animals",
+    "zh": "中文可爱动物",
+    "ja": "中国語かわいい動物"
+  },
+  "description": {
+    "en": "Cute Chinese bot names with animal themes",
+    "zh": "以动物为主题的可爱中文机器人名称",
+    "ja": "動物をテーマにしたかわいい中国語ボット名"
+  },
+  "style": "cute",
+  "languages": [
+    "zh"
+  ],
+  "algorithm": "template",
+  "platformOptimized": [
+    "weixin",
+    "qq",
+    "feishu",
+    "dingtalk"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "cute",
+    "chinese",
+    "animals",
+    "kawaii"
+  ],
+  "data": {
+    "templates": [
+      "{adjective}{animal}",
+      "{adjective}{animal}助手",
+      "小{animal}{suffix}",
+      "{animal}{suffix}",
+      "{prefix}{animal}"
+    ],
+    "adjectives": [
+      "聪明的",
+      "可爱的",
+      "机灵的",
+      "萌萌的",
+      "智慧的",
+      "贴心的",
+      "温柔的",
+      "活泼的",
+      "乖巧的",
+      "灵巧的"
+    ],
+    "animals": [
+      "小猫",
+      "小狗",
+      "兔子",
+      "熊猫",
+      "企鹅",
+      "海豚",
+      "狐狸",
+      "松鼠",
+      "考拉",
+      "浣熊"
+    ],
+    "prefixes": [
+      "小",
+      "智能",
+      "AI",
+      "云端",
+      "数字"
+    ],
+    "suffixes": [
+      "助手",
+      "宝宝",
+      "君",
+      "酱",
+      "仔",
+      "儿",
+      "Bot"
+    ]
+  },
+  "examples": [
+    "可爱的小猫助手",
+    "聪明的兔子",
+    "小熊猫宝宝",
+    "企鹅君",
+    "智能狐狸"
+  ]
+}

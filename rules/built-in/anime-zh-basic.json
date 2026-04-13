@@ -1,0 +1,138 @@
+{
+  "id": "anime-zh-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "Anime Chinese Basic",
+    "zh": "动漫中文基础版",
+    "ja": "アニメ中国語ベーシック"
+  },
+  "description": {
+    "en": "Anime-style bot names in Chinese",
+    "zh": "动漫风格的中文机器人名称",
+    "ja": "中国語のアニメスタイルのボット名"
+  },
+  "style": "anime",
+  "languages": [
+    "zh"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "telegram",
+    "discord",
+    "qq"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "anime",
+    "chinese",
+    "cute",
+    "cartoon"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "小",
+        "weight": 10
+      },
+      {
+        "value": "萌",
+        "weight": 9
+      },
+      {
+        "value": "可爱",
+        "weight": 8
+      },
+      {
+        "value": "梦",
+        "weight": 7
+      },
+      {
+        "value": "星",
+        "weight": 7
+      },
+      {
+        "value": "月",
+        "weight": 6
+      },
+      {
+        "value": "花",
+        "weight": 6
+      },
+      {
+        "value": "樱",
+        "weight": 8
+      }
+    ],
+    "roots": [
+      {
+        "value": "助手",
+        "weight": 10
+      },
+      {
+        "value": "机器人",
+        "weight": 8
+      },
+      {
+        "value": "猫咪",
+        "weight": 9
+      },
+      {
+        "value": "兔子",
+        "weight": 8
+      },
+      {
+        "value": "天使",
+        "weight": 7
+      },
+      {
+        "value": "精灵",
+        "weight": 7
+      },
+      {
+        "value": "少女",
+        "weight": 6
+      },
+      {
+        "value": "妖精",
+        "weight": 6
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "酱",
+        "weight": 10
+      },
+      {
+        "value": "喵",
+        "weight": 9
+      },
+      {
+        "value": "呆",
+        "weight": 7
+      },
+      {
+        "value": "萌",
+        "weight": 8
+      },
+      {
+        "value": "子",
+        "weight": 6
+      },
+      {
+        "value": "君",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "小猫咪酱",
+    "萌兔子喵",
+    "樱天使萌",
+    "星精灵酱",
+    "梦助手呆"
+  ]
+}

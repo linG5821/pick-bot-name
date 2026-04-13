@@ -1,0 +1,124 @@
+{
+  "id": "geek-en-scifi",
+  "version": "1.0.0",
+  "name": {
+    "en": "Sci-Fi Tech",
+    "zh": "科幻技术",
+    "ja": "SFテック"
+  },
+  "description": {
+    "en": "Science fiction and technology inspired names with version numbers",
+    "zh": "科幻和技术风格的名称，带有版本号",
+    "ja": "バージョン番号付きのSFとテクノロジーにインスパイアされた名前"
+  },
+  "style": "geek",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "combination",
+  "author": {
+    "name": "Community Contributor",
+    "github": "pick-bot-name",
+    "email": "example@example.com"
+  },
+  "license": "MIT",
+  "tags": [
+    "scifi",
+    "tech",
+    "geek",
+    "ai"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "Quantum",
+        "weight": 10
+      },
+      {
+        "value": "Neural",
+        "weight": 9
+      },
+      {
+        "value": "Hyper",
+        "weight": 8
+      },
+      {
+        "value": "Meta",
+        "weight": 7
+      },
+      {
+        "value": "Ultra",
+        "weight": 7
+      },
+      {
+        "value": "Proto",
+        "weight": 6
+      }
+    ],
+    "roots": [
+      {
+        "value": "Bot",
+        "weight": 10
+      },
+      {
+        "value": "AI",
+        "weight": 10
+      },
+      {
+        "value": "Mind",
+        "weight": 9
+      },
+      {
+        "value": "Core",
+        "weight": 8
+      },
+      {
+        "value": "Link",
+        "weight": 7
+      },
+      {
+        "value": "Node",
+        "weight": 7
+      },
+      {
+        "value": "Matrix",
+        "weight": 6
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "9000",
+        "weight": 9
+      },
+      {
+        "value": "X",
+        "weight": 8
+      },
+      {
+        "value": "Pro",
+        "weight": 8
+      },
+      {
+        "value": "v2",
+        "weight": 7
+      },
+      {
+        "value": "Alpha",
+        "weight": 6
+      },
+      {
+        "value": "Prime",
+        "weight": 7
+      }
+    ]
+  },
+  "examples": [
+    "QuantumBot9000",
+    "NeuralAIX",
+    "HyperMindPro",
+    "MetaCorev2",
+    "UltraLinkPrime"
+  ],
+  "createdAt": "2026-04-11",
+  "updatedAt": "2026-04-11"
+}

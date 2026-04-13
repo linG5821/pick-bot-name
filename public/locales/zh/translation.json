@@ -28,26 +28,20 @@
     "clear": "清空历史"
   },
   "style": {
-    "CYBERPUNK": "赛博朋克",
+    "PUNK": "朋克",
     "CUTE": "可爱",
     "PROFESSIONAL": "专业",
     "GEEK": "极客",
-    "FANTASY": "奇幻",
     "MINIMAL": "极简",
-    "STEAMPUNK": "蒸汽朋克",
     "ANIME": "动漫",
-    "MILITARY": "军事",
-    "NATURE": "自然",
-    "cyberpunk": "赛博朋克",
+    "ACGN": "二次元",
+    "punk": "朋克",
     "cute": "可爱",
     "professional": "专业",
     "geek": "极客",
-    "fantasy": "奇幻",
     "minimal": "极简",
-    "steampunk": "蒸汽朋克",
     "anime": "动漫",
-    "military": "军事",
-    "nature": "自然"
+    "acgn": "二次元"
   },
   "language": {
     "zh": "中文",

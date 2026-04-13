@@ -28,26 +28,20 @@
     "clear": "Clear History"
   },
   "style": {
-    "CYBERPUNK": "Cyberpunk",
+    "PUNK": "Punk",
     "CUTE": "Cute",
     "PROFESSIONAL": "Professional",
     "GEEK": "Geek",
-    "FANTASY": "Fantasy",
     "MINIMAL": "Minimal",
-    "STEAMPUNK": "Steampunk",
     "ANIME": "Anime",
-    "MILITARY": "Military",
-    "NATURE": "Nature",
-    "cyberpunk": "Cyberpunk",
+    "ACGN": "ACGN",
+    "punk": "Punk",
     "cute": "Cute",
     "professional": "Professional",
     "geek": "Geek",
-    "fantasy": "Fantasy",
     "minimal": "Minimal",
-    "steampunk": "Steampunk",
     "anime": "Anime",
-    "military": "Military",
-    "nature": "Nature"
+    "acgn": "ACGN"
   },
   "language": {
     "zh": "中文",

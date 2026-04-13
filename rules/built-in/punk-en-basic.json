@@ -1,0 +1,186 @@
+{
+  "id": "punk-en-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "Punk English Basic",
+    "zh": "朋克英文基础版",
+    "ja": "パンク英語ベーシック"
+  },
+  "description": {
+    "en": "Basic punk-style bot names in English",
+    "zh": "基础的英文朋克风格机器人名称",
+    "ja": "英語の基本的なパンクスタイルのボット名"
+  },
+  "style": "punk",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "telegram",
+    "discord",
+    "slack"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "punk",
+    "english",
+    "tech",
+    "futuristic"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "Cyber",
+        "weight": 10
+      },
+      {
+        "value": "Nano",
+        "weight": 8
+      },
+      {
+        "value": "Quantum",
+        "weight": 7
+      },
+      {
+        "value": "Neural",
+        "weight": 9
+      },
+      {
+        "value": "Synth",
+        "weight": 8
+      },
+      {
+        "value": "Neuro",
+        "weight": 7
+      },
+      {
+        "value": "Tech",
+        "weight": 6
+      },
+      {
+        "value": "Digi",
+        "weight": 7
+      },
+      {
+        "value": "Pixel",
+        "weight": 6
+      },
+      {
+        "value": "Matrix",
+        "weight": 8
+      },
+      {
+        "value": "Data",
+        "weight": 7
+      },
+      {
+        "value": "Virtual",
+        "weight": 6
+      }
+    ],
+    "roots": [
+      {
+        "value": "Bot",
+        "weight": 10
+      },
+      {
+        "value": "Tron",
+        "weight": 9
+      },
+      {
+        "value": "Core",
+        "weight": 8
+      },
+      {
+        "value": "Mind",
+        "weight": 7
+      },
+      {
+        "value": "Pulse",
+        "weight": 6
+      },
+      {
+        "value": "Wave",
+        "weight": 7
+      },
+      {
+        "value": "Node",
+        "weight": 8
+      },
+      {
+        "value": "Link",
+        "weight": 7
+      },
+      {
+        "value": "Mesh",
+        "weight": 6
+      },
+      {
+        "value": "Grid",
+        "weight": 7
+      },
+      {
+        "value": "Net",
+        "weight": 6
+      },
+      {
+        "value": "Agent",
+        "weight": 8
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "3000",
+        "weight": 8
+      },
+      {
+        "value": "X",
+        "weight": 9
+      },
+      {
+        "value": "Prime",
+        "weight": 7
+      },
+      {
+        "value": "Neo",
+        "weight": 8
+      },
+      {
+        "value": "Alpha",
+        "weight": 7
+      },
+      {
+        "value": "Beta",
+        "weight": 5
+      },
+      {
+        "value": "One",
+        "weight": 7
+      },
+      {
+        "value": "Zero",
+        "weight": 6
+      },
+      {
+        "value": "AI",
+        "weight": 9
+      },
+      {
+        "value": "2077",
+        "weight": 6
+      }
+    ]
+  },
+  "examples": [
+    "CyberBot3000",
+    "QuantumCoreX",
+    "NeuralMindPrime",
+    "NanoAgentAI",
+    "SynthWaveNeo"
+  ]
+}

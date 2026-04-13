@@ -1,0 +1,138 @@
+{
+  "id": "acgn-en-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "ACGN English Basic",
+    "zh": "二次元英文基础版",
+    "ja": "二次元英語ベーシック"
+  },
+  "description": {
+    "en": "ACGN (Anime, Comic, Game, Novel) style bot names in English",
+    "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称",
+    "ja": "英語の二次元(アニメ、コミック、ゲーム、ノベル)スタイルのボット名"
+  },
+  "style": "acgn",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "discord",
+    "telegram",
+    "line"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "acgn",
+    "anime",
+    "otaku",
+    "english"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "Tsundere",
+        "weight": 9
+      },
+      {
+        "value": "Kuudere",
+        "weight": 7
+      },
+      {
+        "value": "Yandere",
+        "weight": 6
+      },
+      {
+        "value": "Kawaii",
+        "weight": 10
+      },
+      {
+        "value": "Moe",
+        "weight": 8
+      },
+      {
+        "value": "Senpai",
+        "weight": 7
+      },
+      {
+        "value": "Otaku",
+        "weight": 6
+      },
+      {
+        "value": "Neko",
+        "weight": 8
+      }
+    ],
+    "roots": [
+      {
+        "value": "Chan",
+        "weight": 10
+      },
+      {
+        "value": "Kun",
+        "weight": 8
+      },
+      {
+        "value": "Bot",
+        "weight": 9
+      },
+      {
+        "value": "AI",
+        "weight": 7
+      },
+      {
+        "value": "Helper",
+        "weight": 6
+      },
+      {
+        "value": "Waifu",
+        "weight": 7
+      },
+      {
+        "value": "Idol",
+        "weight": 6
+      },
+      {
+        "value": "Magical",
+        "weight": 5
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Desu",
+        "weight": 8
+      },
+      {
+        "value": "Nya",
+        "weight": 9
+      },
+      {
+        "value": "Sama",
+        "weight": 6
+      },
+      {
+        "value": "Senpai",
+        "weight": 7
+      },
+      {
+        "value": "2D",
+        "weight": 5
+      },
+      {
+        "value": "Moe",
+        "weight": 6
+      }
+    ]
+  },
+  "examples": [
+    "KawaiiChanNya",
+    "TsundereBotDesu",
+    "MoeHelperSama",
+    "NekoAISenpai",
+    "SenpaiIdol2D"
+  ]
+}

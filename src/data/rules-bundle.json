@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-04-13T04:04:41.779Z",
-  "totalRules": 7,
+  "generatedAt": "2026-04-13T08:54:21.815Z",
+  "totalRules": 8,
   "rules": [
     {
       "id": "professional-zh-business",
@@ -134,136 +134,6 @@
       "updatedAt": "2026-04-11"
     },
     {
-      "id": "nature-ja-forest",
-      "version": "1.0.0",
-      "name": {
-        "en": "Forest Spirit",
-        "zh": "森林精灵",
-        "ja": "森の精霊"
-      },
-      "description": {
-        "en": "Japanese forest and nature-themed names",
-        "zh": "日本森林和自然主题的名称",
-        "ja": "日本の森と自然をテーマにした名前"
-      },
-      "style": "nature",
-      "languages": [
-        "ja"
-      ],
-      "algorithm": "template",
-      "author": {
-        "name": "Community Contributor",
-        "github": "pick-bot-name",
-        "email": "example@example.com"
-      },
-      "license": "MIT",
-      "tags": [
-        "nature",
-        "japanese",
-        "forest",
-        "spirit"
-      ],
-      "data": {
-        "templates": [
-          {
-            "value": "{nature}{element}",
-            "weight": 10
-          },
-          {
-            "value": "{nature}の{element}",
-            "weight": 9
-          },
-          {
-            "value": "{adjective}{nature}{role}",
-            "weight": 8
-          }
-        ],
-        "vocabulary": {
-          "nature": [
-            {
-              "value": "森",
-              "weight": 10
-            },
-            {
-              "value": "木",
-              "weight": 9
-            },
-            {
-              "value": "林",
-              "weight": 8
-            },
-            {
-              "value": "葉",
-              "weight": 7
-            },
-            {
-              "value": "花",
-              "weight": 8
-            }
-          ],
-          "element": [
-            {
-              "value": "精霊",
-              "weight": 10
-            },
-            {
-              "value": "守護者",
-              "weight": 9
-            },
-            {
-              "value": "妖精",
-              "weight": 8
-            },
-            {
-              "value": "神",
-              "weight": 7
-            }
-          ],
-          "adjective": [
-            {
-              "value": "静かな",
-              "weight": 9
-            },
-            {
-              "value": "優しい",
-              "weight": 9
-            },
-            {
-              "value": "古い",
-              "weight": 7
-            },
-            {
-              "value": "神聖な",
-              "weight": 8
-            }
-          ],
-          "role": [
-            {
-              "value": "番人",
-              "weight": 8
-            },
-            {
-              "value": "案内人",
-              "weight": 7
-            },
-            {
-              "value": "使者",
-              "weight": 6
-            }
-          ]
-        }
-      },
-      "examples": [
-        "森精霊",
-        "木の守護者",
-        "静かな林番人",
-        "優しい花妖精",
-        "古い森の神"
-      ],
-      "createdAt": "2026-04-11",
-      "updatedAt": "2026-04-11"
-    },
-    {
       "id": "geek-en-scifi",
       "version": "1.0.0",
       "name": {
@@ -388,132 +258,190 @@
       "updatedAt": "2026-04-11"
     },
     {
-      "id": "fantasy-en-medieval",
+      "id": "punk-en-basic",
       "version": "1.0.0",
       "name": {
-        "en": "Medieval Fantasy",
-        "zh": "中世纪奇幻",
-        "ja": "中世ファンタジー"
+        "en": "Punk English Basic",
+        "zh": "朋克英文基础版",
+        "ja": "パンク英語ベーシック"
       },
       "description": {
-        "en": "Medieval-inspired fantasy names with noble titles",
-        "zh": "中世纪风格的奇幻名称，带有贵族头衔",
-        "ja": "貴族の称号を持つ中世風ファンタジー名"
+        "en": "Basic punk-style bot names in English",
+        "zh": "基础的英文朋克风格机器人名称",
+        "ja": "英語の基本的なパンクスタイルのボット名"
       },
-      "style": "fantasy",
+      "style": "punk",
       "languages": [
         "en"
       ],
       "algorithm": "combination",
+      "platformOptimized": [
+        "telegram",
+        "discord",
+        "slack"
+      ],
       "author": {
-        "name": "Community Contributor",
-        "github": "pick-bot-name",
-        "email": "example@example.com"
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
       },
       "license": "MIT",
       "tags": [
-        "fantasy",
-        "medieval",
-        "rpg",
-        "noble"
+        "punk",
+        "english",
+        "tech",
+        "futuristic"
       ],
       "data": {
         "prefixes": [
           {
-            "value": "Sir",
+            "value": "Cyber",
             "weight": 10
           },
           {
-            "value": "Lord",
-            "weight": 9
+            "value": "Nano",
+            "weight": 8
           },
           {
-            "value": "Lady",
-            "weight": 9
-          },
-          {
-            "value": "Baron",
+            "value": "Quantum",
             "weight": 7
           },
           {
-            "value": "Duke",
+            "value": "Neural",
+            "weight": 9
+          },
+          {
+            "value": "Synth",
+            "weight": 8
+          },
+          {
+            "value": "Neuro",
+            "weight": 7
+          },
+          {
+            "value": "Tech",
             "weight": 6
           },
           {
-            "value": "Knight",
+            "value": "Digi",
+            "weight": 7
+          },
+          {
+            "value": "Pixel",
+            "weight": 6
+          },
+          {
+            "value": "Matrix",
             "weight": 8
+          },
+          {
+            "value": "Data",
+            "weight": 7
+          },
+          {
+            "value": "Virtual",
+            "weight": 6
           }
         ],
         "roots": [
           {
-            "value": "Galahad",
+            "value": "Bot",
             "weight": 10
           },
           {
-            "value": "Merlin",
-            "weight": 10
-          },
-          {
-            "value": "Arthur",
-            "weight": 10
-          },
-          {
-            "value": "Lancelot",
+            "value": "Tron",
             "weight": 9
           },
           {
-            "value": "Percival",
+            "value": "Core",
             "weight": 8
           },
           {
-            "value": "Tristan",
-            "weight": 8
-          },
-          {
-            "value": "Gawain",
+            "value": "Mind",
             "weight": 7
           },
           {
-            "value": "Bedivere",
+            "value": "Pulse",
             "weight": 6
+          },
+          {
+            "value": "Wave",
+            "weight": 7
+          },
+          {
+            "value": "Node",
+            "weight": 8
+          },
+          {
+            "value": "Link",
+            "weight": 7
+          },
+          {
+            "value": "Mesh",
+            "weight": 6
+          },
+          {
+            "value": "Grid",
+            "weight": 7
+          },
+          {
+            "value": "Net",
+            "weight": 6
+          },
+          {
+            "value": "Agent",
+            "weight": 8
           }
         ],
         "suffixes": [
           {
-            "value": "theWise",
+            "value": "3000",
             "weight": 8
           },
           {
-            "value": "theBrave",
+            "value": "X",
             "weight": 9
           },
           {
-            "value": "theNoble",
+            "value": "Prime",
             "weight": 7
           },
           {
-            "value": "theJust",
-            "weight": 7
-          },
-          {
-            "value": "theValiant",
+            "value": "Neo",
             "weight": 8
           },
           {
-            "value": "theBold",
+            "value": "Alpha",
+            "weight": 7
+          },
+          {
+            "value": "Beta",
+            "weight": 5
+          },
+          {
+            "value": "One",
+            "weight": 7
+          },
+          {
+            "value": "Zero",
+            "weight": 6
+          },
+          {
+            "value": "AI",
+            "weight": 9
+          },
+          {
+            "value": "2077",
             "weight": 6
           }
         ]
       },
       "examples": [
-        "SirGalahad",
-        "LordMerlintheBrave",
-        "LadyArthurtheWise",
-        "KnightLancelottheValiant",
-        "DukePercivaltheNoble"
-      ],
-      "createdAt": "2026-04-11",
-      "updatedAt": "2026-04-11"
+        "CyberBot3000",
+        "QuantumCoreX",
+        "NeuralMindPrime",
+        "NanoAgentAI",
+        "SynthWaveNeo"
+      ]
     },
     {
       "id": "professional-en-corporate",
@@ -683,19 +611,19 @@
       ]
     },
     {
-      "id": "cyberpunk-en-basic",
+      "id": "minimal-en-basic",
       "version": "1.0.0",
       "name": {
-        "en": "Cyberpunk English Basic",
-        "zh": "赛博朋克英文基础版",
-        "ja": "サイバーパンク英語ベーシック"
+        "en": "Minimal English Basic",
+        "zh": "极简英文基础版",
+        "ja": "ミニマル英語ベーシック"
       },
       "description": {
-        "en": "Basic cyberpunk-style bot names in English",
-        "zh": "基础的英文赛博朋克风格机器人名称",
-        "ja": "英語の基本的なサイバーパンクスタイルのボット名"
+        "en": "Clean and minimal bot names in English",
+        "zh": "简洁的英文极简风格机器人名称",
+        "ja": "英語のクリーンでミニマルなボット名"
       },
-      "style": "cyberpunk",
+      "style": "minimal",
       "languages": [
         "en"
       ],
@@ -711,161 +639,105 @@
       },
       "license": "MIT",
       "tags": [
-        "cyberpunk",
-        "english",
-        "tech",
-        "futuristic"
+        "minimal",
+        "clean",
+        "simple",
+        "english"
       ],
       "data": {
         "prefixes": [
-          {
-            "value": "Cyber",
-            "weight": 10
-          },
-          {
-            "value": "Nano",
-            "weight": 8
-          },
-          {
-            "value": "Quantum",
-            "weight": 7
-          },
-          {
-            "value": "Neural",
-            "weight": 9
-          },
-          {
-            "value": "Synth",
-            "weight": 8
-          },
-          {
-            "value": "Neuro",
-            "weight": 7
-          },
-          {
-            "value": "Tech",
-            "weight": 6
-          },
-          {
-            "value": "Digi",
-            "weight": 7
-          },
-          {
-            "value": "Pixel",
-            "weight": 6
-          },
-          {
-            "value": "Matrix",
-            "weight": 8
-          },
-          {
-            "value": "Data",
-            "weight": 7
-          },
-          {
-            "value": "Virtual",
-            "weight": 6
-          }
-        ],
-        "roots": [
           {
             "value": "Bot",
             "weight": 10
           },
           {
-            "value": "Tron",
-            "weight": 9
-          },
-          {
-            "value": "Core",
+            "value": "App",
             "weight": 8
-          },
-          {
-            "value": "Mind",
-            "weight": 7
-          },
-          {
-            "value": "Pulse",
-            "weight": 6
-          },
-          {
-            "value": "Wave",
-            "weight": 7
-          },
-          {
-            "value": "Node",
-            "weight": 8
-          },
-          {
-            "value": "Link",
-            "weight": 7
-          },
-          {
-            "value": "Mesh",
-            "weight": 6
-          },
-          {
-            "value": "Grid",
-            "weight": 7
-          },
-          {
-            "value": "Net",
-            "weight": 6
-          },
-          {
-            "value": "Agent",
-            "weight": 8
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "3000",
-            "weight": 8
-          },
-          {
-            "value": "X",
-            "weight": 9
-          },
-          {
-            "value": "Prime",
-            "weight": 7
-          },
-          {
-            "value": "Neo",
-            "weight": 8
-          },
-          {
-            "value": "Alpha",
-            "weight": 7
-          },
-          {
-            "value": "Beta",
-            "weight": 5
-          },
-          {
-            "value": "One",
-            "weight": 7
-          },
-          {
-            "value": "Zero",
-            "weight": 6
           },
           {
             "value": "AI",
             "weight": 9
           },
           {
-            "value": "2077",
+            "value": "One",
+            "weight": 7
+          },
+          {
+            "value": "Pro",
             "weight": 6
+          },
+          {
+            "value": "Max",
+            "weight": 6
+          },
+          {
+            "value": "Mini",
+            "weight": 7
+          },
+          {
+            "value": "Zen",
+            "weight": 5
+          }
+        ],
+        "roots": [
+          {
+            "value": "Helper",
+            "weight": 10
+          },
+          {
+            "value": "Agent",
+            "weight": 9
+          },
+          {
+            "value": "Tool",
+            "weight": 8
+          },
+          {
+            "value": "Hub",
+            "weight": 7
+          },
+          {
+            "value": "Core",
+            "weight": 8
+          },
+          {
+            "value": "Base",
+            "weight": 7
+          },
+          {
+            "value": "Link",
+            "weight": 6
+          },
+          {
+            "value": "Node",
+            "weight": 7
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "",
+            "weight": 10
+          },
+          {
+            "value": "1",
+            "weight": 5
+          },
+          {
+            "value": "X",
+            "weight": 4
+          },
+          {
+            "value": "Plus",
+            "weight": 3
           }
         ]
       },
       "examples": [
-        "CyberBot3000",
-        "QuantumCoreX",
-        "NeuralMindPrime",
-        "NanoAgentAI",
-        "SynthWaveNeo"
+        "BotHelper",
+        "AIAgent",
+        "OneCore",
+        "AppTool",
+        "MiniHub"
       ]
     },
     {
@@ -958,6 +830,282 @@
         "小熊猫宝宝",
         "企鹅君",
         "智能狐狸"
+      ]
+    },
+    {
+      "id": "anime-zh-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Anime Chinese Basic",
+        "zh": "动漫中文基础版",
+        "ja": "アニメ中国語ベーシック"
+      },
+      "description": {
+        "en": "Anime-style bot names in Chinese",
+        "zh": "动漫风格的中文机器人名称",
+        "ja": "中国語のアニメスタイルのボット名"
+      },
+      "style": "anime",
+      "languages": [
+        "zh"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "telegram",
+        "discord",
+        "qq"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "anime",
+        "chinese",
+        "cute",
+        "cartoon"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "小",
+            "weight": 10
+          },
+          {
+            "value": "萌",
+            "weight": 9
+          },
+          {
+            "value": "可爱",
+            "weight": 8
+          },
+          {
+            "value": "梦",
+            "weight": 7
+          },
+          {
+            "value": "星",
+            "weight": 7
+          },
+          {
+            "value": "月",
+            "weight": 6
+          },
+          {
+            "value": "花",
+            "weight": 6
+          },
+          {
+            "value": "樱",
+            "weight": 8
+          }
+        ],
+        "roots": [
+          {
+            "value": "助手",
+            "weight": 10
+          },
+          {
+            "value": "机器人",
+            "weight": 8
+          },
+          {
+            "value": "猫咪",
+            "weight": 9
+          },
+          {
+            "value": "兔子",
+            "weight": 8
+          },
+          {
+            "value": "天使",
+            "weight": 7
+          },
+          {
+            "value": "精灵",
+            "weight": 7
+          },
+          {
+            "value": "少女",
+            "weight": 6
+          },
+          {
+            "value": "妖精",
+            "weight": 6
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "酱",
+            "weight": 10
+          },
+          {
+            "value": "喵",
+            "weight": 9
+          },
+          {
+            "value": "呆",
+            "weight": 7
+          },
+          {
+            "value": "萌",
+            "weight": 8
+          },
+          {
+            "value": "子",
+            "weight": 6
+          },
+          {
+            "value": "君",
+            "weight": 5
+          }
+        ]
+      },
+      "examples": [
+        "小猫咪酱",
+        "萌兔子喵",
+        "樱天使萌",
+        "星精灵酱",
+        "梦助手呆"
+      ]
+    },
+    {
+      "id": "acgn-en-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "ACGN English Basic",
+        "zh": "二次元英文基础版",
+        "ja": "二次元英語ベーシック"
+      },
+      "description": {
+        "en": "ACGN (Anime, Comic, Game, Novel) style bot names in English",
+        "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称",
+        "ja": "英語の二次元(アニメ、コミック、ゲーム、ノベル)スタイルのボット名"
+      },
+      "style": "acgn",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "discord",
+        "telegram",
+        "line"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "acgn",
+        "anime",
+        "otaku",
+        "english"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Tsundere",
+            "weight": 9
+          },
+          {
+            "value": "Kuudere",
+            "weight": 7
+          },
+          {
+            "value": "Yandere",
+            "weight": 6
+          },
+          {
+            "value": "Kawaii",
+            "weight": 10
+          },
+          {
+            "value": "Moe",
+            "weight": 8
+          },
+          {
+            "value": "Senpai",
+            "weight": 7
+          },
+          {
+            "value": "Otaku",
+            "weight": 6
+          },
+          {
+            "value": "Neko",
+            "weight": 8
+          }
+        ],
+        "roots": [
+          {
+            "value": "Chan",
+            "weight": 10
+          },
+          {
+            "value": "Kun",
+            "weight": 8
+          },
+          {
+            "value": "Bot",
+            "weight": 9
+          },
+          {
+            "value": "AI",
+            "weight": 7
+          },
+          {
+            "value": "Helper",
+            "weight": 6
+          },
+          {
+            "value": "Waifu",
+            "weight": 7
+          },
+          {
+            "value": "Idol",
+            "weight": 6
+          },
+          {
+            "value": "Magical",
+            "weight": 5
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "Desu",
+            "weight": 8
+          },
+          {
+            "value": "Nya",
+            "weight": 9
+          },
+          {
+            "value": "Sama",
+            "weight": 6
+          },
+          {
+            "value": "Senpai",
+            "weight": 7
+          },
+          {
+            "value": "2D",
+            "weight": 5
+          },
+          {
+            "value": "Moe",
+            "weight": 6
+          }
+        ]
+      },
+      "examples": [
+        "KawaiiChanNya",
+        "TsundereBotDesu",
+        "MoeHelperSama",
+        "NekoAISenpai",
+        "SenpaiIdol2D"
       ]
     }
   ]

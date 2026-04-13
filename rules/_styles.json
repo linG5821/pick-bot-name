@@ -2,15 +2,15 @@
   "version": "1.0.0",
   "styles": [
     {
-      "id": "cyberpunk",
-      "name": { "en": "Cyberpunk", "zh": "赛博朋克", "ja": "サイバーパンク" },
-      "emoji": "🌃",
+      "id": "punk",
+      "name": { "en": "Punk", "zh": "朋克", "ja": "パンク" },
+      "emoji": "🤖",
       "color": "#00FFFF"
     },
     {
       "id": "cute",
       "name": { "en": "Cute", "zh": "可爱", "ja": "かわいい" },
-      "emoji": "🐰",
+      "emoji": "🥰",
       "color": "#FFB6C1"
     },
     {
@@ -22,44 +22,26 @@
     {
       "id": "geek",
       "name": { "en": "Geek", "zh": "极客", "ja": "ギーク" },
-      "emoji": "⚡",
+      "emoji": "🤓",
       "color": "#32CD32"
-    },
-    {
-      "id": "fantasy",
-      "name": { "en": "Fantasy", "zh": "幻想", "ja": "ファンタジー" },
-      "emoji": "🧙",
-      "color": "#9370DB"
     },
     {
       "id": "minimal",
       "name": { "en": "Minimal", "zh": "极简", "ja": "ミニマル" },
-      "emoji": "⚪",
+      "emoji": "◽",
       "color": "#808080"
-    },
-    {
-      "id": "steampunk",
-      "name": { "en": "Steampunk", "zh": "蒸汽朋克", "ja": "スチームパンク" },
-      "emoji": "⚙️",
-      "color": "#CD853F"
     },
     {
       "id": "anime",
       "name": { "en": "Anime", "zh": "动漫", "ja": "アニメ" },
-      "emoji": "🎌",
+      "emoji": "🎨",
       "color": "#FF69B4"
     },
     {
-      "id": "military",
-      "name": { "en": "Military", "zh": "军事", "ja": "軍事" },
-      "emoji": "🎖️",
-      "color": "#556B2F"
-    },
-    {
-      "id": "nature",
-      "name": { "en": "Nature", "zh": "自然", "ja": "自然" },
-      "emoji": "🌿",
-      "color": "#228B22"
+      "id": "acgn",
+      "name": { "en": "ACGN", "zh": "二次元", "ja": "二次元" },
+      "emoji": "🌸",
+      "color": "#FF1493"
     }
   ]
 }

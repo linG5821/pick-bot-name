@@ -1,0 +1,130 @@
+{
+  "id": "minimal-en-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "Minimal English Basic",
+    "zh": "极简英文基础版",
+    "ja": "ミニマル英語ベーシック"
+  },
+  "description": {
+    "en": "Clean and minimal bot names in English",
+    "zh": "简洁的英文极简风格机器人名称",
+    "ja": "英語のクリーンでミニマルなボット名"
+  },
+  "style": "minimal",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "telegram",
+    "discord",
+    "slack"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "minimal",
+    "clean",
+    "simple",
+    "english"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "Bot",
+        "weight": 10
+      },
+      {
+        "value": "App",
+        "weight": 8
+      },
+      {
+        "value": "AI",
+        "weight": 9
+      },
+      {
+        "value": "One",
+        "weight": 7
+      },
+      {
+        "value": "Pro",
+        "weight": 6
+      },
+      {
+        "value": "Max",
+        "weight": 6
+      },
+      {
+        "value": "Mini",
+        "weight": 7
+      },
+      {
+        "value": "Zen",
+        "weight": 5
+      }
+    ],
+    "roots": [
+      {
+        "value": "Helper",
+        "weight": 10
+      },
+      {
+        "value": "Agent",
+        "weight": 9
+      },
+      {
+        "value": "Tool",
+        "weight": 8
+      },
+      {
+        "value": "Hub",
+        "weight": 7
+      },
+      {
+        "value": "Core",
+        "weight": 8
+      },
+      {
+        "value": "Base",
+        "weight": 7
+      },
+      {
+        "value": "Link",
+        "weight": 6
+      },
+      {
+        "value": "Node",
+        "weight": 7
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 10
+      },
+      {
+        "value": "1",
+        "weight": 5
+      },
+      {
+        "value": "X",
+        "weight": 4
+      },
+      {
+        "value": "Plus",
+        "weight": 3
+      }
+    ]
+  },
+  "examples": [
+    "BotHelper",
+    "AIAgent",
+    "OneCore",
+    "AppTool",
+    "MiniHub"
+  ]
+}
