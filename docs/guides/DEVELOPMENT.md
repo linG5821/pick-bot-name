@@ -15,8 +15,8 @@ Complete guide for developers contributing to Bot Name Generator.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bot-name-generator.git
-cd bot-name-generator
+git clone https://github.com/ling5821/pick-bot-name.git
+cd pick-bot-name
 
 # Install dependencies
 npm install
@@ -33,7 +33,7 @@ The app will open at `http://localhost:3000`.
 ### Project Structure
 
 ```
-bot-name-generator/
+pick-bot-name/
 ├── .github/              # GitHub templates and workflows
 ├── .vscode/              # VSCode settings
 ├── docs/                 # Documentation

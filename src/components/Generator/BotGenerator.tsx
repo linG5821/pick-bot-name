@@ -113,15 +113,35 @@ export const BotGenerator: React.FC = () => {
       // 获取使用的规则
       const rule = ruleLoader.getRandomRule(selectedStyle, selectedLanguage);
       if (!rule) {
-        throw new Error(`No rule found for style: ${selectedStyle}, language: ${selectedLanguage}`);
+        const availableStyles = ruleLoader.getSupportedStyles();
+        const availableLanguages = ruleLoader.getSupportedLanguages();
+        const totalRules = ruleLoader.getAllRules().length;
+
+        console.error('Rule loading failed:', {
+          selectedStyle,
+          selectedLanguage,
+          availableStyles,
+          availableLanguages,
+          totalRules
+        });
+
+        throw new Error(`没有找到匹配的规则 (风格: ${selectedStyle}, 语言: ${selectedLanguage})`);
       }
 
       // 生成主显示名称
       const primaryName = NameGenerator.generate(selectedStyle, selectedLanguage);
+      if (!primaryName) {
+        throw new Error(`名称生成失败 (风格: ${selectedStyle}, 语言: ${selectedLanguage})`);
+      }
+      console.log('Generated name:', primaryName);
 
       // 根据选择的风格生成对应风格的头像
       const avatarStyle = AvatarGenerator.getAvatarStyleForBotStyle(selectedStyle);
       const avatar = AvatarGenerator.generate(undefined, avatarStyle, selectedStyle);
+      if (!avatar) {
+        throw new Error(`头像生成失败 (风格: ${selectedStyle})`);
+      }
+      console.log('Generated avatar:', avatar.style, avatar.seed);
 
       // 生成所有平台的信息
       const platforms = generateAllPlatforms(primaryName);
@@ -151,7 +171,13 @@ export const BotGenerator: React.FC = () => {
       setToast({ message: t('generator.generatedSuccess'), type: 'success' });
     } catch (error) {
       console.error('Failed to generate bot name:', error);
-      setToast({ message: t('generator.generatedError'), type: 'error' });
+
+      // 显示具体的错误信息
+      const errorMessage = error instanceof Error ? error.message : t('generator.generatedError');
+      setToast({
+        message: `生成失败: ${errorMessage}`,
+        type: 'error'
+      });
     } finally {
       setGenerating(false);
     }

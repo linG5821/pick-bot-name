@@ -1404,7 +1404,7 @@ rules/
   "subStyle": "tech",
   "author": {
     "name": "Bot Name Generator Team",
-    "github": "bot-name-generator"
+    "github": "pick-bot-name"
   },
   "languages": ["zh"],
   "platforms": ["feishu", "dingtalk", "wecom", "qqbot"],

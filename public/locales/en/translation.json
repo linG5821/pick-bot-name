@@ -20,7 +20,7 @@
     "selectStyle": "Select Style",
     "selectLanguage": "Select Language",
     "generatedError": "Generation failed, please try again",
-    "generateSuccess": "Generated successfully!"
+    "generatedSuccess": "Generated successfully!"
   },
   "history": {
     "title": "History",

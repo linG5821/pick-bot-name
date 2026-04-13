@@ -20,7 +20,7 @@
     "selectStyle": "选择风格",
     "selectLanguage": "选择语言",
     "generatedError": "生成失败，请重试",
-    "generateSuccess": "生成成功！"
+    "generatedSuccess": "生成成功！"
   },
   "history": {
     "title": "历史记录",

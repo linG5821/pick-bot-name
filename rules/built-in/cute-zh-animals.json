@@ -12,15 +12,27 @@
     "ja": "動物をテーマにしたかわいい中国語ボット名"
   },
   "style": "cute",
-  "languages": ["zh"],
+  "languages": [
+    "zh"
+  ],
   "algorithm": "template",
-  "platformOptimized": ["weixin", "qq", "feishu", "dingtalk"],
+  "platformOptimized": [
+    "weixin",
+    "qq",
+    "feishu",
+    "dingtalk"
+  ],
   "author": {
     "name": "Bot Name Generator Team",
-    "github": "bot-name-generator"
+    "github": "pick-bot-name"
   },
   "license": "MIT",
-  "tags": ["cute", "chinese", "animals", "kawaii"],
+  "tags": [
+    "cute",
+    "chinese",
+    "animals",
+    "kawaii"
+  ],
   "data": {
     "templates": [
       "{adjective}{animal}",

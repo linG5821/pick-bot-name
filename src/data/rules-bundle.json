@@ -23,7 +23,7 @@
       "algorithm": "template",
       "author": {
         "name": "Community Contributor",
-        "github": "bot-name-generator",
+        "github": "pick-bot-name",
         "email": "example@example.com"
       },
       "license": "MIT",
@@ -153,7 +153,7 @@
       "algorithm": "template",
       "author": {
         "name": "Community Contributor",
-        "github": "bot-name-generator",
+        "github": "pick-bot-name",
         "email": "example@example.com"
       },
       "license": "MIT",
@@ -283,7 +283,7 @@
       "algorithm": "combination",
       "author": {
         "name": "Community Contributor",
-        "github": "bot-name-generator",
+        "github": "pick-bot-name",
         "email": "example@example.com"
       },
       "license": "MIT",
@@ -407,7 +407,7 @@
       "algorithm": "combination",
       "author": {
         "name": "Community Contributor",
-        "github": "bot-name-generator",
+        "github": "pick-bot-name",
         "email": "example@example.com"
       },
       "license": "MIT",
@@ -541,7 +541,7 @@
       ],
       "author": {
         "name": "Bot Name Generator Team",
-        "github": "bot-name-generator"
+        "github": "pick-bot-name"
       },
       "license": "MIT",
       "tags": [
@@ -707,7 +707,7 @@
       ],
       "author": {
         "name": "Bot Name Generator Team",
-        "github": "bot-name-generator"
+        "github": "pick-bot-name"
       },
       "license": "MIT",
       "tags": [
@@ -894,7 +894,7 @@
       ],
       "author": {
         "name": "Bot Name Generator Team",
-        "github": "bot-name-generator"
+        "github": "pick-bot-name"
       },
       "license": "MIT",
       "tags": [

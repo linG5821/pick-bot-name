@@ -25,7 +25,7 @@ export class RuleLoader {
   private loadRules(): void {
     // 加载打包的规则
     // @ts-ignore - Rules bundle may have optional fields
-    const rules: Rule[] = Array.isArray(rulesBundle) ? rulesBundle : [];
+    const rules: Rule[] = Array.isArray(rulesBundle.rules) ? rulesBundle.rules : [];
 
     rules.forEach((rule) => {
       this.rules.set(rule.id, rule);

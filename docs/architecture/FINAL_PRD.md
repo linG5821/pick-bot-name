@@ -562,7 +562,7 @@ graph LR
 
 **默认URL**：
 ```
-https://{username}.github.io/bot-name-generator/
+https://{username}.github.io/pick-bot-name/
 ```
 
 **自定义域名（可选）**：

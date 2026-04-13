@@ -12,45 +12,109 @@
     "ja": "日本の森と自然をテーマにした名前"
   },
   "style": "nature",
-  "languages": ["ja"],
+  "languages": [
+    "ja"
+  ],
   "algorithm": "template",
   "author": {
     "name": "Community Contributor",
-    "github": "bot-name-generator",
+    "github": "pick-bot-name",
     "email": "example@example.com"
   },
   "license": "MIT",
-  "tags": ["nature", "japanese", "forest", "spirit"],
+  "tags": [
+    "nature",
+    "japanese",
+    "forest",
+    "spirit"
+  ],
   "data": {
     "templates": [
-      {"value": "{nature}{element}", "weight": 10},
-      {"value": "{nature}の{element}", "weight": 9},
-      {"value": "{adjective}{nature}{role}", "weight": 8}
+      {
+        "value": "{nature}{element}",
+        "weight": 10
+      },
+      {
+        "value": "{nature}の{element}",
+        "weight": 9
+      },
+      {
+        "value": "{adjective}{nature}{role}",
+        "weight": 8
+      }
     ],
     "vocabulary": {
       "nature": [
-        {"value": "森", "weight": 10},
-        {"value": "木", "weight": 9},
-        {"value": "林", "weight": 8},
-        {"value": "葉", "weight": 7},
-        {"value": "花", "weight": 8}
+        {
+          "value": "森",
+          "weight": 10
+        },
+        {
+          "value": "木",
+          "weight": 9
+        },
+        {
+          "value": "林",
+          "weight": 8
+        },
+        {
+          "value": "葉",
+          "weight": 7
+        },
+        {
+          "value": "花",
+          "weight": 8
+        }
       ],
       "element": [
-        {"value": "精霊", "weight": 10},
-        {"value": "守護者", "weight": 9},
-        {"value": "妖精", "weight": 8},
-        {"value": "神", "weight": 7}
+        {
+          "value": "精霊",
+          "weight": 10
+        },
+        {
+          "value": "守護者",
+          "weight": 9
+        },
+        {
+          "value": "妖精",
+          "weight": 8
+        },
+        {
+          "value": "神",
+          "weight": 7
+        }
       ],
       "adjective": [
-        {"value": "静かな", "weight": 9},
-        {"value": "優しい", "weight": 9},
-        {"value": "古い", "weight": 7},
-        {"value": "神聖な", "weight": 8}
+        {
+          "value": "静かな",
+          "weight": 9
+        },
+        {
+          "value": "優しい",
+          "weight": 9
+        },
+        {
+          "value": "古い",
+          "weight": 7
+        },
+        {
+          "value": "神聖な",
+          "weight": 8
+        }
       ],
       "role": [
-        {"value": "番人", "weight": 8},
-        {"value": "案内人", "weight": 7},
-        {"value": "使者", "weight": 6}
+        {
+          "value": "番人",
+          "weight": 8
+        },
+        {
+          "value": "案内人",
+          "weight": 7
+        },
+        {
+          "value": "使者",
+          "weight": 6
+        }
       ]
     }
   },

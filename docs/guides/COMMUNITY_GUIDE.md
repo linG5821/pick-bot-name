@@ -313,4 +313,4 @@ Every contribution matters:
 Ready to contribute? Check out:
 - [Contributing Guide](../CONTRIBUTING.md)
 - [Rule Guide](RULE_GUIDE.md)
-- [Good First Issues](https://github.com/yourusername/bot-name-generator/labels/good-first-issue)
+- [Good First Issues](https://github.com/ling5821/pick-bot-name/labels/good-first-issue)

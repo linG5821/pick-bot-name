@@ -35,7 +35,7 @@
 ### 项目结构
 
 ```
-bot-name-generator/
+pick-bot-name/
 ├── public/                          # 静态资源
 │   ├── fonts/                       # 像素字体
 │   └── images/                      # 图标、背景
@@ -326,7 +326,7 @@ enum GenerationAlgorithm {
   "platformOptimized": ["telegram", "discord", "slack"],
   "author": {
     "name": "Bot Name Generator Team",
-    "github": "bot-name-generator"
+    "github": "pick-bot-name"
   },
   "data": {
     "prefixes": [
@@ -909,13 +909,13 @@ export const NameDisplay: React.FC<NameDisplayProps> = ({
 
 **为你的机器人生成完美的名字**
 
-[![GitHub Stars](https://img.shields.io/github/stars/yourname/bot-name-generator?style=flat-square)](https://github.com/yourname/bot-name-generator)
-[![License](https://img.shields.io/github/license/yourname/bot-name-generator?style=flat-square)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/yourname/pick-bot-name?style=flat-square)](https://github.com/yourname/pick-bot-name)
+[![License](https://img.shields.io/github/license/yourname/pick-bot-name?style=flat-square)](LICENSE)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md)
 
 [English](README.md) | [简体中文](README.zh.md) | [日本語](README.ja.md)
 
-[在线体验](https://yourname.github.io/bot-name-generator/) | [贡献指南](CONTRIBUTING.md) | [添加规则](rules/README.md)
+[在线体验](https://yourname.github.io/pick-bot-name/) | [贡献指南](CONTRIBUTING.md) | [添加规则](rules/README.md)
 
 </div>
 
@@ -931,7 +931,7 @@ export const NameDisplay: React.FC<NameDisplayProps> = ({
 
 ## 🚀 快速开始
 
-访问 [在线版本](https://yourname.github.io/bot-name-generator/)，选择平台和风格，点击生成即可！
+访问 [在线版本](https://yourname.github.io/pick-bot-name/)，选择平台和风格，点击生成即可！
 
 ## 📸 截图
 
@@ -941,8 +941,8 @@ export const NameDisplay: React.FC<NameDisplayProps> = ({
 
 \`\`\`bash
 # 克隆仓库
-git clone https://github.com/yourname/bot-name-generator.git
-cd bot-name-generator
+git clone https://github.com/yourname/pick-bot-name.git
+cd pick-bot-name
 
 # 安装依赖
 npm install
@@ -955,8 +955,8 @@ npm run dev
 
 我们欢迎所有形式的贡献！
 
-- 🐛 [报告 Bug](https://github.com/yourname/bot-name-generator/issues)
-- 💡 [提出新功能](https://github.com/yourname/bot-name-generator/issues)
+- 🐛 [报告 Bug](https://github.com/yourname/pick-bot-name/issues)
+- 💡 [提出新功能](https://github.com/yourname/pick-bot-name/issues)
 - 📝 [贡献名称规则](rules/README.md)
 - 🌍 [改进翻译](src/data/locales)
 

@@ -12,41 +12,108 @@
     "ja": "貴族の称号を持つ中世風ファンタジー名"
   },
   "style": "fantasy",
-  "languages": ["en"],
+  "languages": [
+    "en"
+  ],
   "algorithm": "combination",
   "author": {
     "name": "Community Contributor",
-    "github": "bot-name-generator",
+    "github": "pick-bot-name",
     "email": "example@example.com"
   },
   "license": "MIT",
-  "tags": ["fantasy", "medieval", "rpg", "noble"],
+  "tags": [
+    "fantasy",
+    "medieval",
+    "rpg",
+    "noble"
+  ],
   "data": {
     "prefixes": [
-      {"value": "Sir", "weight": 10},
-      {"value": "Lord", "weight": 9},
-      {"value": "Lady", "weight": 9},
-      {"value": "Baron", "weight": 7},
-      {"value": "Duke", "weight": 6},
-      {"value": "Knight", "weight": 8}
+      {
+        "value": "Sir",
+        "weight": 10
+      },
+      {
+        "value": "Lord",
+        "weight": 9
+      },
+      {
+        "value": "Lady",
+        "weight": 9
+      },
+      {
+        "value": "Baron",
+        "weight": 7
+      },
+      {
+        "value": "Duke",
+        "weight": 6
+      },
+      {
+        "value": "Knight",
+        "weight": 8
+      }
     ],
     "roots": [
-      {"value": "Galahad", "weight": 10},
-      {"value": "Merlin", "weight": 10},
-      {"value": "Arthur", "weight": 10},
-      {"value": "Lancelot", "weight": 9},
-      {"value": "Percival", "weight": 8},
-      {"value": "Tristan", "weight": 8},
-      {"value": "Gawain", "weight": 7},
-      {"value": "Bedivere", "weight": 6}
+      {
+        "value": "Galahad",
+        "weight": 10
+      },
+      {
+        "value": "Merlin",
+        "weight": 10
+      },
+      {
+        "value": "Arthur",
+        "weight": 10
+      },
+      {
+        "value": "Lancelot",
+        "weight": 9
+      },
+      {
+        "value": "Percival",
+        "weight": 8
+      },
+      {
+        "value": "Tristan",
+        "weight": 8
+      },
+      {
+        "value": "Gawain",
+        "weight": 7
+      },
+      {
+        "value": "Bedivere",
+        "weight": 6
+      }
     ],
     "suffixes": [
-      {"value": "theWise", "weight": 8},
-      {"value": "theBrave", "weight": 9},
-      {"value": "theNoble", "weight": 7},
-      {"value": "theJust", "weight": 7},
-      {"value": "theValiant", "weight": 8},
-      {"value": "theBold", "weight": 6}
+      {
+        "value": "theWise",
+        "weight": 8
+      },
+      {
+        "value": "theBrave",
+        "weight": 9
+      },
+      {
+        "value": "theNoble",
+        "weight": 7
+      },
+      {
+        "value": "theJust",
+        "weight": 7
+      },
+      {
+        "value": "theValiant",
+        "weight": 8
+      },
+      {
+        "value": "theBold",
+        "weight": 6
+      }
     ]
   },
   "examples": [

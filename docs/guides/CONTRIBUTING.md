@@ -30,8 +30,8 @@ Thank you for your interest in contributing! This guide will help you get starte
 
 ```bash
 # Fork and clone the repository
-git clone https://github.com/YOUR_USERNAME/bot-name-generator.git
-cd bot-name-generator
+git clone https://github.com/YOUR_USERNAME/pick-bot-name.git
+cd pick-bot-name
 
 # Install dependencies
 npm install
