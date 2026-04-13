@@ -34,7 +34,7 @@ function AppContent() {
 function App() {
   return (
     <ErrorBoundary>
-      <Router basename="/pick_bot_name">
+      <Router basename="/pick-bot-name">
         <AppContent />
       </Router>
     </ErrorBoundary>
