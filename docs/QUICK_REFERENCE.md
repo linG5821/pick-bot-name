@@ -25,12 +25,14 @@
 
 ## 🔌 API端点
 
-### 开发环境
+### 统一端点（开发和生产）
 ```
 GET /api/pick-bot-name?style=punk&language=zh
 ```
 
-**实现方式**：Vite插件（仅开发环境）
+**开发环境**：Vite插件，返回纯JSON  
+**生产环境**：静态HTML，body内容为JSON  
+**注意**：GitHub Pages返回Content-Type: text/html，需用 `response.text()` 解析
 
 **返回结构**：
 ```json

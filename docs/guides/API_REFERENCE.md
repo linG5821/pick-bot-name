@@ -50,6 +50,8 @@ Generate a unique bot name with avatar for all supported platforms.
 GET /api/pick-bot-name
 ```
 
+**Note**: On GitHub Pages, this endpoint returns HTML with JSON content in the body (Content-Type: text/html). Use `response.text()` then `JSON.parse()` to extract the data.
+
 ### Query Parameters
 
 | Parameter | Type | Required | Description | Valid Values |
@@ -175,14 +177,16 @@ curl "http://localhost:3000/api/pick-bot-name?style=professional&language=en"
 ```javascript
 async function generateBotName(style, language) {
   const response = await fetch(
-    `http://localhost:3000/api/pick-bot-name?style=${style}&language=${language}`
+    `/pick-bot-name/api/pick-bot-name?style=${style}&language=${language}`
   );
   
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
   
-  const data = await response.json();
+  // On GitHub Pages, response is HTML with JSON in body
+  const text = await response.text();
+  const data = JSON.parse(text);
   
   if (data.success) {
     return data.data;
