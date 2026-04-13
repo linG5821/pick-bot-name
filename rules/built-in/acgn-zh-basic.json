@@ -1,0 +1,132 @@
+{
+  "id": "acgn-zh-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "ACGN Chinese Basic",
+    "zh": "二次元中文基础版"
+  },
+  "description": {
+    "en": "ACGN (Anime, Comic, Game, Novel) style bot names in Chinese",
+    "zh": "二次元(动画、漫画、游戏、小说)风格的中文机器人名称"
+  },
+  "style": "acgn",
+  "languages": [
+    "zh"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "qq",
+    "qqbot",
+    "bilibili"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "acgn",
+    "chinese",
+    "anime",
+    "otaku"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "傲娇",
+        "weight": 9
+      },
+      {
+        "value": "可爱",
+        "weight": 10
+      },
+      {
+        "value": "萌",
+        "weight": 10
+      },
+      {
+        "value": "宅",
+        "weight": 7
+      },
+      {
+        "value": "二次元",
+        "weight": 8
+      },
+      {
+        "value": "动漫",
+        "weight": 8
+      },
+      {
+        "value": "御宅",
+        "weight": 6
+      },
+      {
+        "value": "萝莉",
+        "weight": 7
+      }
+    ],
+    "roots": [
+      {
+        "value": "酱",
+        "weight": 10
+      },
+      {
+        "value": "君",
+        "weight": 8
+      },
+      {
+        "value": "机器人",
+        "weight": 7
+      },
+      {
+        "value": "助手",
+        "weight": 6
+      },
+      {
+        "value": "老婆",
+        "weight": 8
+      },
+      {
+        "value": "女神",
+        "weight": 7
+      },
+      {
+        "value": "偶像",
+        "weight": 6
+      },
+      {
+        "value": "魔法使",
+        "weight": 5
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "喵",
+        "weight": 9
+      },
+      {
+        "value": "呆",
+        "weight": 8
+      },
+      {
+        "value": "萌",
+        "weight": 7
+      },
+      {
+        "value": "大人",
+        "weight": 6
+      },
+      {
+        "value": "桑",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "傲娇酱喵",
+    "可爱君呆",
+    "萌老婆萌",
+    "宅女神大人",
+    "二次元偶像桑"
+  ]
+}

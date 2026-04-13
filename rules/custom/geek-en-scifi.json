@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "Sci-Fi Tech",
-    "zh": "科幻技术",
-    "ja": "SFテック"
+    "zh": "科幻技术"
   },
   "description": {
     "en": "Science fiction and technology inspired names with version numbers",
-    "zh": "科幻和技术风格的名称，带有版本号",
-    "ja": "バージョン番号付きのSFとテクノロジーにインスパイアされた名前"
+    "zh": "科幻和技术风格的名称，带有版本号"
   },
   "style": "geek",
   "languages": [

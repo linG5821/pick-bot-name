@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "Anime Chinese Basic",
-    "zh": "动漫中文基础版",
-    "ja": "アニメ中国語ベーシック"
+    "zh": "动漫中文基础版"
   },
   "description": {
     "en": "Anime-style bot names in Chinese",
-    "zh": "动漫风格的中文机器人名称",
-    "ja": "中国語のアニメスタイルのボット名"
+    "zh": "动漫风格的中文机器人名称"
   },
   "style": "anime",
   "languages": [

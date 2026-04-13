@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "Cute Chinese Animals",
-    "zh": "中文可爱动物",
-    "ja": "中国語かわいい動物"
+    "zh": "中文可爱动物"
   },
   "description": {
     "en": "Cute Chinese bot names with animal themes",
-    "zh": "以动物为主题的可爱中文机器人名称",
-    "ja": "動物をテーマにしたかわいい中国語ボット名"
+    "zh": "以动物为主题的可爱中文机器人名称"
   },
   "style": "cute",
   "languages": [

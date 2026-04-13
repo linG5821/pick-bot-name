@@ -1,0 +1,132 @@
+{
+  "id": "anime-en-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "Anime English Basic",
+    "zh": "动漫英文基础版"
+  },
+  "description": {
+    "en": "Anime-style bot names in English",
+    "zh": "动漫风格的英文机器人名称"
+  },
+  "style": "anime",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "discord",
+    "telegram",
+    "line"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "anime",
+    "english",
+    "cartoon",
+    "manga"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "Magical",
+        "weight": 10
+      },
+      {
+        "value": "Anime",
+        "weight": 9
+      },
+      {
+        "value": "Manga",
+        "weight": 8
+      },
+      {
+        "value": "Sparkle",
+        "weight": 8
+      },
+      {
+        "value": "Dream",
+        "weight": 7
+      },
+      {
+        "value": "Star",
+        "weight": 7
+      },
+      {
+        "value": "Moon",
+        "weight": 6
+      },
+      {
+        "value": "Cherry",
+        "weight": 8
+      }
+    ],
+    "roots": [
+      {
+        "value": "Girl",
+        "weight": 9
+      },
+      {
+        "value": "Boy",
+        "weight": 8
+      },
+      {
+        "value": "Helper",
+        "weight": 10
+      },
+      {
+        "value": "Guardian",
+        "weight": 7
+      },
+      {
+        "value": "Fairy",
+        "weight": 8
+      },
+      {
+        "value": "Spirit",
+        "weight": 7
+      },
+      {
+        "value": "Angel",
+        "weight": 6
+      },
+      {
+        "value": "Bot",
+        "weight": 8
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Chan",
+        "weight": 10
+      },
+      {
+        "value": "Kun",
+        "weight": 8
+      },
+      {
+        "value": "San",
+        "weight": 7
+      },
+      {
+        "value": "Senpai",
+        "weight": 6
+      },
+      {
+        "value": "Sama",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "MagicalHelperChan",
+    "AnimeGuardianKun",
+    "SparkleBotan",
+    "DreamFairySenpai",
+    "StarAngelSama"
+  ]
+}

@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "ACGN English Basic",
-    "zh": "二次元英文基础版",
-    "ja": "二次元英語ベーシック"
+    "zh": "二次元英文基础版"
   },
   "description": {
     "en": "ACGN (Anime, Comic, Game, Novel) style bot names in English",
-    "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称",
-    "ja": "英語の二次元(アニメ、コミック、ゲーム、ノベル)スタイルのボット名"
+    "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称"
   },
   "style": "acgn",
   "languages": [

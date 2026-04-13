@@ -1,20 +1,18 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-04-13T08:54:21.815Z",
-  "totalRules": 8,
+  "generatedAt": "2026-04-13T12:11:28.946Z",
+  "totalRules": 14,
   "rules": [
     {
       "id": "professional-zh-business",
       "version": "1.0.0",
       "name": {
         "en": "Business Professional",
-        "zh": "商务专业",
-        "ja": "ビジネスプロフェッショナル"
+        "zh": "商务专业"
       },
       "description": {
         "en": "Professional Chinese business names",
-        "zh": "专业的中文商务名称",
-        "ja": "プロフェッショナルな中国語ビジネス名"
+        "zh": "专业的中文商务名称"
       },
       "style": "professional",
       "languages": [
@@ -138,13 +136,11 @@
       "version": "1.0.0",
       "name": {
         "en": "Sci-Fi Tech",
-        "zh": "科幻技术",
-        "ja": "SFテック"
+        "zh": "科幻技术"
       },
       "description": {
         "en": "Science fiction and technology inspired names with version numbers",
-        "zh": "科幻和技术风格的名称，带有版本号",
-        "ja": "バージョン番号付きのSFとテクノロジーにインスパイアされた名前"
+        "zh": "科幻和技术风格的名称，带有版本号"
       },
       "style": "geek",
       "languages": [
@@ -258,17 +254,151 @@
       "updatedAt": "2026-04-11"
     },
     {
+      "id": "punk-zh-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Punk Chinese Basic",
+        "zh": "朋克中文基础版"
+      },
+      "description": {
+        "en": "Basic punk-style bot names in Chinese",
+        "zh": "基础的中文朋克风格机器人名称"
+      },
+      "style": "punk",
+      "languages": [
+        "zh"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "telegram",
+        "discord",
+        "qq"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "punk",
+        "chinese",
+        "tech",
+        "futuristic"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "赛博",
+            "weight": 10
+          },
+          {
+            "value": "量子",
+            "weight": 9
+          },
+          {
+            "value": "神经",
+            "weight": 8
+          },
+          {
+            "value": "合成",
+            "weight": 7
+          },
+          {
+            "value": "数字",
+            "weight": 8
+          },
+          {
+            "value": "虚拟",
+            "weight": 7
+          },
+          {
+            "value": "矩阵",
+            "weight": 6
+          },
+          {
+            "value": "科技",
+            "weight": 7
+          }
+        ],
+        "roots": [
+          {
+            "value": "机器人",
+            "weight": 10
+          },
+          {
+            "value": "核心",
+            "weight": 9
+          },
+          {
+            "value": "思维",
+            "weight": 8
+          },
+          {
+            "value": "脉冲",
+            "weight": 7
+          },
+          {
+            "value": "波动",
+            "weight": 6
+          },
+          {
+            "value": "节点",
+            "weight": 8
+          },
+          {
+            "value": "网络",
+            "weight": 7
+          },
+          {
+            "value": "代理",
+            "weight": 8
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "3000",
+            "weight": 8
+          },
+          {
+            "value": "X",
+            "weight": 9
+          },
+          {
+            "value": "终极",
+            "weight": 7
+          },
+          {
+            "value": "新世代",
+            "weight": 6
+          },
+          {
+            "value": "阿尔法",
+            "weight": 7
+          },
+          {
+            "value": "AI",
+            "weight": 9
+          }
+        ]
+      },
+      "examples": [
+        "赛博机器人3000",
+        "量子核心X",
+        "神经思维终极",
+        "数字代理AI",
+        "虚拟节点阿尔法"
+      ]
+    },
+    {
       "id": "punk-en-basic",
       "version": "1.0.0",
       "name": {
         "en": "Punk English Basic",
-        "zh": "朋克英文基础版",
-        "ja": "パンク英語ベーシック"
+        "zh": "朋克英文基础版"
       },
       "description": {
         "en": "Basic punk-style bot names in English",
-        "zh": "基础的英文朋克风格机器人名称",
-        "ja": "英語の基本的なパンクスタイルのボット名"
+        "zh": "基础的英文朋克风格机器人名称"
       },
       "style": "punk",
       "languages": [
@@ -448,13 +578,11 @@
       "version": "1.0.0",
       "name": {
         "en": "Professional English Corporate",
-        "zh": "专业英文企业版",
-        "ja": "プロフェッショナル英語コーポレート"
+        "zh": "专业英文企业版"
       },
       "description": {
         "en": "Professional and corporate-style bot names for business use",
-        "zh": "适合商务使用的专业企业风格机器人名称",
-        "ja": "ビジネス用のプロフェッショナルなコーポレートスタイルのボット名"
+        "zh": "适合商务使用的专业企业风格机器人名称"
       },
       "style": "professional",
       "languages": [
@@ -611,17 +739,131 @@
       ]
     },
     {
+      "id": "minimal-zh-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Minimal Chinese Basic",
+        "zh": "极简中文基础版"
+      },
+      "description": {
+        "en": "Clean and minimal bot names in Chinese",
+        "zh": "简洁的中文极简风格机器人名称"
+      },
+      "style": "minimal",
+      "languages": [
+        "zh"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "weixin",
+        "wecom",
+        "feishu"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "minimal",
+        "chinese",
+        "clean",
+        "simple"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "简",
+            "weight": 10
+          },
+          {
+            "value": "小",
+            "weight": 9
+          },
+          {
+            "value": "一",
+            "weight": 8
+          },
+          {
+            "value": "轻",
+            "weight": 7
+          },
+          {
+            "value": "快",
+            "weight": 6
+          },
+          {
+            "value": "纯",
+            "weight": 7
+          }
+        ],
+        "roots": [
+          {
+            "value": "助手",
+            "weight": 10
+          },
+          {
+            "value": "机器人",
+            "weight": 8
+          },
+          {
+            "value": "工具",
+            "weight": 9
+          },
+          {
+            "value": "帮手",
+            "weight": 7
+          },
+          {
+            "value": "伙伴",
+            "weight": 6
+          },
+          {
+            "value": "代理",
+            "weight": 5
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "",
+            "weight": 10
+          },
+          {
+            "value": "一号",
+            "weight": 5
+          },
+          {
+            "value": "版",
+            "weight": 4
+          },
+          {
+            "value": "Pro",
+            "weight": 3
+          },
+          {
+            "value": "精简版",
+            "weight": 2
+          }
+        ]
+      },
+      "examples": [
+        "简助手",
+        "小工具",
+        "一帮手",
+        "轻伙伴",
+        "纯代理"
+      ]
+    },
+    {
       "id": "minimal-en-basic",
       "version": "1.0.0",
       "name": {
         "en": "Minimal English Basic",
-        "zh": "极简英文基础版",
-        "ja": "ミニマル英語ベーシック"
+        "zh": "极简英文基础版"
       },
       "description": {
         "en": "Clean and minimal bot names in English",
-        "zh": "简洁的英文极简风格机器人名称",
-        "ja": "英語のクリーンでミニマルなボット名"
+        "zh": "简洁的英文极简风格机器人名称"
       },
       "style": "minimal",
       "languages": [
@@ -729,6 +971,10 @@
           {
             "value": "Plus",
             "weight": 3
+          },
+          {
+            "value": "Pro",
+            "weight": 4
           }
         ]
       },
@@ -741,17 +987,147 @@
       ]
     },
     {
+      "id": "geek-zh-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Geek Chinese Basic",
+        "zh": "极客中文基础版"
+      },
+      "description": {
+        "en": "Geeky tech-style bot names in Chinese",
+        "zh": "极客科技风格的中文机器人名称"
+      },
+      "style": "geek",
+      "languages": [
+        "zh"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "discord",
+        "slack",
+        "telegram"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "geek",
+        "chinese",
+        "tech",
+        "programming"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "代码",
+            "weight": 10
+          },
+          {
+            "value": "算法",
+            "weight": 9
+          },
+          {
+            "value": "编程",
+            "weight": 8
+          },
+          {
+            "value": "黑客",
+            "weight": 7
+          },
+          {
+            "value": "数据",
+            "weight": 8
+          },
+          {
+            "value": "系统",
+            "weight": 7
+          },
+          {
+            "value": "开源",
+            "weight": 6
+          },
+          {
+            "value": "技术",
+            "weight": 8
+          }
+        ],
+        "roots": [
+          {
+            "value": "大师",
+            "weight": 10
+          },
+          {
+            "value": "专家",
+            "weight": 9
+          },
+          {
+            "value": "机器人",
+            "weight": 8
+          },
+          {
+            "value": "助手",
+            "weight": 7
+          },
+          {
+            "value": "工具",
+            "weight": 6
+          },
+          {
+            "value": "引擎",
+            "weight": 7
+          },
+          {
+            "value": "框架",
+            "weight": 6
+          },
+          {
+            "value": "库",
+            "weight": 5
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "2.0",
+            "weight": 8
+          },
+          {
+            "value": "Pro",
+            "weight": 7
+          },
+          {
+            "value": "Plus",
+            "weight": 6
+          },
+          {
+            "value": "终端",
+            "weight": 5
+          },
+          {
+            "value": "版",
+            "weight": 7
+          }
+        ]
+      },
+      "examples": [
+        "代码大师2.0",
+        "算法专家Pro",
+        "编程助手Plus",
+        "数据工具版",
+        "技术引擎终端"
+      ]
+    },
+    {
       "id": "cute-zh-animals",
       "version": "1.0.0",
       "name": {
         "en": "Cute Chinese Animals",
-        "zh": "中文可爱动物",
-        "ja": "中国語かわいい動物"
+        "zh": "中文可爱动物"
       },
       "description": {
         "en": "Cute Chinese bot names with animal themes",
-        "zh": "以动物为主题的可爱中文机器人名称",
-        "ja": "動物をテーマにしたかわいい中国語ボット名"
+        "zh": "以动物为主题的可爱中文机器人名称"
       },
       "style": "cute",
       "languages": [
@@ -833,17 +1209,147 @@
       ]
     },
     {
+      "id": "cute-en-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Cute English Basic",
+        "zh": "可爱英文基础版"
+      },
+      "description": {
+        "en": "Cute and adorable bot names in English",
+        "zh": "可爱的英文机器人名称"
+      },
+      "style": "cute",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "discord",
+        "telegram",
+        "line"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "cute",
+        "english",
+        "adorable",
+        "sweet"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Sweet",
+            "weight": 10
+          },
+          {
+            "value": "Cute",
+            "weight": 10
+          },
+          {
+            "value": "Little",
+            "weight": 9
+          },
+          {
+            "value": "Tiny",
+            "weight": 8
+          },
+          {
+            "value": "Baby",
+            "weight": 8
+          },
+          {
+            "value": "Mini",
+            "weight": 7
+          },
+          {
+            "value": "Fluffy",
+            "weight": 9
+          },
+          {
+            "value": "Happy",
+            "weight": 8
+          }
+        ],
+        "roots": [
+          {
+            "value": "Bot",
+            "weight": 10
+          },
+          {
+            "value": "Bunny",
+            "weight": 9
+          },
+          {
+            "value": "Kitty",
+            "weight": 10
+          },
+          {
+            "value": "Puppy",
+            "weight": 8
+          },
+          {
+            "value": "Angel",
+            "weight": 7
+          },
+          {
+            "value": "Helper",
+            "weight": 8
+          },
+          {
+            "value": "Friend",
+            "weight": 9
+          },
+          {
+            "value": "Buddy",
+            "weight": 8
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "ie",
+            "weight": 9
+          },
+          {
+            "value": "y",
+            "weight": 8
+          },
+          {
+            "value": "Bear",
+            "weight": 7
+          },
+          {
+            "value": "Chan",
+            "weight": 6
+          },
+          {
+            "value": "Paw",
+            "weight": 5
+          }
+        ]
+      },
+      "examples": [
+        "SweetBotie",
+        "CuteKittyy",
+        "LittleHelperBear",
+        "TinyBuddy",
+        "FluffyFriend"
+      ]
+    },
+    {
       "id": "anime-zh-basic",
       "version": "1.0.0",
       "name": {
         "en": "Anime Chinese Basic",
-        "zh": "动漫中文基础版",
-        "ja": "アニメ中国語ベーシック"
+        "zh": "动漫中文基础版"
       },
       "description": {
         "en": "Anime-style bot names in Chinese",
-        "zh": "动漫风格的中文机器人名称",
-        "ja": "中国語のアニメスタイルのボット名"
+        "zh": "动漫风格的中文机器人名称"
       },
       "style": "anime",
       "languages": [
@@ -971,17 +1477,279 @@
       ]
     },
     {
+      "id": "anime-en-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Anime English Basic",
+        "zh": "动漫英文基础版"
+      },
+      "description": {
+        "en": "Anime-style bot names in English",
+        "zh": "动漫风格的英文机器人名称"
+      },
+      "style": "anime",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "discord",
+        "telegram",
+        "line"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "anime",
+        "english",
+        "cartoon",
+        "manga"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Magical",
+            "weight": 10
+          },
+          {
+            "value": "Anime",
+            "weight": 9
+          },
+          {
+            "value": "Manga",
+            "weight": 8
+          },
+          {
+            "value": "Sparkle",
+            "weight": 8
+          },
+          {
+            "value": "Dream",
+            "weight": 7
+          },
+          {
+            "value": "Star",
+            "weight": 7
+          },
+          {
+            "value": "Moon",
+            "weight": 6
+          },
+          {
+            "value": "Cherry",
+            "weight": 8
+          }
+        ],
+        "roots": [
+          {
+            "value": "Girl",
+            "weight": 9
+          },
+          {
+            "value": "Boy",
+            "weight": 8
+          },
+          {
+            "value": "Helper",
+            "weight": 10
+          },
+          {
+            "value": "Guardian",
+            "weight": 7
+          },
+          {
+            "value": "Fairy",
+            "weight": 8
+          },
+          {
+            "value": "Spirit",
+            "weight": 7
+          },
+          {
+            "value": "Angel",
+            "weight": 6
+          },
+          {
+            "value": "Bot",
+            "weight": 8
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "Chan",
+            "weight": 10
+          },
+          {
+            "value": "Kun",
+            "weight": 8
+          },
+          {
+            "value": "San",
+            "weight": 7
+          },
+          {
+            "value": "Senpai",
+            "weight": 6
+          },
+          {
+            "value": "Sama",
+            "weight": 5
+          }
+        ]
+      },
+      "examples": [
+        "MagicalHelperChan",
+        "AnimeGuardianKun",
+        "SparkleBotan",
+        "DreamFairySenpai",
+        "StarAngelSama"
+      ]
+    },
+    {
+      "id": "acgn-zh-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "ACGN Chinese Basic",
+        "zh": "二次元中文基础版"
+      },
+      "description": {
+        "en": "ACGN (Anime, Comic, Game, Novel) style bot names in Chinese",
+        "zh": "二次元(动画、漫画、游戏、小说)风格的中文机器人名称"
+      },
+      "style": "acgn",
+      "languages": [
+        "zh"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "qq",
+        "qqbot",
+        "bilibili"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "acgn",
+        "chinese",
+        "anime",
+        "otaku"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "傲娇",
+            "weight": 9
+          },
+          {
+            "value": "可爱",
+            "weight": 10
+          },
+          {
+            "value": "萌",
+            "weight": 10
+          },
+          {
+            "value": "宅",
+            "weight": 7
+          },
+          {
+            "value": "二次元",
+            "weight": 8
+          },
+          {
+            "value": "动漫",
+            "weight": 8
+          },
+          {
+            "value": "御宅",
+            "weight": 6
+          },
+          {
+            "value": "萝莉",
+            "weight": 7
+          }
+        ],
+        "roots": [
+          {
+            "value": "酱",
+            "weight": 10
+          },
+          {
+            "value": "君",
+            "weight": 8
+          },
+          {
+            "value": "机器人",
+            "weight": 7
+          },
+          {
+            "value": "助手",
+            "weight": 6
+          },
+          {
+            "value": "老婆",
+            "weight": 8
+          },
+          {
+            "value": "女神",
+            "weight": 7
+          },
+          {
+            "value": "偶像",
+            "weight": 6
+          },
+          {
+            "value": "魔法使",
+            "weight": 5
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "喵",
+            "weight": 9
+          },
+          {
+            "value": "呆",
+            "weight": 8
+          },
+          {
+            "value": "萌",
+            "weight": 7
+          },
+          {
+            "value": "大人",
+            "weight": 6
+          },
+          {
+            "value": "桑",
+            "weight": 5
+          }
+        ]
+      },
+      "examples": [
+        "傲娇酱喵",
+        "可爱君呆",
+        "萌老婆萌",
+        "宅女神大人",
+        "二次元偶像桑"
+      ]
+    },
+    {
       "id": "acgn-en-basic",
       "version": "1.0.0",
       "name": {
         "en": "ACGN English Basic",
-        "zh": "二次元英文基础版",
-        "ja": "二次元英語ベーシック"
+        "zh": "二次元英文基础版"
       },
       "description": {
         "en": "ACGN (Anime, Comic, Game, Novel) style bot names in English",
-        "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称",
-        "ja": "英語の二次元(アニメ、コミック、ゲーム、ノベル)スタイルのボット名"
+        "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称"
       },
       "style": "acgn",
       "languages": [

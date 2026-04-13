@@ -1,0 +1,132 @@
+{
+  "id": "cute-en-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "Cute English Basic",
+    "zh": "可爱英文基础版"
+  },
+  "description": {
+    "en": "Cute and adorable bot names in English",
+    "zh": "可爱的英文机器人名称"
+  },
+  "style": "cute",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "combination",
+  "platformOptimized": [
+    "discord",
+    "telegram",
+    "line"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "cute",
+    "english",
+    "adorable",
+    "sweet"
+  ],
+  "data": {
+    "prefixes": [
+      {
+        "value": "Sweet",
+        "weight": 10
+      },
+      {
+        "value": "Cute",
+        "weight": 10
+      },
+      {
+        "value": "Little",
+        "weight": 9
+      },
+      {
+        "value": "Tiny",
+        "weight": 8
+      },
+      {
+        "value": "Baby",
+        "weight": 8
+      },
+      {
+        "value": "Mini",
+        "weight": 7
+      },
+      {
+        "value": "Fluffy",
+        "weight": 9
+      },
+      {
+        "value": "Happy",
+        "weight": 8
+      }
+    ],
+    "roots": [
+      {
+        "value": "Bot",
+        "weight": 10
+      },
+      {
+        "value": "Bunny",
+        "weight": 9
+      },
+      {
+        "value": "Kitty",
+        "weight": 10
+      },
+      {
+        "value": "Puppy",
+        "weight": 8
+      },
+      {
+        "value": "Angel",
+        "weight": 7
+      },
+      {
+        "value": "Helper",
+        "weight": 8
+      },
+      {
+        "value": "Friend",
+        "weight": 9
+      },
+      {
+        "value": "Buddy",
+        "weight": 8
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "ie",
+        "weight": 9
+      },
+      {
+        "value": "y",
+        "weight": 8
+      },
+      {
+        "value": "Bear",
+        "weight": 7
+      },
+      {
+        "value": "Chan",
+        "weight": 6
+      },
+      {
+        "value": "Paw",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "SweetBotie",
+    "CuteKittyy",
+    "LittleHelperBear",
+    "TinyBuddy",
+    "FluffyFriend"
+  ]
+}

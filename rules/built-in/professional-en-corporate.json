@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "Professional English Corporate",
-    "zh": "专业英文企业版",
-    "ja": "プロフェッショナル英語コーポレート"
+    "zh": "专业英文企业版"
   },
   "description": {
     "en": "Professional and corporate-style bot names for business use",
-    "zh": "适合商务使用的专业企业风格机器人名称",
-    "ja": "ビジネス用のプロフェッショナルなコーポレートスタイルのボット名"
+    "zh": "适合商务使用的专业企业风格机器人名称"
   },
   "style": "professional",
   "languages": [

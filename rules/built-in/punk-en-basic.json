@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "Punk English Basic",
-    "zh": "朋克英文基础版",
-    "ja": "パンク英語ベーシック"
+    "zh": "朋克英文基础版"
   },
   "description": {
     "en": "Basic punk-style bot names in English",
-    "zh": "基础的英文朋克风格机器人名称",
-    "ja": "英語の基本的なパンクスタイルのボット名"
+    "zh": "基础的英文朋克风格机器人名称"
   },
   "style": "punk",
   "languages": [

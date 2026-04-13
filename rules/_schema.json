@@ -18,23 +18,21 @@
       "required": ["en", "zh"],
       "properties": {
         "en": { "type": "string" },
-        "zh": { "type": "string" },
-        "ja": { "type": "string" }
+        "zh": { "type": "string" }
       },
-      "description": "规则名称（多语言）"
+      "description": "规则名称（中英文）"
     },
     "description": {
       "type": "object",
       "properties": {
         "en": { "type": "string" },
-        "zh": { "type": "string" },
-        "ja": { "type": "string" }
+        "zh": { "type": "string" }
       },
-      "description": "规则描述"
+      "description": "规则描述（中英文）"
     },
     "style": {
       "type": "string",
-      "enum": ["cyberpunk", "cute", "professional", "geek", "fantasy", "minimal", "steampunk", "anime", "military", "nature"],
+      "enum": ["punk", "cute", "professional", "geek", "minimal", "anime", "acgn"],
       "description": "所属风格"
     },
     "languages": {

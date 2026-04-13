@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "name": {
     "en": "Minimal English Basic",
-    "zh": "极简英文基础版",
-    "ja": "ミニマル英語ベーシック"
+    "zh": "极简英文基础版"
   },
   "description": {
     "en": "Clean and minimal bot names in English",
-    "zh": "简洁的英文极简风格机器人名称",
-    "ja": "英語のクリーンでミニマルなボット名"
+    "zh": "简洁的英文极简风格机器人名称"
   },
   "style": "minimal",
   "languages": [
@@ -117,6 +115,10 @@
       {
         "value": "Plus",
         "weight": 3
+      },
+      {
+        "value": "Pro",
+        "weight": 4
       }
     ]
   },
