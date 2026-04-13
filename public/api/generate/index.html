@@ -9,7 +9,6 @@
     const params = new URLSearchParams(window.location.search);
     const style = params.get('style') || 'punk';
     const language = params.get('language') || 'en';
-    const count = parseInt(params.get('count') || '5', 10);
 
     // Validate style
     const validStyles = ['punk', 'cute', 'professional', 'geek', 'minimal', 'anime', 'acgn'];
@@ -31,15 +30,7 @@
       throw new Error('Invalid language');
     }
 
-    if (count < 1 || count > 50) {
-      document.body.textContent = JSON.stringify({
-        success: false,
-        error: 'Count must be between 1 and 50'
-      }, null, 2);
-      throw new Error('Invalid count');
-    }
-
-    // Load rules bundle - use relative path to work in both dev and prod
+    // Load rules bundle
     const rulesResponse = await fetch('../../data/rules-bundle.json');
     const rulesBundle = await rulesResponse.json();
     const rules = rulesBundle.rules || [];
@@ -61,57 +52,37 @@
     function weightedRandom(items) {
       const totalWeight = items.reduce((sum, item) => sum + (item.weight || 1), 0);
       let random = Math.random() * totalWeight;
-
       for (const item of items) {
         random -= (item.weight || 1);
-        if (random <= 0) {
-          return item.value;
-        }
+        if (random <= 0) return item.value;
       }
-
       return items[items.length - 1].value;
     }
 
-    // Generate name from rule using combination algorithm
+    // Generate name from combination algorithm
     function generateFromCombination(data) {
       const parts = [];
-
       if (data.prefixes && data.prefixes.length > 0) {
         parts.push(weightedRandom(data.prefixes));
       }
-
       if (data.roots && data.roots.length > 0) {
         parts.push(weightedRandom(data.roots));
       }
-
       if (data.suffixes && data.suffixes.length > 0) {
         const suffix = weightedRandom(data.suffixes);
         if (suffix) parts.push(suffix);
       }
-
       return parts.join('');
     }
 
-    // Generate name from rule using template algorithm
+    // Generate name from template algorithm
     function generateFromTemplate(data) {
-      if (!data.templates || data.templates.length === 0) {
-        return '';
-      }
-
+      if (!data.templates || data.templates.length === 0) return '';
       const template = weightedRandom(data.templates);
-      let result = template;
-
-      // Replace placeholders
-      const placeholderRegex = /\{(\w+)\}/g;
-      result = result.replace(placeholderRegex, (match, key) => {
+      return template.replace(/\{(\w+)\}/g, (match, key) => {
         const vocabulary = data.vocabulary?.[key];
-        if (!vocabulary || vocabulary.length === 0) {
-          return match;
-        }
-        return weightedRandom(vocabulary);
+        return vocabulary && vocabulary.length > 0 ? weightedRandom(vocabulary) : match;
       });
-
-      return result;
     }
 
     // Generate name from rule
@@ -124,38 +95,134 @@
       return '';
     }
 
-    // Generate multiple names
-    function generateMultiple(rules, count) {
-      const names = new Set();
-      let attempts = 0;
-      const maxAttempts = count * 10;
-
-      while (names.size < count && attempts < maxAttempts) {
-        const rule = rules[Math.floor(Math.random() * rules.length)];
-        const name = generateFromRule(rule);
-
-        if (name && name.length > 0) {
-          names.add(name);
-        }
-
-        attempts++;
-      }
-
-      return Array.from(names);
+    // Generate UUID
+    function generateUUID() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
+        const r = Math.random() * 16 | 0;
+        const v = c === 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
     }
 
-    // Generate names
-    const names = generateMultiple(matchingRules, count);
+    // Simple Chinese to Pinyin (basic conversion)
+    function toPinyin(text) {
+      const pinyinMap = {
+        '赛博': 'saibo', '量子': 'liangzi', '神经': 'shenjing', '数字': 'shuzi', '矩阵': 'juzhen',
+        '核': 'he', '网': 'wang', '脉': 'mai', '波': 'bo',
+        '萌': 'meng', '元气': 'yuanqi', '治愈': 'zhiyu', '宅': 'zhai', '二次元': 'erciyuan',
+        '酱': 'jiang', '喵': 'miao', '君': 'jun', '姬': 'ji', '娘': 'niang',
+        '樱': 'ying', '星': 'xing', '月': 'yue', '小': 'xiao',
+        '兔': 'tu', '天使': 'tianshi', '精灵': 'jingling', '子': 'zi',
+        '喵喵': 'miaomiao', '团团': 'tuantuan', '软': 'ruan', '甜': 'tian', '球': 'qiu',
+        '熊': 'xiong', '鹅': 'e', '狐': 'hu', '儿': 'er', '心': 'xin',
+        '码': 'ma', '算法': 'suanfa', '技术': 'jishu', '开源': 'kaiyuan', '数据': 'shuju',
+        '神': 'shen', '猫': 'mao', '师': 'shi',
+        '简': 'jian', '一': 'yi', '轻': 'qing', '纯': 'chun',
+        '助手': 'zhushou', '工具': 'gongju', '帮手': 'bangshou', '伙伴': 'huoban', '代理': 'daili',
+        '商': 'shang', '企': 'qi', '云': 'yun', '助': 'zhu', '顾': 'gu', '管': 'guan',
+        '智能': 'zhineng', '专业': 'zhuanye'
+      };
 
-    // Return JSON response
+      let result = text.toLowerCase();
+      for (const [cn, py] of Object.entries(pinyinMap)) {
+        result = result.replace(new RegExp(cn, 'g'), py);
+      }
+      return result.replace(/[^a-z0-9_]/g, '').substring(0, 32);
+    }
+
+    // Generate simple SVG avatar
+    function generateSimpleAvatar(style, seed) {
+      const colors = {
+        punk: '#00ff00',
+        cute: '#ff69b4',
+        professional: '#4169e1',
+        geek: '#ffa500',
+        minimal: '#808080',
+        anime: '#ff1493',
+        acgn: '#ff69b4'
+      };
+      const color = colors[style] || '#808080';
+      return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" fill="${color}"/><text x="128" y="140" text-anchor="middle" font-size="80" fill="white">${seed.substring(0, 2).toUpperCase()}</text></svg>`;
+    }
+
+    // Platform configurations (simplified)
+    const platformConfigs = {
+      telegram: { needsUsername: true, difficulty: 'easy' },
+      discord: { needsUsername: true, difficulty: 'medium' },
+      slack: { needsUsername: false, difficulty: 'medium' },
+      feishu: { needsUsername: false, difficulty: 'easy' },
+      dingtalk: { needsUsername: false, difficulty: 'easy' },
+      wecom: { needsUsername: false, difficulty: 'medium' },
+      weixin: { needsUsername: false, difficulty: 'hard' },
+      qq: { needsUsername: false, difficulty: 'medium' },
+      qqbot: { needsUsername: false, difficulty: 'medium' },
+      line: { needsUsername: true, difficulty: 'medium' }
+    };
+
+    // Generate all platform info
+    function generateAllPlatforms(displayName) {
+      const platforms = {};
+      for (const [platformId, config] of Object.entries(platformConfigs)) {
+        const username = config.needsUsername ? toPinyin(displayName) : null;
+        const estimatedTime = config.difficulty === 'easy' ? '5-10 min' :
+                             config.difficulty === 'medium' ? '15-30 min' : '30-60 min';
+
+        platforms[platformId] = {
+          platform: platformId,
+          displayName: displayName,
+          username: username,
+          needsUsername: config.needsUsername,
+          isValid: true,
+          metadata: {
+            difficulty: config.difficulty,
+            estimatedTime: estimatedTime,
+            isGeneric: false,
+            usernameGeneratedBySystem: false
+          }
+        };
+      }
+      return platforms;
+    }
+
+    // Select random rule and generate name
+    const rule = matchingRules[Math.floor(Math.random() * matchingRules.length)];
+    const primaryName = generateFromRule(rule);
+
+    if (!primaryName) {
+      document.body.textContent = JSON.stringify({
+        success: false,
+        error: 'Failed to generate name from rule'
+      }, null, 2);
+      throw new Error('Generation failed');
+    }
+
+    // Generate complete bot info
+    const seed = Math.random().toString(36).substring(2, 10);
+    const botInfo = {
+      id: generateUUID(),
+      timestamp: Date.now(),
+      style: style,
+      ruleId: rule.id,
+      algorithm: rule.algorithm,
+      displayNames: {
+        primary: primaryName,
+        translations: {
+          zh: primaryName,
+          en: primaryName
+        }
+      },
+      platforms: generateAllPlatforms(primaryName),
+      avatar: {
+        svg: generateSimpleAvatar(style, seed),
+        style: style === 'acgn' ? 'notionists' : 'bottts',
+        seed: seed
+      }
+    };
+
+    // Return complete response
     const response = {
       success: true,
-      data: {
-        style,
-        language,
-        count: names.length,
-        names
-      }
+      data: botInfo
     };
 
     document.body.textContent = JSON.stringify(response, null, 2);
