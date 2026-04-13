@@ -11,12 +11,15 @@ export default defineConfig({
     react(),
     proxyRateLimitPlugin(), // 必须在 apiPlugin 之前，这样才能拦截代理请求
     apiPlugin(),
-    visualizer({
-      open: false,
-      gzipSize: true,
-      brotliSize: true,
-      filename: 'dist/stats.html',
-    }),
+    // 只在本地开发时启用 visualizer
+    ...(process.env.NODE_ENV !== 'production' ? [
+      visualizer({
+        open: false,
+        gzipSize: true,
+        brotliSize: true,
+        filename: 'stats.html',
+      }),
+    ] : []),
   ],
   base: '/pick_bot_name/', // GitHub Pages 路径
   resolve: {
