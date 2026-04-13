@@ -47,7 +47,7 @@ Generate a unique bot name with avatar for all supported platforms.
 ### Endpoint
 
 ```
-GET /api/pick_bot_name
+GET /api/pick-bot-name
 ```
 
 ### Query Parameters
@@ -164,10 +164,10 @@ GET /api/pick_bot_name
 
 ```bash
 # Generate a cute bot in Chinese
-curl "http://localhost:3000/api/pick_bot_name?style=cute&language=zh"
+curl "http://localhost:3000/api/pick-bot-name?style=cute&language=zh"
 
 # Generate a professional bot in English
-curl "http://localhost:3000/api/pick_bot_name?style=professional&language=en"
+curl "http://localhost:3000/api/pick-bot-name?style=professional&language=en"
 ```
 
 #### JavaScript (Fetch)
@@ -175,7 +175,7 @@ curl "http://localhost:3000/api/pick_bot_name?style=professional&language=en"
 ```javascript
 async function generateBotName(style, language) {
   const response = await fetch(
-    `http://localhost:3000/api/pick_bot_name?style=${style}&language=${language}`
+    `http://localhost:3000/api/pick-bot-name?style=${style}&language=${language}`
   );
   
   if (!response.ok) {
@@ -208,7 +208,7 @@ import requests
 
 def generate_bot_name(style: str, language: str) -> dict:
     """Generate a bot name using the API."""
-    url = "http://localhost:3000/api/pick_bot_name"
+    url = "http://localhost:3000/api/pick-bot-name"
     params = {"style": style, "language": language}
     
     response = requests.get(url, params=params)
@@ -246,7 +246,7 @@ async function generateBotName(
   language: string
 ): Promise<GeneratedBotInfo> {
   const response = await axios.get<BotNameResponse>(
-    'http://localhost:3000/api/pick_bot_name',
+    'http://localhost:3000/api/pick-bot-name',
     { params: { style, language } }
   );
   
@@ -272,7 +272,7 @@ The API implements sliding window rate limiting to prevent abuse:
 
 | Endpoint | Limit | Window | Header |
 |----------|-------|--------|--------|
-| `/api/pick_bot_name` | 30 requests | 60 seconds | `X-RateLimit-Limit: 30` |
+| `/api/pick-bot-name` | 30 requests | 60 seconds | `X-RateLimit-Limit: 30` |
 | `/api/waifu/*` | 10 requests | 60 seconds | `X-RateLimit-Limit: 10` |
 | `/proxy/waifu-img/*` | 15 requests | 60 seconds | `X-RateLimit-Limit: 15` |
 
@@ -293,7 +293,7 @@ async function generateWithRetry(style, language, maxRetries = 3) {
   for (let i = 0; i < maxRetries; i++) {
     try {
       const response = await fetch(
-        `http://localhost:3000/api/pick_bot_name?style=${style}&language=${language}`
+        `http://localhost:3000/api/pick-bot-name?style=${style}&language=${language}`
       );
       
       if (response.status === 429) {
@@ -771,7 +771,7 @@ console.log(username); // "saiboshouwei"
 
 ### Quick Integration Checklist
 
-- [x] **HTTP API**: Use `GET /api/pick_bot_name?style=xxx&language=xxx`
+- [x] **HTTP API**: Use `GET /api/pick-bot-name?style=xxx&language=xxx`
 - [x] **Rate Limiting**: Max 30 requests/minute, respect `Retry-After` header
 - [x] **Error Handling**: Check `success` field, handle 400/429/500 errors
 - [x] **Response Format**: Parse JSON, extract `data.displayNames.primary`
@@ -792,7 +792,7 @@ console.log(username); // "saiboshouwei"
 
 ```bash
 # Generate a punk-style bot in Chinese
-curl -X GET "http://localhost:3000/api/pick_bot_name?style=punk&language=zh" \
+curl -X GET "http://localhost:3000/api/pick-bot-name?style=punk&language=zh" \
   -H "Accept: application/json"
 
 # Expected response structure:

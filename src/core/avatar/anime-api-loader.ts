@@ -3,8 +3,10 @@
  */
 
 // 可用的anime头像API列表
-// 使用代理路径避免CORS问题
-const ANIME_APIS = [
+// 在开发环境使用代理，生产环境直接调用API（或使用静态资源）
+const isDev = import.meta.env.DEV;
+
+const ANIME_APIS = isDev ? [
   {
     name: 'waifu.pics',
     endpoint: '/api/waifu/sfw/waifu',
@@ -25,7 +27,7 @@ const ANIME_APIS = [
     type: 'json',
     getUrl: (data: any) => data.images?.[0]?.url,
   },
-];
+] : [];
 
 // 本地缓存的anime头像URLs
 const localAnimeCache: Map<string, string> = new Map();
@@ -68,7 +70,13 @@ async function fetchAnimeAvatarFromAPI(apiIndex: number = 0): Promise<string | n
  * 根据seed获取anime头像URL（带缓存）
  */
 export async function getAnimeAvatarUrl(seed: string): Promise<string> {
-  // 检查缓存
+  // 在生产环境中，直接使用静态头像
+  if (!isDev) {
+    const { getStaticAnimeAvatar } = await import('./static-anime-loader');
+    return getStaticAnimeAvatar(seed);
+  }
+
+  // 开发环境：检查缓存
   if (localAnimeCache.has(seed)) {
     return localAnimeCache.get(seed)!;
   }
@@ -83,13 +91,19 @@ export async function getAnimeAvatarUrl(seed: string): Promise<string> {
   }
 
   // 如果所有API都失败，返回占位符
-  return '/pick_bot_name/avatars/anime/fallback.svg';
+  return '/pick-bot-name/avatars/anime/fallback.svg';
 }
 
 /**
  * 预加载多个anime头像到缓存
  */
 export async function preloadAnimeAvatars(count: number = 10): Promise<void> {
+  // 在生产环境中跳过预加载，因为使用静态资源
+  if (!isDev) {
+    console.log('Production mode: using static anime avatars, skipping preload');
+    return;
+  }
+
   console.log(`Preloading ${count} anime avatars...`);
 
   const promises = Array.from({ length: count }, async (_, i) => {

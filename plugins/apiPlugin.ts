@@ -11,7 +11,7 @@ export function apiPlugin(): Plugin {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         // 只处理API请求
-        if (!req.url?.startsWith('/api/pick_bot_name')) {
+        if (!req.url?.startsWith('/api/pick-bot-name')) {
           return next();
         }
 

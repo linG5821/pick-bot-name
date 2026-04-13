@@ -25,7 +25,7 @@ export function getStaticAnimeAvatar(seed: string): string {
   const avatarFile = ANIME_AVATARS[index];
 
   // 返回相对于public文件夹的路径
-  return `/pick_bot_name/avatars/anime/${avatarFile}`;
+  return `/pick-bot-name/avatars/anime/${avatarFile}`;
 }
 
 /**
@@ -55,5 +55,5 @@ export async function loadStaticAnimeSvg(seed: string): Promise<string> {
  * 获取所有可用的动漫头像
  */
 export function getAvailableAnimeAvatars(): string[] {
-  return ANIME_AVATARS.map(file => `/pick_bot_name/avatars/anime/${file}`);
+  return ANIME_AVATARS.map(file => `/pick-bot-name/avatars/anime/${file}`);
 }

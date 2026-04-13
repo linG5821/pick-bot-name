@@ -116,7 +116,7 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
           onError={(e) => {
             console.error('Failed to load anime image');
             // 加载失败时显示fallback
-            (e.target as HTMLImageElement).src = '/pick_bot_name/avatars/anime/fallback.svg';
+            (e.target as HTMLImageElement).src = '/pick-bot-name/avatars/anime/fallback.svg';
           }}
         />
       );
