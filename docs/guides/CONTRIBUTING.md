@@ -78,7 +78,7 @@ Each rule is a JSON file in the `rules/custom/` directory:
     "zh": "规则描述",
     "ja": "ルールの説明"
   },
-  "style": "cyberpunk",
+  "style": "punk",
   "languages": ["en"],
   "algorithm": "combination",
   "author": {
@@ -102,7 +102,7 @@ Each rule is a JSON file in the `rules/custom/` directory:
 - **File name**: `{style}-{language}-{variant}.json`
 - **Rule ID**: Must match file name
 - **Examples**: 
-  - `cyberpunk-en-basic.json`
+  - `punk-en-basic.json`
   - `cute-zh-animals.json`
   - `professional-ja-business.json`
 
@@ -110,14 +110,14 @@ Each rule is a JSON file in the `rules/custom/` directory:
 
 #### 1. Combination Algorithm
 
-Combines prefixes, roots, and suffixes with weights. **Length limit: 2-6 characters/words**.
+Combines prefixes, roots, and suffixes with weights. **Length limit: Chinese 2-4 characters, English 4-12 characters**.
 
 **Best Practices**:
 - Use high weight (5) for empty suffix `""` to avoid overly long names
 - Keep prefixes to 1-2 characters (Chinese) or 1 word (English)  
 - Keep roots to 2-3 characters (Chinese) or 1-2 words (English)
 - Avoid suffixes longer than 3 characters
-- Add repetitive words (叠词) like "喵喵", "兔兔" for cute styles
+- Recommended for cute styles: repetitive words (叠词) like "喵喵", "兔兔"
 
 ```json
 {
@@ -279,7 +279,7 @@ Use conventional commits format:
 type(scope): description
 
 Examples:
-- feat(rules): add cyberpunk Japanese rule
+- feat(rules): add punk Japanese rule
 - fix(generator): resolve duplicate name issue
 - docs(readme): update installation steps
 - style(ui): improve button hover effect
@@ -334,7 +334,9 @@ Contributors are recognized in:
 
 ## 🎨 Adding New Bot Styles
 
-Want to add a new bot style (e.g., "Fantasy", "Corporate", "Gaming")? Follow these steps:
+Want to add a new bot style? Follow these steps:
+
+> **Note**: The examples below use "fantasy" as a hypothetical new style to demonstrate the process. Current styles are: `punk`, `cute`, `professional`, `geek`, `minimal`, `anime`, `acgn`.
 
 ### 1. Update the BotStyle Enum
 

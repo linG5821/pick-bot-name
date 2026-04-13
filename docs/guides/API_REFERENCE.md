@@ -27,12 +27,21 @@ This document provides comprehensive API documentation for both human developers
 
 ## 🌐 HTTP API
 
-The HTTP API is available **only in development mode** via Vite's dev server. It is implemented as a Vite plugin and provides a simple REST interface for generating bot names.
+The HTTP API is available in both development and production environments, but with different implementations.
 
 ### Base URL
 
 - **Development**: `http://localhost:3000`
-- **Production**: Not available (static site deployment only)
+  - Implemented as a Vite plugin
+  - Returns pure JSON (`Content-Type: application/json`)
+  - Dynamic generation (random each time)
+  - Rate limiting: 30 requests/minute
+  
+- **Production (GitHub Pages)**: `https://ling5821.github.io/pick-bot-name`
+  - Serves static HTML files with JSON in body
+  - Returns HTML (`Content-Type: text/html`)
+  - Pre-generated content (cached)
+  - No rate limiting
 
 ### Authentication
 
@@ -51,6 +60,24 @@ GET /api/pick-bot-name
 ```
 
 **Note**: On GitHub Pages, this endpoint returns HTML with JSON content in the body (Content-Type: text/html). Use `response.text()` then `JSON.parse()` to extract the data.
+
+#### Why HTML? Understanding GitHub Pages Limitations
+
+GitHub Pages serves `index.html` files with `Content-Type: text/html` header. While the file body contains pure JSON (no HTML tags), the Content-Type header makes browsers and HTTP clients treat it as HTML. 
+
+**Solution**: Parse with `response.text()` to get the raw JSON string, then use `JSON.parse()`.
+
+#### Development vs Production Comparison
+
+| Feature | Development | Production (GitHub Pages) |
+|---------|-------------|---------------------------|
+| **Endpoint** | `http://localhost:3000/api/pick-bot-name` | `https://ling5821.github.io/pick-bot-name/api/pick-bot-name/` |
+| **Response Type** | Pure JSON | HTML with JSON in body |
+| **Content-Type** | `application/json` | `text/html` |
+| **Parsing** | `response.json()` | `response.text()` → `JSON.parse()` |
+| **Generation** | Dynamic (random each time) | Pre-generated (cached) |
+| **Rate Limiting** | Yes (30 req/min) | No (static files) |
+| **CORS** | Configured | Open (static files) |
 
 ### Query Parameters
 
@@ -209,16 +236,23 @@ try {
 
 ```python
 import requests
+import json
 
-def generate_bot_name(style: str, language: str) -> dict:
+def generate_bot_name(style: str, language: str, use_production: bool = False) -> dict:
     """Generate a bot name using the API."""
-    url = "http://localhost:3000/api/pick-bot-name"
-    params = {"style": style, "language": language}
-    
-    response = requests.get(url, params=params)
-    response.raise_for_status()
-    
-    data = response.json()
+    if use_production:
+        # GitHub Pages: HTML with JSON in body
+        url = f"https://ling5821.github.io/pick-bot-name/api/pick-bot-name/"
+        response = requests.get(url, params={"style": style, "language": language})
+        response.raise_for_status()
+        # Parse as text first, then JSON
+        data = json.loads(response.text)
+    else:
+        # Development: Pure JSON
+        url = "http://localhost:3000/api/pick-bot-name"
+        response = requests.get(url, params={"style": style, "language": language})
+        response.raise_for_status()
+        data = response.json()
     
     if data["success"]:
         return data["data"]
@@ -227,7 +261,12 @@ def generate_bot_name(style: str, language: str) -> dict:
 
 # Usage
 try:
+    # Development
     bot = generate_bot_name("cute", "zh")
+    
+    # Or use production (GitHub Pages)
+    # bot = generate_bot_name("cute", "zh", use_production=True)
+    
     print(f"Bot name: {bot['displayNames']['primary']}")
     print(f"Telegram: @{bot['platforms']['telegram']['username']}")
 except Exception as e:
@@ -268,17 +307,19 @@ console.log(bot.displayNames.primary);
 
 ---
 
-## ⏱️ Rate Limiting
+## ⏱️ Rate Limiting (Development Only)
 
-The API implements sliding window rate limiting to prevent abuse:
+⚠️ **Note**: Rate limiting only applies to the development server. GitHub Pages serves static files with no rate limits.
+
+The development API implements sliding window rate limiting to prevent abuse:
 
 ### Limits
 
 | Endpoint | Limit | Window | Header |
 |----------|-------|--------|--------|
 | `/api/pick-bot-name` | 30 requests | 60 seconds | `X-RateLimit-Limit: 30` |
-| `/api/waifu/*` | 10 requests | 60 seconds | `X-RateLimit-Limit: 10` |
-| `/proxy/waifu-img/*` | 15 requests | 60 seconds | `X-RateLimit-Limit: 15` |
+| `/api/waifu/*` (Dev only) | 10 requests | 60 seconds | `X-RateLimit-Limit: 10` |
+| `/proxy/waifu-img/*` (Dev only) | 15 requests | 60 seconds | `X-RateLimit-Limit: 15` |
 
 ### Rate Limit Headers
 
