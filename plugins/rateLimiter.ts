@@ -133,11 +133,18 @@ function getRateLimitInfo(
  * 定期清理内存中的过期数据（防止内存泄漏）
  */
 function startCleanupTask(): void {
-  setInterval(() => {
+  // 在生产构建时不启动清理任务，避免阻止进程退出
+  if (process.env.NODE_ENV === 'production') {
+    return;
+  }
+
+  const cleanupInterval = setInterval(() => {
     const now = Date.now();
     const maxWindowMs = Math.max(
       ...Object.values(RATE_LIMIT_RULES).map((rule) => rule.windowMs)
     );
+
+    const originalSize = requestStore.size;
 
     for (const [ip, record] of requestStore.entries()) {
       // 清理所有过期记录
@@ -149,8 +156,20 @@ function startCleanupTask(): void {
       }
     }
 
-    console.log(`[Rate Limiter] Cleanup complete. Active IPs: ${requestStore.size}`);
+    // 只在有实际清理动作时才记录日志
+    if (originalSize > requestStore.size) {
+      console.log(`[Rate Limiter] Cleanup complete. Active IPs: ${requestStore.size} (cleaned ${originalSize - requestStore.size})`);
+    }
   }, 5 * 60 * 1000); // 每 5 分钟清理一次
+
+  // 优雅关闭：清理定时器
+  process.on('SIGTERM', () => {
+    clearInterval(cleanupInterval);
+  });
+
+  process.on('SIGINT', () => {
+    clearInterval(cleanupInterval);
+  });
 }
 
 // 启动清理任务

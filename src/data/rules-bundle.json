@@ -1,1500 +1,964 @@
-[
-  {
-    "id": "acgn-en-001",
-    "name": "ACGN English Combination",
-    "description": "ACGN style English names (Anime, Comic, Game, Novel)",
-    "style": "acgn",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Tsundere",
-          "weight": 1
-        },
-        {
-          "value": "Kuudere",
-          "weight": 1
-        },
-        {
-          "value": "Genki",
-          "weight": 1
-        },
-        {
-          "value": "Fluffy",
-          "weight": 1
-        },
-        {
-          "value": "Magic",
-          "weight": 1
-        },
-        {
-          "value": "Fantasy",
-          "weight": 1
-        },
-        {
-          "value": "Mystic",
-          "weight": 1
-        },
-        {
-          "value": "Astral",
-          "weight": 1
-        },
-        {
-          "value": "Lunar",
-          "weight": 1
-        },
-        {
-          "value": "Dream",
-          "weight": 1
-        },
-        {
-          "value": "Virtual",
-          "weight": 1
-        },
-        {
-          "value": "Dimension",
-          "weight": 1
-        },
-        {
-          "value": "Isekai",
-          "weight": 1
-        },
-        {
-          "value": "Sweet",
-          "weight": 1
-        },
-        {
-          "value": "Healing",
-          "weight": 1
-        },
-        {
-          "value": "Adorable",
-          "weight": 1
-        }
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-04-13T04:04:41.779Z",
+  "totalRules": 7,
+  "rules": [
+    {
+      "id": "professional-zh-business",
+      "version": "1.0.0",
+      "name": {
+        "en": "Business Professional",
+        "zh": "商务专业",
+        "ja": "ビジネスプロフェッショナル"
+      },
+      "description": {
+        "en": "Professional Chinese business names",
+        "zh": "专业的中文商务名称",
+        "ja": "プロフェッショナルな中国語ビジネス名"
+      },
+      "style": "professional",
+      "languages": [
+        "zh"
       ],
-      "roots": [
-        {
-          "value": "Maiden",
-          "weight": 1
-        },
-        {
-          "value": "Knight",
-          "weight": 1
-        },
-        {
-          "value": "Mage",
-          "weight": 1
-        },
-        {
-          "value": "Guardian",
-          "weight": 1
-        },
-        {
-          "value": "Diva",
-          "weight": 1
-        },
-        {
-          "value": "Hero",
-          "weight": 1
-        },
-        {
-          "value": "Summoner",
-          "weight": 1
-        },
-        {
-          "value": "Neko",
-          "weight": 1
-        },
-        {
-          "value": "Kitsune",
-          "weight": 1
-        },
-        {
-          "value": "Elf",
-          "weight": 1
-        },
-        {
-          "value": "Angel",
-          "weight": 1
-        },
-        {
-          "value": "Witch",
-          "weight": 1
-        },
-        {
-          "value": "Fairy",
-          "weight": 1
-        },
-        {
-          "value": "Chan",
-          "weight": 1
-        }
+      "algorithm": "template",
+      "author": {
+        "name": "Community Contributor",
+        "github": "bot-name-generator",
+        "email": "example@example.com"
+      },
+      "license": "MIT",
+      "tags": [
+        "professional",
+        "business",
+        "chinese",
+        "corporate"
       ],
-      "suffixes": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
+      "data": {
+        "templates": [
+          {
+            "value": "{company}{role}",
+            "weight": 10
+          },
+          {
+            "value": "{adjective}{company}{role}",
+            "weight": 9
+          },
+          {
+            "value": "{company}{department}{role}",
+            "weight": 8
+          }
+        ],
+        "vocabulary": {
+          "company": [
+            {
+              "value": "企业",
+              "weight": 10
+            },
+            {
+              "value": "商务",
+              "weight": 9
+            },
+            {
+              "value": "集团",
+              "weight": 8
+            },
+            {
+              "value": "公司",
+              "weight": 7
+            }
+          ],
+          "role": [
+            {
+              "value": "助手",
+              "weight": 10
+            },
+            {
+              "value": "顾问",
+              "weight": 9
+            },
+            {
+              "value": "管家",
+              "weight": 8
+            },
+            {
+              "value": "秘书",
+              "weight": 7
+            }
+          ],
+          "adjective": [
+            {
+              "value": "智能",
+              "weight": 10
+            },
+            {
+              "value": "高效",
+              "weight": 9
+            },
+            {
+              "value": "专业",
+              "weight": 9
+            },
+            {
+              "value": "可靠",
+              "weight": 8
+            }
+          ],
+          "department": [
+            {
+              "value": "客服",
+              "weight": 9
+            },
+            {
+              "value": "财务",
+              "weight": 7
+            },
+            {
+              "value": "人事",
+              "weight": 7
+            },
+            {
+              "value": "行政",
+              "weight": 6
+            }
+          ]
         }
+      },
+      "examples": [
+        "企业助手",
+        "智能商务顾问",
+        "专业集团管家",
+        "公司客服秘书",
+        "高效企业助手"
+      ],
+      "createdAt": "2026-04-11",
+      "updatedAt": "2026-04-11"
+    },
+    {
+      "id": "nature-ja-forest",
+      "version": "1.0.0",
+      "name": {
+        "en": "Forest Spirit",
+        "zh": "森林精灵",
+        "ja": "森の精霊"
+      },
+      "description": {
+        "en": "Japanese forest and nature-themed names",
+        "zh": "日本森林和自然主题的名称",
+        "ja": "日本の森と自然をテーマにした名前"
+      },
+      "style": "nature",
+      "languages": [
+        "ja"
+      ],
+      "algorithm": "template",
+      "author": {
+        "name": "Community Contributor",
+        "github": "bot-name-generator",
+        "email": "example@example.com"
+      },
+      "license": "MIT",
+      "tags": [
+        "nature",
+        "japanese",
+        "forest",
+        "spirit"
+      ],
+      "data": {
+        "templates": [
+          {
+            "value": "{nature}{element}",
+            "weight": 10
+          },
+          {
+            "value": "{nature}の{element}",
+            "weight": 9
+          },
+          {
+            "value": "{adjective}{nature}{role}",
+            "weight": 8
+          }
+        ],
+        "vocabulary": {
+          "nature": [
+            {
+              "value": "森",
+              "weight": 10
+            },
+            {
+              "value": "木",
+              "weight": 9
+            },
+            {
+              "value": "林",
+              "weight": 8
+            },
+            {
+              "value": "葉",
+              "weight": 7
+            },
+            {
+              "value": "花",
+              "weight": 8
+            }
+          ],
+          "element": [
+            {
+              "value": "精霊",
+              "weight": 10
+            },
+            {
+              "value": "守護者",
+              "weight": 9
+            },
+            {
+              "value": "妖精",
+              "weight": 8
+            },
+            {
+              "value": "神",
+              "weight": 7
+            }
+          ],
+          "adjective": [
+            {
+              "value": "静かな",
+              "weight": 9
+            },
+            {
+              "value": "優しい",
+              "weight": 9
+            },
+            {
+              "value": "古い",
+              "weight": 7
+            },
+            {
+              "value": "神聖な",
+              "weight": 8
+            }
+          ],
+          "role": [
+            {
+              "value": "番人",
+              "weight": 8
+            },
+            {
+              "value": "案内人",
+              "weight": 7
+            },
+            {
+              "value": "使者",
+              "weight": 6
+            }
+          ]
+        }
+      },
+      "examples": [
+        "森精霊",
+        "木の守護者",
+        "静かな林番人",
+        "優しい花妖精",
+        "古い森の神"
+      ],
+      "createdAt": "2026-04-11",
+      "updatedAt": "2026-04-11"
+    },
+    {
+      "id": "geek-en-scifi",
+      "version": "1.0.0",
+      "name": {
+        "en": "Sci-Fi Tech",
+        "zh": "科幻技术",
+        "ja": "SFテック"
+      },
+      "description": {
+        "en": "Science fiction and technology inspired names with version numbers",
+        "zh": "科幻和技术风格的名称，带有版本号",
+        "ja": "バージョン番号付きのSFとテクノロジーにインスパイアされた名前"
+      },
+      "style": "geek",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "combination",
+      "author": {
+        "name": "Community Contributor",
+        "github": "bot-name-generator",
+        "email": "example@example.com"
+      },
+      "license": "MIT",
+      "tags": [
+        "scifi",
+        "tech",
+        "geek",
+        "ai"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Quantum",
+            "weight": 10
+          },
+          {
+            "value": "Neural",
+            "weight": 9
+          },
+          {
+            "value": "Hyper",
+            "weight": 8
+          },
+          {
+            "value": "Meta",
+            "weight": 7
+          },
+          {
+            "value": "Ultra",
+            "weight": 7
+          },
+          {
+            "value": "Proto",
+            "weight": 6
+          }
+        ],
+        "roots": [
+          {
+            "value": "Bot",
+            "weight": 10
+          },
+          {
+            "value": "AI",
+            "weight": 10
+          },
+          {
+            "value": "Mind",
+            "weight": 9
+          },
+          {
+            "value": "Core",
+            "weight": 8
+          },
+          {
+            "value": "Link",
+            "weight": 7
+          },
+          {
+            "value": "Node",
+            "weight": 7
+          },
+          {
+            "value": "Matrix",
+            "weight": 6
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "9000",
+            "weight": 9
+          },
+          {
+            "value": "X",
+            "weight": 8
+          },
+          {
+            "value": "Pro",
+            "weight": 8
+          },
+          {
+            "value": "v2",
+            "weight": 7
+          },
+          {
+            "value": "Alpha",
+            "weight": 6
+          },
+          {
+            "value": "Prime",
+            "weight": 7
+          }
+        ]
+      },
+      "examples": [
+        "QuantumBot9000",
+        "NeuralAIX",
+        "HyperMindPro",
+        "MetaCorev2",
+        "UltraLinkPrime"
+      ],
+      "createdAt": "2026-04-11",
+      "updatedAt": "2026-04-11"
+    },
+    {
+      "id": "fantasy-en-medieval",
+      "version": "1.0.0",
+      "name": {
+        "en": "Medieval Fantasy",
+        "zh": "中世纪奇幻",
+        "ja": "中世ファンタジー"
+      },
+      "description": {
+        "en": "Medieval-inspired fantasy names with noble titles",
+        "zh": "中世纪风格的奇幻名称，带有贵族头衔",
+        "ja": "貴族の称号を持つ中世風ファンタジー名"
+      },
+      "style": "fantasy",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "combination",
+      "author": {
+        "name": "Community Contributor",
+        "github": "bot-name-generator",
+        "email": "example@example.com"
+      },
+      "license": "MIT",
+      "tags": [
+        "fantasy",
+        "medieval",
+        "rpg",
+        "noble"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Sir",
+            "weight": 10
+          },
+          {
+            "value": "Lord",
+            "weight": 9
+          },
+          {
+            "value": "Lady",
+            "weight": 9
+          },
+          {
+            "value": "Baron",
+            "weight": 7
+          },
+          {
+            "value": "Duke",
+            "weight": 6
+          },
+          {
+            "value": "Knight",
+            "weight": 8
+          }
+        ],
+        "roots": [
+          {
+            "value": "Galahad",
+            "weight": 10
+          },
+          {
+            "value": "Merlin",
+            "weight": 10
+          },
+          {
+            "value": "Arthur",
+            "weight": 10
+          },
+          {
+            "value": "Lancelot",
+            "weight": 9
+          },
+          {
+            "value": "Percival",
+            "weight": 8
+          },
+          {
+            "value": "Tristan",
+            "weight": 8
+          },
+          {
+            "value": "Gawain",
+            "weight": 7
+          },
+          {
+            "value": "Bedivere",
+            "weight": 6
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "theWise",
+            "weight": 8
+          },
+          {
+            "value": "theBrave",
+            "weight": 9
+          },
+          {
+            "value": "theNoble",
+            "weight": 7
+          },
+          {
+            "value": "theJust",
+            "weight": 7
+          },
+          {
+            "value": "theValiant",
+            "weight": 8
+          },
+          {
+            "value": "theBold",
+            "weight": 6
+          }
+        ]
+      },
+      "examples": [
+        "SirGalahad",
+        "LordMerlintheBrave",
+        "LadyArthurtheWise",
+        "KnightLancelottheValiant",
+        "DukePercivaltheNoble"
+      ],
+      "createdAt": "2026-04-11",
+      "updatedAt": "2026-04-11"
+    },
+    {
+      "id": "professional-en-corporate",
+      "version": "1.0.0",
+      "name": {
+        "en": "Professional English Corporate",
+        "zh": "专业英文企业版",
+        "ja": "プロフェッショナル英語コーポレート"
+      },
+      "description": {
+        "en": "Professional and corporate-style bot names for business use",
+        "zh": "适合商务使用的专业企业风格机器人名称",
+        "ja": "ビジネス用のプロフェッショナルなコーポレートスタイルのボット名"
+      },
+      "style": "professional",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "combination",
+      "platformOptimized": [
+        "slack",
+        "feishu",
+        "wecom",
+        "dingtalk"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "bot-name-generator"
+      },
+      "license": "MIT",
+      "tags": [
+        "professional",
+        "business",
+        "corporate",
+        "enterprise"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Business",
+            "weight": 9
+          },
+          {
+            "value": "Corporate",
+            "weight": 8
+          },
+          {
+            "value": "Enterprise",
+            "weight": 8
+          },
+          {
+            "value": "Office",
+            "weight": 7
+          },
+          {
+            "value": "Work",
+            "weight": 8
+          },
+          {
+            "value": "Pro",
+            "weight": 9
+          },
+          {
+            "value": "Smart",
+            "weight": 8
+          },
+          {
+            "value": "Team",
+            "weight": 7
+          },
+          {
+            "value": "Collab",
+            "weight": 6
+          },
+          {
+            "value": "Workflow",
+            "weight": 7
+          }
+        ],
+        "roots": [
+          {
+            "value": "Assistant",
+            "weight": 10
+          },
+          {
+            "value": "Helper",
+            "weight": 8
+          },
+          {
+            "value": "Agent",
+            "weight": 9
+          },
+          {
+            "value": "Manager",
+            "weight": 7
+          },
+          {
+            "value": "Coordinator",
+            "weight": 6
+          },
+          {
+            "value": "Advisor",
+            "weight": 7
+          },
+          {
+            "value": "Support",
+            "weight": 8
+          },
+          {
+            "value": "Guide",
+            "weight": 7
+          },
+          {
+            "value": "Partner",
+            "weight": 6
+          },
+          {
+            "value": "Bot",
+            "weight": 9
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "Pro",
+            "weight": 9
+          },
+          {
+            "value": "Plus",
+            "weight": 7
+          },
+          {
+            "value": "360",
+            "weight": 6
+          },
+          {
+            "value": "AI",
+            "weight": 8
+          },
+          {
+            "value": "X",
+            "weight": 6
+          },
+          {
+            "value": "Hub",
+            "weight": 7
+          },
+          {
+            "value": "Suite",
+            "weight": 5
+          },
+          {
+            "value": "One",
+            "weight": 7
+          },
+          {
+            "value": "",
+            "weight": 10
+          }
+        ]
+      },
+      "examples": [
+        "BusinessAssistantPro",
+        "WorkflowAgentAI",
+        "TeamHelper",
+        "ProSupportBot",
+        "EnterpriseGuide360"
       ]
     },
-    "examples": [
-      "MagicMaiden",
-      "NekoGuard",
-      "StarHelper",
-      "AngelAI"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "acgn-zh-001",
-    "name": "二次元中文组合",
-    "description": "二次元风格中文词汇（ACGN文化）",
-    "style": "acgn",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "傲娇",
-          "weight": 2
-        },
-        {
-          "value": "软萌",
-          "weight": 2
-        },
-        {
-          "value": "元气",
-          "weight": 3
-        },
-        {
-          "value": "高冷",
-          "weight": 2
-        },
-        {
-          "value": "呆萌",
-          "weight": 2
-        },
-        {
-          "value": "魔法",
-          "weight": 2
-        },
-        {
-          "value": "星辰",
-          "weight": 2
-        },
-        {
-          "value": "月光",
-          "weight": 2
-        },
-        {
-          "value": "梦幻",
-          "weight": 2
-        },
-        {
-          "value": "甜心",
-          "weight": 2
-        }
+    {
+      "id": "cyberpunk-en-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Cyberpunk English Basic",
+        "zh": "赛博朋克英文基础版",
+        "ja": "サイバーパンク英語ベーシック"
+      },
+      "description": {
+        "en": "Basic cyberpunk-style bot names in English",
+        "zh": "基础的英文赛博朋克风格机器人名称",
+        "ja": "英語の基本的なサイバーパンクスタイルのボット名"
+      },
+      "style": "cyberpunk",
+      "languages": [
+        "en"
       ],
-      "roots": [
-        {
-          "value": "少女",
-          "weight": 2
-        },
-        {
-          "value": "骑士",
-          "weight": 2
-        },
-        {
-          "value": "歌姬",
-          "weight": 2
-        },
-        {
-          "value": "猫娘",
-          "weight": 3
-        },
-        {
-          "value": "狐仙",
-          "weight": 2
-        },
-        {
-          "value": "精灵",
-          "weight": 2
-        },
-        {
-          "value": "天使",
-          "weight": 2
-        },
-        {
-          "value": "魔女",
-          "weight": 2
-        },
-        {
-          "value": "妖精",
-          "weight": 2
-        },
-        {
-          "value": "酱",
-          "weight": 2
-        }
+      "algorithm": "combination",
+      "platformOptimized": [
+        "telegram",
+        "discord",
+        "slack"
       ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        }
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "bot-name-generator"
+      },
+      "license": "MIT",
+      "tags": [
+        "cyberpunk",
+        "english",
+        "tech",
+        "futuristic"
+      ],
+      "data": {
+        "prefixes": [
+          {
+            "value": "Cyber",
+            "weight": 10
+          },
+          {
+            "value": "Nano",
+            "weight": 8
+          },
+          {
+            "value": "Quantum",
+            "weight": 7
+          },
+          {
+            "value": "Neural",
+            "weight": 9
+          },
+          {
+            "value": "Synth",
+            "weight": 8
+          },
+          {
+            "value": "Neuro",
+            "weight": 7
+          },
+          {
+            "value": "Tech",
+            "weight": 6
+          },
+          {
+            "value": "Digi",
+            "weight": 7
+          },
+          {
+            "value": "Pixel",
+            "weight": 6
+          },
+          {
+            "value": "Matrix",
+            "weight": 8
+          },
+          {
+            "value": "Data",
+            "weight": 7
+          },
+          {
+            "value": "Virtual",
+            "weight": 6
+          }
+        ],
+        "roots": [
+          {
+            "value": "Bot",
+            "weight": 10
+          },
+          {
+            "value": "Tron",
+            "weight": 9
+          },
+          {
+            "value": "Core",
+            "weight": 8
+          },
+          {
+            "value": "Mind",
+            "weight": 7
+          },
+          {
+            "value": "Pulse",
+            "weight": 6
+          },
+          {
+            "value": "Wave",
+            "weight": 7
+          },
+          {
+            "value": "Node",
+            "weight": 8
+          },
+          {
+            "value": "Link",
+            "weight": 7
+          },
+          {
+            "value": "Mesh",
+            "weight": 6
+          },
+          {
+            "value": "Grid",
+            "weight": 7
+          },
+          {
+            "value": "Net",
+            "weight": 6
+          },
+          {
+            "value": "Agent",
+            "weight": 8
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "3000",
+            "weight": 8
+          },
+          {
+            "value": "X",
+            "weight": 9
+          },
+          {
+            "value": "Prime",
+            "weight": 7
+          },
+          {
+            "value": "Neo",
+            "weight": 8
+          },
+          {
+            "value": "Alpha",
+            "weight": 7
+          },
+          {
+            "value": "Beta",
+            "weight": 5
+          },
+          {
+            "value": "One",
+            "weight": 7
+          },
+          {
+            "value": "Zero",
+            "weight": 6
+          },
+          {
+            "value": "AI",
+            "weight": 9
+          },
+          {
+            "value": "2077",
+            "weight": 6
+          }
+        ]
+      },
+      "examples": [
+        "CyberBot3000",
+        "QuantumCoreX",
+        "NeuralMindPrime",
+        "NanoAgentAI",
+        "SynthWaveNeo"
       ]
     },
-    "examples": [
-      "傲娇猫娘",
-      "魔法少女",
-      "星辰歌姬",
-      "元气精灵"
-    ],
-    "languages": [
-      "zh"
-    ]
-  },
-  {
-    "id": "anime-en-001",
-    "name": "Anime English Combination",
-    "description": "Anime style English names",
-    "style": "anime",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Kawaii",
-          "weight": 1
-        },
-        {
-          "value": "Moe",
-          "weight": 1
-        },
-        {
-          "value": "Chibi",
-          "weight": 1
-        },
-        {
-          "value": "Neko",
-          "weight": 1
-        },
-        {
-          "value": "Senpai",
-          "weight": 1
-        },
-        {
-          "value": "Super",
-          "weight": 1
-        },
-        {
-          "value": "Mega",
-          "weight": 1
-        },
-        {
-          "value": "Star",
-          "weight": 1
-        }
+    {
+      "id": "cute-zh-animals",
+      "version": "1.0.0",
+      "name": {
+        "en": "Cute Chinese Animals",
+        "zh": "中文可爱动物",
+        "ja": "中国語かわいい動物"
+      },
+      "description": {
+        "en": "Cute Chinese bot names with animal themes",
+        "zh": "以动物为主题的可爱中文机器人名称",
+        "ja": "動物をテーマにしたかわいい中国語ボット名"
+      },
+      "style": "cute",
+      "languages": [
+        "zh"
       ],
-      "roots": [
-        {
-          "value": "Chan",
-          "weight": 1
-        },
-        {
-          "value": "Kun",
-          "weight": 1
-        },
-        {
-          "value": "San",
-          "weight": 1
-        },
-        {
-          "value": "Helper",
-          "weight": 1
-        },
-        {
-          "value": "Friend",
-          "weight": 1
-        },
-        {
-          "value": "Hero",
-          "weight": 1
-        },
-        {
-          "value": "Angel",
-          "weight": 1
-        },
-        {
-          "value": "Star",
-          "weight": 1
-        }
+      "algorithm": "template",
+      "platformOptimized": [
+        "weixin",
+        "qq",
+        "feishu",
+        "dingtalk"
       ],
-      "suffixes": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
-        }
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "bot-name-generator"
+      },
+      "license": "MIT",
+      "tags": [
+        "cute",
+        "chinese",
+        "animals",
+        "kawaii"
+      ],
+      "data": {
+        "templates": [
+          "{adjective}{animal}",
+          "{adjective}{animal}助手",
+          "小{animal}{suffix}",
+          "{animal}{suffix}",
+          "{prefix}{animal}"
+        ],
+        "adjectives": [
+          "聪明的",
+          "可爱的",
+          "机灵的",
+          "萌萌的",
+          "智慧的",
+          "贴心的",
+          "温柔的",
+          "活泼的",
+          "乖巧的",
+          "灵巧的"
+        ],
+        "animals": [
+          "小猫",
+          "小狗",
+          "兔子",
+          "熊猫",
+          "企鹅",
+          "海豚",
+          "狐狸",
+          "松鼠",
+          "考拉",
+          "浣熊"
+        ],
+        "prefixes": [
+          "小",
+          "智能",
+          "AI",
+          "云端",
+          "数字"
+        ],
+        "suffixes": [
+          "助手",
+          "宝宝",
+          "君",
+          "酱",
+          "仔",
+          "儿",
+          "Bot"
+        ]
+      },
+      "examples": [
+        "可爱的小猫助手",
+        "聪明的兔子",
+        "小熊猫宝宝",
+        "企鹅君",
+        "智能狐狸"
       ]
-    },
-    "examples": [
-      "KawaiiBot",
-      "NekoHelper",
-      "HeroAI",
-      "ChanAssist"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "anime-zh-001",
-    "name": "动漫中文组合",
-    "description": "动漫风格中文词汇",
-    "style": "anime",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "萌",
-          "weight": 3
-        },
-        {
-          "value": "热血",
-          "weight": 2
-        },
-        {
-          "value": "青春",
-          "weight": 2
-        },
-        {
-          "value": "元气",
-          "weight": 3
-        },
-        {
-          "value": "治愈",
-          "weight": 2
-        },
-        {
-          "value": "次元",
-          "weight": 2
-        }
-      ],
-      "roots": [
-        {
-          "value": "酱",
-          "weight": 3
-        },
-        {
-          "value": "君",
-          "weight": 3
-        },
-        {
-          "value": "桑",
-          "weight": 2
-        },
-        {
-          "value": "宝",
-          "weight": 2
-        },
-        {
-          "value": "喵",
-          "weight": 2
-        },
-        {
-          "value": "炭",
-          "weight": 2
-        },
-        {
-          "value": "助手",
-          "weight": 2
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        }
-      ]
-    },
-    "examples": [
-      "萌酱",
-      "热血君",
-      "元气助手",
-      "治愈宝"
-    ],
-    "languages": [
-      "zh"
-    ]
-  },
-  {
-    "id": "cute-en-001",
-    "name": "Cute English Combination",
-    "description": "Cute style English names",
-    "style": "cute",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Tiny",
-          "weight": 1
-        },
-        {
-          "value": "Little",
-          "weight": 1
-        },
-        {
-          "value": "Sweet",
-          "weight": 1
-        },
-        {
-          "value": "Fluffy",
-          "weight": 1
-        },
-        {
-          "value": "Cozy",
-          "weight": 1
-        },
-        {
-          "value": "Baby",
-          "weight": 1
-        },
-        {
-          "value": "Mini",
-          "weight": 1
-        },
-        {
-          "value": "Soft",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "Helper",
-          "weight": 1
-        },
-        {
-          "value": "Buddy",
-          "weight": 1
-        },
-        {
-          "value": "Panda",
-          "weight": 1
-        },
-        {
-          "value": "Bunny",
-          "weight": 1
-        },
-        {
-          "value": "Kitty",
-          "weight": 1
-        },
-        {
-          "value": "Bear",
-          "weight": 1
-        },
-        {
-          "value": "Friend",
-          "weight": 1
-        },
-        {
-          "value": "Pal",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
-        }
-      ]
-    },
-    "examples": [
-      "FluffyBot",
-      "SweetPal",
-      "CuddlyAI",
-      "HappyHelper"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "cute-zh-001",
-    "name": "可爱中文组合",
-    "description": "使用中文可爱风格词汇生成名称",
-    "style": "cute",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "小",
-          "weight": 3
-        },
-        {
-          "value": "萌",
-          "weight": 2
-        },
-        {
-          "value": "软",
-          "weight": 2
-        },
-        {
-          "value": "甜",
-          "weight": 2
-        },
-        {
-          "value": "乖",
-          "weight": 2
-        },
-        {
-          "value": "糯",
-          "weight": 1
-        },
-        {
-          "value": "奶",
-          "weight": 2
-        }
-      ],
-      "roots": [
-        {
-          "value": "助手",
-          "weight": 2
-        },
-        {
-          "value": "宝宝",
-          "weight": 2
-        },
-        {
-          "value": "团团",
-          "weight": 2
-        },
-        {
-          "value": "球球",
-          "weight": 2
-        },
-        {
-          "value": "喵喵",
-          "weight": 3
-        },
-        {
-          "value": "兔兔",
-          "weight": 3
-        },
-        {
-          "value": "熊熊",
-          "weight": 2
-        },
-        {
-          "value": "汪汪",
-          "weight": 2
-        },
-        {
-          "value": "咩咩",
-          "weight": 2
-        },
-        {
-          "value": "叽叽",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "酱",
-          "weight": 2
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        }
-      ]
-    },
-    "examples": [
-      "小助手",
-      "萌团团",
-      "软兔兔",
-      "甜喵喵"
-    ],
-    "languages": [
-      "zh"
-    ]
-  },
-  {
-    "id": "geek-en-001",
-    "name": "Geek English Combination",
-    "description": "Generate names using tech geek vocabulary",
-    "style": "geek",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Code",
-          "weight": 1
-        },
-        {
-          "value": "Debug",
-          "weight": 1
-        },
-        {
-          "value": "Terminal",
-          "weight": 1
-        },
-        {
-          "value": "Console",
-          "weight": 1
-        },
-        {
-          "value": "Binary",
-          "weight": 1
-        },
-        {
-          "value": "Hex",
-          "weight": 1
-        },
-        {
-          "value": "Script",
-          "weight": 1
-        },
-        {
-          "value": "Kernel",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "Master",
-          "weight": 1
-        },
-        {
-          "value": "Wizard",
-          "weight": 1
-        },
-        {
-          "value": "Ninja",
-          "weight": 1
-        },
-        {
-          "value": "Guru",
-          "weight": 1
-        },
-        {
-          "value": "Hacker",
-          "weight": 1
-        },
-        {
-          "value": "Dev",
-          "weight": 1
-        },
-        {
-          "value": "Pro",
-          "weight": 1
-        },
-        {
-          "value": "Expert",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
-        }
-      ]
-    },
-    "examples": [
-      "CodeBot",
-      "TerminalPro",
-      "AlgoMaster",
-      "HackerAI"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "geek-zh-001",
-    "name": "极客中文组合",
-    "description": "极客技术风格中文词汇",
-    "style": "geek",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "代码",
-          "weight": 3
-        },
-        {
-          "value": "终端",
-          "weight": 2
-        },
-        {
-          "value": "脚本",
-          "weight": 2
-        },
-        {
-          "value": "算法",
-          "weight": 2
-        },
-        {
-          "value": "开源",
-          "weight": 2
-        },
-        {
-          "value": "命令",
-          "weight": 2
-        }
-      ],
-      "roots": [
-        {
-          "value": "大师",
-          "weight": 2
-        },
-        {
-          "value": "忍者",
-          "weight": 2
-        },
-        {
-          "value": "大神",
-          "weight": 2
-        },
-        {
-          "value": "黑客",
-          "weight": 2
-        },
-        {
-          "value": "专家",
-          "weight": 2
-        },
-        {
-          "value": "助手",
-          "weight": 3
-        },
-        {
-          "value": "伙伴",
-          "weight": 2
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        }
-      ]
-    },
-    "examples": [
-      "代码大师",
-      "终端忍者",
-      "算法专家",
-      "脚本助手"
-    ],
-    "languages": [
-      "zh"
-    ]
-  },
-  {
-    "id": "minimal-en-001",
-    "name": "Minimal English Combination",
-    "description": "Minimal style English names",
-    "style": "minimal",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Pure",
-          "weight": 1
-        },
-        {
-          "value": "Simple",
-          "weight": 1
-        },
-        {
-          "value": "Clean",
-          "weight": 1
-        },
-        {
-          "value": "Clear",
-          "weight": 1
-        },
-        {
-          "value": "Neat",
-          "weight": 1
-        },
-        {
-          "value": "Plain",
-          "weight": 1
-        },
-        {
-          "value": "Basic",
-          "weight": 1
-        },
-        {
-          "value": "Zen",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "Helper",
-          "weight": 1
-        },
-        {
-          "value": "Tool",
-          "weight": 1
-        },
-        {
-          "value": "Agent",
-          "weight": 1
-        },
-        {
-          "value": "Core",
-          "weight": 1
-        },
-        {
-          "value": "One",
-          "weight": 1
-        },
-        {
-          "value": "Zero",
-          "weight": 1
-        },
-        {
-          "value": "Unit",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
-        }
-      ]
-    },
-    "examples": [
-      "SimpleBot",
-      "CleanAI",
-      "PureHelper",
-      "LightTool"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "minimal-zh-001",
-    "name": "极简中文组合",
-    "description": "简洁的中文词汇组合",
-    "style": "minimal",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "简",
-          "weight": 2
-        },
-        {
-          "value": "轻",
-          "weight": 2
-        },
-        {
-          "value": "纯",
-          "weight": 2
-        },
-        {
-          "value": "净",
-          "weight": 1
-        },
-        {
-          "value": "素",
-          "weight": 1
-        },
-        {
-          "value": "一",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "助手",
-          "weight": 3
-        },
-        {
-          "value": "工具",
-          "weight": 2
-        },
-        {
-          "value": "帮手",
-          "weight": 2
-        },
-        {
-          "value": "伙伴",
-          "weight": 2
-        },
-        {
-          "value": "向导",
-          "weight": 2
-        },
-        {
-          "value": "点",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        }
-      ]
-    },
-    "examples": [
-      "简助手",
-      "轻工具",
-      "纯伙伴",
-      "一点"
-    ],
-    "languages": [
-      "zh"
-    ]
-  },
-  {
-    "id": "professional-en-001",
-    "name": "Professional English Combination",
-    "description": "Professional business style names",
-    "style": "professional",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Smart",
-          "weight": 1
-        },
-        {
-          "value": "Pro",
-          "weight": 1
-        },
-        {
-          "value": "Expert",
-          "weight": 1
-        },
-        {
-          "value": "Elite",
-          "weight": 1
-        },
-        {
-          "value": "Prime",
-          "weight": 1
-        },
-        {
-          "value": "Advanced",
-          "weight": 1
-        },
-        {
-          "value": "Premium",
-          "weight": 1
-        },
-        {
-          "value": "Executive",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "Assistant",
-          "weight": 1
-        },
-        {
-          "value": "Advisor",
-          "weight": 1
-        },
-        {
-          "value": "Consultant",
-          "weight": 1
-        },
-        {
-          "value": "Manager",
-          "weight": 1
-        },
-        {
-          "value": "Analyst",
-          "weight": 1
-        },
-        {
-          "value": "Specialist",
-          "weight": 1
-        },
-        {
-          "value": "Expert",
-          "weight": 1
-        },
-        {
-          "value": "Agent",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "Pro",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
-        }
-      ]
-    },
-    "examples": [
-      "SmartAI",
-      "ProHelper",
-      "ExpertBot",
-      "PreciseAssist"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "professional-zh-001",
-    "name": "专业中文组合",
-    "description": "使用专业商务词汇生成名称",
-    "style": "professional",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "智能",
-          "weight": 3
-        },
-        {
-          "value": "专业",
-          "weight": 2
-        },
-        {
-          "value": "高效",
-          "weight": 2
-        },
-        {
-          "value": "精准",
-          "weight": 2
-        },
-        {
-          "value": "卓越",
-          "weight": 1
-        },
-        {
-          "value": "精英",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "助理",
-          "weight": 3
-        },
-        {
-          "value": "顾问",
-          "weight": 2
-        },
-        {
-          "value": "专家",
-          "weight": 2
-        },
-        {
-          "value": "管家",
-          "weight": 2
-        },
-        {
-          "value": "秘书",
-          "weight": 2
-        },
-        {
-          "value": "伙伴",
-          "weight": 2
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        }
-      ]
-    },
-    "examples": [
-      "智能助理",
-      "专业顾问",
-      "高效管家",
-      "精准伙伴"
-    ],
-    "languages": [
-      "zh"
-    ]
-  },
-  {
-    "id": "punk-en-001",
-    "name": "Punk English Combination",
-    "description": "Combining cyberpunk and steampunk English vocabulary",
-    "style": "punk",
-    "language": "en",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "Cyber",
-          "weight": 1
-        },
-        {
-          "value": "Quantum",
-          "weight": 1
-        },
-        {
-          "value": "Digital",
-          "weight": 1
-        },
-        {
-          "value": "Virtual",
-          "weight": 1
-        },
-        {
-          "value": "Neon",
-          "weight": 1
-        },
-        {
-          "value": "Matrix",
-          "weight": 1
-        },
-        {
-          "value": "Neural",
-          "weight": 1
-        },
-        {
-          "value": "Data",
-          "weight": 1
-        },
-        {
-          "value": "Steam",
-          "weight": 1
-        },
-        {
-          "value": "Gear",
-          "weight": 1
-        },
-        {
-          "value": "Brass",
-          "weight": 1
-        },
-        {
-          "value": "Copper",
-          "weight": 1
-        },
-        {
-          "value": "Iron",
-          "weight": 1
-        },
-        {
-          "value": "Clock",
-          "weight": 1
-        },
-        {
-          "value": "Mech",
-          "weight": 1
-        },
-        {
-          "value": "Forge",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "Guard",
-          "weight": 1
-        },
-        {
-          "value": "Runner",
-          "weight": 1
-        },
-        {
-          "value": "Scout",
-          "weight": 1
-        },
-        {
-          "value": "Agent",
-          "weight": 1
-        },
-        {
-          "value": "Helper",
-          "weight": 1
-        },
-        {
-          "value": "Sage",
-          "weight": 1
-        },
-        {
-          "value": "Guide",
-          "weight": 1
-        },
-        {
-          "value": "Sentinel",
-          "weight": 1
-        },
-        {
-          "value": "Smith",
-          "weight": 1
-        },
-        {
-          "value": "Wright",
-          "weight": 1
-        },
-        {
-          "value": "Engineer",
-          "weight": 1
-        },
-        {
-          "value": "Inventor",
-          "weight": 1
-        },
-        {
-          "value": "Butler",
-          "weight": 1
-        },
-        {
-          "value": "Mechanic",
-          "weight": 1
-        },
-        {
-          "value": "Craftsman",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "Bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        },
-        {
-          "value": "",
-          "weight": 5
-        }
-      ]
-    },
-    "examples": [
-      "CyberGuard",
-      "SteamHelper",
-      "GearMaster",
-      "QuantumAI"
-    ],
-    "languages": [
-      "en"
-    ]
-  },
-  {
-    "id": "punk-zh-001",
-    "name": "朋克中文组合",
-    "description": "结合赛博朋克和蒸汽朋克风格的中文词汇",
-    "style": "punk",
-    "language": "zh",
-    "algorithm": "combination",
-    "data": {
-      "prefixes": [
-        {
-          "value": "赛博",
-          "weight": 2
-        },
-        {
-          "value": "量子",
-          "weight": 2
-        },
-        {
-          "value": "数码",
-          "weight": 2
-        },
-        {
-          "value": "蒸汽",
-          "weight": 2
-        },
-        {
-          "value": "机械",
-          "weight": 2
-        },
-        {
-          "value": "钢铁",
-          "weight": 1
-        },
-        {
-          "value": "齿轮",
-          "weight": 1
-        },
-        {
-          "value": "发条",
-          "weight": 1
-        }
-      ],
-      "roots": [
-        {
-          "value": "守卫",
-          "weight": 2
-        },
-        {
-          "value": "战士",
-          "weight": 2
-        },
-        {
-          "value": "助手",
-          "weight": 3
-        },
-        {
-          "value": "管家",
-          "weight": 2
-        },
-        {
-          "value": "向导",
-          "weight": 2
-        },
-        {
-          "value": "先锋",
-          "weight": 2
-        },
-        {
-          "value": "哨兵",
-          "weight": 2
-        },
-        {
-          "value": "工匠",
-          "weight": 2
-        },
-        {
-          "value": "机师",
-          "weight": 2
-        },
-        {
-          "value": "技师",
-          "weight": 2
-        },
-        {
-          "value": "侦探",
-          "weight": 1
-        }
-      ],
-      "suffixes": [
-        {
-          "value": "",
-          "weight": 5
-        },
-        {
-          "value": "bot",
-          "weight": 1
-        },
-        {
-          "value": "AI",
-          "weight": 1
-        }
-      ]
-    },
-    "examples": [
-      "赛博守卫",
-      "蒸汽管家",
-      "齿轮工匠",
-      "量子助手"
-    ],
-    "languages": [
-      "zh"
-    ]
-  }
-]
+    }
+  ]
+}
