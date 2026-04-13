@@ -1,0 +1,101 @@
+{
+  "id": "geek-en-001",
+  "name": "Geek English Combination",
+  "description": "Generate names using tech geek vocabulary",
+  "style": "geek",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Code",
+        "weight": 1
+      },
+      {
+        "value": "Debug",
+        "weight": 1
+      },
+      {
+        "value": "Terminal",
+        "weight": 1
+      },
+      {
+        "value": "Console",
+        "weight": 1
+      },
+      {
+        "value": "Binary",
+        "weight": 1
+      },
+      {
+        "value": "Hex",
+        "weight": 1
+      },
+      {
+        "value": "Script",
+        "weight": 1
+      },
+      {
+        "value": "Kernel",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Master",
+        "weight": 1
+      },
+      {
+        "value": "Wizard",
+        "weight": 1
+      },
+      {
+        "value": "Ninja",
+        "weight": 1
+      },
+      {
+        "value": "Guru",
+        "weight": 1
+      },
+      {
+        "value": "Hacker",
+        "weight": 1
+      },
+      {
+        "value": "Dev",
+        "weight": 1
+      },
+      {
+        "value": "Pro",
+        "weight": 1
+      },
+      {
+        "value": "Expert",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "CodeBot",
+    "TerminalPro",
+    "AlgoMaster",
+    "HackerAI"
+  ],
+  "languages": [
+    "en"
+  ]
+}

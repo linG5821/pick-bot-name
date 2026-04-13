@@ -1,0 +1,85 @@
+{
+  "id": "professional-zh-001",
+  "name": "专业中文组合",
+  "description": "使用专业商务词汇生成名称",
+  "style": "professional",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "智能",
+        "weight": 3
+      },
+      {
+        "value": "专业",
+        "weight": 2
+      },
+      {
+        "value": "高效",
+        "weight": 2
+      },
+      {
+        "value": "精准",
+        "weight": 2
+      },
+      {
+        "value": "卓越",
+        "weight": 1
+      },
+      {
+        "value": "精英",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "助理",
+        "weight": 3
+      },
+      {
+        "value": "顾问",
+        "weight": 2
+      },
+      {
+        "value": "专家",
+        "weight": 2
+      },
+      {
+        "value": "管家",
+        "weight": 2
+      },
+      {
+        "value": "秘书",
+        "weight": 2
+      },
+      {
+        "value": "伙伴",
+        "weight": 2
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "智能助理",
+    "专业顾问",
+    "高效管家",
+    "精准伙伴"
+  ],
+  "languages": [
+    "zh"
+  ]
+}

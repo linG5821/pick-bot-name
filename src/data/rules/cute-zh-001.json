@@ -1,0 +1,105 @@
+{
+  "id": "cute-zh-001",
+  "name": "可爱中文组合",
+  "description": "使用中文可爱风格词汇生成名称",
+  "style": "cute",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "小",
+        "weight": 3
+      },
+      {
+        "value": "萌",
+        "weight": 2
+      },
+      {
+        "value": "软",
+        "weight": 2
+      },
+      {
+        "value": "甜",
+        "weight": 2
+      },
+      {
+        "value": "乖",
+        "weight": 2
+      },
+      {
+        "value": "糯",
+        "weight": 1
+      },
+      {
+        "value": "奶",
+        "weight": 2
+      }
+    ],
+    "roots": [
+      {
+        "value": "助手",
+        "weight": 2
+      },
+      {
+        "value": "宝宝",
+        "weight": 2
+      },
+      {
+        "value": "团团",
+        "weight": 2
+      },
+      {
+        "value": "球球",
+        "weight": 2
+      },
+      {
+        "value": "喵喵",
+        "weight": 3
+      },
+      {
+        "value": "兔兔",
+        "weight": 3
+      },
+      {
+        "value": "熊熊",
+        "weight": 2
+      },
+      {
+        "value": "汪汪",
+        "weight": 2
+      },
+      {
+        "value": "咩咩",
+        "weight": 2
+      },
+      {
+        "value": "叽叽",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "酱",
+        "weight": 2
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "小助手",
+    "萌团团",
+    "软兔兔",
+    "甜喵喵"
+  ],
+  "languages": [
+    "zh"
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "id": "professional-en-001",
+  "name": "Professional English Combination",
+  "description": "Professional business style names",
+  "style": "professional",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Smart",
+        "weight": 1
+      },
+      {
+        "value": "Pro",
+        "weight": 1
+      },
+      {
+        "value": "Expert",
+        "weight": 1
+      },
+      {
+        "value": "Elite",
+        "weight": 1
+      },
+      {
+        "value": "Prime",
+        "weight": 1
+      },
+      {
+        "value": "Advanced",
+        "weight": 1
+      },
+      {
+        "value": "Premium",
+        "weight": 1
+      },
+      {
+        "value": "Executive",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Assistant",
+        "weight": 1
+      },
+      {
+        "value": "Advisor",
+        "weight": 1
+      },
+      {
+        "value": "Consultant",
+        "weight": 1
+      },
+      {
+        "value": "Manager",
+        "weight": 1
+      },
+      {
+        "value": "Analyst",
+        "weight": 1
+      },
+      {
+        "value": "Specialist",
+        "weight": 1
+      },
+      {
+        "value": "Expert",
+        "weight": 1
+      },
+      {
+        "value": "Agent",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "Pro",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "SmartAI",
+    "ProHelper",
+    "ExpertBot",
+    "PreciseAssist"
+  ],
+  "languages": [
+    "en"
+  ]
+}

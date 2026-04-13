@@ -1,0 +1,91 @@
+name: PR Checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-type-check:
+    name: Lint and Type Check
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Type check
+        run: npx tsc --noEmit
+        
+      - name: Lint check (if configured)
+        run: |
+          if [ -f ".eslintrc.json" ] || [ -f ".eslintrc.js" ]; then
+            npm run lint || echo "Lint script not found, skipping..."
+          else
+            echo "ESLint not configured, skipping..."
+          fi
+        continue-on-error: true
+        
+  build:
+    name: Build Project
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Build rules
+        run: npm run build-rules
+        
+      - name: Build project
+        run: npm run build
+        
+      - name: Check build size
+        run: |
+          echo "Build completed successfully!"
+          du -sh dist/
+          echo "Main bundle sizes:"
+          ls -lh dist/assets/*.js | awk '{print $9, $5}'
+          
+  validate-pr:
+    name: Validate PR Format
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Check PR title format
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            const validPrefixes = ['feat', 'fix', 'docs', 'style', 'refactor', 'test', 'chore', 'rule'];
+            const hasValidPrefix = validPrefixes.some(prefix => 
+              title.toLowerCase().startsWith(`[${prefix}]`) || 
+              title.toLowerCase().startsWith(prefix + ':') ||
+              title.toLowerCase().startsWith(prefix + '(')
+            );
+            
+            if (!hasValidPrefix) {
+              core.warning('PR title should follow conventional commits format: [type] description or type: description');
+            }

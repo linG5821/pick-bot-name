@@ -1,0 +1,93 @@
+{
+  "app": {
+    "title": "机器人名称生成器",
+    "subtitle": "起名是个大问题？不用纠结，快来pick一个专属Bot名称吧！",
+    "description": "支持多平台、多风格、多语言的智能名称生成"
+  },
+  "common": {
+    "copied": "已复制到剪贴板",
+    "close": "关闭",
+    "confirm": "确认",
+    "cancel": "取消",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功"
+  },
+  "generator": {
+    "generate": "生成名称",
+    "generating": "生成中...",
+    "noResult": "还没有生成结果",
+    "selectStyle": "选择风格",
+    "selectLanguage": "选择语言",
+    "generatedError": "生成失败，请重试",
+    "generateSuccess": "生成成功！"
+  },
+  "history": {
+    "title": "历史记录",
+    "empty": "暂无历史记录",
+    "clear": "清空历史"
+  },
+  "style": {
+    "CYBERPUNK": "赛博朋克",
+    "CUTE": "可爱",
+    "PROFESSIONAL": "专业",
+    "GEEK": "极客",
+    "FANTASY": "奇幻",
+    "MINIMAL": "极简",
+    "STEAMPUNK": "蒸汽朋克",
+    "ANIME": "动漫",
+    "MILITARY": "军事",
+    "NATURE": "自然",
+    "cyberpunk": "赛博朋克",
+    "cute": "可爱",
+    "professional": "专业",
+    "geek": "极客",
+    "fantasy": "奇幻",
+    "minimal": "极简",
+    "steampunk": "蒸汽朋克",
+    "anime": "动漫",
+    "military": "军事",
+    "nature": "自然"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English",
+    "ja": "日本語"
+  },
+  "platform": {
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "slack": "Slack",
+    "feishu": "飞书",
+    "dingtalk": "钉钉",
+    "wecom": "企业微信",
+    "weixin": "微信",
+    "qq": "QQ",
+    "qqbot": "QQ频道",
+    "line": "LINE",
+    "generic": "通用"
+  },
+  "platformGuide": {
+    "displayName": "显示名称",
+    "botId": "机器人ID",
+    "username": "用户名",
+    "validationErrors": "验证错误",
+    "officialDocs": "官方文档",
+    "systemGenerated": "系统生成",
+    "needsUsername": "需要用户名"
+  },
+  "tabs": {
+    "generator": "生成器",
+    "ranking": "排行榜"
+  },
+  "ranking": {
+    "title": "排行榜",
+    "description": "最受欢迎的机器人名称",
+    "empty": "暂无数据",
+    "emptyHint": "复制名称后会显示统计数据",
+    "rank": "排名",
+    "name": "名称",
+    "style": "风格",
+    "copyCount": "复制次数"
+  }
+}

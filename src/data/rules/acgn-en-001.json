@@ -1,0 +1,157 @@
+{
+  "id": "acgn-en-001",
+  "name": "ACGN English Combination",
+  "description": "ACGN style English names (Anime, Comic, Game, Novel)",
+  "style": "acgn",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Tsundere",
+        "weight": 1
+      },
+      {
+        "value": "Kuudere",
+        "weight": 1
+      },
+      {
+        "value": "Genki",
+        "weight": 1
+      },
+      {
+        "value": "Fluffy",
+        "weight": 1
+      },
+      {
+        "value": "Magic",
+        "weight": 1
+      },
+      {
+        "value": "Fantasy",
+        "weight": 1
+      },
+      {
+        "value": "Mystic",
+        "weight": 1
+      },
+      {
+        "value": "Astral",
+        "weight": 1
+      },
+      {
+        "value": "Lunar",
+        "weight": 1
+      },
+      {
+        "value": "Dream",
+        "weight": 1
+      },
+      {
+        "value": "Virtual",
+        "weight": 1
+      },
+      {
+        "value": "Dimension",
+        "weight": 1
+      },
+      {
+        "value": "Isekai",
+        "weight": 1
+      },
+      {
+        "value": "Sweet",
+        "weight": 1
+      },
+      {
+        "value": "Healing",
+        "weight": 1
+      },
+      {
+        "value": "Adorable",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Maiden",
+        "weight": 1
+      },
+      {
+        "value": "Knight",
+        "weight": 1
+      },
+      {
+        "value": "Mage",
+        "weight": 1
+      },
+      {
+        "value": "Guardian",
+        "weight": 1
+      },
+      {
+        "value": "Diva",
+        "weight": 1
+      },
+      {
+        "value": "Hero",
+        "weight": 1
+      },
+      {
+        "value": "Summoner",
+        "weight": 1
+      },
+      {
+        "value": "Neko",
+        "weight": 1
+      },
+      {
+        "value": "Kitsune",
+        "weight": 1
+      },
+      {
+        "value": "Elf",
+        "weight": 1
+      },
+      {
+        "value": "Angel",
+        "weight": 1
+      },
+      {
+        "value": "Witch",
+        "weight": 1
+      },
+      {
+        "value": "Fairy",
+        "weight": 1
+      },
+      {
+        "value": "Chan",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "MagicMaiden",
+    "NekoGuard",
+    "StarHelper",
+    "AngelAI"
+  ],
+  "languages": [
+    "en"
+  ]
+}

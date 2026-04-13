@@ -1,0 +1,132 @@
+{
+  "app": {
+    "title": "Bot Name Generator",
+    "subtitle": "Naming is hard? No worries! Let's pick an awesome bot name together!",
+    "description": "Multi-platform, multi-style, multi-language intelligent name generation"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "copy": "Copy",
+    "copied": "Copied",
+    "download": "Download",
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "required": "Required",
+    "sensitive": "Sensitive",
+    "example": "Example"
+  },
+  "generator": {
+    "title": "Generator",
+    "selectStyle": "Select Style",
+    "selectLanguage": "Select Language",
+    "generate": "Generate",
+    "regenerate": "Regenerate",
+    "generating": "Generating...",
+    "noResult": "No Result",
+    "generatedSuccess": "Generated successfully!",
+    "generatedError": "Generation failed, please try again"
+  },
+  "style": {
+    "punk": "Punk",
+    "cute": "Cute",
+    "professional": "Professional",
+    "geek": "Geek",
+    "minimal": "Minimal",
+    "anime": "Cartoon",
+    "acgn": "ACGN",
+    "PUNK": "Punk",
+    "CUTE": "Cute",
+    "PROFESSIONAL": "Professional",
+    "GEEK": "Geek",
+    "MINIMAL": "Minimal",
+    "ANIME": "Cartoon",
+    "ACGN": "ACGN"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  },
+  "platform": {
+    "generic": "Generic",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "slack": "Slack",
+    "feishu": "Feishu",
+    "dingtalk": "DingTalk",
+    "wecom": "WeCom",
+    "weixin": "Weixin",
+    "qq": "QQ",
+    "qqbot": "QQ Bot",
+    "line": "LINE"
+  },
+  "platformGuide": {
+    "title": "Platform Creation Guide",
+    "selectPlatform": "Select Platform",
+    "steps": "Steps",
+    "creationSteps": "Creation Steps",
+    "requiredCredentials": "Required Credentials",
+    "displayName": "Display Name",
+    "username": "Username",
+    "botId": "Bot ID",
+    "difficulty": "Difficulty",
+    "estimatedTime": "Estimated Time",
+    "officialDocs": "Official Docs",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "systemGenerated": "System Generated",
+    "needsUsername": "Username Required",
+    "validationErrors": "Validation Errors"
+  },
+  "tabs": {
+    "generator": "Generator",
+    "ranking": "Ranking"
+  },
+  "ranking": {
+    "title": "Ranking",
+    "description": "Most popular bot names",
+    "empty": "No data yet",
+    "emptyHint": "Statistics will appear after copying names",
+    "rank": "Rank",
+    "name": "Name",
+    "style": "Style",
+    "copyCount": "Copy Count"
+  },
+  "avatar": {
+    "title": "Avatar",
+    "generate": "Generate Avatar",
+    "regenerate": "Change Avatar",
+    "download": "Download Avatar",
+    "downloading": "Downloading..."
+  },
+  "history": {
+    "title": "History",
+    "recent": "Recent",
+    "favorites": "Favorites",
+    "addToFavorites": "Add to Favorites",
+    "removeFromFavorites": "Remove from Favorites",
+    "clear": "Clear History",
+    "clearConfirm": "Are you sure you want to clear all history?",
+    "empty": "No Records"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark",
+    "toggle": "Toggle Theme"
+  },
+  "footer": {
+    "madeWith": "Made with ❤️",
+    "by": "By Bot Name Generator Team",
+    "github": "GitHub",
+    "contribute": "Contribute"
+  }
+}

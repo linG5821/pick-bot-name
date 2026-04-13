@@ -1,0 +1,68 @@
+{
+  "id": "professional-en-corporate",
+  "version": "1.0.0",
+  "name": {
+    "en": "Professional English Corporate",
+    "zh": "专业英文企业版",
+    "ja": "プロフェッショナル英語コーポレート"
+  },
+  "description": {
+    "en": "Professional and corporate-style bot names for business use",
+    "zh": "适合商务使用的专业企业风格机器人名称",
+    "ja": "ビジネス用のプロフェッショナルなコーポレートスタイルのボット名"
+  },
+  "style": "professional",
+  "languages": ["en"],
+  "algorithm": "combination",
+  "platformOptimized": ["slack", "feishu", "wecom", "dingtalk"],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "bot-name-generator"
+  },
+  "license": "MIT",
+  "tags": ["professional", "business", "corporate", "enterprise"],
+  "data": {
+    "prefixes": [
+      { "value": "Business", "weight": 9 },
+      { "value": "Corporate", "weight": 8 },
+      { "value": "Enterprise", "weight": 8 },
+      { "value": "Office", "weight": 7 },
+      { "value": "Work", "weight": 8 },
+      { "value": "Pro", "weight": 9 },
+      { "value": "Smart", "weight": 8 },
+      { "value": "Team", "weight": 7 },
+      { "value": "Collab", "weight": 6 },
+      { "value": "Workflow", "weight": 7 }
+    ],
+    "roots": [
+      { "value": "Assistant", "weight": 10 },
+      { "value": "Helper", "weight": 8 },
+      { "value": "Agent", "weight": 9 },
+      { "value": "Manager", "weight": 7 },
+      { "value": "Coordinator", "weight": 6 },
+      { "value": "Advisor", "weight": 7 },
+      { "value": "Support", "weight": 8 },
+      { "value": "Guide", "weight": 7 },
+      { "value": "Partner", "weight": 6 },
+      { "value": "Bot", "weight": 9 }
+    ],
+    "suffixes": [
+      { "value": "Pro", "weight": 9 },
+      { "value": "Plus", "weight": 7 },
+      { "value": "360", "weight": 6 },
+      { "value": "AI", "weight": 8 },
+      { "value": "X", "weight": 6 },
+      { "value": "Hub", "weight": 7 },
+      { "value": "Suite", "weight": 5 },
+      { "value": "One", "weight": 7 },
+      { "value": "", "weight": 10 }
+    ]
+  },
+  "examples": [
+    "BusinessAssistantPro",
+    "WorkflowAgentAI",
+    "TeamHelper",
+    "ProSupportBot",
+    "EnterpriseGuide360"
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "app": {
+    "title": "Bot名称生成器",
+    "subtitle": "起名是个大问题？不用纠结，快来pick一个专属Bot名称吧！",
+    "description": "支持多平台、多风格、多语言的智能名称生成"
+  },
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "copy": "复制",
+    "copied": "已复制",
+    "download": "下载",
+    "close": "关闭",
+    "cancel": "取消",
+    "confirm": "确认",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "required": "必需",
+    "sensitive": "敏感",
+    "example": "示例"
+  },
+  "generator": {
+    "title": "生成器",
+    "selectStyle": "选择风格",
+    "selectLanguage": "选择语言",
+    "generate": "生成名称",
+    "regenerate": "重新生成",
+    "generating": "生成中...",
+    "noResult": "暂无结果",
+    "generatedSuccess": "生成成功！",
+    "generatedError": "生成失败，请重试"
+  },
+  "style": {
+    "punk": "朋克",
+    "cute": "可爱",
+    "professional": "专业",
+    "geek": "极客",
+    "minimal": "极简",
+    "anime": "卡通",
+    "acgn": "二次元",
+    "PUNK": "朋克",
+    "CUTE": "可爱",
+    "PROFESSIONAL": "专业",
+    "GEEK": "极客",
+    "MINIMAL": "极简",
+    "ANIME": "卡通",
+    "ACGN": "二次元"
+  },
+  "language": {
+    "zh": "中文",
+    "en": "English"
+  },
+  "platform": {
+    "generic": "通用",
+    "telegram": "Telegram",
+    "discord": "Discord",
+    "slack": "Slack",
+    "feishu": "飞书",
+    "dingtalk": "钉钉",
+    "wecom": "企业微信",
+    "weixin": "微信",
+    "qq": "QQ",
+    "qqbot": "QQ频道",
+    "line": "LINE"
+  },
+  "platformGuide": {
+    "title": "平台创建指南",
+    "selectPlatform": "选择平台",
+    "steps": "创建步骤",
+    "creationSteps": "创建步骤",
+    "requiredCredentials": "所需凭证",
+    "displayName": "显示名称",
+    "username": "用户名",
+    "botId": "Bot ID",
+    "difficulty": "难度",
+    "estimatedTime": "预计时间",
+    "officialDocs": "官方文档",
+    "easy": "简单",
+    "medium": "中等",
+    "hard": "困难",
+    "systemGenerated": "系统生成",
+    "needsUsername": "需要用户名",
+    "validationErrors": "验证错误"
+  },
+  "tabs": {
+    "generator": "生成器",
+    "ranking": "排行榜"
+  },
+  "ranking": {
+    "title": "排行榜",
+    "description": "最受欢迎的Bot名称",
+    "empty": "暂无数据",
+    "emptyHint": "复制名称后会显示统计数据",
+    "rank": "排名",
+    "name": "名称",
+    "style": "风格",
+    "copyCount": "复制次数"
+  },
+  "avatar": {
+    "title": "头像",
+    "generate": "生成头像",
+    "regenerate": "换个头像",
+    "download": "下载头像",
+    "downloading": "下载中..."
+  },
+  "history": {
+    "title": "历史记录",
+    "recent": "最近生成",
+    "favorites": "收藏",
+    "addToFavorites": "添加到收藏",
+    "removeFromFavorites": "取消收藏",
+    "clear": "清空历史",
+    "clearConfirm": "确定要清空所有历史记录吗？",
+    "empty": "暂无记录"
+  },
+  "theme": {
+    "light": "明亮",
+    "dark": "暗黑",
+    "toggle": "切换主题"
+  },
+  "footer": {
+    "madeWith": "用 ❤️ 制作",
+    "by": "By Bot Name Generator Team",
+    "github": "GitHub",
+    "contribute": "贡献"
+  }
+}

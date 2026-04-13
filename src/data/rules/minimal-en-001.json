@@ -1,0 +1,97 @@
+{
+  "id": "minimal-en-001",
+  "name": "Minimal English Combination",
+  "description": "Minimal style English names",
+  "style": "minimal",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Pure",
+        "weight": 1
+      },
+      {
+        "value": "Simple",
+        "weight": 1
+      },
+      {
+        "value": "Clean",
+        "weight": 1
+      },
+      {
+        "value": "Clear",
+        "weight": 1
+      },
+      {
+        "value": "Neat",
+        "weight": 1
+      },
+      {
+        "value": "Plain",
+        "weight": 1
+      },
+      {
+        "value": "Basic",
+        "weight": 1
+      },
+      {
+        "value": "Zen",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "Helper",
+        "weight": 1
+      },
+      {
+        "value": "Tool",
+        "weight": 1
+      },
+      {
+        "value": "Agent",
+        "weight": 1
+      },
+      {
+        "value": "Core",
+        "weight": 1
+      },
+      {
+        "value": "One",
+        "weight": 1
+      },
+      {
+        "value": "Zero",
+        "weight": 1
+      },
+      {
+        "value": "Unit",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "SimpleBot",
+    "CleanAI",
+    "PureHelper",
+    "LightTool"
+  ],
+  "languages": [
+    "en"
+  ]
+}

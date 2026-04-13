@@ -1,0 +1,161 @@
+{
+  "id": "punk-en-001",
+  "name": "Punk English Combination",
+  "description": "Combining cyberpunk and steampunk English vocabulary",
+  "style": "punk",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Cyber",
+        "weight": 1
+      },
+      {
+        "value": "Quantum",
+        "weight": 1
+      },
+      {
+        "value": "Digital",
+        "weight": 1
+      },
+      {
+        "value": "Virtual",
+        "weight": 1
+      },
+      {
+        "value": "Neon",
+        "weight": 1
+      },
+      {
+        "value": "Matrix",
+        "weight": 1
+      },
+      {
+        "value": "Neural",
+        "weight": 1
+      },
+      {
+        "value": "Data",
+        "weight": 1
+      },
+      {
+        "value": "Steam",
+        "weight": 1
+      },
+      {
+        "value": "Gear",
+        "weight": 1
+      },
+      {
+        "value": "Brass",
+        "weight": 1
+      },
+      {
+        "value": "Copper",
+        "weight": 1
+      },
+      {
+        "value": "Iron",
+        "weight": 1
+      },
+      {
+        "value": "Clock",
+        "weight": 1
+      },
+      {
+        "value": "Mech",
+        "weight": 1
+      },
+      {
+        "value": "Forge",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Guard",
+        "weight": 1
+      },
+      {
+        "value": "Runner",
+        "weight": 1
+      },
+      {
+        "value": "Scout",
+        "weight": 1
+      },
+      {
+        "value": "Agent",
+        "weight": 1
+      },
+      {
+        "value": "Helper",
+        "weight": 1
+      },
+      {
+        "value": "Sage",
+        "weight": 1
+      },
+      {
+        "value": "Guide",
+        "weight": 1
+      },
+      {
+        "value": "Sentinel",
+        "weight": 1
+      },
+      {
+        "value": "Smith",
+        "weight": 1
+      },
+      {
+        "value": "Wright",
+        "weight": 1
+      },
+      {
+        "value": "Engineer",
+        "weight": 1
+      },
+      {
+        "value": "Inventor",
+        "weight": 1
+      },
+      {
+        "value": "Butler",
+        "weight": 1
+      },
+      {
+        "value": "Mechanic",
+        "weight": 1
+      },
+      {
+        "value": "Craftsman",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "CyberGuard",
+    "SteamHelper",
+    "GearMaster",
+    "QuantumAI"
+  ],
+  "languages": [
+    "en"
+  ]
+}

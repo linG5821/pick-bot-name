@@ -1,0 +1,101 @@
+{
+  "id": "anime-en-001",
+  "name": "Anime English Combination",
+  "description": "Anime style English names",
+  "style": "anime",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Kawaii",
+        "weight": 1
+      },
+      {
+        "value": "Moe",
+        "weight": 1
+      },
+      {
+        "value": "Chibi",
+        "weight": 1
+      },
+      {
+        "value": "Neko",
+        "weight": 1
+      },
+      {
+        "value": "Senpai",
+        "weight": 1
+      },
+      {
+        "value": "Super",
+        "weight": 1
+      },
+      {
+        "value": "Mega",
+        "weight": 1
+      },
+      {
+        "value": "Star",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Chan",
+        "weight": 1
+      },
+      {
+        "value": "Kun",
+        "weight": 1
+      },
+      {
+        "value": "San",
+        "weight": 1
+      },
+      {
+        "value": "Helper",
+        "weight": 1
+      },
+      {
+        "value": "Friend",
+        "weight": 1
+      },
+      {
+        "value": "Hero",
+        "weight": 1
+      },
+      {
+        "value": "Angel",
+        "weight": 1
+      },
+      {
+        "value": "Star",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "KawaiiBot",
+    "NekoHelper",
+    "HeroAI",
+    "ChanAssist"
+  ],
+  "languages": [
+    "en"
+  ]
+}

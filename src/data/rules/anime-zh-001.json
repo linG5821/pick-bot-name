@@ -1,0 +1,85 @@
+{
+  "id": "anime-zh-001",
+  "name": "动漫中文组合",
+  "description": "动漫风格中文词汇",
+  "style": "anime",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "萌",
+        "weight": 3
+      },
+      {
+        "value": "热血",
+        "weight": 2
+      },
+      {
+        "value": "青春",
+        "weight": 2
+      },
+      {
+        "value": "元气",
+        "weight": 3
+      },
+      {
+        "value": "治愈",
+        "weight": 2
+      },
+      {
+        "value": "次元",
+        "weight": 2
+      }
+    ],
+    "roots": [
+      {
+        "value": "酱",
+        "weight": 3
+      },
+      {
+        "value": "君",
+        "weight": 3
+      },
+      {
+        "value": "桑",
+        "weight": 2
+      },
+      {
+        "value": "宝",
+        "weight": 2
+      },
+      {
+        "value": "喵",
+        "weight": 2
+      },
+      {
+        "value": "炭",
+        "weight": 2
+      },
+      {
+        "value": "助手",
+        "weight": 2
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "萌酱",
+    "热血君",
+    "元气助手",
+    "治愈宝"
+  ],
+  "languages": [
+    "zh"
+  ]
+}

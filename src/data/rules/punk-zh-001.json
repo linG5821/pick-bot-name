@@ -1,0 +1,113 @@
+{
+  "id": "punk-zh-001",
+  "name": "朋克中文组合",
+  "description": "结合赛博朋克和蒸汽朋克风格的中文词汇",
+  "style": "punk",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "赛博",
+        "weight": 2
+      },
+      {
+        "value": "量子",
+        "weight": 2
+      },
+      {
+        "value": "数码",
+        "weight": 2
+      },
+      {
+        "value": "蒸汽",
+        "weight": 2
+      },
+      {
+        "value": "机械",
+        "weight": 2
+      },
+      {
+        "value": "钢铁",
+        "weight": 1
+      },
+      {
+        "value": "齿轮",
+        "weight": 1
+      },
+      {
+        "value": "发条",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "守卫",
+        "weight": 2
+      },
+      {
+        "value": "战士",
+        "weight": 2
+      },
+      {
+        "value": "助手",
+        "weight": 3
+      },
+      {
+        "value": "管家",
+        "weight": 2
+      },
+      {
+        "value": "向导",
+        "weight": 2
+      },
+      {
+        "value": "先锋",
+        "weight": 2
+      },
+      {
+        "value": "哨兵",
+        "weight": 2
+      },
+      {
+        "value": "工匠",
+        "weight": 2
+      },
+      {
+        "value": "机师",
+        "weight": 2
+      },
+      {
+        "value": "技师",
+        "weight": 2
+      },
+      {
+        "value": "侦探",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "赛博守卫",
+    "蒸汽管家",
+    "齿轮工匠",
+    "量子助手"
+  ],
+  "languages": [
+    "zh"
+  ]
+}

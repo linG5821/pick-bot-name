@@ -1,0 +1,182 @@
+/**
+ * 头像展示组件
+ */
+
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import { AvatarInfo } from '@/types';
+import { AvatarGenerator } from '@/core/avatar';
+import { getAnimeAvatarUrl } from '@/core/avatar/anime-api-loader';
+import { Button, Card } from '@/components/common';
+
+export interface AvatarDisplayProps {
+  avatar: AvatarInfo;
+  onRegenerate?: () => void;
+  showControls?: boolean;
+}
+
+export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
+  avatar,
+  onRegenerate,
+  showControls = true,
+}) => {
+  const { t } = useTranslation();
+  const [isDownloading, setIsDownloading] = useState(false);
+  const [animeImageUrl, setAnimeImageUrl] = useState<string | null>(null);
+  const [isLoadingAnime, setIsLoadingAnime] = useState(false);
+
+  // 检测并加载anime头像（来自API）
+  useEffect(() => {
+    const isAnimeAvatar = avatar.svg.includes('data-static-anime="true"');
+
+    if (isAnimeAvatar) {
+      setIsLoadingAnime(true);
+      getAnimeAvatarUrl(avatar.seed)
+        .then(url => {
+          setAnimeImageUrl(url);
+          setIsLoadingAnime(false);
+        })
+        .catch(error => {
+          console.error('Failed to load anime avatar:', error);
+          setAnimeImageUrl(null);
+          setIsLoadingAnime(false);
+        });
+    } else {
+      setAnimeImageUrl(null);
+    }
+  }, [avatar.svg, avatar.seed]);
+
+  const handleDownloadPng = async () => {
+    try {
+      setIsDownloading(true);
+
+      // 如果是anime头像
+      if (animeImageUrl) {
+        // 使用fetch下载（因为使用了代理，没有CORS问题）
+        const response = await fetch(animeImageUrl);
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'anime-avatar.png';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      } else {
+        // SVG头像正常下载
+        await AvatarGenerator.downloadAsPng(avatar.svg, 'bot-avatar.png');
+      }
+    } catch (error) {
+      console.error('Failed to download PNG:', error);
+      alert('下载失败，请右键图片选择"图片另存为"');
+    } finally {
+      setIsDownloading(false);
+    }
+  };
+
+  const handleDownloadSvg = () => {
+    // anime头像是PNG，不支持SVG下载
+    if (animeImageUrl) {
+      alert('Anime头像不支持SVG格式下载，请使用PNG下载');
+      return;
+    }
+    AvatarGenerator.downloadAsSvg(avatar.svg, 'bot-avatar.svg');
+  };
+
+  const dataUri = AvatarGenerator.svgToDataUri(avatar.svg);
+
+  // 渲染头像
+  const renderAvatar = () => {
+    // 加载中状态
+    if (isLoadingAnime) {
+      return (
+        <div className="flex items-center justify-center w-full h-full bg-gradient-to-br from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20">
+          <div className="text-center">
+            <div className="text-5xl mb-3 animate-bounce">🌸</div>
+            <div className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              加载真正的二次元头像...
+            </div>
+            <div className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+              来自 waifu.pics API
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // 如果是anime头像，显示真实的anime图片
+    if (animeImageUrl) {
+      return (
+        <img
+          src={animeImageUrl}
+          alt="Anime Avatar"
+          className="w-full h-full object-cover"
+          crossOrigin="anonymous"
+          onError={(e) => {
+            console.error('Failed to load anime image');
+            // 加载失败时显示fallback
+            (e.target as HTMLImageElement).src = '/pick_bot_name/avatars/anime/fallback.svg';
+          }}
+        />
+      );
+    }
+
+    // 其他风格显示SVG
+    return (
+      <img
+        src={dataUri}
+        alt="Bot Avatar"
+        className="w-full h-full object-cover"
+      />
+    );
+  };
+
+  return (
+    <Card className="space-y-4">
+      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+        {t('avatar.title')}
+      </h3>
+
+      {/* 头像预览 */}
+      <div className="flex justify-center">
+        <div className="relative w-64 h-64 border-2 border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-700 shadow-lg">
+          {renderAvatar()}
+        </div>
+      </div>
+
+      {/* 控制按钮 */}
+      {showControls && (
+        <div className="flex flex-wrap gap-2 justify-center">
+          {onRegenerate && (
+            <Button
+              variant="secondary"
+              size="sm"
+              onClick={onRegenerate}
+              icon="🔄"
+            >
+              {t('avatar.regenerate')}
+            </Button>
+          )}
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={handleDownloadPng}
+            loading={isDownloading}
+            icon="📥"
+          >
+            PNG
+          </Button>
+          <Button
+            variant="secondary"
+            size="sm"
+            onClick={handleDownloadSvg}
+            icon="📥"
+          >
+            SVG
+          </Button>
+        </div>
+      )}
+    </Card>
+  );
+};

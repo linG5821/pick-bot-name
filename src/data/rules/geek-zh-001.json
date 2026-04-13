@@ -1,0 +1,89 @@
+{
+  "id": "geek-zh-001",
+  "name": "极客中文组合",
+  "description": "极客技术风格中文词汇",
+  "style": "geek",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "代码",
+        "weight": 3
+      },
+      {
+        "value": "终端",
+        "weight": 2
+      },
+      {
+        "value": "脚本",
+        "weight": 2
+      },
+      {
+        "value": "算法",
+        "weight": 2
+      },
+      {
+        "value": "开源",
+        "weight": 2
+      },
+      {
+        "value": "命令",
+        "weight": 2
+      }
+    ],
+    "roots": [
+      {
+        "value": "大师",
+        "weight": 2
+      },
+      {
+        "value": "忍者",
+        "weight": 2
+      },
+      {
+        "value": "大神",
+        "weight": 2
+      },
+      {
+        "value": "黑客",
+        "weight": 2
+      },
+      {
+        "value": "专家",
+        "weight": 2
+      },
+      {
+        "value": "助手",
+        "weight": 3
+      },
+      {
+        "value": "伙伴",
+        "weight": 2
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "代码大师",
+    "终端忍者",
+    "算法专家",
+    "脚本助手"
+  ],
+  "languages": [
+    "zh"
+  ]
+}

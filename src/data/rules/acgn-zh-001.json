@@ -1,0 +1,115 @@
+{
+  "id": "acgn-zh-001",
+  "name": "二次元中文组合",
+  "description": "二次元风格中文词汇（ACGN文化）",
+  "style": "acgn",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "傲娇",
+        "weight": 2
+      },
+      {
+        "value": "软萌",
+        "weight": 2
+      },
+      {
+        "value": "元气",
+        "weight": 3
+      },
+      {
+        "value": "高冷",
+        "weight": 2
+      },
+      {
+        "value": "呆萌",
+        "weight": 2
+      },
+      {
+        "value": "魔法",
+        "weight": 2
+      },
+      {
+        "value": "星辰",
+        "weight": 2
+      },
+      {
+        "value": "月光",
+        "weight": 2
+      },
+      {
+        "value": "梦幻",
+        "weight": 2
+      },
+      {
+        "value": "甜心",
+        "weight": 2
+      }
+    ],
+    "roots": [
+      {
+        "value": "少女",
+        "weight": 2
+      },
+      {
+        "value": "骑士",
+        "weight": 2
+      },
+      {
+        "value": "歌姬",
+        "weight": 2
+      },
+      {
+        "value": "猫娘",
+        "weight": 3
+      },
+      {
+        "value": "狐仙",
+        "weight": 2
+      },
+      {
+        "value": "精灵",
+        "weight": 2
+      },
+      {
+        "value": "天使",
+        "weight": 2
+      },
+      {
+        "value": "魔女",
+        "weight": 2
+      },
+      {
+        "value": "妖精",
+        "weight": 2
+      },
+      {
+        "value": "酱",
+        "weight": 2
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "傲娇猫娘",
+    "魔法少女",
+    "星辰歌姬",
+    "元气精灵"
+  ],
+  "languages": ["zh"]
+}

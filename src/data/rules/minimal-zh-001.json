@@ -1,0 +1,81 @@
+{
+  "id": "minimal-zh-001",
+  "name": "极简中文组合",
+  "description": "简洁的中文词汇组合",
+  "style": "minimal",
+  "language": "zh",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "简",
+        "weight": 2
+      },
+      {
+        "value": "轻",
+        "weight": 2
+      },
+      {
+        "value": "纯",
+        "weight": 2
+      },
+      {
+        "value": "净",
+        "weight": 1
+      },
+      {
+        "value": "素",
+        "weight": 1
+      },
+      {
+        "value": "一",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "助手",
+        "weight": 3
+      },
+      {
+        "value": "工具",
+        "weight": 2
+      },
+      {
+        "value": "帮手",
+        "weight": 2
+      },
+      {
+        "value": "伙伴",
+        "weight": 2
+      },
+      {
+        "value": "向导",
+        "weight": 2
+      },
+      {
+        "value": "点",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 5
+      },
+      {
+        "value": "bot",
+        "weight": 1
+      }
+    ]
+  },
+  "examples": [
+    "简助手",
+    "轻工具",
+    "纯伙伴",
+    "一点"
+  ],
+  "languages": [
+    "zh"
+  ]
+}

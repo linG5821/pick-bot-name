@@ -1,0 +1,76 @@
+name: Rule Validation
+
+on:
+  pull_request:
+    paths:
+      - 'rules/**/*.json'
+      - 'scripts/validate-rules.js'
+      - 'rules/_schema.json'
+  push:
+    branches:
+      - main
+    paths:
+      - 'rules/**/*.json'
+
+jobs:
+  validate:
+    name: Validate Generation Rules
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Validate rules
+        id: validate
+        run: |
+          echo "Starting rule validation..."
+          npm run validate-rules
+          echo "validation_status=success" >> $GITHUB_OUTPUT
+          
+      - name: Build rules bundle
+        run: npm run build-rules
+        
+      - name: Check for rule conflicts
+        run: |
+          # Check for duplicate rule IDs
+          cd rules
+          find . -name "*.json" -not -path "./_*" | while read file; do
+            id=$(jq -r '.id' "$file")
+            echo "$id|$file"
+          done | sort | uniq -d -f1 | while read line; do
+            echo "Error: Duplicate rule ID found: $line"
+            exit 1
+          done
+          
+      - name: Comment on PR
+        if: github.event_name == 'pull_request' && steps.validate.outputs.validation_status == 'success'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const rulesBundle = JSON.parse(fs.readFileSync('src/data/rules-bundle.json', 'utf8'));
+            const totalRules = rulesBundle.totalRules;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `✅ **Rule Validation Passed!**\n\n- Total rules: ${totalRules}\n- All rules follow the schema\n- No duplicate IDs found\n\nYour generation rules are ready to merge! 🎉`
+            });
+            
+      - name: Upload rules bundle as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: rules-bundle
+          path: src/data/rules-bundle.json
+          retention-days: 30

@@ -1,0 +1,101 @@
+{
+  "id": "cute-en-001",
+  "name": "Cute English Combination",
+  "description": "Cute style English names",
+  "style": "cute",
+  "language": "en",
+  "algorithm": "combination",
+  "data": {
+    "prefixes": [
+      {
+        "value": "Tiny",
+        "weight": 1
+      },
+      {
+        "value": "Little",
+        "weight": 1
+      },
+      {
+        "value": "Sweet",
+        "weight": 1
+      },
+      {
+        "value": "Fluffy",
+        "weight": 1
+      },
+      {
+        "value": "Cozy",
+        "weight": 1
+      },
+      {
+        "value": "Baby",
+        "weight": 1
+      },
+      {
+        "value": "Mini",
+        "weight": 1
+      },
+      {
+        "value": "Soft",
+        "weight": 1
+      }
+    ],
+    "roots": [
+      {
+        "value": "Helper",
+        "weight": 1
+      },
+      {
+        "value": "Buddy",
+        "weight": 1
+      },
+      {
+        "value": "Panda",
+        "weight": 1
+      },
+      {
+        "value": "Bunny",
+        "weight": 1
+      },
+      {
+        "value": "Kitty",
+        "weight": 1
+      },
+      {
+        "value": "Bear",
+        "weight": 1
+      },
+      {
+        "value": "Friend",
+        "weight": 1
+      },
+      {
+        "value": "Pal",
+        "weight": 1
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "Bot",
+        "weight": 1
+      },
+      {
+        "value": "AI",
+        "weight": 1
+      },
+      {
+        "value": "",
+        "weight": 5
+      }
+    ]
+  },
+  "examples": [
+    "FluffyBot",
+    "SweetPal",
+    "CuddlyAI",
+    "HappyHelper"
+  ],
+  "languages": [
+    "en"
+  ]
+}
