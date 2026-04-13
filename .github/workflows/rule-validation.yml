@@ -44,13 +44,17 @@ jobs:
         run: |
           # Check for duplicate rule IDs
           cd rules
-          find . -name "*.json" -not -path "./_*" | while read file; do
-            id=$(jq -r '.id' "$file")
-            echo "$id|$file"
-          done | sort | uniq -d -f1 | while read line; do
-            echo "Error: Duplicate rule ID found: $line"
+          duplicates=$(find . -name "*.json" -not -path "./_*" | while read file; do
+            jq -r '.id' "$file"
+          done | sort | uniq -d)
+
+          if [ ! -z "$duplicates" ]; then
+            echo "Error: Duplicate rule IDs found:"
+            echo "$duplicates"
             exit 1
-          done
+          fi
+
+          echo "✅ No duplicate rule IDs found"
           
       - name: Comment on PR
         if: github.event_name == 'pull_request' && steps.validate.outputs.validation_status == 'success'
