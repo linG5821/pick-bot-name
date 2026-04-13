@@ -6,6 +6,7 @@ Welcome to the Bot Name Generator documentation! This guide will help you unders
 
 ### 🚀 Getting Started
 
+- **[Quick Reference](QUICK_REFERENCE.md)** - 核心信息快速参考 ⚡
 - **[User Guide](../README.md)** - Quick start and basic usage
 - **[Development Guide](guides/DEVELOPMENT.md)** - Setup your development environment
 - **[Contributing Guide](guides/CONTRIBUTING.md)** - How to contribute to the project
@@ -63,8 +64,7 @@ docs/
 ├── README.md              # This file - documentation index
 ├── architecture/          # System design and architecture
 │   ├── ARCHITECTURE.md   # Complete system architecture
-│   ├── FINAL_PRD.md      # Product requirements document
-│   └── PROJECT_PLAN.md   # Project roadmap and planning
+│   └── FINAL_PRD.md      # Product requirements document
 ├── features/             # Feature-specific documentation
 │   ├── AVATAR_FEATURE.md
 │   ├── AVATAR_STYLES.md
@@ -137,6 +137,7 @@ Have questions or suggestions about the documentation?
 ---
 
 **Last Updated:** 2026-04-13  
-**Total Public Documents:** 12 files across 3 categories
+**Total Documents:** 12 files (reduced from 37, removed outdated fixes/reports)  
+**Structure:** 3 categories (guides, architecture, features)
 
 [⬆ Back to Top](#-documentation)

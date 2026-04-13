@@ -19,6 +19,42 @@ Generation rules define how bot names are created. Each rule specifies:
 - **Algorithm**: The generation method
 - **Data**: Algorithm-specific configuration
 
+## 📏 Name Length Requirements
+
+**CRITICAL**: Generated names must follow these length constraints:
+
+### Chinese Names (zh)
+- **Length**: 2-4 characters （两到四个字）
+- **Ideal**: 2-3 characters
+- **Recommended**: Use reduplication (叠词) for cute/anime styles
+  - Examples: 喵喵, 团团, 软软, 小兔, 甜甜
+
+### English Names (en)
+- **Ideal length**: 4-12 characters
+- **Easy to pronounce and remember**
+- Examples: Fluffy, Sweetie, BotPal
+
+### Japanese Names (ja)
+- **Ideal length**: 2-4 characters
+- Examples: にゃんにゃん, ぴよぴよ
+
+### ❌ Bad Examples (Too Long)
+```
+"可爱的小猫助手"  (7 chars - TOO LONG)
+"聪明的兔子管家"  (7 chars - TOO LONG)
+"萌萌的熊猫宝宝"  (7 chars - TOO LONG)
+```
+
+### ✅ Good Examples
+```
+"喵喵"    (2 chars, reduplication)
+"小兔"    (2 chars)
+"团团"    (2 chars, reduplication)
+"软软"    (2 chars, reduplication)
+"小狐"    (2 chars)
+"甜心"    (2 chars)
+```
+
 ## 📐 Rule Schema
 
 ### Required Fields
@@ -348,7 +384,7 @@ Generation rules define how bot names are created. Each rule specifies:
 }
 ```
 
-### Example 2: Cute Animals (Chinese)
+### Example 2: Cute Animals (Chinese) - Correct Length
 
 ```json
 {
@@ -367,31 +403,37 @@ Generation rules define how bot names are created. Each rule specifies:
   },
   "data": {
     "templates": [
-      {"value": "{adjective}{animal}", "weight": 10},
-      {"value": "{adjective}的{animal}{role}", "weight": 8}
+      {"value": "{animal}{reduplication}", "weight": 10},
+      {"value": "小{animal}", "weight": 9},
+      {"value": "{adjective}{animal}", "weight": 8}
     ],
     "vocabulary": {
       "adjective": [
-        {"value": "可爱", "weight": 10},
-        {"value": "萌萌", "weight": 9}
+        {"value": "萌", "weight": 10},
+        {"value": "软", "weight": 9}
       ],
       "animal": [
-        {"value": "猫咪", "weight": 10},
-        {"value": "兔子", "weight": 9}
+        {"value": "喵", "weight": 10},
+        {"value": "兔", "weight": 9},
+        {"value": "团", "weight": 8}
       ],
-      "role": [
-        {"value": "助手", "weight": 10},
-        {"value": "管家", "weight": 8}
+      "reduplication": [
+        {"value": "喵", "weight": 10},
+        {"value": "兔", "weight": 9}
       ]
     }
   },
   "examples": [
-    "可爱猫咪",
-    "萌萌的兔子助手",
-    "可爱的猫咪管家"
+    "喵喵",
+    "小兔",
+    "团团",
+    "萌喵",
+    "软兔"
   ]
 }
 ```
+
+**Note**: This example follows the 2-3 character requirement with reduplication patterns.
 
 ## 🧪 Testing
 

@@ -86,19 +86,49 @@ Generated Name
 - `NameGenerator` (`src/core/generator/NameGenerator.ts`): Algorithm dispatcher
 - Algorithm implementations (`src/core/generator/algorithms/`): Stateless generators
 
-### Static API Endpoint
+### Development API Endpoint ⚠️
 
-A client-side JSON API at `public/api/generate/index.html`:
+**Development-only** Vite plugin API (NOT a static HTML file):
 
 ```
-GET /pick-bot-name/api/generate?style=punk&language=zh&count=5
+GET /api/pick-bot-name?style=punk&language=zh
 ```
 
-- Loads `public/data/rules-bundle.json` via relative path
-- Executes generation logic in browser
-- Returns JSON with generated names
+**Implementation**:
+- Vite plugin middleware in dev server
+- Returns complete `GeneratedBotInfo` structure (not minimal response)
+- Includes all platforms, avatar, and metadata
+- See `docs/guides/API_REFERENCE.md` for full specification
 
-This works on GitHub Pages without server-side processing.
+**Response Format**:
+```json
+{
+  "success": true,
+  "data": {
+    "id": "uuid",
+    "displayNames": { "primary": "赛博守卫", "translations": {...} },
+    "platforms": { "telegram": {...}, "discord": {...}, ... },
+    "avatar": { "svg": "...", "style": "bottts", "seed": "..." }
+  }
+}
+```
+
+**NOT available in production** (GitHub Pages is static)
+
+### Avatar Generation
+
+**DiceBear Avatars** (most styles):
+- Punk, Cute, Professional, Geek, Minimal, Anime styles
+- Generated using DiceBear library
+- Styles: bottts, funEmoji, identicon, botttsNeutral, lorelei
+
+**ACGN Style (二次元) ⚠️**:
+- Uses **waifu.pics API** for real anime illustrations
+- Implementation: `src/core/avatar/anime-api-loader.ts`
+- Proxy paths: `/api/waifu/*` and `/proxy/waifu-img/*`
+- Features: caching, preloading, fallback mechanism
+- DO NOT break this integration - it's a key differentiator
+- See `docs/features/ANIME_AVATAR_IMPLEMENTATION.md`
 
 ### Platform ID Generation
 
@@ -112,11 +142,31 @@ Platform configs in `src/data/platforms/`.
 
 ## Important Constraints
 
+### Name Generation Requirements ⚠️ CRITICAL
+
+**Chinese Names (zh)**:
+- **Length**: 2-4 characters (两到四个字)
+- **Ideal**: 2-3 characters
+- **Reduplication**: Use for cute/anime styles (喵喵, 团团, 软软)
+- **Avoid**: 
+  - Long phrases with "的" (可爱的小猫)
+  - Role suffixes creating 5+ char names
+  - Names longer than 4 characters
+
+**Examples**:
+- ✅ Good: 喵喵, 团团, 小兔 (2 chars), 算法君 (3 chars), 二次元娘 (4 chars)
+- ❌ Bad: 可爱的小猫助手 (7 chars - TOO LONG)
+
+**English Names (en)**:
+- Length: 4-12 characters
+- Easy to pronounce and remember
+
 ### Rules System
 - Rule ID must match pattern: `{style}-{language}-{variant}` (lowercase, hyphens only)
 - Template algorithm requires `vocabulary` object with weighted items
 - Combination algorithm requires `prefixes`, `roots`, `suffixes` arrays with weights
 - Minimum 5 items recommended for each array (enforced as warning)
+- **All Chinese rules must generate 2-3 character names** (see Name Generation Requirements above)
 
 ### Build System
 - `rules-bundle.json` is built at compile time and must be in both:
@@ -152,11 +202,15 @@ Three workflows validate rules on push/PR:
    }
    ```
 
-2. Validate: `npm run validate-rules`
-3. Build bundle: `npm run build-rules`
-4. Copy to public: `cp src/data/rules-bundle.json public/data/`
-5. Test in dev: `npm run dev`
-6. Commit all three files: rule file + both bundle copies
+2. **For Chinese rules**: Verify examples are 2-3 characters
+   - Bad: "可爱的小猫助手" (7 chars)
+   - Good: "喵喵", "小兔", "团团" (2 chars)
+
+3. Validate: `npm run validate-rules`
+4. Build bundle: `npm run build-rules`
+5. Copy to public: `cp src/data/rules-bundle.json public/data/`
+6. Test in dev: `npm run dev`
+7. Commit all three files: rule file + both bundle copies
 
 ### Debugging Generation Issues
 
@@ -190,3 +244,23 @@ Zustand stores in `src/store/`:
 - `settingsStore.ts`: App settings (theme, locale)
 
 All stores are lightweight and use immer for immutability.
+
+## Critical Design Requirements
+
+Before making changes, review these key constraints:
+
+1. **Name Length** (`memory/feedback_name_length.md`)
+   - Chinese: 2-3 characters, use reduplication
+   - Avoid long phrases like "可爱的小猫助手"
+
+2. **API Design** (`memory/feedback_api_design.md`)
+   - Endpoint: `/api/pick-bot-name` (Vite plugin)
+   - Returns full `GeneratedBotInfo`, not minimal response
+   - See `docs/guides/API_REFERENCE.md`
+
+3. **Anime Avatars** (`memory/project_anime_avatar.md`)
+   - ACGN uses waifu.pics API (real anime illustrations)
+   - Implementation: `src/core/avatar/anime-api-loader.ts`
+   - Don't break this integration
+
+For detailed context, see memory files in `.claude/projects/.../memory/`
