@@ -2,13 +2,13 @@
 
 <div align="center">
 
-[![Deploy Status](https://github.com/yourusername/bot-name-generator/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/yourusername/bot-name-generator/actions)
+[![Deploy Status](https://github.com/ling5821/pick-bot-name/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)](https://github.com/ling5821/pick-bot-name/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](docs/guides/CONTRIBUTING.md)
 
 **Multi-platform, multi-style, multi-language bot name generator with avatar generation**
 
-[🌐 Live Demo](https://yourusername.github.io/bot-name-generator) | [📚 Documentation](docs/) | [🤝 Contributing](docs/guides/CONTRIBUTING.md) | [🐛 Report Bug](https://github.com/yourusername/bot-name-generator/issues)
+[🌐 Live Demo](https://ling5821.github.io/pick-bot-name) | [📚 Documentation](docs/) | [🤝 Contributing](docs/guides/CONTRIBUTING.md) | [🐛 Report Bug](https://github.com/ling5821/pick-bot-name/issues)
 
 </div>
 
@@ -18,18 +18,17 @@
 
 ### 🎯 Core Capabilities
 
-- **🌍 10+ Platform Support**
+- **🌍 11 Platform Support**
   - Telegram, Discord, Slack, Feishu, DingTalk
-  - WeChat Work, Weixin, QQ, QQ Bot, LINE
+  - WeChat Work, Weixin, QQ, QQ Bot, LINE, Generic
 
-- **🎨 10 Style Categories**
-  - Cyberpunk, Cute, Professional, Geek, Fantasy
-  - Minimal, Steampunk, Anime, Military, Nature
+- **🎨 7 Style Categories**
+  - Punk (Cyberpunk/Steampunk), Cute, Professional
+  - Geek, Minimal, Anime, ACGN (二次元)
 
 - **🌐 Multi-language Support**
   - Chinese (中文)
   - English
-  - Japanese (日本語)
 
 - **🧠 4 Generation Algorithms**
   - **Combination**: Mix prefixes, roots, and suffixes
@@ -70,8 +69,8 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/bot-name-generator.git
-cd bot-name-generator
+git clone https://github.com/ling5821/pick-bot-name.git
+cd pick-bot-name
 
 # Install dependencies
 npm install
@@ -146,11 +145,13 @@ npm run preview
 
 ## 📊 Project Statistics
 
-- **Files**: 62 TypeScript/TSX files
-- **Lines of Code**: ~5,000 lines
+- **Files**: 62+ TypeScript/TSX files
+- **Lines of Code**: ~5,000+ lines
 - **Components**: 15+ React components
-- **Platform Configs**: 10 platforms
-- **Generation Rules**: 30+ built-in rules
+- **Platform Configs**: 11 platforms
+- **Bot Styles**: 7 categories
+- **Generation Rules**: 14 built-in rules (7 styles × 2 languages)
+- **Supported Languages**: 2 (Chinese, English)
 - **Build Size**: ~1.1 MB (gzipped: ~250 KB main bundle)
 
 ---
@@ -158,7 +159,7 @@ npm run preview
 ## 🗂️ Project Structure
 
 ```
-bot-name-generator/
+pick-bot-name/
 ├── .github/              # GitHub templates and workflows
 │   ├── workflows/       # CI/CD workflows
 │   └── ISSUE_TEMPLATE/  # Issue templates
@@ -228,14 +229,14 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - [DiceBear](https://dicebear.com/) - Avatar generation library
 - [pinyin-pro](https://github.com/zh-lx/pinyin-pro) - Chinese pinyin conversion
 - [Tailwind CSS](https://tailwindcss.com/) - CSS framework
-- All our [contributors](https://github.com/yourusername/bot-name-generator/graphs/contributors)
+- All our [contributors](https://github.com/ling5821/pick-bot-name/graphs/contributors)
 
 ---
 
 ## 📞 Contact & Support
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/bot-name-generator/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/bot-name-generator/discussions)
+- **Issues**: [GitHub Issues](https://github.com/ling5821/pick-bot-name/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/ling5821/pick-bot-name/discussions)
 - **Email**: your-email@example.com
 
 ---
@@ -244,7 +245,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 If you find this project helpful, please consider giving it a star ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=yourusername/bot-name-generator&type=Date)](https://star-history.com/#yourusername/bot-name-generator&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=ling5821/pick-bot-name&type=Date)](https://star-history.com/#ling5821/pick-bot-name&Date)
 
 ---
 
@@ -252,6 +253,6 @@ If you find this project helpful, please consider giving it a star ⭐
 
 **Made with ❤️ by the Bot Name Generator Team**
 
-[⬆ Back to Top](#-bot-name-generator)
+[⬆ Back to Top](#-pick-bot-name)
 
 </div>
