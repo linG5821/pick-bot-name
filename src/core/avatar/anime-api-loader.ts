@@ -27,25 +27,18 @@ const ANIME_APIS = isDev ? [
     getUrl: (data: any) => data.images?.[0]?.url,
   },
 ] : [
-  // 生产环境直接调用API，使用CORS代理包装图片URL
+  // 生产环境直接调用API，直接使用图片URL（不需要CORS因为移除了crossOrigin）
   {
     name: 'waifu.pics',
     endpoint: 'https://api.waifu.pics/sfw/waifu',
     type: 'json',
-    getUrl: (data: any) => {
-      const imageUrl = data.url;
-      // 使用CORS代理包装图片URL（API本身支持CORS，但图片CDN不支持）
-      return `https://corsproxy.io/?${encodeURIComponent(imageUrl)}`;
-    },
+    getUrl: (data: any) => data.url, // 直接使用返回的URL
   },
   {
     name: 'waifu.im',
     endpoint: 'https://api.waifu.im/search/?included_tags=waifu&height=>=256',
     type: 'json',
-    getUrl: (data: any) => {
-      const imageUrl = data.images?.[0]?.url;
-      return imageUrl ? `https://corsproxy.io/?${encodeURIComponent(imageUrl)}` : null;
-    },
+    getUrl: (data: any) => data.images?.[0]?.url,
   },
 ];
 

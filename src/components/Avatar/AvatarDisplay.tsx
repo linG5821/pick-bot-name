@@ -50,19 +50,15 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
     try {
       setIsDownloading(true);
 
-      // 如果是anime头像
+      // 如果是anime头像（由于CORS限制，使用直接下载链接）
       if (animeImageUrl) {
-        // 使用fetch下载（因为使用了代理，没有CORS问题）
-        const response = await fetch(animeImageUrl);
-        const blob = await response.blob();
-        const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
-        link.href = url;
-        link.download = 'anime-avatar.png';
+        link.href = animeImageUrl;
+        link.download = 'anime-avatar.jpg';
+        link.target = '_blank';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        URL.revokeObjectURL(url);
       } else {
         // SVG头像正常下载
         await AvatarGenerator.downloadAsPng(avatar.svg, 'bot-avatar.png');
@@ -112,7 +108,6 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
           src={animeImageUrl}
           alt="Anime Avatar"
           className="w-full h-full object-cover"
-          crossOrigin="anonymous"
           onError={(e) => {
             console.error('Failed to load anime image');
             // 加载失败时显示fallback
