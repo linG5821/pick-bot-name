@@ -21,7 +21,7 @@ export default defineConfig({
       }),
     ] : []),
   ],
-  base: '/pick_bot_name/', // GitHub Pages 路径
+  base: '/pick-bot-name/', // GitHub Pages 路径
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
