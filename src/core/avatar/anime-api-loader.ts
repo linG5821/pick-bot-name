@@ -3,7 +3,6 @@
  */
 
 // 可用的anime头像API列表
-// 在开发环境使用代理，生产环境直接调用API（或使用静态资源）
 const isDev = import.meta.env.DEV;
 
 const ANIME_APIS = isDev ? [
@@ -27,7 +26,21 @@ const ANIME_APIS = isDev ? [
     type: 'json',
     getUrl: (data: any) => data.images?.[0]?.url,
   },
-] : [];
+] : [
+  // 生产环境直接调用API（waifu.pics支持CORS）
+  {
+    name: 'waifu.pics',
+    endpoint: 'https://api.waifu.pics/sfw/waifu',
+    type: 'json',
+    getUrl: (data: any) => data.url, // 直接使用返回的URL
+  },
+  {
+    name: 'waifu.im',
+    endpoint: 'https://api.waifu.im/search/?included_tags=waifu&height=>=256',
+    type: 'json',
+    getUrl: (data: any) => data.images?.[0]?.url,
+  },
+];
 
 // 本地缓存的anime头像URLs
 const localAnimeCache: Map<string, string> = new Map();
@@ -70,18 +83,12 @@ async function fetchAnimeAvatarFromAPI(apiIndex: number = 0): Promise<string | n
  * 根据seed获取anime头像URL（带缓存）
  */
 export async function getAnimeAvatarUrl(seed: string): Promise<string> {
-  // 在生产环境中，直接使用静态头像
-  if (!isDev) {
-    const { getStaticAnimeAvatar } = await import('./static-anime-loader');
-    return getStaticAnimeAvatar(seed);
-  }
-
-  // 开发环境：检查缓存
+  // 检查缓存（开发和生产都使用缓存）
   if (localAnimeCache.has(seed)) {
     return localAnimeCache.get(seed)!;
   }
 
-  // 从API获取新头像
+  // 从API获取新头像（开发和生产都调用API）
   const imageUrl = await fetchAnimeAvatarFromAPI();
 
   if (imageUrl) {
