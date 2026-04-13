@@ -9,6 +9,7 @@
 **使用的API**：
 - ✅ **waifu.pics** - 主API（免费、无需密钥）
 - ✅ **waifu.im** - 备用API
+- ✅ **corsproxy.io** - CORS代理（生产环境图片加载）
 
 **核心功能**：
 ```typescript
