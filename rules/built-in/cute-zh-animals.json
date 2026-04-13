@@ -34,74 +34,49 @@
   "data": {
     "templates": [
       {
-        "value": "{adjective}{animal}",
+        "value": "{animal}{animal}",
         "weight": 10
       },
       {
-        "value": "{adjective}{animal}助手",
-        "weight": 8
-      },
-      {
-        "value": "小{animal}{suffix}",
+        "value": "小{animal}",
         "weight": 9
       },
       {
         "value": "{animal}{suffix}",
-        "weight": 10
+        "weight": 8
       },
       {
-        "value": "{prefix}{animal}",
+        "value": "{adjective}{animal}",
         "weight": 7
       }
     ],
     "vocabulary": {
       "adjective": [
-        { "value": "聪明的", "weight": 10 },
-        { "value": "可爱的", "weight": 10 },
-        { "value": "机灵的", "weight": 9 },
-        { "value": "萌萌的", "weight": 10 },
-        { "value": "智慧的", "weight": 8 },
-        { "value": "贴心的", "weight": 9 },
-        { "value": "温柔的", "weight": 8 },
-        { "value": "活泼的", "weight": 9 },
-        { "value": "乖巧的", "weight": 8 },
-        { "value": "灵巧的", "weight": 7 }
+        { "value": "萌", "weight": 10 },
+        { "value": "软", "weight": 9 },
+        { "value": "甜", "weight": 8 }
       ],
       "animal": [
-        { "value": "小猫", "weight": 10 },
-        { "value": "小狗", "weight": 10 },
-        { "value": "兔子", "weight": 9 },
-        { "value": "熊猫", "weight": 10 },
-        { "value": "企鹅", "weight": 8 },
-        { "value": "海豚", "weight": 7 },
-        { "value": "狐狸", "weight": 8 },
-        { "value": "松鼠", "weight": 7 },
-        { "value": "考拉", "weight": 6 },
-        { "value": "浣熊", "weight": 6 }
-      ],
-      "prefix": [
-        { "value": "小", "weight": 10 },
-        { "value": "智能", "weight": 8 },
-        { "value": "AI", "weight": 7 },
-        { "value": "云端", "weight": 6 },
-        { "value": "数字", "weight": 6 }
+        { "value": "喵", "weight": 10 },
+        { "value": "兔", "weight": 10 },
+        { "value": "团", "weight": 9 },
+        { "value": "球", "weight": 8 },
+        { "value": "熊", "weight": 8 },
+        { "value": "鹅", "weight": 7 },
+        { "value": "狐", "weight": 7 }
       ],
       "suffix": [
-        { "value": "助手", "weight": 10 },
-        { "value": "宝宝", "weight": 9 },
-        { "value": "君", "weight": 8 },
+        { "value": "喵", "weight": 10 },
         { "value": "酱", "weight": 9 },
-        { "value": "仔", "weight": 7 },
-        { "value": "儿", "weight": 6 },
-        { "value": "Bot", "weight": 5 }
+        { "value": "儿", "weight": 8 }
       ]
     }
   },
   "examples": [
-    "可爱的小猫助手",
-    "聪明的兔子",
-    "小熊猫宝宝",
-    "企鹅君",
-    "智能狐狸"
+    "喵喵",
+    "团团",
+    "小兔",
+    "软软",
+    "甜心"
   ]
 }

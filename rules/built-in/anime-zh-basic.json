@@ -41,12 +41,8 @@
         "weight": 9
       },
       {
-        "value": "可爱",
+        "value": "樱",
         "weight": 8
-      },
-      {
-        "value": "梦",
-        "weight": 7
       },
       {
         "value": "星",
@@ -55,47 +51,27 @@
       {
         "value": "月",
         "weight": 6
-      },
-      {
-        "value": "花",
-        "weight": 6
-      },
-      {
-        "value": "樱",
-        "weight": 8
       }
     ],
     "roots": [
       {
-        "value": "助手",
+        "value": "喵",
         "weight": 10
       },
       {
-        "value": "机器人",
-        "weight": 8
-      },
-      {
-        "value": "猫咪",
+        "value": "兔",
         "weight": 9
       },
       {
-        "value": "兔子",
-        "weight": 8
-      },
-      {
         "value": "天使",
-        "weight": 7
+        "weight": 8
       },
       {
         "value": "精灵",
         "weight": 7
       },
       {
-        "value": "少女",
-        "weight": 6
-      },
-      {
-        "value": "妖精",
+        "value": "子",
         "weight": 6
       }
     ],
@@ -109,28 +85,20 @@
         "weight": 9
       },
       {
-        "value": "呆",
-        "weight": 7
-      },
-      {
-        "value": "萌",
+        "value": "君",
         "weight": 8
       },
       {
-        "value": "子",
-        "weight": 6
-      },
-      {
-        "value": "君",
-        "weight": 5
+        "value": "",
+        "weight": 7
       }
     ]
   },
   "examples": [
-    "小猫咪酱",
-    "萌兔子喵",
-    "樱天使萌",
-    "星精灵酱",
-    "梦助手呆"
+    "樱酱",
+    "小喵",
+    "星子",
+    "萌兔",
+    "月君"
   ]
 }

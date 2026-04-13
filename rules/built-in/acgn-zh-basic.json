@@ -33,16 +33,16 @@
   "data": {
     "prefixes": [
       {
-        "value": "傲娇",
+        "value": "萌",
+        "weight": 10
+      },
+      {
+        "value": "元气",
         "weight": 9
       },
       {
-        "value": "可爱",
-        "weight": 10
-      },
-      {
-        "value": "萌",
-        "weight": 10
+        "value": "治愈",
+        "weight": 8
       },
       {
         "value": "宅",
@@ -50,19 +50,7 @@
       },
       {
         "value": "二次元",
-        "weight": 8
-      },
-      {
-        "value": "动漫",
-        "weight": 8
-      },
-      {
-        "value": "御宅",
         "weight": 6
-      },
-      {
-        "value": "萝莉",
-        "weight": 7
       }
     ],
     "roots": [
@@ -71,62 +59,42 @@
         "weight": 10
       },
       {
-        "value": "君",
-        "weight": 8
-      },
-      {
-        "value": "机器人",
-        "weight": 7
-      },
-      {
-        "value": "助手",
-        "weight": 6
-      },
-      {
-        "value": "老婆",
-        "weight": 8
-      },
-      {
-        "value": "女神",
-        "weight": 7
-      },
-      {
-        "value": "偶像",
-        "weight": 6
-      },
-      {
-        "value": "魔法使",
-        "weight": 5
-      }
-    ],
-    "suffixes": [
-      {
         "value": "喵",
         "weight": 9
       },
       {
-        "value": "呆",
+        "value": "君",
         "weight": 8
       },
       {
-        "value": "萌",
+        "value": "姬",
         "weight": 7
       },
       {
-        "value": "大人",
+        "value": "娘",
         "weight": 6
+      }
+    ],
+    "suffixes": [
+      {
+        "value": "",
+        "weight": 10
       },
       {
-        "value": "桑",
-        "weight": 5
+        "value": "喵",
+        "weight": 8
+      },
+      {
+        "value": "呆",
+        "weight": 7
       }
     ]
   },
   "examples": [
-    "傲娇酱喵",
-    "可爱君呆",
-    "萌老婆萌",
-    "宅女神大人",
-    "二次元偶像桑"
+    "萌酱",
+    "元气喵",
+    "治愈君",
+    "宅姬",
+    "二次元娘"
   ]
 }

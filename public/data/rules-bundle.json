@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-04-13T13:07:11.694Z",
+  "generatedAt": "2026-04-13T15:18:12.765Z",
   "totalRules": 14,
   "rules": [
     {
@@ -38,49 +38,37 @@
             "weight": 10
           },
           {
-            "value": "{adjective}{company}{role}",
+            "value": "{adjective}{role}",
             "weight": 9
-          },
-          {
-            "value": "{company}{department}{role}",
-            "weight": 8
           }
         ],
         "vocabulary": {
           "company": [
             {
-              "value": "企业",
+              "value": "商",
               "weight": 10
             },
             {
-              "value": "商务",
+              "value": "企",
               "weight": 9
             },
             {
-              "value": "集团",
+              "value": "云",
               "weight": 8
-            },
-            {
-              "value": "公司",
-              "weight": 7
             }
           ],
           "role": [
             {
-              "value": "助手",
+              "value": "助",
               "weight": 10
             },
             {
-              "value": "顾问",
+              "value": "顾",
               "weight": 9
             },
             {
-              "value": "管家",
+              "value": "管",
               "weight": 8
-            },
-            {
-              "value": "秘书",
-              "weight": 7
             }
           ],
           "adjective": [
@@ -89,47 +77,21 @@
               "weight": 10
             },
             {
-              "value": "高效",
-              "weight": 9
-            },
-            {
               "value": "专业",
               "weight": 9
-            },
-            {
-              "value": "可靠",
-              "weight": 8
-            }
-          ],
-          "department": [
-            {
-              "value": "客服",
-              "weight": 9
-            },
-            {
-              "value": "财务",
-              "weight": 7
-            },
-            {
-              "value": "人事",
-              "weight": 7
-            },
-            {
-              "value": "行政",
-              "weight": 6
             }
           ]
         }
       },
       "examples": [
-        "企业助手",
-        "智能商务顾问",
-        "专业集团管家",
-        "公司客服秘书",
-        "高效企业助手"
+        "商助",
+        "企顾",
+        "云管",
+        "智能助",
+        "专业顾"
       ],
       "createdAt": "2026-04-11",
-      "updatedAt": "2026-04-11"
+      "updatedAt": "2026-04-13"
     },
     {
       "id": "geek-en-scifi",
@@ -300,93 +262,57 @@
             "weight": 8
           },
           {
-            "value": "合成",
-            "weight": 7
-          },
-          {
             "value": "数字",
-            "weight": 8
-          },
-          {
-            "value": "虚拟",
             "weight": 7
           },
           {
             "value": "矩阵",
             "weight": 6
-          },
-          {
-            "value": "科技",
-            "weight": 7
           }
         ],
         "roots": [
           {
-            "value": "机器人",
+            "value": "核",
             "weight": 10
           },
           {
-            "value": "核心",
+            "value": "网",
             "weight": 9
           },
           {
-            "value": "思维",
+            "value": "脉",
             "weight": 8
           },
           {
-            "value": "脉冲",
+            "value": "波",
             "weight": 7
           },
           {
-            "value": "波动",
+            "value": "X",
             "weight": 6
-          },
-          {
-            "value": "节点",
-            "weight": 8
-          },
-          {
-            "value": "网络",
-            "weight": 7
-          },
-          {
-            "value": "代理",
-            "weight": 8
           }
         ],
         "suffixes": [
           {
-            "value": "3000",
-            "weight": 8
+            "value": "",
+            "weight": 10
           },
           {
             "value": "X",
-            "weight": 9
+            "weight": 8
           },
           {
-            "value": "终极",
-            "weight": 7
-          },
-          {
-            "value": "新世代",
+            "value": "版",
             "weight": 6
-          },
-          {
-            "value": "阿尔法",
-            "weight": 7
-          },
-          {
-            "value": "AI",
-            "weight": 9
           }
         ]
       },
       "examples": [
-        "赛博机器人3000",
-        "量子核心X",
-        "神经思维终极",
-        "数字代理AI",
-        "虚拟节点阿尔法"
+        "赛博核",
+        "量子X",
+        "神经网",
+        "数字脉",
+        "矩阵波"
       ]
     },
     {
@@ -1021,7 +947,7 @@
       "data": {
         "prefixes": [
           {
-            "value": "代码",
+            "value": "码",
             "weight": 10
           },
           {
@@ -1029,93 +955,61 @@
             "weight": 9
           },
           {
-            "value": "编程",
+            "value": "技术",
             "weight": 8
           },
           {
-            "value": "黑客",
+            "value": "开源",
             "weight": 7
           },
           {
             "value": "数据",
-            "weight": 8
-          },
-          {
-            "value": "系统",
-            "weight": 7
-          },
-          {
-            "value": "开源",
             "weight": 6
-          },
-          {
-            "value": "技术",
-            "weight": 8
           }
         ],
         "roots": [
           {
-            "value": "大师",
+            "value": "神",
             "weight": 10
           },
           {
-            "value": "专家",
+            "value": "君",
             "weight": 9
           },
           {
-            "value": "机器人",
+            "value": "猫",
             "weight": 8
           },
           {
-            "value": "助手",
+            "value": "师",
             "weight": 7
           },
           {
-            "value": "工具",
+            "value": "X",
             "weight": 6
-          },
-          {
-            "value": "引擎",
-            "weight": 7
-          },
-          {
-            "value": "框架",
-            "weight": 6
-          },
-          {
-            "value": "库",
-            "weight": 5
           }
         ],
         "suffixes": [
           {
-            "value": "2.0",
-            "weight": 8
+            "value": "",
+            "weight": 10
           },
           {
-            "value": "Pro",
+            "value": "喵",
             "weight": 7
-          },
-          {
-            "value": "Plus",
-            "weight": 6
-          },
-          {
-            "value": "终端",
-            "weight": 5
           },
           {
             "value": "版",
-            "weight": 7
+            "weight": 6
           }
         ]
       },
       "examples": [
-        "代码大师2.0",
-        "算法专家Pro",
-        "编程助手Plus",
-        "数据工具版",
-        "技术引擎终端"
+        "码神",
+        "算法君",
+        "技术猫",
+        "开源师",
+        "数据X"
       ]
     },
     {
@@ -1154,171 +1048,89 @@
       "data": {
         "templates": [
           {
-            "value": "{adjective}{animal}",
+            "value": "{animal}{animal}",
             "weight": 10
           },
           {
-            "value": "{adjective}{animal}助手",
-            "weight": 8
-          },
-          {
-            "value": "小{animal}{suffix}",
+            "value": "小{animal}",
             "weight": 9
           },
           {
             "value": "{animal}{suffix}",
-            "weight": 10
+            "weight": 8
           },
           {
-            "value": "{prefix}{animal}",
+            "value": "{adjective}{animal}",
             "weight": 7
           }
         ],
         "vocabulary": {
           "adjective": [
             {
-              "value": "聪明的",
+              "value": "萌",
               "weight": 10
             },
             {
-              "value": "可爱的",
-              "weight": 10
-            },
-            {
-              "value": "机灵的",
+              "value": "软",
               "weight": 9
             },
             {
-              "value": "萌萌的",
-              "weight": 10
-            },
-            {
-              "value": "智慧的",
+              "value": "甜",
               "weight": 8
-            },
-            {
-              "value": "贴心的",
-              "weight": 9
-            },
-            {
-              "value": "温柔的",
-              "weight": 8
-            },
-            {
-              "value": "活泼的",
-              "weight": 9
-            },
-            {
-              "value": "乖巧的",
-              "weight": 8
-            },
-            {
-              "value": "灵巧的",
-              "weight": 7
             }
           ],
           "animal": [
             {
-              "value": "小猫",
+              "value": "喵",
               "weight": 10
             },
             {
-              "value": "小狗",
+              "value": "兔",
               "weight": 10
             },
             {
-              "value": "兔子",
+              "value": "团",
               "weight": 9
             },
             {
-              "value": "熊猫",
-              "weight": 10
-            },
-            {
-              "value": "企鹅",
+              "value": "球",
               "weight": 8
             },
             {
-              "value": "海豚",
-              "weight": 7
-            },
-            {
-              "value": "狐狸",
+              "value": "熊",
               "weight": 8
             },
             {
-              "value": "松鼠",
+              "value": "鹅",
               "weight": 7
             },
             {
-              "value": "考拉",
-              "weight": 6
-            },
-            {
-              "value": "浣熊",
-              "weight": 6
-            }
-          ],
-          "prefix": [
-            {
-              "value": "小",
-              "weight": 10
-            },
-            {
-              "value": "智能",
-              "weight": 8
-            },
-            {
-              "value": "AI",
+              "value": "狐",
               "weight": 7
-            },
-            {
-              "value": "云端",
-              "weight": 6
-            },
-            {
-              "value": "数字",
-              "weight": 6
             }
           ],
           "suffix": [
             {
-              "value": "助手",
+              "value": "喵",
               "weight": 10
-            },
-            {
-              "value": "宝宝",
-              "weight": 9
-            },
-            {
-              "value": "君",
-              "weight": 8
             },
             {
               "value": "酱",
               "weight": 9
             },
             {
-              "value": "仔",
-              "weight": 7
-            },
-            {
               "value": "儿",
-              "weight": 6
-            },
-            {
-              "value": "Bot",
-              "weight": 5
+              "weight": 8
             }
           ]
         }
       },
       "examples": [
-        "可爱的小猫助手",
-        "聪明的兔子",
-        "小熊猫宝宝",
-        "企鹅君",
-        "智能狐狸"
+        "喵喵",
+        "团团",
+        "小兔",
+        "软软",
+        "甜心"
       ]
     },
     {
@@ -1496,12 +1308,8 @@
             "weight": 9
           },
           {
-            "value": "可爱",
+            "value": "樱",
             "weight": 8
-          },
-          {
-            "value": "梦",
-            "weight": 7
           },
           {
             "value": "星",
@@ -1510,47 +1318,27 @@
           {
             "value": "月",
             "weight": 6
-          },
-          {
-            "value": "花",
-            "weight": 6
-          },
-          {
-            "value": "樱",
-            "weight": 8
           }
         ],
         "roots": [
           {
-            "value": "助手",
+            "value": "喵",
             "weight": 10
           },
           {
-            "value": "机器人",
-            "weight": 8
-          },
-          {
-            "value": "猫咪",
+            "value": "兔",
             "weight": 9
           },
           {
-            "value": "兔子",
-            "weight": 8
-          },
-          {
             "value": "天使",
-            "weight": 7
+            "weight": 8
           },
           {
             "value": "精灵",
             "weight": 7
           },
           {
-            "value": "少女",
-            "weight": 6
-          },
-          {
-            "value": "妖精",
+            "value": "子",
             "weight": 6
           }
         ],
@@ -1564,29 +1352,21 @@
             "weight": 9
           },
           {
-            "value": "呆",
-            "weight": 7
-          },
-          {
-            "value": "萌",
+            "value": "君",
             "weight": 8
           },
           {
-            "value": "子",
-            "weight": 6
-          },
-          {
-            "value": "君",
-            "weight": 5
+            "value": "",
+            "weight": 7
           }
         ]
       },
       "examples": [
-        "小猫咪酱",
-        "萌兔子喵",
-        "樱天使萌",
-        "星精灵酱",
-        "梦助手呆"
+        "樱酱",
+        "小喵",
+        "星子",
+        "萌兔",
+        "月君"
       ]
     },
     {
@@ -1756,16 +1536,16 @@
       "data": {
         "prefixes": [
           {
-            "value": "傲娇",
+            "value": "萌",
+            "weight": 10
+          },
+          {
+            "value": "元气",
             "weight": 9
           },
           {
-            "value": "可爱",
-            "weight": 10
-          },
-          {
-            "value": "萌",
-            "weight": 10
+            "value": "治愈",
+            "weight": 8
           },
           {
             "value": "宅",
@@ -1773,19 +1553,7 @@
           },
           {
             "value": "二次元",
-            "weight": 8
-          },
-          {
-            "value": "动漫",
-            "weight": 8
-          },
-          {
-            "value": "御宅",
             "weight": 6
-          },
-          {
-            "value": "萝莉",
-            "weight": 7
           }
         ],
         "roots": [
@@ -1794,63 +1562,43 @@
             "weight": 10
           },
           {
-            "value": "君",
-            "weight": 8
-          },
-          {
-            "value": "机器人",
-            "weight": 7
-          },
-          {
-            "value": "助手",
-            "weight": 6
-          },
-          {
-            "value": "老婆",
-            "weight": 8
-          },
-          {
-            "value": "女神",
-            "weight": 7
-          },
-          {
-            "value": "偶像",
-            "weight": 6
-          },
-          {
-            "value": "魔法使",
-            "weight": 5
-          }
-        ],
-        "suffixes": [
-          {
             "value": "喵",
             "weight": 9
           },
           {
-            "value": "呆",
+            "value": "君",
             "weight": 8
           },
           {
-            "value": "萌",
+            "value": "姬",
             "weight": 7
           },
           {
-            "value": "大人",
+            "value": "娘",
             "weight": 6
+          }
+        ],
+        "suffixes": [
+          {
+            "value": "",
+            "weight": 10
           },
           {
-            "value": "桑",
-            "weight": 5
+            "value": "喵",
+            "weight": 8
+          },
+          {
+            "value": "呆",
+            "weight": 7
           }
         ]
       },
       "examples": [
-        "傲娇酱喵",
-        "可爱君呆",
-        "萌老婆萌",
-        "宅女神大人",
-        "二次元偶像桑"
+        "萌酱",
+        "元气喵",
+        "治愈君",
+        "宅姬",
+        "二次元娘"
       ]
     },
     {

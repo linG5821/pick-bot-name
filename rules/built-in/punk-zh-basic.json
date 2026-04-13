@@ -45,92 +45,56 @@
         "weight": 8
       },
       {
-        "value": "合成",
-        "weight": 7
-      },
-      {
         "value": "数字",
-        "weight": 8
-      },
-      {
-        "value": "虚拟",
         "weight": 7
       },
       {
         "value": "矩阵",
         "weight": 6
-      },
-      {
-        "value": "科技",
-        "weight": 7
       }
     ],
     "roots": [
       {
-        "value": "机器人",
+        "value": "核",
         "weight": 10
       },
       {
-        "value": "核心",
+        "value": "网",
         "weight": 9
       },
       {
-        "value": "思维",
+        "value": "脉",
         "weight": 8
       },
       {
-        "value": "脉冲",
+        "value": "波",
         "weight": 7
       },
       {
-        "value": "波动",
+        "value": "X",
         "weight": 6
-      },
-      {
-        "value": "节点",
-        "weight": 8
-      },
-      {
-        "value": "网络",
-        "weight": 7
-      },
-      {
-        "value": "代理",
-        "weight": 8
       }
     ],
     "suffixes": [
       {
-        "value": "3000",
-        "weight": 8
+        "value": "",
+        "weight": 10
       },
       {
         "value": "X",
-        "weight": 9
+        "weight": 8
       },
       {
-        "value": "终极",
-        "weight": 7
-      },
-      {
-        "value": "新世代",
+        "value": "版",
         "weight": 6
-      },
-      {
-        "value": "阿尔法",
-        "weight": 7
-      },
-      {
-        "value": "AI",
-        "weight": 9
       }
     ]
   },
   "examples": [
-    "赛博机器人3000",
-    "量子核心X",
-    "神经思维终极",
-    "数字代理AI",
-    "虚拟节点阿尔法"
+    "赛博核",
+    "量子X",
+    "神经网",
+    "数字脉",
+    "矩阵波"
   ]
 }

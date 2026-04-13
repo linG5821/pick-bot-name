@@ -33,49 +33,37 @@
         "weight": 10
       },
       {
-        "value": "{adjective}{company}{role}",
+        "value": "{adjective}{role}",
         "weight": 9
-      },
-      {
-        "value": "{company}{department}{role}",
-        "weight": 8
       }
     ],
     "vocabulary": {
       "company": [
         {
-          "value": "企业",
+          "value": "商",
           "weight": 10
         },
         {
-          "value": "商务",
+          "value": "企",
           "weight": 9
         },
         {
-          "value": "集团",
+          "value": "云",
           "weight": 8
-        },
-        {
-          "value": "公司",
-          "weight": 7
         }
       ],
       "role": [
         {
-          "value": "助手",
+          "value": "助",
           "weight": 10
         },
         {
-          "value": "顾问",
+          "value": "顾",
           "weight": 9
         },
         {
-          "value": "管家",
+          "value": "管",
           "weight": 8
-        },
-        {
-          "value": "秘书",
-          "weight": 7
         }
       ],
       "adjective": [
@@ -84,45 +72,19 @@
           "weight": 10
         },
         {
-          "value": "高效",
-          "weight": 9
-        },
-        {
           "value": "专业",
           "weight": 9
-        },
-        {
-          "value": "可靠",
-          "weight": 8
-        }
-      ],
-      "department": [
-        {
-          "value": "客服",
-          "weight": 9
-        },
-        {
-          "value": "财务",
-          "weight": 7
-        },
-        {
-          "value": "人事",
-          "weight": 7
-        },
-        {
-          "value": "行政",
-          "weight": 6
         }
       ]
     }
   },
   "examples": [
-    "企业助手",
-    "智能商务顾问",
-    "专业集团管家",
-    "公司客服秘书",
-    "高效企业助手"
+    "商助",
+    "企顾",
+    "云管",
+    "智能助",
+    "专业顾"
   ],
   "createdAt": "2026-04-11",
-  "updatedAt": "2026-04-11"
+  "updatedAt": "2026-04-13"
 }

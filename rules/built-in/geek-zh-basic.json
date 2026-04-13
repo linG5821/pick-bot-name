@@ -33,7 +33,7 @@
   "data": {
     "prefixes": [
       {
-        "value": "代码",
+        "value": "码",
         "weight": 10
       },
       {
@@ -41,92 +41,60 @@
         "weight": 9
       },
       {
-        "value": "编程",
+        "value": "技术",
         "weight": 8
       },
       {
-        "value": "黑客",
+        "value": "开源",
         "weight": 7
       },
       {
         "value": "数据",
-        "weight": 8
-      },
-      {
-        "value": "系统",
-        "weight": 7
-      },
-      {
-        "value": "开源",
         "weight": 6
-      },
-      {
-        "value": "技术",
-        "weight": 8
       }
     ],
     "roots": [
       {
-        "value": "大师",
+        "value": "神",
         "weight": 10
       },
       {
-        "value": "专家",
+        "value": "君",
         "weight": 9
       },
       {
-        "value": "机器人",
+        "value": "猫",
         "weight": 8
       },
       {
-        "value": "助手",
+        "value": "师",
         "weight": 7
       },
       {
-        "value": "工具",
+        "value": "X",
         "weight": 6
-      },
-      {
-        "value": "引擎",
-        "weight": 7
-      },
-      {
-        "value": "框架",
-        "weight": 6
-      },
-      {
-        "value": "库",
-        "weight": 5
       }
     ],
     "suffixes": [
       {
-        "value": "2.0",
-        "weight": 8
+        "value": "",
+        "weight": 10
       },
       {
-        "value": "Pro",
+        "value": "喵",
         "weight": 7
-      },
-      {
-        "value": "Plus",
-        "weight": 6
-      },
-      {
-        "value": "终端",
-        "weight": 5
       },
       {
         "value": "版",
-        "weight": 7
+        "weight": 6
       }
     ]
   },
   "examples": [
-    "代码大师2.0",
-    "算法专家Pro",
-    "编程助手Plus",
-    "数据工具版",
-    "技术引擎终端"
+    "码神",
+    "算法君",
+    "技术猫",
+    "开源师",
+    "数据X"
   ]
 }
