@@ -1,100 +1,142 @@
-# 📚 Documentation Directory
+# 📚 Documentation
 
-This directory contains all project documentation organized by category.
+Welcome to the Bot Name Generator documentation! This guide will help you understand, use, and contribute to the project.
 
-## 📁 Directory Structure
+## 📖 Table of Contents
 
-### `/architecture` - Architecture & Design
-High-level design documents and architecture decisions.
+### 🚀 Getting Started
 
-- **ARCHITECTURE.md** - Complete system architecture overview
-- **FINAL_PRD.md** - Product Requirements Document
-- **PROJECT_PLAN.md** - Project planning and roadmap
+- **[User Guide](../README.md)** - Quick start and basic usage
+- **[Development Guide](guides/DEVELOPMENT.md)** - Setup your development environment
+- **[Contributing Guide](guides/CONTRIBUTING.md)** - How to contribute to the project
 
-### `/features` - Feature Documentation
-Detailed documentation for specific features.
+### 📘 User Documentation
 
-- **AVATAR_FEATURE.md** - Avatar generation feature
-- **AVATAR_STYLES.md** - Avatar style specifications
-- **ANIME_AVATAR_IMPLEMENTATION.md** - Anime avatar implementation details
+#### Core Guides
 
-### `/fixes` - Bug Fixes & Corrections
-Documentation of bugs found and fixed.
+- **[API Reference](guides/API_REFERENCE.md)** - Complete API documentation
+- **[Rule Guide](guides/RULE_GUIDE.md)** - Understanding generation rules and creating custom rules
+- **[Community Guide](guides/COMMUNITY_GUIDE.md)** - Community guidelines and best practices
 
-- **CORS_FIX.md** - CORS issue resolution
-- **CREATION_STEPS_FIX.md** - Platform creation steps display fix
-- **ICON_FIX.md** - Platform icon color corrections
-- **FIXES_COMPLETED.md** - Completed fixes summary
-- **FIXES_SUMMARY.md** - Overall fixes summary
-- **P0_FIXES.md** - Priority 0 critical fixes
+### 🏗️ Architecture & Design
 
-### `/optimization` - Performance & Optimization
-Documentation related to performance improvements and dependency upgrades.
+- **[System Architecture](architecture/ARCHITECTURE.md)** - Complete system design and architecture
+- **[Product Requirements](architecture/FINAL_PRD.md)** - Product requirements and specifications
+- **[Project Roadmap](architecture/PROJECT_PLAN.md)** - Project planning and future roadmap
 
-- **OPTIMIZATION_SUMMARY.md** - Bundle size and performance optimizations
-- **FINAL_ISSUES_AND_OPTIMIZATIONS.md** - Final optimization report
-- **UPGRADE_GUIDE.md** - Dependency upgrade guide
-- **UPGRADE_SUMMARY.md** - Upgrade summary
+### ✨ Feature Documentation
 
-### `/reports` - Project Reports
-Progress reports, summaries, and status updates.
+- **[Avatar Generation](features/AVATAR_FEATURE.md)** - Avatar generation system overview
+- **[Avatar Styles](features/AVATAR_STYLES.md)** - Available avatar styles and customization
+- **[Anime Avatar Implementation](features/ANIME_AVATAR_IMPLEMENTATION.md)** - Technical details of anime avatar integration
 
-- **PROJECT_COMPLETION_REPORT.md** - Final project completion report
-- **PROJECT_SUMMARY.md** - Project overview and summary
-- **STAGE6_SUMMARY.md** - Stage 6 development summary
-- **STYLE_REDESIGN_SUMMARY.md** - UI style redesign report
-- **TRANSLATION_FIX_SUMMARY.md** - Translation fixes
-- **UPDATES_SUMMARY.md** - Updates summary
+## 🎯 Quick Links by Role
 
-### `/development` - Development Process
-Development workflows, testing, and code review documentation.
+### 👤 For Users
 
-- **FINAL_IMPLEMENTATION_PLAN.md** - Implementation plan
-- **FINAL_TEST_CHECKLIST.md** - Testing checklist
-- **ISSUES_FOUND.md** - Issues discovered during development
-- **REVIEW.md** - Code review notes
-- **RULES_VERIFICATION.md** - Naming rules verification
+Start here to learn how to use the generator:
 
-### `/guides` - Guides & References
-User guides, API references, and contribution guidelines.
+1. Read the [main README](../README.md) for quick start
+2. Check [Rule Guide](guides/RULE_GUIDE.md) to understand how generation works
+3. Browse [Avatar Styles](features/AVATAR_STYLES.md) to see available options
 
-- **API_REFERENCE.md** - API documentation
-- **CONTRIBUTING.md** - Contribution guidelines
-- **DEVELOPMENT.md** - Development setup and workflow
-- **RULE_GUIDE.md** - Naming rules guide
-- **COMMUNITY_GUIDE.md** - Community guidelines
-- **STAGE7_SUMMARY.md** - Stage 7 guide
+### 👨‍💻 For Developers
 
-## 🔍 Quick Navigation
+Start here to set up your development environment:
 
-**For Developers:**
-- Start with `/guides/DEVELOPMENT.md`
-- Check `/architecture/ARCHITECTURE.md` for system overview
-- Review `/guides/CONTRIBUTING.md` for contribution guidelines
+1. Follow [Development Guide](guides/DEVELOPMENT.md) for setup
+2. Read [Contributing Guide](guides/CONTRIBUTING.md) for guidelines
+3. Study [System Architecture](architecture/ARCHITECTURE.md) to understand the codebase
 
-**For Understanding the Project:**
-- Read `/reports/PROJECT_SUMMARY.md`
-- Check `/architecture/FINAL_PRD.md` for requirements
-- Review `/reports/PROJECT_COMPLETION_REPORT.md` for final status
+### 🎨 For Contributors
 
-**For Bug Fixes:**
-- Browse `/fixes/` directory
-- Check `/optimization/OPTIMIZATION_SUMMARY.md` for performance issues
+Want to add new content? Start here:
 
-**For Feature Details:**
-- Browse `/features/` directory
-- Check `/guides/API_REFERENCE.md` for API usage
+1. Read [Contributing Guide](guides/CONTRIBUTING.md) for the process
+2. Check [Rule Guide](guides/RULE_GUIDE.md) to create custom rules
+3. Follow [Community Guide](guides/COMMUNITY_GUIDE.md) for best practices
+
+## 📁 Documentation Structure
+
+```
+docs/
+├── README.md              # This file - documentation index
+├── architecture/          # System design and architecture
+│   ├── ARCHITECTURE.md   # Complete system architecture
+│   ├── FINAL_PRD.md      # Product requirements document
+│   └── PROJECT_PLAN.md   # Project roadmap and planning
+├── features/             # Feature-specific documentation
+│   ├── AVATAR_FEATURE.md
+│   ├── AVATAR_STYLES.md
+│   └── ANIME_AVATAR_IMPLEMENTATION.md
+└── guides/               # User and developer guides
+    ├── API_REFERENCE.md
+    ├── COMMUNITY_GUIDE.md
+    ├── CONTRIBUTING.md
+    ├── DEVELOPMENT.md
+    └── RULE_GUIDE.md
+```
+
+## 🔍 Finding What You Need
+
+### Common Tasks
+
+| Task | Documentation |
+|------|---------------|
+| Generate bot names | [Main README](../README.md) |
+| Create custom rules | [Rule Guide](guides/RULE_GUIDE.md) + [Contributing](guides/CONTRIBUTING.md) |
+| Set up development | [Development Guide](guides/DEVELOPMENT.md) |
+| Submit a PR | [Contributing Guide](guides/CONTRIBUTING.md) |
+| Understand the system | [Architecture](architecture/ARCHITECTURE.md) |
+| Use the API | [API Reference](guides/API_REFERENCE.md) |
+| Customize avatars | [Avatar Features](features/) |
+
+### Common Questions
+
+**Q: How do I add a new platform?**  
+A: See [Contributing Guide](guides/CONTRIBUTING.md) → "Adding New Platforms" section
+
+**Q: How do I create custom generation rules?**  
+A: See [Rule Guide](guides/RULE_GUIDE.md) and [Contributing Guide](guides/CONTRIBUTING.md) → "Submitting Generation Rules"
+
+**Q: How do I add a new language?**  
+A: See [Contributing Guide](guides/CONTRIBUTING.md) → "Adding New Languages" section
+
+**Q: How does the generation algorithm work?**  
+A: See [System Architecture](architecture/ARCHITECTURE.md) → "Core Algorithms" section
 
 ## 📝 Documentation Standards
 
-All documentation in this directory follows these conventions:
-- Written in Markdown format
-- Include date stamps for time-sensitive content
-- Use clear headings and structure
-- Provide code examples where applicable
-- Include verification/testing results
+All documentation in this repository follows these conventions:
+
+- **Format**: GitHub-flavored Markdown
+- **Structure**: Clear headings (H1 → H6)
+- **Examples**: Code blocks with syntax highlighting
+- **Links**: Relative links to other documentation
+- **Language**: English (primary), with Chinese examples where applicable
+- **Updates**: Include "Last Updated" date for time-sensitive content
+
+## 🤝 Contributing to Documentation
+
+Found an error or want to improve the docs?
+
+1. **Small fixes**: Submit a PR directly
+2. **Large changes**: Open an issue first to discuss
+3. **New sections**: Follow the existing structure and style
+4. **Code examples**: Test them before submitting
+
+See [Contributing Guide](guides/CONTRIBUTING.md) for detailed instructions.
+
+## 📮 Feedback
+
+Have questions or suggestions about the documentation?
+
+- **Issues**: [Report documentation issues](https://github.com/ling5821/pick-bot-name/issues/new?labels=documentation)
+- **Discussions**: [Ask questions](https://github.com/ling5821/pick-bot-name/discussions)
 
 ---
 
-**Last Updated:** 2026-04-12  
-**Total Documents:** 32 files across 6 categories
+**Last Updated:** 2026-04-13  
+**Total Public Documents:** 12 files across 3 categories
+
+[⬆ Back to Top](#-documentation)

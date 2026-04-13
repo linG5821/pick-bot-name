@@ -34,13 +34,11 @@ coverage
 build
 .cache
 
-# Development documentation (not for GitHub)
+# Internal development documentation (not for public GitHub)
 docs/fixes/
 docs/reports/
 docs/optimization/
-docs/development/REVIEW.md
-docs/development/ISSUES_FOUND.md
-docs/development/RULES_VERIFICATION.md
+docs/development/
 
 # cc-connect session data
 .cc-connect/
