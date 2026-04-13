@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Name Generator API</title>
+  <script type="module">
+    // Parse URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const style = params.get('style') || 'punk';
+    const language = params.get('language') || 'en';
+    const count = parseInt(params.get('count') || '5', 10);
+
+    // Validate style
+    const validStyles = ['punk', 'cute', 'professional', 'geek', 'minimal', 'anime', 'acgn'];
+    const validLanguages = ['en', 'zh'];
+
+    if (!validStyles.includes(style)) {
+      document.body.textContent = JSON.stringify({
+        success: false,
+        error: `Invalid style. Valid styles: ${validStyles.join(', ')}`
+      }, null, 2);
+      throw new Error('Invalid style');
+    }
+
+    if (!validLanguages.includes(language)) {
+      document.body.textContent = JSON.stringify({
+        success: false,
+        error: `Invalid language. Valid languages: ${validLanguages.join(', ')}`
+      }, null, 2);
+      throw new Error('Invalid language');
+    }
+
+    if (count < 1 || count > 50) {
+      document.body.textContent = JSON.stringify({
+        success: false,
+        error: 'Count must be between 1 and 50'
+      }, null, 2);
+      throw new Error('Invalid count');
+    }
+
+    // Load rules bundle
+    const rulesResponse = await fetch('/pick-bot-name/data/rules-bundle.json');
+    const rulesBundle = await rulesResponse.json();
+    const rules = rulesBundle.rules || [];
+
+    // Filter rules by style and language
+    const matchingRules = rules.filter(rule =>
+      rule.style === style && rule.languages.includes(language)
+    );
+
+    if (matchingRules.length === 0) {
+      document.body.textContent = JSON.stringify({
+        success: false,
+        error: `No rules found for style '${style}' and language '${language}'`
+      }, null, 2);
+      throw new Error('No matching rules');
+    }
+
+    // Weighted random selection
+    function weightedRandom(items) {
+      const totalWeight = items.reduce((sum, item) => sum + (item.weight || 1), 0);
+      let random = Math.random() * totalWeight;
+
+      for (const item of items) {
+        random -= (item.weight || 1);
+        if (random <= 0) {
+          return item.value;
+        }
+      }
+
+      return items[items.length - 1].value;
+    }
+
+    // Generate name from rule using combination algorithm
+    function generateFromCombination(data) {
+      const parts = [];
+
+      if (data.prefixes && data.prefixes.length > 0) {
+        parts.push(weightedRandom(data.prefixes));
+      }
+
+      if (data.roots && data.roots.length > 0) {
+        parts.push(weightedRandom(data.roots));
+      }
+
+      if (data.suffixes && data.suffixes.length > 0) {
+        const suffix = weightedRandom(data.suffixes);
+        if (suffix) parts.push(suffix);
+      }
+
+      return parts.join('');
+    }
+
+    // Generate name from rule using template algorithm
+    function generateFromTemplate(data) {
+      if (!data.templates || data.templates.length === 0) {
+        return '';
+      }
+
+      const template = weightedRandom(data.templates);
+      let result = template;
+
+      // Replace placeholders
+      const placeholderRegex = /\{(\w+)\}/g;
+      result = result.replace(placeholderRegex, (match, key) => {
+        const vocabulary = data.vocabulary?.[key];
+        if (!vocabulary || vocabulary.length === 0) {
+          return match;
+        }
+        return weightedRandom(vocabulary);
+      });
+
+      return result;
+    }
+
+    // Generate name from rule
+    function generateFromRule(rule) {
+      if (rule.algorithm === 'combination') {
+        return generateFromCombination(rule.data);
+      } else if (rule.algorithm === 'template') {
+        return generateFromTemplate(rule.data);
+      }
+      return '';
+    }
+
+    // Generate multiple names
+    function generateMultiple(rules, count) {
+      const names = new Set();
+      let attempts = 0;
+      const maxAttempts = count * 10;
+
+      while (names.size < count && attempts < maxAttempts) {
+        const rule = rules[Math.floor(Math.random() * rules.length)];
+        const name = generateFromRule(rule);
+
+        if (name && name.length > 0) {
+          names.add(name);
+        }
+
+        attempts++;
+      }
+
+      return Array.from(names);
+    }
+
+    // Generate names
+    const names = generateMultiple(matchingRules, count);
+
+    // Return JSON response
+    const response = {
+      success: true,
+      data: {
+        style,
+        language,
+        count: names.length,
+        names
+      }
+    };
+
+    document.body.textContent = JSON.stringify(response, null, 2);
+  </script>
+  <style>
+    body {
+      font-family: monospace;
+      white-space: pre-wrap;
+      padding: 20px;
+      margin: 0;
+      background: #1a1a1a;
+      color: #00ff00;
+    }
+  </style>
+</head>
+<body>Loading...</body>
+</html>
