@@ -1,6 +1,6 @@
 {
   "id": "acgn-zh-basic",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "name": {
     "en": "ACGN Chinese",
     "zh": "二次元中文版"
@@ -41,19 +41,34 @@
       "name": [
         { "value": "星音", "weight": 10 },
         { "value": "雪姬", "weight": 10 },
-        { "value": "樱乃", "weight": 9 },
+        { "value": "樱乃", "weight": 10 },
         { "value": "月夜", "weight": 9 },
         { "value": "晴空", "weight": 9 },
-        { "value": "灵梦", "weight": 8 },
+        { "value": "灵梦", "weight": 9 },
         { "value": "真白", "weight": 8 },
         { "value": "千寻", "weight": 8 },
         { "value": "凛音", "weight": 8 },
-        { "value": "优奈", "weight": 7 },
+        { "value": "优奈", "weight": 8 },
         { "value": "绘梨", "weight": 7 },
         { "value": "心羽", "weight": 7 },
         { "value": "诗乃", "weight": 7 },
-        { "value": "花音", "weight": 6 },
-        { "value": "美咲", "weight": 6 }
+        { "value": "花音", "weight": 7 },
+        { "value": "美咲", "weight": 7 },
+        { "value": "海未", "weight": 7 },
+        { "value": "真姬", "weight": 6 },
+        { "value": "春香", "weight": 6 },
+        { "value": "千早", "weight": 6 },
+        { "value": "美希", "weight": 6 },
+        { "value": "绘里", "weight": 6 },
+        { "value": "希望", "weight": 6 },
+        { "value": "天音", "weight": 5 },
+        { "value": "梦羽", "weight": 5 },
+        { "value": "晓梦", "weight": 5 },
+        { "value": "纯白", "weight": 5 },
+        { "value": "星空", "weight": 5 },
+        { "value": "夜空", "weight": 5 },
+        { "value": "风华", "weight": 5 },
+        { "value": "雨音", "weight": 5 }
       ],
       "suffix": [
         { "value": "酱", "weight": 10 },
@@ -87,6 +102,7 @@
   "examples": [
     "星音",
     "雪姬",
+    "樱乃",
     "星音酱",
     "樱乃喵",
     "小月夜",

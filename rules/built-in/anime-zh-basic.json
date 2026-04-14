@@ -1,6 +1,6 @@
 {
   "id": "anime-zh-basic",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "name": {
     "en": "Anime Chinese",
     "zh": "动漫中文版"
@@ -41,18 +41,34 @@
       "name": [
         { "value": "星", "weight": 10 },
         { "value": "月", "weight": 10 },
-        { "value": "雪", "weight": 9 },
+        { "value": "雪", "weight": 10 },
         { "value": "樱", "weight": 9 },
         { "value": "羽", "weight": 9 },
-        { "value": "瞳", "weight": 8 },
+        { "value": "瞳", "weight": 9 },
         { "value": "晴", "weight": 8 },
         { "value": "晨", "weight": 8 },
-        { "value": "夜", "weight": 7 },
-        { "value": "霞", "weight": 7 },
+        { "value": "夜", "weight": 8 },
+        { "value": "霞", "weight": 8 },
         { "value": "梦", "weight": 7 },
-        { "value": "诗", "weight": 6 },
-        { "value": "语", "weight": 6 },
-        { "value": "音", "weight": 6 }
+        { "value": "诗", "weight": 7 },
+        { "value": "语", "weight": 7 },
+        { "value": "音", "weight": 7 },
+        { "value": "海", "weight": 7 },
+        { "value": "风", "weight": 7 },
+        { "value": "云", "weight": 6 },
+        { "value": "花", "weight": 6 },
+        { "value": "叶", "weight": 6 },
+        { "value": "光", "weight": 6 },
+        { "value": "影", "weight": 6 },
+        { "value": "心", "weight": 6 },
+        { "value": "爱", "weight": 5 },
+        { "value": "美", "weight": 5 },
+        { "value": "真", "weight": 5 },
+        { "value": "纯", "weight": 5 },
+        { "value": "希", "weight": 5 },
+        { "value": "空", "weight": 5 },
+        { "value": "凛", "weight": 5 },
+        { "value": "晓", "weight": 5 }
       ],
       "prefix": [
         { "value": "小", "weight": 10 },
@@ -71,7 +87,10 @@
         { "value": "紫", "weight": 9 },
         { "value": "银", "weight": 8 },
         { "value": "金", "weight": 8 },
-        { "value": "翠", "weight": 7 }
+        { "value": "翠", "weight": 7 },
+        { "value": "碧", "weight": 7 },
+        { "value": "绯", "weight": 6 },
+        { "value": "墨", "weight": 6 }
       ],
       "nature": [
         { "value": "月", "weight": 10 },
@@ -79,18 +98,24 @@
         { "value": "风", "weight": 9 },
         { "value": "云", "weight": 9 },
         { "value": "霞", "weight": 8 },
-        { "value": "露", "weight": 8 }
+        { "value": "露", "weight": 8 },
+        { "value": "樱", "weight": 7 },
+        { "value": "星", "weight": 7 },
+        { "value": "光", "weight": 6 },
+        { "value": "海", "weight": 6 }
       ]
     }
   },
   "examples": [
     "星星",
     "月月",
+    "雪雪",
     "小雪",
     "阿樱",
     "瞳酱",
     "晴喵",
     "白月",
-    "青雪"
+    "青雪",
+    "紫霞"
   ]
 }
