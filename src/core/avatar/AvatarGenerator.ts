@@ -36,6 +36,7 @@ const BOT_STYLE_TO_AVATAR: Record<BotStyle, AvatarStyle> = {
   [BotStyle.MINIMAL]: 'identicon',     // 极简 → Identicon（用户指定）
   [BotStyle.ANIME]: 'toonHead',        // 卡通 → Toon Head（卡通风格）
   [BotStyle.ACGN]: 'notionists',       // 二次元 → 静态动漫头像（占位符，实际在组件中加载）
+  [BotStyle.GUOFENG]: 'lorelei',       // 国风 → Lorelei（优雅中性头像）
 };
 
 export class AvatarGenerator {

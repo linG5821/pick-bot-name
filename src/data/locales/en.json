@@ -43,13 +43,15 @@
     "minimal": "Minimal",
     "anime": "Cartoon",
     "acgn": "ACGN",
+    "guofeng": "Guofeng",
     "PUNK": "Punk",
     "CUTE": "Cute",
     "PROFESSIONAL": "Professional",
     "GEEK": "Geek",
     "MINIMAL": "Minimal",
     "ANIME": "Cartoon",
-    "ACGN": "ACGN"
+    "ACGN": "ACGN",
+    "GUOFENG": "Guofeng"
   },
   "language": {
     "zh": "中文",

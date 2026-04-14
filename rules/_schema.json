@@ -32,7 +32,7 @@
     },
     "style": {
       "type": "string",
-      "enum": ["punk", "cute", "professional", "geek", "minimal", "anime", "acgn"],
+      "enum": ["punk", "cute", "professional", "geek", "minimal", "anime", "acgn", "guofeng"],
       "description": "所属风格"
     },
     "languages": {

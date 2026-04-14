@@ -16,6 +16,7 @@ export enum BotStyle {
   MINIMAL = 'minimal',         // 极简
   ANIME = 'anime',             // 卡通
   ACGN = 'acgn',               // 二次元
+  GUOFENG = 'guofeng',         // 国风
 }
 
 /**

@@ -42,6 +42,12 @@
       "name": { "en": "ACGN", "zh": "二次元", "ja": "二次元" },
       "emoji": "🌸",
       "color": "#FF1493"
+    },
+    {
+      "id": "guofeng",
+      "name": { "en": "Guofeng", "zh": "国风", "ja": "中国風" },
+      "emoji": "🎋",
+      "color": "#3CB371"
     }
   ]
 }

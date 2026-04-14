@@ -43,13 +43,15 @@
     "minimal": "极简",
     "anime": "卡通",
     "acgn": "二次元",
+    "guofeng": "国风",
     "PUNK": "朋克",
     "CUTE": "可爱",
     "PROFESSIONAL": "专业",
     "GEEK": "极客",
     "MINIMAL": "极简",
     "ANIME": "卡通",
-    "ACGN": "二次元"
+    "ACGN": "二次元",
+    "GUOFENG": "国风"
   },
   "language": {
     "zh": "中文",

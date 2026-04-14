@@ -15,6 +15,7 @@ const STYLE_EMOJIS: Record<BotStyle, string> = {
   [BotStyle.MINIMAL]: '◽',        // 极简
   [BotStyle.ANIME]: '🎨',          // 卡通
   [BotStyle.ACGN]: '🌸',          // 二次元
+  [BotStyle.GUOFENG]: '🎋',       // 国风
 };
 
 export interface StyleSelectorProps {
