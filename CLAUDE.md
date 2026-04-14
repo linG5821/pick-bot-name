@@ -164,10 +164,13 @@ Platform configs in `src/data/platforms/`.
 
 ### Rules System
 - Rule ID must match pattern: `{style}-{language}-{variant}` (lowercase, hyphens only)
-- Template algorithm requires `vocabulary` object with weighted items
-- Combination algorithm requires `prefixes`, `roots`, `suffixes` arrays with weights
+- **Template algorithm**: BOTH `templates` and `vocabulary` must use WeightedItem format `{ value, weight }`
+  - ❌ Wrong: `"templates": ["{name}"]`
+  - ✅ Correct: `"templates": [{ "value": "{name}", "weight": 10 }]`
+- **Combination algorithm**: `prefixes`, `roots`, `suffixes` must use WeightedItem format
 - Minimum 5 items recommended for each array (enforced as warning)
 - **All Chinese rules must generate 2-3 character names** (see Name Generation Requirements above)
+- **ALWAYS check TypeScript types** (`src/types/rule.ts`) before creating/modifying rules
 
 ### Build System
 - `rules-bundle.json` is built at compile time and must be in both:
