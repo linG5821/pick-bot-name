@@ -2,6 +2,8 @@
 
 Thank you for your interest in contributing! This guide will help you get started.
 
+English | [简体中文](CONTRIBUTING_zh.md)
+
 ## 📋 Table of Contents
 
 - [Code of Conduct](#code-of-conduct)

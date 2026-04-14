@@ -2,6 +2,8 @@
 
 Complete guide for developers contributing to Bot Name Generator.
 
+English | [简体中文](DEVELOPMENT_zh.md)
+
 ## 📋 Prerequisites
 
 - **Node.js**: 18.x or higher
