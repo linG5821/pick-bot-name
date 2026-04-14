@@ -10,6 +10,8 @@
 
 [🌐 Live Demo](https://ling5821.github.io/pick-bot-name) | [📚 Documentation](docs/) | [🤝 Contributing](docs/guides/CONTRIBUTING.md) | [🐛 Report Bug](https://github.com/ling5821/pick-bot-name/issues)
 
+English | [简体中文](README_zh.md)
+
 </div>
 
 ---

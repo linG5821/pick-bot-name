@@ -1,8 +1,8 @@
-# 🚀 Quick Reference
+# 🚀 快速参考
 
 快速参考指南 - 项目核心信息
 
-English | [简体中文](QUICK_REFERENCE_zh.md)
+[English](QUICK_REFERENCE.md) | 简体中文
 
 ---
 
@@ -12,7 +12,7 @@ English | [简体中文](QUICK_REFERENCE_zh.md)
 ```
 ✅ 2-4个字（两到四个字）
 ✅ 理想：2-3个字
-✅ 使用叠词：喵喵、团团、软软
+✅ 推荐使用叠词：喵喵、团团、软软
 ❌ 避免超过4个字
 ❌ 避免"的"字结构（可爱的小猫）
 ```
@@ -26,6 +26,8 @@ English | [简体中文](QUICK_REFERENCE_zh.md)
 ✅ 4-12个字符
 ✅ 易于发音和记忆
 ```
+
+---
 
 ## 🔌 API端点
 
@@ -55,6 +57,8 @@ GET /api/pick-bot-name?style=punk&language=zh
 - ❌ `/api/generate` 端点
 - ❌ 简化的 `{ names: [...] }` 结构
 
+---
+
 ## 🌸 动漫头像
 
 ### ACGN风格使用真实API
@@ -69,6 +73,8 @@ GET /api/pick-bot-name?style=punk&language=zh
 - ✅ 智能缓存（每个seed对应唯一头像）
 - ✅ 预加载机制（启动时加载5张）
 - ✅ 自动降级（多个API备份）
+
+---
 
 ## 📝 规则文件
 
@@ -91,6 +97,8 @@ npm run build-rules     # 构建
 cp src/data/rules-bundle.json public/data/  # 复制
 ```
 
+---
+
 ## 🔧 常用命令
 
 ```bash
@@ -110,6 +118,8 @@ npm run test            # 运行测试
 npm run lint            # 代码检查
 ```
 
+---
+
 ## 📚 完整文档
 
 - [API Reference](guides/API_REFERENCE.md) - 完整API文档
@@ -120,5 +130,5 @@ npm run lint            # 代码检查
 
 ---
 
-**最后更新**：2026-04-13  
+**最后更新**：2026-04-14  
 **维护**：Bot Name Generator Team
