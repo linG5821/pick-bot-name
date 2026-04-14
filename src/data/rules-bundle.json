@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-04-14T11:39:50.882Z",
+  "generatedAt": "2026-04-14T11:54:40.919Z",
   "totalRules": 15,
   "rules": [
     {
@@ -565,10 +565,22 @@
       ],
       "data": {
         "templates": [
-          "{function}机器人",
-          "{function}助手",
-          "{adj}{function}助手",
-          "{adj}{function}器"
+          {
+            "value": "{function}机器人",
+            "weight": 8
+          },
+          {
+            "value": "{function}助手",
+            "weight": 10
+          },
+          {
+            "value": "{adj}{function}助手",
+            "weight": 7
+          },
+          {
+            "value": "{adj}{function}器",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "function": [
@@ -730,10 +742,22 @@
       ],
       "data": {
         "templates": [
-          "{function} {type}",
-          "{adj} {function} {type}",
-          "{function} {action}",
-          "{adj} {function} {action}"
+          {
+            "value": "{function} {type}",
+            "weight": 10
+          },
+          {
+            "value": "{adj} {function} {type}",
+            "weight": 7
+          },
+          {
+            "value": "{function} {action}",
+            "weight": 9
+          },
+          {
+            "value": "{adj} {function} {action}",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "function": [
@@ -966,8 +990,14 @@
       ],
       "data": {
         "templates": [
-          "{word}",
-          "{word}{word}"
+          {
+            "value": "{word}",
+            "weight": 10
+          },
+          {
+            "value": "{word}{word}",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "word": [
@@ -1099,9 +1129,18 @@
       ],
       "data": {
         "templates": [
-          "{word}",
-          "{adj} {noun}",
-          "{noun} Bot"
+          {
+            "value": "{word}",
+            "weight": 10
+          },
+          {
+            "value": "{adj} {noun}",
+            "weight": 8
+          },
+          {
+            "value": "{noun} Bot",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "word": [
@@ -1487,10 +1526,22 @@
       ],
       "data": {
         "templates": [
-          "{word}",
-          "{tech} {role}",
-          "{action} {object}",
-          "{title} of {domain}"
+          {
+            "value": "{word}",
+            "weight": 10
+          },
+          {
+            "value": "{tech} {role}",
+            "weight": 9
+          },
+          {
+            "value": "{action} {object}",
+            "weight": 8
+          },
+          {
+            "value": "{title} of {domain}",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "word": [
@@ -2165,10 +2216,22 @@
       ],
       "data": {
         "templates": [
-          "{name}{name}",
-          "{prefix}{name}",
-          "{name}{suffix}",
-          "{color}{nature}"
+          {
+            "value": "{name}{name}",
+            "weight": 10
+          },
+          {
+            "value": "{prefix}{name}",
+            "weight": 9
+          },
+          {
+            "value": "{name}{suffix}",
+            "weight": 8
+          },
+          {
+            "value": "{color}{nature}",
+            "weight": 7
+          }
         ],
         "vocabulary": {
           "name": [
@@ -2360,10 +2423,22 @@
       ],
       "data": {
         "templates": [
-          "{name}",
-          "{name} {suffix}",
-          "{adj} {name}",
-          "{name} {name}"
+          {
+            "value": "{name}",
+            "weight": 10
+          },
+          {
+            "value": "{name} {suffix}",
+            "weight": 8
+          },
+          {
+            "value": "{adj} {name}",
+            "weight": 7
+          },
+          {
+            "value": "{name} {name}",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "name": [
@@ -2519,10 +2594,22 @@
       ],
       "data": {
         "templates": [
-          "{name}",
-          "{name}{suffix}",
-          "{prefix}{name}",
-          "{trait}{role}"
+          {
+            "value": "{name}",
+            "weight": 10
+          },
+          {
+            "value": "{name}{suffix}",
+            "weight": 9
+          },
+          {
+            "value": "{prefix}{name}",
+            "weight": 8
+          },
+          {
+            "value": "{trait}{role}",
+            "weight": 6
+          }
         ],
         "vocabulary": {
           "name": [
@@ -2718,10 +2805,22 @@
       ],
       "data": {
         "templates": [
-          "{name}",
-          "{name} {suffix}",
-          "{trait} {name}",
-          "{name} {role}"
+          {
+            "value": "{name}",
+            "weight": 10
+          },
+          {
+            "value": "{name} {suffix}",
+            "weight": 9
+          },
+          {
+            "value": "{trait} {name}",
+            "weight": 7
+          },
+          {
+            "value": "{name} {role}",
+            "weight": 8
+          }
         ],
         "vocabulary": {
           "name": [

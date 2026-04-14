@@ -32,9 +32,9 @@
   ],
   "data": {
     "templates": [
-      "{word}",
-      "{adj} {noun}",
-      "{noun} Bot"
+      { "value": "{word}", "weight": 10 },
+      { "value": "{adj} {noun}", "weight": 8 },
+      { "value": "{noun} Bot", "weight": 6 }
     ],
     "vocabulary": {
       "word": [

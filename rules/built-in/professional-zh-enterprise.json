@@ -32,10 +32,10 @@
   ],
   "data": {
     "templates": [
-      "{function}机器人",
-      "{function}助手",
-      "{adj}{function}助手",
-      "{adj}{function}器"
+      { "value": "{function}机器人", "weight": 8 },
+      { "value": "{function}助手", "weight": 10 },
+      { "value": "{adj}{function}助手", "weight": 7 },
+      { "value": "{adj}{function}器", "weight": 6 }
     ],
     "vocabulary": {
       "function": [

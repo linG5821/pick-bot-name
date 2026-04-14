@@ -32,10 +32,10 @@
   ],
   "data": {
     "templates": [
-      "{name}",
-      "{name} {suffix}",
-      "{adj} {name}",
-      "{name} {name}"
+      { "value": "{name}", "weight": 10 },
+      { "value": "{name} {suffix}", "weight": 8 },
+      { "value": "{adj} {name}", "weight": 7 },
+      { "value": "{name} {name}", "weight": 6 }
     ],
     "vocabulary": {
       "name": [

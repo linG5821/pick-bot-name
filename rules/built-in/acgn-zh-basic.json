@@ -32,10 +32,10 @@
   ],
   "data": {
     "templates": [
-      "{name}",
-      "{name}{suffix}",
-      "{prefix}{name}",
-      "{trait}{role}"
+      { "value": "{name}", "weight": 10 },
+      { "value": "{name}{suffix}", "weight": 9 },
+      { "value": "{prefix}{name}", "weight": 8 },
+      { "value": "{trait}{role}", "weight": 6 }
     ],
     "vocabulary": {
       "name": [

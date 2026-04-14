@@ -34,10 +34,10 @@
   ],
   "data": {
     "templates": [
-      "{function} {type}",
-      "{adj} {function} {type}",
-      "{function} {action}",
-      "{adj} {function} {action}"
+      { "value": "{function} {type}", "weight": 10 },
+      { "value": "{adj} {function} {type}", "weight": 7 },
+      { "value": "{function} {action}", "weight": 9 },
+      { "value": "{adj} {function} {action}", "weight": 6 }
     ],
     "vocabulary": {
       "function": [

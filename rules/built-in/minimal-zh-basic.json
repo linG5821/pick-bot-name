@@ -32,8 +32,8 @@
   ],
   "data": {
     "templates": [
-      "{word}",
-      "{word}{word}"
+      { "value": "{word}", "weight": 10 },
+      { "value": "{word}{word}", "weight": 6 }
     ],
     "vocabulary": {
       "word": [
