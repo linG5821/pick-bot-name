@@ -1,96 +1,96 @@
-# 🔌 Bot Name Generator - API Reference
+# 🔌 Bot Name Generator - API 参考
 
-**Version**: 0.1.0  
-**Last Updated**: 2026-04-14  
-**Base URL (Dev)**: `http://localhost:3000`
+**版本**: 0.1.0  
+**最后更新**: 2026-04-14  
+**基础 URL (开发)**: `http://localhost:3000`
 
-This document provides comprehensive API documentation for both human developers and AI agents, covering HTTP API endpoints and TypeScript/JavaScript modules.
+本文档为人类开发者和 AI 代理提供全面的 API 文档，涵盖 HTTP API 端点和 TypeScript/JavaScript 模块。
 
-English | [简体中文](API_REFERENCE_zh.md)
+[English](API_REFERENCE.md) | 简体中文
 
 ---
 
-## 📋 Table of Contents
+## 📋 目录
 
 - [HTTP API](#http-api)
-  - [Generate Bot Name](#generate-bot-name)
-  - [Rate Limiting](#rate-limiting)
-  - [Error Handling](#error-handling)
+  - [生成机器人名称](#生成机器人名称)
+  - [速率限制](#速率限制)
+  - [错误处理](#错误处理)
 - [TypeScript/JavaScript API](#typescriptjavascript-api)
   - [NameGenerator](#namegenerator)
   - [AvatarGenerator](#avatargenerator)
   - [BotIdGenerator](#botidgenerator)
   - [PlatformValidator](#platformvalidator)
-- [Type Definitions](#type-definitions)
-- [Usage Examples](#usage-examples)
-- [For AI Agents](#for-ai-agents)
+- [类型定义](#类型定义)
+- [使用示例](#使用示例)
+- [为 AI 代理准备](#为-ai-代理准备)
 
 ---
 
 ## 🌐 HTTP API
 
-The HTTP API is available in both development and production environments, but with different implementations.
+HTTP API 在开发和生产环境中都可用，但实现方式不同。
 
-### Base URL
+### 基础 URL
 
-- **Development**: `http://localhost:3000`
-  - Implemented as a Vite plugin
-  - Returns pure JSON (`Content-Type: application/json`)
-  - Dynamic generation (random each time)
-  - Rate limiting: 30 requests/minute
+- **开发环境**: `http://localhost:3000`
+  - 作为 Vite 插件实现
+  - 返回纯 JSON (`Content-Type: application/json`)
+  - 动态生成（每次都是随机的）
+  - 速率限制：30 请求/分钟
   
-- **Production (GitHub Pages)**: `https://ling5821.github.io/pick-bot-name`
-  - Serves static HTML files with JSON in body
-  - Returns HTML (`Content-Type: text/html`)
-  - Pre-generated content (cached)
-  - No rate limiting
+- **生产环境 (GitHub Pages)**: `https://ling5821.github.io/pick-bot-name`
+  - 提供静态 HTML 文件，body 中包含 JSON
+  - 返回 HTML (`Content-Type: text/html`)
+  - 预生成内容（缓存的）
+  - 无速率限制
 
-### Authentication
+### 认证
 
-No authentication required.
+无需认证。
 
 ---
 
-## 📍 Generate Bot Name
+## 📍 生成机器人名称
 
-Generate a unique bot name with avatar for all supported platforms.
+为所有支持的平台生成唯一的机器人名称和头像。
 
-### Endpoint
+### 端点
 
 ```
 GET /api/pick-bot-name
 ```
 
-**Note**: On GitHub Pages, this endpoint returns HTML with JSON content in the body (Content-Type: text/html). Use `response.text()` then `JSON.parse()` to extract the data.
+**注意**: 在 GitHub Pages 上，此端点返回 HTML，JSON 内容在 body 中 (Content-Type: text/html)。使用 `response.text()` 然后 `JSON.parse()` 提取数据。
 
-#### Why HTML? Understanding GitHub Pages Limitations
+#### 为什么是 HTML？理解 GitHub Pages 限制
 
-GitHub Pages serves `index.html` files with `Content-Type: text/html` header. While the file body contains pure JSON (no HTML tags), the Content-Type header makes browsers and HTTP clients treat it as HTML. 
+GitHub Pages 以 `Content-Type: text/html` 头提供 `index.html` 文件。虽然文件 body 包含纯 JSON（没有 HTML 标签），但 Content-Type 头使浏览器和 HTTP 客户端将其视为 HTML。
 
-**Solution**: Parse with `response.text()` to get the raw JSON string, then use `JSON.parse()`.
+**解决方案**: 使用 `response.text()` 解析以获取原始 JSON 字符串，然后使用 `JSON.parse()`。
 
-#### Development vs Production Comparison
+#### 开发环境 vs 生产环境对比
 
-| Feature | Development | Production (GitHub Pages) |
-|---------|-------------|---------------------------|
-| **Endpoint** | `http://localhost:3000/api/pick-bot-name` | `https://ling5821.github.io/pick-bot-name/api/pick-bot-name/` |
-| **Response Type** | Pure JSON | HTML with JSON in body |
+| 功能 | 开发环境 | 生产环境 (GitHub Pages) |
+|------|----------|-------------------------|
+| **端点** | `http://localhost:3000/api/pick-bot-name` | `https://ling5821.github.io/pick-bot-name/api/pick-bot-name/` |
+| **响应类型** | 纯 JSON | HTML，body 中包含 JSON |
 | **Content-Type** | `application/json` | `text/html` |
-| **Parsing** | `response.json()` | `response.text()` → `JSON.parse()` |
-| **Generation** | Dynamic (random each time) | Pre-generated (cached) |
-| **Rate Limiting** | Yes (30 req/min) | No (static files) |
-| **CORS** | Configured | Open (static files) |
+| **解析** | `response.json()` | `response.text()` → `JSON.parse()` |
+| **生成** | 动态（每次随机） | 预生成（缓存的） |
+| **速率限制** | 是 (30 req/min) | 否（静态文件） |
+| **CORS** | 已配置 | 开放（静态文件） |
 
-### Query Parameters
+### 查询参数
 
-| Parameter | Type | Required | Description | Valid Values |
-|-----------|------|----------|-------------|--------------|
-| `style` | string | ✅ Yes | Bot style category | `punk`, `cute`, `professional`, `geek`, `minimal`, `anime`, `acgn` |
-| `language` | string | ✅ Yes | Generation language | `zh` (Chinese), `en` (English) |
+| 参数 | 类型 | 必需 | 描述 | 有效值 |
+|------|------|------|------|--------|
+| `style` | string | ✅ 是 | 机器人风格类别 | `punk`, `cute`, `professional`, `geek`, `minimal`, `anime`, `acgn` |
+| `language` | string | ✅ 是 | 生成语言 | `zh` (中文), `en` (英文) |
 
-### Response Format
+### 响应格式
 
-#### Success Response (200 OK)
+#### 成功响应 (200 OK)
 
 ```json
 {
@@ -135,7 +135,7 @@ GitHub Pages serves `index.html` files with `Content-Type: text/html` header. Wh
           "usernameGeneratedBySystem": false
         }
       }
-      // ... 8 more platforms
+      // ... 另外 8 个平台
     },
     "avatar": {
       "svg": "<svg>...</svg>",
@@ -146,7 +146,7 @@ GitHub Pages serves `index.html` files with `Content-Type: text/html` header. Wh
 }
 ```
 
-#### Error Response (400 Bad Request)
+#### 错误响应 (400 Bad Request)
 
 ```json
 {
@@ -162,7 +162,7 @@ GitHub Pages serves `index.html` files with `Content-Type: text/html` header. Wh
 }
 ```
 
-#### Error Response (429 Too Many Requests)
+#### 错误响应 (429 Too Many Requests)
 
 ```json
 {
@@ -172,13 +172,13 @@ GitHub Pages serves `index.html` files with `Content-Type: text/html` header. Wh
 }
 ```
 
-**Response Headers** (429):
-- `Retry-After`: Seconds until rate limit resets
-- `X-RateLimit-Limit`: Maximum requests per window
-- `X-RateLimit-Remaining`: Remaining requests
-- `X-RateLimit-Reset`: Unix timestamp when limit resets
+**响应头** (429):
+- `Retry-After`: 速率限制重置前的秒数
+- `X-RateLimit-Limit`: 每个窗口的最大请求数
+- `X-RateLimit-Remaining`: 剩余请求数
+- `X-RateLimit-Reset`: 限制重置时的 Unix 时间戳
 
-#### Error Response (500 Internal Server Error)
+#### 错误响应 (500 Internal Server Error)
 
 ```json
 {
@@ -189,15 +189,15 @@ GitHub Pages serves `index.html` files with `Content-Type: text/html` header. Wh
 
 ---
 
-### Request Examples
+### 请求示例
 
 #### cURL
 
 ```bash
-# Generate a cute bot in Chinese
+# 生成中文可爱风格的机器人
 curl "http://localhost:3000/api/pick-bot-name?style=cute&language=zh"
 
-# Generate a professional bot in English
+# 生成英文专业风格的机器人
 curl "http://localhost:3000/api/pick-bot-name?style=professional&language=en"
 ```
 
@@ -213,7 +213,7 @@ async function generateBotName(style, language) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
   
-  // On GitHub Pages, response is HTML with JSON in body
+  // 在 GitHub Pages 上，响应是 HTML，body 中包含 JSON
   const text = await response.text();
   const data = JSON.parse(text);
   
@@ -224,13 +224,13 @@ async function generateBotName(style, language) {
   }
 }
 
-// Usage
+// 使用
 try {
   const bot = await generateBotName('punk', 'zh');
-  console.log('Bot name:', bot.displayNames.primary);
-  console.log('Telegram username:', bot.platforms.telegram.username);
+  console.log('机器人名称:', bot.displayNames.primary);
+  console.log('Telegram 用户名:', bot.platforms.telegram.username);
 } catch (error) {
-  console.error('Failed to generate bot:', error.message);
+  console.error('生成机器人失败:', error.message);
 }
 ```
 
@@ -241,16 +241,16 @@ import requests
 import json
 
 def generate_bot_name(style: str, language: str, use_production: bool = False) -> dict:
-    """Generate a bot name using the API."""
+    """使用 API 生成机器人名称。"""
     if use_production:
-        # GitHub Pages: HTML with JSON in body
+        # GitHub Pages: HTML，body 中包含 JSON
         url = f"https://ling5821.github.io/pick-bot-name/api/pick-bot-name/"
         response = requests.get(url, params={"style": style, "language": language})
         response.raise_for_status()
-        # Parse as text first, then JSON
+        # 先解析为文本，然后解析 JSON
         data = json.loads(response.text)
     else:
-        # Development: Pure JSON
+        # 开发环境: 纯 JSON
         url = "http://localhost:3000/api/pick-bot-name"
         response = requests.get(url, params={"style": style, "language": language})
         response.raise_for_status()
@@ -261,18 +261,18 @@ def generate_bot_name(style: str, language: str, use_production: bool = False) -
     else:
         raise Exception(data["error"])
 
-# Usage
+# 使用
 try:
-    # Development
+    # 开发环境
     bot = generate_bot_name("cute", "zh")
     
-    # Or use production (GitHub Pages)
+    # 或使用生产环境 (GitHub Pages)
     # bot = generate_bot_name("cute", "zh", use_production=True)
     
-    print(f"Bot name: {bot['displayNames']['primary']}")
+    print(f"机器人名称: {bot['displayNames']['primary']}")
     print(f"Telegram: @{bot['platforms']['telegram']['username']}")
 except Exception as e:
-    print(f"Error: {e}")
+    print(f"错误: {e}")
 ```
 
 #### TypeScript (axios)
@@ -302,30 +302,30 @@ async function generateBotName(
   }
 }
 
-// Usage
+// 使用
 const bot = await generateBotName('professional', 'en');
 console.log(bot.displayNames.primary);
 ```
 
 ---
 
-## ⏱️ Rate Limiting (Development Only)
+## ⏱️ 速率限制（仅开发环境）
 
-⚠️ **Note**: Rate limiting only applies to the development server. GitHub Pages serves static files with no rate limits.
+⚠️ **注意**: 速率限制仅适用于开发服务器。GitHub Pages 提供静态文件，无速率限制。
 
-The development API implements sliding window rate limiting to prevent abuse:
+开发 API 实现滑动窗口速率限制以防止滥用：
 
-### Limits
+### 限制
 
-| Endpoint | Limit | Window | Header |
-|----------|-------|--------|--------|
-| `/api/pick-bot-name` | 30 requests | 60 seconds | `X-RateLimit-Limit: 30` |
-| `/api/waifu/*` (Dev only) | 10 requests | 60 seconds | `X-RateLimit-Limit: 10` |
-| `/proxy/waifu-img/*` (Dev only) | 15 requests | 60 seconds | `X-RateLimit-Limit: 15` |
+| 端点 | 限制 | 窗口 | 头 |
+|------|------|------|-----|
+| `/api/pick-bot-name` | 30 请求 | 60 秒 | `X-RateLimit-Limit: 30` |
+| `/api/waifu/*` (仅开发) | 10 请求 | 60 秒 | `X-RateLimit-Limit: 10` |
+| `/proxy/waifu-img/*` (仅开发) | 15 请求 | 60 秒 | `X-RateLimit-Limit: 15` |
 
-### Rate Limit Headers
+### 速率限制头
 
-Every successful response includes rate limit information:
+每个成功响应都包含速率限制信息：
 
 ```
 X-RateLimit-Limit: 30
@@ -333,7 +333,7 @@ X-RateLimit-Remaining: 27
 X-RateLimit-Reset: 1713001260000
 ```
 
-### Handling Rate Limits
+### 处理速率限制
 
 ```javascript
 async function generateWithRetry(style, language, maxRetries = 3) {
@@ -346,7 +346,7 @@ async function generateWithRetry(style, language, maxRetries = 3) {
       if (response.status === 429) {
         const retryAfter = response.headers.get('Retry-After');
         const waitSeconds = parseInt(retryAfter || '60', 10);
-        console.log(`Rate limited. Waiting ${waitSeconds}s...`);
+        console.log(`速率限制。等待 ${waitSeconds}秒...`);
         await new Promise(resolve => setTimeout(resolve, waitSeconds * 1000));
         continue;
       }
@@ -357,72 +357,72 @@ async function generateWithRetry(style, language, maxRetries = 3) {
     }
   }
   
-  throw new Error('Max retries exceeded');
+  throw new Error('超过最大重试次数');
 }
 ```
 
 ---
 
-## ❌ Error Handling
+## ❌ 错误处理
 
-### Error Response Format
+### 错误响应格式
 
-All errors follow a consistent format:
+所有错误都遵循一致的格式：
 
 ```typescript
 interface ErrorResponse {
   success: false;
   error: string;
-  retryAfter?: number; // Only for 429 errors
+  retryAfter?: number; // 仅用于 429 错误
 }
 ```
 
-### Common Errors
+### 常见错误
 
-| Status | Error Message | Cause | Solution |
-|--------|--------------|-------|----------|
-| 400 | `Missing required parameters: style and language` | Missing query params | Include both `style` and `language` |
-| 400 | `Invalid style: xxx` | Invalid style value | Use valid style: `punk`, `cute`, `professional`, `geek`, `minimal`, `anime`, `acgn` |
-| 400 | `Invalid language: xxx` | Invalid language code | Use `zh` or `en` |
-| 400 | `No rule found for style: xxx, language: yyy` | No matching rule | Use a different style/language combination |
-| 429 | `Too many requests, please try again later` | Rate limit exceeded | Wait for `Retry-After` seconds |
-| 500 | `Internal server error` | Server error | Report issue on GitHub |
+| 状态 | 错误消息 | 原因 | 解决方案 |
+|------|---------|------|---------|
+| 400 | `Missing required parameters: style and language` | 缺少查询参数 | 包含 `style` 和 `language` |
+| 400 | `Invalid style: xxx` | 无效的风格值 | 使用有效风格: `punk`, `cute`, `professional`, `geek`, `minimal`, `anime`, `acgn` |
+| 400 | `Invalid language: xxx` | 无效的语言代码 | 使用 `zh` 或 `en` |
+| 400 | `No rule found for style: xxx, language: yyy` | 没有匹配的规则 | 使用不同的风格/语言组合 |
+| 429 | `Too many requests, please try again later` | 超过速率限制 | 等待 `Retry-After` 秒 |
+| 500 | `Internal server error` | 服务器错误 | 在 GitHub 上报告问题 |
 
 ---
 
 ## 💻 TypeScript/JavaScript API
 
-For direct integration in Node.js or browser applications, use the TypeScript modules.
+对于在 Node.js 或浏览器应用中的直接集成，使用 TypeScript 模块。
 
 ### NameGenerator
 
-Generate bot names programmatically.
+以编程方式生成机器人名称。
 
-**Import**:
+**导入**:
 ```typescript
 import { NameGenerator } from '@/core/generator';
 import { BotStyle } from '@/types';
 ```
 
-#### Methods
+#### 方法
 
 ##### `generate(style, language)`
 
-Generate a single bot name.
+生成单个机器人名称。
 
 ```typescript
 static generate(style: BotStyle, language: LanguageCode): string
 ```
 
-**Example**:
+**示例**:
 ```typescript
 const name = NameGenerator.generate(BotStyle.PUNK, 'zh');
-// Returns: "赛博守卫", "量子卫士", etc.
+// 返回: "赛博守卫", "量子卫士" 等
 ```
 
 ##### `generateMultiple(style, language, count)`
 
-Generate multiple unique names.
+生成多个唯一名称。
 
 ```typescript
 static generateMultiple(
@@ -432,28 +432,28 @@ static generateMultiple(
 ): string[]
 ```
 
-**Example**:
+**示例**:
 ```typescript
 const names = NameGenerator.generateMultiple(BotStyle.CUTE, 'zh', 5);
-// Returns: ["小喵喵", "萌团团", "软兔兔", "甜心酱", "可爱宝"]
+// 返回: ["小喵喵", "萌团团", "软兔兔", "甜心酱", "可爱宝"]
 ```
 
 ---
 
 ### AvatarGenerator
 
-Generate avatars using DiceBear or external APIs.
+使用 DiceBear 或外部 API 生成头像。
 
-**Import**:
+**导入**:
 ```typescript
 import { AvatarGenerator } from '@/core/avatar';
 ```
 
-#### Methods
+#### 方法
 
 ##### `generate(seed?, style?, botStyle?)`
 
-Generate an avatar.
+生成头像。
 
 ```typescript
 static generate(
@@ -463,54 +463,46 @@ static generate(
 ): AvatarInfo
 ```
 
-**Parameters**:
-- `seed`: Random seed for reproducibility (optional)
-- `style`: Avatar style (DiceBear style name)
-- `botStyle`: Auto-map avatar style from bot style (optional)
+**参数**:
+- `seed`: 用于可重现性的随机种子（可选）
+- `style`: 头像风格（DiceBear 风格名称）
+- `botStyle`: 从机器人风格自动映射头像风格（可选）
 
-**Returns**:
+**返回**:
 ```typescript
 {
-  svg: string;         // SVG markup or image URL
-  style: AvatarStyle;  // Style used
-  seed: string;        // Seed for reproducibility
+  svg: string;         // SVG 标记或图像 URL
+  style: AvatarStyle;  // 使用的风格
+  seed: string;        // 用于可重现性的种子
 }
 ```
 
-**Example**:
+**示例**:
 ```typescript
-// Auto-mapped from bot style
+// 从机器人风格自动映射
 const avatar = AvatarGenerator.generate(undefined, undefined, BotStyle.CUTE);
 console.log(avatar.svg); // "<svg>...</svg>"
 console.log(avatar.seed); // "a1b2c3d4e5"
 
-// Specific style
+// 特定风格
 const avatar2 = AvatarGenerator.generate('my-seed', 'bottts');
 ```
 
-**Avatar Style Mapping**:
+**头像风格映射**:
 
-| Bot Style | Avatar Style |
-|-----------|--------------|
+| 机器人风格 | 头像风格 |
+|-----------|---------|
 | `punk` | `bottts` |
 | `cute` | `funEmoji` |
 | `professional` | `identicon` |
 | `geek` | `botttsNeutral` |
 | `minimal` | `identicon` |
 | `anime` | `lorelei` |
-| `acgn` | External API (waifu.pics) |
-
-##### `getAvatarStyleForBotStyle(botStyle)`
-
-Get the mapped avatar style for a bot style.
-
-```typescript
-static getAvatarStyleForBotStyle(botStyle: BotStyle): AvatarStyle
-```
+| `acgn` | 外部 API (waifu.pics) |
 
 ##### `downloadAsPng(svg, filename)`
 
-Download avatar as PNG (browser only).
+将头像下载为 PNG（仅浏览器）。
 
 ```typescript
 static async downloadAsPng(svg: string, filename: string): Promise<void>
@@ -518,7 +510,7 @@ static async downloadAsPng(svg: string, filename: string): Promise<void>
 
 ##### `downloadAsSvg(svg, filename)`
 
-Download avatar as SVG (browser only).
+将头像下载为 SVG（仅浏览器）。
 
 ```typescript
 static downloadAsSvg(svg: string, filename: string): void
@@ -528,18 +520,18 @@ static downloadAsSvg(svg: string, filename: string): void
 
 ### BotIdGenerator
 
-Generate platform-specific usernames/IDs.
+生成特定于平台的用户名/ID。
 
-**Import**:
+**导入**:
 ```typescript
 import { BotIdGenerator } from '@/core/generator';
 ```
 
-#### Methods
+#### 方法
 
 ##### `generate(options)`
 
-Generate a bot username/ID.
+生成机器人用户名/ID。
 
 ```typescript
 static generate(options: {
@@ -550,47 +542,47 @@ static generate(options: {
 }): string
 ```
 
-**Behavior**:
-1. Converts Chinese to pinyin
-2. Transliterates non-ASCII to ASCII
-3. Removes special characters
-4. Converts to lowercase
-5. Truncates to `maxLength`
-6. Optionally adds random suffix
+**行为**:
+1. 将中文转换为拼音
+2. 将非 ASCII 音译为 ASCII
+3. 删除特殊字符
+4. 转换为小写
+5. 截断到 `maxLength`
+6. 可选地添加随机后缀
 
-**Example**:
+**示例**:
 ```typescript
 const username = BotIdGenerator.generate({
   displayName: "赛博守卫",
   platform: 'telegram',
   addRandomSuffix: false,
 });
-// Returns: "saiboshouwei"
+// 返回: "saiboshouwei"
 
 const username2 = BotIdGenerator.generate({
   displayName: "赛博守卫",
   platform: 'telegram',
   addRandomSuffix: true,
 });
-// Returns: "saiboshouwei_a8f3"
+// 返回: "saiboshouwei_a8f3"
 ```
 
 ---
 
 ### PlatformValidator
 
-Validate names against platform-specific rules.
+根据平台特定规则验证名称。
 
-**Import**:
+**导入**:
 ```typescript
 import { PlatformValidator } from '@/core/platform';
 ```
 
-#### Methods
+#### 方法
 
 ##### `validateDisplayName(name, platform, rules)`
 
-Validate a display name.
+验证显示名称。
 
 ```typescript
 static validateDisplayName(
@@ -600,7 +592,7 @@ static validateDisplayName(
 ): ValidationResult
 ```
 
-**Returns**:
+**返回**:
 ```typescript
 {
   valid: boolean;
@@ -608,7 +600,7 @@ static validateDisplayName(
 }
 ```
 
-**Example**:
+**示例**:
 ```typescript
 import { platformConfigs } from '@/data/platforms';
 
@@ -622,23 +614,11 @@ console.log(result.valid); // true
 console.log(result.errors); // []
 ```
 
-##### `validateUsername(username, platform, rules)`
-
-Validate a username.
-
-```typescript
-static validateUsername(
-  username: string,
-  platform: PlatformId,
-  rules: NamingRules
-): ValidationResult
-```
-
 ---
 
-## 📘 Type Definitions
+## 📘 类型定义
 
-### Core Types
+### 核心类型
 
 #### BotStyle
 
@@ -662,36 +642,36 @@ type LanguageCode = 'zh' | 'en';
 
 #### GeneratedBotInfo
 
-Complete bot information including names, platforms, and avatar.
+包括名称、平台和头像的完整机器人信息。
 
 ```typescript
 interface GeneratedBotInfo {
-  id: string;                    // Unique identifier
-  timestamp: number;             // Generation timestamp
-  style: BotStyle;               // Bot style used
-  ruleId: string;                // Rule ID used
-  algorithm: GenerationAlgorithm; // Algorithm used
+  id: string;                    // 唯一标识符
+  timestamp: number;             // 生成时间戳
+  style: BotStyle;               // 使用的机器人风格
+  ruleId: string;                // 使用的规则 ID
+  algorithm: GenerationAlgorithm; // 使用的算法
   
   displayNames: {
-    primary: string;             // Primary display name
-    translations: Record<string, string>; // Translated names
+    primary: string;             // 主显示名称
+    translations: Record<string, string>; // 翻译的名称
   };
   
-  platforms: Record<string, PlatformBotInfo>; // Platform-specific info
+  platforms: Record<string, PlatformBotInfo>; // 特定于平台的信息
   
-  avatar: AvatarInfo;            // Avatar data
+  avatar: AvatarInfo;            // 头像数据
 }
 ```
 
 #### PlatformBotInfo
 
-Platform-specific bot information.
+特定于平台的机器人信息。
 
 ```typescript
 interface PlatformBotInfo {
   platform: PlatformId;
   displayName: string;
-  username: string | null;       // null if not needed
+  username: string | null;       // 如果不需要则为 null
   needsUsername: boolean;
   isValid: boolean;
   validationErrors?: string[];
@@ -706,41 +686,41 @@ interface PlatformBotInfo {
 
 #### AvatarInfo
 
-Avatar data.
+头像数据。
 
 ```typescript
 interface AvatarInfo {
-  svg: string;         // SVG string or image URL
-  style: AvatarStyle;  // Avatar style used
-  seed: string;        // Random seed for reproducibility
+  svg: string;         // SVG 字符串或图像 URL
+  style: AvatarStyle;  // 使用的头像风格
+  seed: string;        // 用于可重现性的随机种子
 }
 ```
 
-### Supported Platforms
+### 支持的平台
 
-| Platform ID | Display Name | Username Required | Difficulty |
-|-------------|--------------|-------------------|------------|
-| `telegram` | Telegram | ✅ Yes | Easy |
-| `discord` | Discord | ✅ Yes | Medium |
-| `slack` | Slack | ❌ No | Medium |
-| `feishu` | Feishu (Lark) | ❌ No | Easy |
-| `dingtalk` | DingTalk | ❌ No | Easy |
-| `wecom` | WeChat Work | ❌ No | Medium |
-| `weixin` | Weixin (WeChat) | ❌ No | Hard |
-| `qq` | QQ | ❌ No | Medium |
-| `qqbot` | QQ Bot | ❌ No | Medium |
-| `line` | LINE | ✅ Yes | Medium |
+| 平台 ID | 显示名称 | 需要用户名 | 难度 |
+|---------|----------|-----------|------|
+| `telegram` | Telegram | ✅ 是 | 简单 |
+| `discord` | Discord | ✅ 是 | 中等 |
+| `slack` | Slack | ❌ 否 | 中等 |
+| `feishu` | Feishu (飞书) | ❌ 否 | 简单 |
+| `dingtalk` | DingTalk (钉钉) | ❌ 否 | 简单 |
+| `wecom` | WeChat Work (企业微信) | ❌ 否 | 中等 |
+| `weixin` | Weixin (微信) | ❌ 否 | 困难 |
+| `qq` | QQ | ❌ 否 | 中等 |
+| `qqbot` | QQ Bot | ❌ 否 | 中等 |
+| `line` | LINE | ✅ 是 | 中等 |
 
 ---
 
-## 💡 Usage Examples
+## 💡 使用示例
 
-### Example 1: Full Bot Generation Pipeline
+### 示例 1: 完整的机器人生成管道
 
 ```typescript
 import { pickBotName } from '@/api/pickBotName';
 
-// Generate complete bot info
+// 生成完整的机器人信息
 const result = pickBotName({
   style: 'punk',
   language: 'zh'
@@ -749,14 +729,14 @@ const result = pickBotName({
 if (result.success && result.data) {
   const bot = result.data;
   
-  console.log('Display Name:', bot.displayNames.primary);
-  console.log('Avatar SVG:', bot.avatar.svg);
+  console.log('显示名称:', bot.displayNames.primary);
+  console.log('头像 SVG:', bot.avatar.svg);
   console.log('Telegram:', bot.platforms.telegram.username);
   console.log('Discord:', bot.platforms.discord.username);
 }
 ```
 
-### Example 2: Generate Multiple Candidates
+### 示例 2: 生成多个候选
 
 ```typescript
 import { NameGenerator, AvatarGenerator } from '@/core';
@@ -772,10 +752,10 @@ function generateCandidates(style: BotStyle, language: LanguageCode, count: numb
 }
 
 const candidates = generateCandidates(BotStyle.CUTE, 'zh', 5);
-// Returns 5 bot name + avatar combinations
+// 返回 5 个机器人名称 + 头像组合
 ```
 
-### Example 3: Custom Validation
+### 示例 3: 自定义验证
 
 ```typescript
 import { BotIdGenerator, PlatformValidator, platformConfigs } from '@/core';
@@ -791,7 +771,7 @@ function generateValidUsername(
     const username = BotIdGenerator.generate({
       displayName,
       platform,
-      addRandomSuffix: i > 0, // Add suffix after first attempt
+      addRandomSuffix: i > 0, // 第一次尝试后添加后缀
     });
     
     const result = PlatformValidator.validateUsername(
@@ -814,19 +794,19 @@ console.log(username); // "saiboshouwei"
 
 ---
 
-## 🤖 For AI Agents
+## 🤖 为 AI 代理准备
 
-### Quick Integration Checklist
+### 快速集成检查清单
 
-- [x] **HTTP API**: Use `GET /api/pick-bot-name?style=xxx&language=xxx`
-- [x] **Rate Limiting**: Max 30 requests/minute, respect `Retry-After` header
-- [x] **Error Handling**: Check `success` field, handle 400/429/500 errors
-- [x] **Response Format**: Parse JSON, extract `data.displayNames.primary`
+- [x] **HTTP API**: 使用 `GET /api/pick-bot-name?style=xxx&language=xxx`
+- [x] **速率限制**: 最大 30 请求/分钟，遵守 `Retry-After` 头
+- [x] **错误处理**: 检查 `success` 字段，处理 400/429/500 错误
+- [x] **响应格式**: 解析 JSON，提取 `data.displayNames.primary`
 
-### Supported Styles & Examples
+### 支持的风格和示例
 
-| Style Code | Chinese Examples | English Examples |
-|------------|------------------|------------------|
+| 风格代码 | 中文示例 | 英文示例 |
+|---------|---------|---------|
 | `punk` | 赛博守卫, 量子卫士, 蒸汽管家 | CyberGuard, QuantumDefender, SteamButler |
 | `cute` | 小喵喵, 萌团团, 软兔兔 | Fluffy, Sweetie, CuteBunny |
 | `professional` | 智能助理, 专业顾问, 效率专家 | SmartAssistant, ProAdvisor, EfficiencyExpert |
@@ -835,14 +815,14 @@ console.log(username); // "saiboshouwei"
 | `anime` | 萌酱, 元气君, 可爱喵 | CuteChan, EnergyKun, KawaiiNeko |
 | `acgn` | 傲娇猫娘, 魔法少女, 治愈天使 | TsundereNeko, MagicalGirl, HealingAngel |
 
-### AI-Friendly cURL Example
+### AI 友好的 cURL 示例
 
 ```bash
-# Generate a punk-style bot in Chinese
+# 生成中文朋克风格的机器人
 curl -X GET "http://localhost:3000/api/pick-bot-name?style=punk&language=zh" \
   -H "Accept: application/json"
 
-# Expected response structure:
+# 预期响应结构:
 # {
 #   "success": true,
 #   "data": {
@@ -853,33 +833,33 @@ curl -X GET "http://localhost:3000/api/pick-bot-name?style=punk&language=zh" \
 # }
 ```
 
-### Integration Tips for AI
+### AI 集成提示
 
-1. **Always check `success` field** before accessing `data`
-2. **Handle rate limits gracefully** with exponential backoff
-3. **Cache results** when possible (use `data.id` as key)
-4. **Validate input** before calling API (valid styles/languages)
-5. **Use TypeScript types** for type safety if available
-
----
-
-## 🔗 Related Documentation
-
-- [Contributing Guide](CONTRIBUTING.md) - How to add new rules and features
-- [Rule Guide](RULE_GUIDE.md) - Understanding generation rules
-- [Development Guide](DEVELOPMENT.md) - Setup and development workflow
-- [Architecture](../architecture/ARCHITECTURE.md) - System design
+1. **始终检查 `success` 字段**，然后再访问 `data`
+2. **优雅地处理速率限制**，使用指数退避
+3. **尽可能缓存结果**（使用 `data.id` 作为键）
+4. **在调用 API 前验证输入**（有效的风格/语言）
+5. **如果可用，使用 TypeScript 类型**以确保类型安全
 
 ---
 
-## 📞 Support
+## 🔗 相关文档
+
+- [贡献指南](CONTRIBUTING_zh.md) - 如何添加新规则和功能
+- [规则指南](RULE_GUIDE.md) - 理解生成规则
+- [开发指南](DEVELOPMENT_zh.md) - 设置和开发工作流
+- [架构](../architecture/ARCHITECTURE.md) - 系统设计
+
+---
+
+## 📞 支持
 
 - **Issues**: [GitHub Issues](https://github.com/ling5821/pick-bot-name/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/ling5821/pick-bot-name/discussions)
-- **API Questions**: Tag with `api` label
+- **API 问题**: 使用 `api` 标签
 
 ---
 
-**Last Updated**: 2026-04-13  
-**API Version**: 0.1.0  
-**Maintained by**: Bot Name Generator Team
+**最后更新**: 2026-04-14  
+**API 版本**: 0.1.0  
+**维护**: Bot Name Generator Team
