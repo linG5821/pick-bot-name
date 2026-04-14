@@ -12,3 +12,5 @@ export * from './PlatformIcon';
 export * from './ErrorBoundary';
 export * from './LoadingSpinner';
 export * from './Toast';
+export * from './Header/Header';
+export * from './Footer/Footer';

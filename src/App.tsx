@@ -2,7 +2,7 @@ import './App.css';
 import '@/core/i18n/i18n';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ThemeToggle, LanguageToggle } from '@/components/common';
+import { ThemeToggle, LanguageToggle, Header, Footer } from '@/components/common';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { BotGenerator } from '@/components/Generator';
 import { preloadAnimeAvatars } from '@/core/avatar';
@@ -16,17 +16,21 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="app relative min-h-screen">
-      {/* 右上角按钮组 - 语言和主题切换 */}
+    <div className="app relative min-h-screen pb-16">
+      {/* 右上角按钮组 - 语言、主题切换和GitHub */}
       <div className="fixed top-4 right-4 z-50 flex gap-2">
         <LanguageToggle />
         <ThemeToggle />
+        <Header />
       </div>
 
       {/* 路由内容 */}
       <Routes>
         <Route path="/" element={<BotGenerator />} />
       </Routes>
+
+      {/* 版权信息 */}
+      <Footer />
     </div>
   );
 }
