@@ -2,6 +2,8 @@
 
 Welcome to the Bot Name Generator documentation! This guide will help you understand, use, and contribute to the project.
 
+English | [简体中文](README_zh.md)
+
 ## 📖 Table of Contents
 
 ### 🚀 Getting Started

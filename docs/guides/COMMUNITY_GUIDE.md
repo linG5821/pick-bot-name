@@ -2,6 +2,8 @@
 
 Welcome to the Bot Name Generator community! This guide will help you understand how to participate, contribute, and engage with the project.
 
+English | [简体中文](COMMUNITY_GUIDE_zh.md)
+
 ## 🎯 Ways to Contribute
 
 ### 1. 🎲 Submit Generation Rules
