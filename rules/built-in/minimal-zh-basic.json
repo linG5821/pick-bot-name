@@ -1,13 +1,13 @@
 {
   "id": "minimal-zh-basic",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "name": {
     "en": "Minimal Chinese",
     "zh": "极简中文版"
   },
   "description": {
-    "en": "Ultra-minimal Chinese bot names with natural 2-character words",
-    "zh": "极简自然的中文机器人名称，使用常见2字词汇"
+    "en": "Ultra-minimal Chinese bot names (2 characters only)",
+    "zh": "极简自然的中文机器人名称（仅2个字）"
   },
   "style": "minimal",
   "languages": [
@@ -32,8 +32,7 @@
   ],
   "data": {
     "templates": [
-      { "value": "{word}", "weight": 10 },
-      { "value": "{word}{word}", "weight": 6 }
+      { "value": "{word}", "weight": 10 }
     ],
     "vocabulary": {
       "word": [
