@@ -247,7 +247,13 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 If you find this project helpful, please consider giving it a star ⭐
 
-[![Star History Chart](https://api.star-history.com/svg?repos=ling5821/pick-bot-name&type=Date)](https://star-history.com/#ling5821/pick-bot-name&Date)
+<a href="https://www.star-history.com/?repos=ling5821%2Fpick-bot-name&type=date&legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ling5821/pick-bot-name&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ling5821/pick-bot-name&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ling5821/pick-bot-name&type=date&legend=top-left" />
+ </picture>
+</a>
 
 ---
 
