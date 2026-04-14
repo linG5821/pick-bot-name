@@ -268,6 +268,7 @@ pick-bot-name/
 如果这个项目对你有帮助，请考虑给它一个 star ⭐
 
 [![Star History Chart](https://api.star-history.com/chart?repos=ling5821/pick-bot-name&type=date&legend=bottom-right)](https://www.star-history.com/?repos=ling5821%2Fpick-bot-name&type=date&legend=bottom-right)
+
 ---
 
 <div align="center">
