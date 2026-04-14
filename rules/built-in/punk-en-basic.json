@@ -33,107 +33,155 @@
   "data": {
     "prefixes": [
       {
-        "value": "Cyber",
+        "value": "Phantom",
         "weight": 10
       },
       {
-        "value": "Nano",
-        "weight": 8
-      },
-      {
-        "value": "Quantum",
-        "weight": 7
-      },
-      {
-        "value": "Neural",
+        "value": "Razor",
         "weight": 9
       },
       {
-        "value": "Synth",
+        "value": "Ghost",
+        "weight": 10
+      },
+      {
+        "value": "Neon",
+        "weight": 9
+      },
+      {
+        "value": "Void",
         "weight": 8
       },
       {
-        "value": "Neuro",
-        "weight": 7
+        "value": "Echo",
+        "weight": 9
       },
       {
-        "value": "Tech",
-        "weight": 6
-      },
-      {
-        "value": "Digi",
-        "weight": 7
-      },
-      {
-        "value": "Pixel",
-        "weight": 6
-      },
-      {
-        "value": "Matrix",
+        "value": "Rogue",
         "weight": 8
       },
       {
-        "value": "Data",
+        "value": "Shade",
         "weight": 7
       },
       {
-        "value": "Virtual",
+        "value": "Nomad",
+        "weight": 8
+      },
+      {
+        "value": "Cipher",
+        "weight": 9
+      },
+      {
+        "value": "Nexus",
+        "weight": 8
+      },
+      {
+        "value": "Chrome",
+        "weight": 7
+      },
+      {
+        "value": "Static",
+        "weight": 7
+      },
+      {
+        "value": "Glitch",
+        "weight": 8
+      },
+      {
+        "value": "Wire",
+        "weight": 7
+      },
+      {
+        "value": "Flux",
+        "weight": 7
+      },
+      {
+        "value": "Crash",
         "weight": 6
+      },
+      {
+        "value": "Pulse",
+        "weight": 8
+      },
+      {
+        "value": "Oracle",
+        "weight": 9
+      },
+      {
+        "value": "Cortex",
+        "weight": 8
       }
     ],
     "roots": [
       {
-        "value": "Bot",
+        "value": "Runner",
         "weight": 10
       },
       {
-        "value": "Tron",
+        "value": "Trace",
         "weight": 9
       },
       {
-        "value": "Core",
+        "value": "Byte",
         "weight": 8
       },
       {
-        "value": "Mind",
+        "value": "Jack",
+        "weight": 9
+      },
+      {
+        "value": "Ware",
         "weight": 7
       },
       {
-        "value": "Pulse",
+        "value": "Link",
+        "weight": 8
+      },
+      {
+        "value": "Node",
+        "weight": 7
+      },
+      {
+        "value": "Deck",
+        "weight": 8
+      },
+      {
+        "value": "Port",
+        "weight": 7
+      },
+      {
+        "value": "Code",
+        "weight": 9
+      },
+      {
+        "value": "Net",
+        "weight": 8
+      },
+      {
+        "value": "Core",
+        "weight": 7
+      },
+      {
+        "value": "Mind",
+        "weight": 8
+      },
+      {
+        "value": "Frame",
         "weight": 6
       },
       {
         "value": "Wave",
         "weight": 7
-      },
-      {
-        "value": "Node",
-        "weight": 8
-      },
-      {
-        "value": "Link",
-        "weight": 7
-      },
-      {
-        "value": "Mesh",
-        "weight": 6
-      },
-      {
-        "value": "Grid",
-        "weight": 7
-      },
-      {
-        "value": "Net",
-        "weight": 6
-      },
-      {
-        "value": "Agent",
-        "weight": 8
       }
     ],
     "suffixes": [
       {
-        "value": "3000",
+        "value": "",
+        "weight": 15
+      },
+      {
+        "value": "9",
         "weight": 8
       },
       {
@@ -141,44 +189,35 @@
         "weight": 9
       },
       {
+        "value": "Zero",
+        "weight": 7
+      },
+      {
         "value": "Prime",
-        "weight": 7
+        "weight": 6
       },
       {
-        "value": "Neo",
-        "weight": 8
-      },
-      {
-        "value": "Alpha",
-        "weight": 7
-      },
-      {
-        "value": "Beta",
+        "value": "Dev",
         "weight": 5
       },
       {
-        "value": "One",
-        "weight": 7
-      },
-      {
-        "value": "Zero",
-        "weight": 6
+        "value": "Ops",
+        "weight": 5
       },
       {
         "value": "AI",
-        "weight": 9
-      },
-      {
-        "value": "2077",
-        "weight": 6
+        "weight": 7
       }
     ]
   },
   "examples": [
-    "CyberBot3000",
-    "QuantumCoreX",
-    "NeuralMindPrime",
-    "NanoAgentAI",
-    "SynthWaveNeo"
+    "PhantomRunner",
+    "GhostTrace",
+    "RazorJack9",
+    "NeonCodeX",
+    "VoidNetZero",
+    "CipherDeck",
+    "EchoMind",
+    "RogueByteAI"
   ]
 }

@@ -33,42 +33,114 @@
   "data": {
     "prefixes": [
       {
-        "value": "Sweet",
+        "value": "Soft",
         "weight": 10
       },
       {
-        "value": "Cute",
+        "value": "Dreamy",
         "weight": 10
-      },
-      {
-        "value": "Little",
-        "weight": 9
-      },
-      {
-        "value": "Tiny",
-        "weight": 8
-      },
-      {
-        "value": "Baby",
-        "weight": 8
-      },
-      {
-        "value": "Mini",
-        "weight": 7
       },
       {
         "value": "Fluffy",
+        "weight": 10
+      },
+      {
+        "value": "Cozy",
         "weight": 9
       },
       {
-        "value": "Happy",
+        "value": "Bubbly",
+        "weight": 9
+      },
+      {
+        "value": "Starry",
+        "weight": 9
+      },
+      {
+        "value": "Milky",
+        "weight": 9
+      },
+      {
+        "value": "Peachy",
+        "weight": 9
+      },
+      {
+        "value": "Honey",
+        "weight": 10
+      },
+      {
+        "value": "Sugar",
+        "weight": 9
+      },
+      {
+        "value": "Mochi",
+        "weight": 9
+      },
+      {
+        "value": "Boba",
+        "weight": 9
+      },
+      {
+        "value": "Cookie",
+        "weight": 9
+      },
+      {
+        "value": "Peach",
+        "weight": 9
+      },
+      {
+        "value": "Cloud",
+        "weight": 10
+      },
+      {
+        "value": "Moon",
+        "weight": 9
+      },
+      {
+        "value": "Star",
+        "weight": 9
+      },
+      {
+        "value": "Daisy",
+        "weight": 8
+      },
+      {
+        "value": "Petal",
+        "weight": 8
+      },
+      {
+        "value": "Tiny",
         "weight": 8
       }
     ],
     "roots": [
       {
-        "value": "Bot",
+        "value": "Bun",
         "weight": 10
+      },
+      {
+        "value": "Bean",
+        "weight": 10
+      },
+      {
+        "value": "Bee",
+        "weight": 10
+      },
+      {
+        "value": "Pup",
+        "weight": 9
+      },
+      {
+        "value": "Fox",
+        "weight": 9
+      },
+      {
+        "value": "Cub",
+        "weight": 9
+      },
+      {
+        "value": "Bear",
+        "weight": 9
       },
       {
         "value": "Bunny",
@@ -76,57 +148,56 @@
       },
       {
         "value": "Kitty",
-        "weight": 10
-      },
-      {
-        "value": "Puppy",
-        "weight": 8
-      },
-      {
-        "value": "Angel",
-        "weight": 7
-      },
-      {
-        "value": "Helper",
-        "weight": 8
-      },
-      {
-        "value": "Friend",
         "weight": 9
       },
       {
-        "value": "Buddy",
+        "value": "Cake",
+        "weight": 8
+      },
+      {
+        "value": "Puff",
+        "weight": 8
+      },
+      {
+        "value": "Blossom",
+        "weight": 8
+      },
+      {
+        "value": "Fairy",
         "weight": 8
       }
     ],
     "suffixes": [
       {
-        "value": "ie",
-        "weight": 9
+        "value": "",
+        "weight": 15
       },
       {
         "value": "y",
+        "weight": 10
+      },
+      {
+        "value": "ie",
         "weight": 8
       },
       {
-        "value": "Bear",
-        "weight": 7
-      },
-      {
-        "value": "Chan",
+        "value": "Boo",
         "weight": 6
       },
       {
-        "value": "Paw",
+        "value": "Bot",
         "weight": 5
       }
     ]
   },
   "examples": [
-    "SweetBotie",
-    "CuteKittyy",
-    "LittleHelperBear",
-    "TinyBuddy",
-    "FluffyFriend"
+    "SoftBean",
+    "DreamyBun",
+    "FluffyBee",
+    "CloudPup",
+    "HoneyFox",
+    "MochiCub",
+    "PeachyBunny",
+    "StarryKitty"
   ]
 }

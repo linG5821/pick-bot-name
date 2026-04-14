@@ -16,7 +16,7 @@ function AppContent() {
   }, []);
 
   return (
-    <div className="app relative min-h-screen pb-16">
+    <div className="app relative min-h-screen pb-16 overflow-x-hidden max-w-full">
       {/* 右上角按钮组 - 语言、主题切换和GitHub */}
       <div className="fixed top-4 right-4 z-50 flex gap-2">
         <LanguageToggle />

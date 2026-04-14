@@ -125,8 +125,9 @@ GET /api/pick-bot-name?style=punk&language=zh
 **ACGN Style (二次元) ⚠️**:
 - Uses **waifu.pics API** for real anime illustrations
 - Implementation: `src/core/avatar/anime-api-loader.ts`
-- Proxy paths: `/api/waifu/*` and `/proxy/waifu-img/*`
-- Features: caching, preloading, fallback mechanism
+- Dev and production: Direct API calls to `https://api.waifu.pics` (no proxy)
+- Features: caching, preloading, automatic fallback
+- Fallback: `public/avatars/anime/fallback.svg` when all APIs fail
 - DO NOT break this integration - it's a key differentiator
 - See `docs/features/ANIME_AVATAR_IMPLEMENTATION.md`
 
@@ -259,8 +260,9 @@ Before making changes, review these key constraints:
    - See `docs/guides/API_REFERENCE.md`
 
 3. **Anime Avatars** (`memory/project_anime_avatar.md`)
-   - ACGN uses waifu.pics API (real anime illustrations)
+   - ACGN uses waifu.pics API for real anime illustrations
    - Implementation: `src/core/avatar/anime-api-loader.ts`
+   - Dev and production both directly call external API (no proxy)
    - Don't break this integration
 
 For detailed context, see memory files in `.claude/projects/.../memory/`

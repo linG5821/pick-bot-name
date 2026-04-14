@@ -1,24 +1,24 @@
 {
   "id": "professional-en-corporate",
-  "version": "1.0.0",
+  "version": "3.0.0",
   "name": {
-    "en": "Professional English Corporate",
-    "zh": "专业英文企业版"
+    "en": "Professional English",
+    "zh": "专业英文版"
   },
   "description": {
-    "en": "Professional and corporate-style bot names for business use",
-    "zh": "适合商务使用的专业企业风格机器人名称"
+    "en": "Real-world professional bot names based on GitHub, Probot, and enterprise tools (2-4 words)",
+    "zh": "基于GitHub、Probot等真实企业工具的专业机器人命名（2-4个单词）"
   },
   "style": "professional",
   "languages": [
     "en"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
     "slack",
-    "feishu",
-    "wecom",
-    "dingtalk"
+    "github",
+    "gitlab",
+    "teams"
   ],
   "author": {
     "name": "Bot Name Generator Team",
@@ -27,139 +27,80 @@
   "license": "MIT",
   "tags": [
     "professional",
-    "business",
-    "corporate",
-    "enterprise"
+    "development",
+    "devops",
+    "github",
+    "probot"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "Business",
-        "weight": 9
-      },
-      {
-        "value": "Corporate",
-        "weight": 8
-      },
-      {
-        "value": "Enterprise",
-        "weight": 8
-      },
-      {
-        "value": "Office",
-        "weight": 7
-      },
-      {
-        "value": "Work",
-        "weight": 8
-      },
-      {
-        "value": "Pro",
-        "weight": 9
-      },
-      {
-        "value": "Smart",
-        "weight": 8
-      },
-      {
-        "value": "Team",
-        "weight": 7
-      },
-      {
-        "value": "Collab",
-        "weight": 6
-      },
-      {
-        "value": "Workflow",
-        "weight": 7
-      }
+    "templates": [
+      "{function} {type}",
+      "{adj} {function} {type}",
+      "{function} {action}",
+      "{adj} {function} {action}"
     ],
-    "roots": [
-      {
-        "value": "Assistant",
-        "weight": 10
-      },
-      {
-        "value": "Helper",
-        "weight": 8
-      },
-      {
-        "value": "Agent",
-        "weight": 9
-      },
-      {
-        "value": "Manager",
-        "weight": 7
-      },
-      {
-        "value": "Coordinator",
-        "weight": 6
-      },
-      {
-        "value": "Advisor",
-        "weight": 7
-      },
-      {
-        "value": "Support",
-        "weight": 8
-      },
-      {
-        "value": "Guide",
-        "weight": 7
-      },
-      {
-        "value": "Partner",
-        "weight": 6
-      },
-      {
-        "value": "Bot",
-        "weight": 9
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "Pro",
-        "weight": 9
-      },
-      {
-        "value": "Plus",
-        "weight": 7
-      },
-      {
-        "value": "360",
-        "weight": 6
-      },
-      {
-        "value": "AI",
-        "weight": 8
-      },
-      {
-        "value": "X",
-        "weight": 6
-      },
-      {
-        "value": "Hub",
-        "weight": 7
-      },
-      {
-        "value": "Suite",
-        "weight": 5
-      },
-      {
-        "value": "One",
-        "weight": 7
-      },
-      {
-        "value": "",
-        "weight": 10
-      }
-    ]
+    "vocabulary": {
+      "function": [
+        { "value": "Code", "weight": 10 },
+        { "value": "Deploy", "weight": 10 },
+        { "value": "Test", "weight": 10 },
+        { "value": "Release", "weight": 9 },
+        { "value": "Build", "weight": 9 },
+        { "value": "Merge", "weight": 9 },
+        { "value": "Review", "weight": 9 },
+        { "value": "Issue", "weight": 8 },
+        { "value": "PR", "weight": 8 },
+        { "value": "Security", "weight": 8 },
+        { "value": "Performance", "weight": 7 },
+        { "value": "Container", "weight": 7 },
+        { "value": "API", "weight": 7 },
+        { "value": "Database", "weight": 7 },
+        { "value": "Log", "weight": 6 },
+        { "value": "CI", "weight": 6 },
+        { "value": "Pipeline", "weight": 6 },
+        { "value": "Branch", "weight": 6 },
+        { "value": "Workflow", "weight": 6 },
+        { "value": "Team", "weight": 5 }
+      ],
+      "type": [
+        { "value": "Bot", "weight": 10 },
+        { "value": "Helper", "weight": 9 },
+        { "value": "Assistant", "weight": 9 },
+        { "value": "Runner", "weight": 8 },
+        { "value": "Manager", "weight": 7 },
+        { "value": "Monitor", "weight": 7 },
+        { "value": "Checker", "weight": 6 },
+        { "value": "Scanner", "weight": 6 },
+        { "value": "Agent", "weight": 5 }
+      ],
+      "action": [
+        { "value": "Review", "weight": 10 },
+        { "value": "Drafter", "weight": 9 },
+        { "value": "Checker", "weight": 9 },
+        { "value": "Runner", "weight": 8 },
+        { "value": "Triage", "weight": 8 },
+        { "value": "Labeler", "weight": 7 },
+        { "value": "Assigner", "weight": 7 },
+        { "value": "Analyzer", "weight": 6 },
+        { "value": "Detector", "weight": 6 }
+      ],
+      "adj": [
+        { "value": "Smart", "weight": 10 },
+        { "value": "Auto", "weight": 10 },
+        { "value": "Automated", "weight": 9 },
+        { "value": "Continuous", "weight": 7 },
+        { "value": "Quick", "weight": 6 },
+        { "value": "Fast", "weight": 6 }
+      ]
+    }
   },
   "examples": [
-    "BusinessAssistantPro",
-    "WorkflowAgentAI",
-    "TeamHelper",
-    "ProSupportBot",
-    "EnterpriseGuide360"
+    "Code Review",
+    "Deploy Bot",
+    "Test Runner",
+    "Release Drafter",
+    "Smart Code Assistant",
+    "Auto Merge Bot",
+    "Automated Test Runner"
   ]
 }

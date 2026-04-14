@@ -1,23 +1,23 @@
 {
   "id": "acgn-en-basic",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": {
-    "en": "ACGN English Basic",
-    "zh": "二次元英文基础版"
+    "en": "ACGN English",
+    "zh": "二次元英文版"
   },
   "description": {
-    "en": "ACGN (Anime, Comic, Game, Novel) style bot names in English",
-    "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称"
+    "en": "Real ACGN character naming patterns from anime, games, visual novels, and VTubers (1-4 words)",
+    "zh": "基于动漫、游戏、视觉小说、虚拟主播的真实二次元角色命名（1-4个单词）"
   },
   "style": "acgn",
   "languages": [
     "en"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
     "discord",
-    "telegram",
-    "line"
+    "twitch",
+    "youtube"
   ],
   "author": {
     "name": "Bot Name Generator Team",
@@ -28,109 +28,63 @@
     "acgn",
     "anime",
     "otaku",
-    "english"
+    "vtuber"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "Tsundere",
-        "weight": 9
-      },
-      {
-        "value": "Kuudere",
-        "weight": 7
-      },
-      {
-        "value": "Yandere",
-        "weight": 6
-      },
-      {
-        "value": "Kawaii",
-        "weight": 10
-      },
-      {
-        "value": "Moe",
-        "weight": 8
-      },
-      {
-        "value": "Senpai",
-        "weight": 7
-      },
-      {
-        "value": "Otaku",
-        "weight": 6
-      },
-      {
-        "value": "Neko",
-        "weight": 8
-      }
+    "templates": [
+      "{name}",
+      "{name} {suffix}",
+      "{trait} {name}",
+      "{name} {role}"
     ],
-    "roots": [
-      {
-        "value": "Chan",
-        "weight": 10
-      },
-      {
-        "value": "Kun",
-        "weight": 8
-      },
-      {
-        "value": "Bot",
-        "weight": 9
-      },
-      {
-        "value": "AI",
-        "weight": 7
-      },
-      {
-        "value": "Helper",
-        "weight": 6
-      },
-      {
-        "value": "Waifu",
-        "weight": 7
-      },
-      {
-        "value": "Idol",
-        "weight": 6
-      },
-      {
-        "value": "Magical",
-        "weight": 5
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "Desu",
-        "weight": 8
-      },
-      {
-        "value": "Nya",
-        "weight": 9
-      },
-      {
-        "value": "Sama",
-        "weight": 6
-      },
-      {
-        "value": "Senpai",
-        "weight": 7
-      },
-      {
-        "value": "2D",
-        "weight": 5
-      },
-      {
-        "value": "Moe",
-        "weight": 6
-      }
-    ]
+    "vocabulary": {
+      "name": [
+        { "value": "Hoshino", "weight": 10 },
+        { "value": "Yukina", "weight": 10 },
+        { "value": "Sakura", "weight": 9 },
+        { "value": "Tsuki", "weight": 9 },
+        { "value": "Haruka", "weight": 9 },
+        { "value": "Rin", "weight": 8 },
+        { "value": "Yui", "weight": 8 },
+        { "value": "Mio", "weight": 8 },
+        { "value": "Nana", "weight": 8 },
+        { "value": "Akari", "weight": 7 },
+        { "value": "Shiro", "weight": 7 },
+        { "value": "Hana", "weight": 7 },
+        { "value": "Ai", "weight": 7 },
+        { "value": "Mei", "weight": 6 },
+        { "value": "Nene", "weight": 6 }
+      ],
+      "suffix": [
+        { "value": "chan", "weight": 10 },
+        { "value": "kun", "weight": 8 },
+        { "value": "sama", "weight": 6 },
+        { "value": "senpai", "weight": 5 }
+      ],
+      "trait": [
+        { "value": "Tsundere", "weight": 10 },
+        { "value": "Yandere", "weight": 8 },
+        { "value": "Kuudere", "weight": 7 },
+        { "value": "Dandere", "weight": 6 },
+        { "value": "Genki", "weight": 8 },
+        { "value": "Kawaii", "weight": 9 }
+      ],
+      "role": [
+        { "value": "Idol", "weight": 10 },
+        { "value": "Mage", "weight": 8 },
+        { "value": "Knight", "weight": 7 },
+        { "value": "Priestess", "weight": 6 }
+      ]
+    }
   },
   "examples": [
-    "KawaiiChanNya",
-    "TsundereBotDesu",
-    "MoeHelperSama",
-    "NekoAISenpai",
-    "SenpaiIdol2D"
+    "Hoshino",
+    "Yukina",
+    "Sakura chan",
+    "Rin kun",
+    "Tsundere Hana",
+    "Kawaii Yui",
+    "Haruka Idol",
+    "Ai Mage"
   ]
 }

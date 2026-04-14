@@ -1,0 +1,82 @@
+{
+  "id": "professional-zh-enterprise",
+  "version": "2.0.0",
+  "name": {
+    "en": "Professional Chinese",
+    "zh": "专业中文版"
+  },
+  "description": {
+    "en": "Real-world Chinese professional bot names based on DingTalk, Feishu, and enterprise tools (4-6 chars)",
+    "zh": "基于钉钉、飞书等真实企业工具的专业机器人命名（4-6个字）"
+  },
+  "style": "professional",
+  "languages": [
+    "zh"
+  ],
+  "algorithm": "template",
+  "platformOptimized": [
+    "dingtalk",
+    "feishu",
+    "wecom"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "professional",
+    "enterprise",
+    "chinese",
+    "development"
+  ],
+  "data": {
+    "templates": [
+      "{function}机器人",
+      "{function}助手",
+      "{adj}{function}助手",
+      "{adj}{function}器"
+    ],
+    "vocabulary": {
+      "function": [
+        { "value": "代码", "weight": 10 },
+        { "value": "部署", "weight": 10 },
+        { "value": "测试", "weight": 10 },
+        { "value": "审查", "weight": 9 },
+        { "value": "构建", "weight": 9 },
+        { "value": "发布", "weight": 9 },
+        { "value": "监控", "weight": 9 },
+        { "value": "通知", "weight": 8 },
+        { "value": "集成", "weight": 8 },
+        { "value": "文档", "weight": 8 },
+        { "value": "报告", "weight": 7 },
+        { "value": "工作流", "weight": 7 },
+        { "value": "安全", "weight": 7 },
+        { "value": "性能", "weight": 6 },
+        { "value": "容器", "weight": 6 },
+        { "value": "日志", "weight": 6 },
+        { "value": "数据", "weight": 6 },
+        { "value": "接口", "weight": 5 },
+        { "value": "数据库", "weight": 5 }
+      ],
+      "adj": [
+        { "value": "智能", "weight": 10 },
+        { "value": "自动化", "weight": 10 },
+        { "value": "持续集成", "weight": 8 },
+        { "value": "代码审查", "weight": 7 },
+        { "value": "代码质量", "weight": 7 },
+        { "value": "安全扫描", "weight": 6 },
+        { "value": "性能监控", "weight": 6 },
+        { "value": "日志分析", "weight": 5 }
+      ]
+    }
+  },
+  "examples": [
+    "代码机器人",
+    "部署机器人",
+    "测试助手",
+    "智能代码助手",
+    "自动化测试助手",
+    "代码审查助手"
+  ]
+}

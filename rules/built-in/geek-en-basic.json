@@ -1,0 +1,118 @@
+{
+  "id": "geek-en-basic",
+  "version": "1.0.0",
+  "name": {
+    "en": "Geek English",
+    "zh": "极客英文版"
+  },
+  "description": {
+    "en": "Real programmer culture names with tech humor and memes (1-4 words)",
+    "zh": "真实的程序员文化命名，包含技术幽默和梗（1-4个单词）"
+  },
+  "style": "geek",
+  "languages": [
+    "en"
+  ],
+  "algorithm": "template",
+  "platformOptimized": [
+    "github",
+    "discord",
+    "telegram"
+  ],
+  "author": {
+    "name": "Bot Name Generator Team",
+    "github": "pick-bot-name"
+  },
+  "license": "MIT",
+  "tags": [
+    "geek",
+    "programmer",
+    "hacker",
+    "meme"
+  ],
+  "data": {
+    "templates": [
+      "{word}",
+      "{tech} {role}",
+      "{action} {object}",
+      "{title} of {domain}"
+    ],
+    "vocabulary": {
+      "word": [
+        { "value": "ninja", "weight": 10 },
+        { "value": "wizard", "weight": 10 },
+        { "value": "hacker", "weight": 9 },
+        { "value": "geek", "weight": 9 },
+        { "value": "guru", "weight": 8 },
+        { "value": "master", "weight": 8 },
+        { "value": "daemon", "weight": 7 },
+        { "value": "kernel", "weight": 7 },
+        { "value": "phantom", "weight": 6 },
+        { "value": "cipher", "weight": 6 },
+        { "value": "byte", "weight": 6 },
+        { "value": "pixel", "weight": 5 },
+        { "value": "ghost", "weight": 5 }
+      ],
+      "tech": [
+        { "value": "code", "weight": 10 },
+        { "value": "debug", "weight": 9 },
+        { "value": "git", "weight": 9 },
+        { "value": "stack", "weight": 8 },
+        { "value": "api", "weight": 8 },
+        { "value": "shell", "weight": 7 },
+        { "value": "terminal", "weight": 7 },
+        { "value": "regex", "weight": 6 },
+        { "value": "byte", "weight": 6 },
+        { "value": "bit", "weight": 6 }
+      ],
+      "role": [
+        { "value": "ninja", "weight": 10 },
+        { "value": "master", "weight": 10 },
+        { "value": "wizard", "weight": 9 },
+        { "value": "guru", "weight": 8 },
+        { "value": "monk", "weight": 7 },
+        { "value": "lord", "weight": 7 },
+        { "value": "god", "weight": 6 }
+      ],
+      "action": [
+        { "value": "bug", "weight": 10 },
+        { "value": "merge", "weight": 9 },
+        { "value": "commit", "weight": 8 },
+        { "value": "push", "weight": 8 },
+        { "value": "pull", "weight": 7 },
+        { "value": "deploy", "weight": 7 }
+      ],
+      "object": [
+        { "value": "slayer", "weight": 10 },
+        { "value": "hunter", "weight": 9 },
+        { "value": "master", "weight": 9 },
+        { "value": "wizard", "weight": 8 },
+        { "value": "king", "weight": 7 }
+      ],
+      "title": [
+        { "value": "lord", "weight": 10 },
+        { "value": "master", "weight": 9 },
+        { "value": "king", "weight": 8 },
+        { "value": "keeper", "weight": 7 },
+        { "value": "breaker", "weight": 7 }
+      ],
+      "domain": [
+        { "value": "code", "weight": 10 },
+        { "value": "bugs", "weight": 9 },
+        { "value": "stack", "weight": 8 },
+        { "value": "terminal", "weight": 7 },
+        { "value": "repo", "weight": 7 }
+      ]
+    }
+  },
+  "examples": [
+    "ninja",
+    "wizard",
+    "code ninja",
+    "debug master",
+    "bug slayer",
+    "git master",
+    "lord of code",
+    "keeper of repo"
+  ]
+}

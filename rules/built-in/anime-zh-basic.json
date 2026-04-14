@@ -1,23 +1,23 @@
 {
   "id": "anime-zh-basic",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": {
-    "en": "Anime Chinese Basic",
-    "zh": "动漫中文基础版"
+    "en": "Anime Chinese",
+    "zh": "动漫中文版"
   },
   "description": {
-    "en": "Anime-style bot names in Chinese",
-    "zh": "动漫风格的中文机器人名称"
+    "en": "Real anime/manga character naming patterns from Chinese anime, VTubers, and manga translations (2-4 chars)",
+    "zh": "基于中国动漫、虚拟UP主、漫画角色的真实命名模式（2-4个字）"
   },
   "style": "anime",
   "languages": [
     "zh"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
-    "telegram",
-    "discord",
-    "qq"
+    "bilibili",
+    "qq",
+    "discord"
   ],
   "author": {
     "name": "Bot Name Generator Team",
@@ -27,78 +27,70 @@
   "tags": [
     "anime",
     "chinese",
-    "cute",
-    "cartoon"
+    "vtuber",
+    "manga"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "小",
-        "weight": 10
-      },
-      {
-        "value": "萌",
-        "weight": 9
-      },
-      {
-        "value": "樱",
-        "weight": 8
-      },
-      {
-        "value": "星",
-        "weight": 7
-      },
-      {
-        "value": "月",
-        "weight": 6
-      }
+    "templates": [
+      "{name}{name}",
+      "{prefix}{name}",
+      "{name}{suffix}",
+      "{color}{nature}"
     ],
-    "roots": [
-      {
-        "value": "喵",
-        "weight": 10
-      },
-      {
-        "value": "兔",
-        "weight": 9
-      },
-      {
-        "value": "天使",
-        "weight": 8
-      },
-      {
-        "value": "精灵",
-        "weight": 7
-      },
-      {
-        "value": "子",
-        "weight": 6
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "酱",
-        "weight": 10
-      },
-      {
-        "value": "喵",
-        "weight": 9
-      },
-      {
-        "value": "君",
-        "weight": 8
-      },
-      {
-        "value": "",
-        "weight": 7
-      }
-    ]
+    "vocabulary": {
+      "name": [
+        { "value": "星", "weight": 10 },
+        { "value": "月", "weight": 10 },
+        { "value": "雪", "weight": 9 },
+        { "value": "樱", "weight": 9 },
+        { "value": "羽", "weight": 9 },
+        { "value": "瞳", "weight": 8 },
+        { "value": "晴", "weight": 8 },
+        { "value": "晨", "weight": 8 },
+        { "value": "夜", "weight": 7 },
+        { "value": "霞", "weight": 7 },
+        { "value": "梦", "weight": 7 },
+        { "value": "诗", "weight": 6 },
+        { "value": "语", "weight": 6 },
+        { "value": "音", "weight": 6 }
+      ],
+      "prefix": [
+        { "value": "小", "weight": 10 },
+        { "value": "阿", "weight": 8 }
+      ],
+      "suffix": [
+        { "value": "酱", "weight": 10 },
+        { "value": "喵", "weight": 9 },
+        { "value": "君", "weight": 8 },
+        { "value": "子", "weight": 7 },
+        { "value": "儿", "weight": 6 }
+      ],
+      "color": [
+        { "value": "白", "weight": 10 },
+        { "value": "青", "weight": 9 },
+        { "value": "紫", "weight": 9 },
+        { "value": "银", "weight": 8 },
+        { "value": "金", "weight": 8 },
+        { "value": "翠", "weight": 7 }
+      ],
+      "nature": [
+        { "value": "月", "weight": 10 },
+        { "value": "雪", "weight": 10 },
+        { "value": "风", "weight": 9 },
+        { "value": "云", "weight": 9 },
+        { "value": "霞", "weight": 8 },
+        { "value": "露", "weight": 8 }
+      ]
+    }
   },
   "examples": [
-    "樱酱",
-    "小喵",
-    "星子",
-    "萌兔",
-    "月君"
+    "星星",
+    "月月",
+    "小雪",
+    "阿樱",
+    "瞳酱",
+    "晴喵",
+    "白月",
+    "青雪"
   ]
 }

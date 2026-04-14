@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2026-04-13T15:18:12.765Z",
-  "totalRules": 14,
+  "generatedAt": "2026-04-14T11:39:50.882Z",
+  "totalRules": 15,
   "rules": [
     {
       "id": "professional-zh-business",
@@ -94,128 +94,6 @@
       "updatedAt": "2026-04-13"
     },
     {
-      "id": "geek-en-scifi",
-      "version": "1.0.0",
-      "name": {
-        "en": "Sci-Fi Tech",
-        "zh": "科幻技术"
-      },
-      "description": {
-        "en": "Science fiction and technology inspired names with version numbers",
-        "zh": "科幻和技术风格的名称，带有版本号"
-      },
-      "style": "geek",
-      "languages": [
-        "en"
-      ],
-      "algorithm": "combination",
-      "author": {
-        "name": "Community Contributor",
-        "github": "pick-bot-name",
-        "email": "example@example.com"
-      },
-      "license": "MIT",
-      "tags": [
-        "scifi",
-        "tech",
-        "geek",
-        "ai"
-      ],
-      "data": {
-        "prefixes": [
-          {
-            "value": "Quantum",
-            "weight": 10
-          },
-          {
-            "value": "Neural",
-            "weight": 9
-          },
-          {
-            "value": "Hyper",
-            "weight": 8
-          },
-          {
-            "value": "Meta",
-            "weight": 7
-          },
-          {
-            "value": "Ultra",
-            "weight": 7
-          },
-          {
-            "value": "Proto",
-            "weight": 6
-          }
-        ],
-        "roots": [
-          {
-            "value": "Bot",
-            "weight": 10
-          },
-          {
-            "value": "AI",
-            "weight": 10
-          },
-          {
-            "value": "Mind",
-            "weight": 9
-          },
-          {
-            "value": "Core",
-            "weight": 8
-          },
-          {
-            "value": "Link",
-            "weight": 7
-          },
-          {
-            "value": "Node",
-            "weight": 7
-          },
-          {
-            "value": "Matrix",
-            "weight": 6
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "9000",
-            "weight": 9
-          },
-          {
-            "value": "X",
-            "weight": 8
-          },
-          {
-            "value": "Pro",
-            "weight": 8
-          },
-          {
-            "value": "v2",
-            "weight": 7
-          },
-          {
-            "value": "Alpha",
-            "weight": 6
-          },
-          {
-            "value": "Prime",
-            "weight": 7
-          }
-        ]
-      },
-      "examples": [
-        "QuantumBot9000",
-        "NeuralAIX",
-        "HyperMindPro",
-        "MetaCorev2",
-        "UltraLinkPrime"
-      ],
-      "createdAt": "2026-04-11",
-      "updatedAt": "2026-04-11"
-    },
-    {
       "id": "punk-zh-basic",
       "version": "1.0.0",
       "name": {
@@ -250,69 +128,184 @@
       "data": {
         "prefixes": [
           {
-            "value": "赛博",
+            "value": "幽灵",
             "weight": 10
           },
           {
-            "value": "量子",
+            "value": "幻影",
             "weight": 9
+          },
+          {
+            "value": "刀锋",
+            "weight": 10
+          },
+          {
+            "value": "暗影",
+            "weight": 9
+          },
+          {
+            "value": "游荡者",
+            "weight": 8
+          },
+          {
+            "value": "拾荒者",
+            "weight": 7
+          },
+          {
+            "value": "回声",
+            "weight": 8
+          },
+          {
+            "value": "先知",
+            "weight": 9
+          },
+          {
+            "value": "守望",
+            "weight": 8
+          },
+          {
+            "value": "哨兵",
+            "weight": 8
+          },
+          {
+            "value": "迷失",
+            "weight": 7
+          },
+          {
+            "value": "流浪",
+            "weight": 7
+          },
+          {
+            "value": "霓虹",
+            "weight": 8
+          },
+          {
+            "value": "密语",
+            "weight": 7
+          },
+          {
+            "value": "脉冲",
+            "weight": 8
+          },
+          {
+            "value": "虚空",
+            "weight": 7
+          },
+          {
+            "value": "义体",
+            "weight": 9
+          },
+          {
+            "value": "芯核",
+            "weight": 8
           },
           {
             "value": "神经",
             "weight": 8
           },
           {
-            "value": "数字",
+            "value": "数据流",
             "weight": 7
-          },
-          {
-            "value": "矩阵",
-            "weight": 6
           }
         ],
         "roots": [
           {
-            "value": "核",
+            "value": "行者",
             "weight": 10
           },
           {
-            "value": "网",
+            "value": "追踪",
             "weight": 9
           },
           {
-            "value": "脉",
+            "value": "骇客",
+            "weight": 10
+          },
+          {
+            "value": "猎手",
+            "weight": 9
+          },
+          {
+            "value": "守卫",
             "weight": 8
           },
           {
-            "value": "波",
+            "value": "编码",
+            "weight": 8
+          },
+          {
+            "value": "终端",
             "weight": 7
           },
           {
-            "value": "X",
+            "value": "链接",
+            "weight": 7
+          },
+          {
+            "value": "协议",
+            "weight": 7
+          },
+          {
+            "value": "节点",
+            "weight": 8
+          },
+          {
+            "value": "网络",
+            "weight": 8
+          },
+          {
+            "value": "矩阵",
+            "weight": 7
+          },
+          {
+            "value": "信号",
+            "weight": 7
+          },
+          {
+            "value": "载体",
             "weight": 6
+          },
+          {
+            "value": "系统",
+            "weight": 7
           }
         ],
         "suffixes": [
           {
             "value": "",
-            "weight": 10
+            "weight": 20
+          },
+          {
+            "value": "9号",
+            "weight": 7
+          },
+          {
+            "value": "零",
+            "weight": 6
           },
           {
             "value": "X",
             "weight": 8
           },
           {
+            "value": "改",
+            "weight": 5
+          },
+          {
             "value": "版",
-            "weight": 6
+            "weight": 5
           }
         ]
       },
       "examples": [
-        "赛博核",
-        "量子X",
-        "神经网",
-        "数字脉",
-        "矩阵波"
+        "幽灵行者",
+        "刀锋骇客",
+        "暗影猎手9号",
+        "先知终端",
+        "义体守卫",
+        "霓虹追踪零",
+        "虚空编码X",
+        "脉冲节点"
       ]
     },
     {
@@ -350,107 +343,155 @@
       "data": {
         "prefixes": [
           {
-            "value": "Cyber",
+            "value": "Phantom",
             "weight": 10
           },
           {
-            "value": "Nano",
-            "weight": 8
-          },
-          {
-            "value": "Quantum",
-            "weight": 7
-          },
-          {
-            "value": "Neural",
+            "value": "Razor",
             "weight": 9
           },
           {
-            "value": "Synth",
+            "value": "Ghost",
+            "weight": 10
+          },
+          {
+            "value": "Neon",
+            "weight": 9
+          },
+          {
+            "value": "Void",
             "weight": 8
           },
           {
-            "value": "Neuro",
-            "weight": 7
+            "value": "Echo",
+            "weight": 9
           },
           {
-            "value": "Tech",
-            "weight": 6
-          },
-          {
-            "value": "Digi",
-            "weight": 7
-          },
-          {
-            "value": "Pixel",
-            "weight": 6
-          },
-          {
-            "value": "Matrix",
+            "value": "Rogue",
             "weight": 8
           },
           {
-            "value": "Data",
+            "value": "Shade",
             "weight": 7
           },
           {
-            "value": "Virtual",
+            "value": "Nomad",
+            "weight": 8
+          },
+          {
+            "value": "Cipher",
+            "weight": 9
+          },
+          {
+            "value": "Nexus",
+            "weight": 8
+          },
+          {
+            "value": "Chrome",
+            "weight": 7
+          },
+          {
+            "value": "Static",
+            "weight": 7
+          },
+          {
+            "value": "Glitch",
+            "weight": 8
+          },
+          {
+            "value": "Wire",
+            "weight": 7
+          },
+          {
+            "value": "Flux",
+            "weight": 7
+          },
+          {
+            "value": "Crash",
             "weight": 6
+          },
+          {
+            "value": "Pulse",
+            "weight": 8
+          },
+          {
+            "value": "Oracle",
+            "weight": 9
+          },
+          {
+            "value": "Cortex",
+            "weight": 8
           }
         ],
         "roots": [
           {
-            "value": "Bot",
+            "value": "Runner",
             "weight": 10
           },
           {
-            "value": "Tron",
+            "value": "Trace",
             "weight": 9
           },
           {
-            "value": "Core",
+            "value": "Byte",
             "weight": 8
           },
           {
-            "value": "Mind",
+            "value": "Jack",
+            "weight": 9
+          },
+          {
+            "value": "Ware",
             "weight": 7
           },
           {
-            "value": "Pulse",
+            "value": "Link",
+            "weight": 8
+          },
+          {
+            "value": "Node",
+            "weight": 7
+          },
+          {
+            "value": "Deck",
+            "weight": 8
+          },
+          {
+            "value": "Port",
+            "weight": 7
+          },
+          {
+            "value": "Code",
+            "weight": 9
+          },
+          {
+            "value": "Net",
+            "weight": 8
+          },
+          {
+            "value": "Core",
+            "weight": 7
+          },
+          {
+            "value": "Mind",
+            "weight": 8
+          },
+          {
+            "value": "Frame",
             "weight": 6
           },
           {
             "value": "Wave",
             "weight": 7
-          },
-          {
-            "value": "Node",
-            "weight": 8
-          },
-          {
-            "value": "Link",
-            "weight": 7
-          },
-          {
-            "value": "Mesh",
-            "weight": 6
-          },
-          {
-            "value": "Grid",
-            "weight": 7
-          },
-          {
-            "value": "Net",
-            "weight": 6
-          },
-          {
-            "value": "Agent",
-            "weight": 8
           }
         ],
         "suffixes": [
           {
-            "value": "3000",
+            "value": "",
+            "weight": 15
+          },
+          {
+            "value": "9",
             "weight": 8
           },
           {
@@ -458,68 +499,58 @@
             "weight": 9
           },
           {
+            "value": "Zero",
+            "weight": 7
+          },
+          {
             "value": "Prime",
-            "weight": 7
+            "weight": 6
           },
           {
-            "value": "Neo",
-            "weight": 8
-          },
-          {
-            "value": "Alpha",
-            "weight": 7
-          },
-          {
-            "value": "Beta",
+            "value": "Dev",
             "weight": 5
           },
           {
-            "value": "One",
-            "weight": 7
-          },
-          {
-            "value": "Zero",
-            "weight": 6
+            "value": "Ops",
+            "weight": 5
           },
           {
             "value": "AI",
-            "weight": 9
-          },
-          {
-            "value": "2077",
-            "weight": 6
+            "weight": 7
           }
         ]
       },
       "examples": [
-        "CyberBot3000",
-        "QuantumCoreX",
-        "NeuralMindPrime",
-        "NanoAgentAI",
-        "SynthWaveNeo"
+        "PhantomRunner",
+        "GhostTrace",
+        "RazorJack9",
+        "NeonCodeX",
+        "VoidNetZero",
+        "CipherDeck",
+        "EchoMind",
+        "RogueByteAI"
       ]
     },
     {
-      "id": "professional-en-corporate",
-      "version": "1.0.0",
+      "id": "professional-zh-enterprise",
+      "version": "2.0.0",
       "name": {
-        "en": "Professional English Corporate",
-        "zh": "专业英文企业版"
+        "en": "Professional Chinese",
+        "zh": "专业中文版"
       },
       "description": {
-        "en": "Professional and corporate-style bot names for business use",
-        "zh": "适合商务使用的专业企业风格机器人名称"
+        "en": "Real-world Chinese professional bot names based on DingTalk, Feishu, and enterprise tools (4-6 chars)",
+        "zh": "基于钉钉、飞书等真实企业工具的专业机器人命名（4-6个字）"
       },
       "style": "professional",
       "languages": [
-        "en"
+        "zh"
       ],
-      "algorithm": "combination",
+      "algorithm": "template",
       "platformOptimized": [
-        "slack",
+        "dingtalk",
         "feishu",
-        "wecom",
-        "dingtalk"
+        "wecom"
       ],
       "author": {
         "name": "Bot Name Generator Team",
@@ -528,158 +559,395 @@
       "license": "MIT",
       "tags": [
         "professional",
-        "business",
-        "corporate",
-        "enterprise"
+        "enterprise",
+        "chinese",
+        "development"
       ],
       "data": {
-        "prefixes": [
-          {
-            "value": "Business",
-            "weight": 9
-          },
-          {
-            "value": "Corporate",
-            "weight": 8
-          },
-          {
-            "value": "Enterprise",
-            "weight": 8
-          },
-          {
-            "value": "Office",
-            "weight": 7
-          },
-          {
-            "value": "Work",
-            "weight": 8
-          },
-          {
-            "value": "Pro",
-            "weight": 9
-          },
-          {
-            "value": "Smart",
-            "weight": 8
-          },
-          {
-            "value": "Team",
-            "weight": 7
-          },
-          {
-            "value": "Collab",
-            "weight": 6
-          },
-          {
-            "value": "Workflow",
-            "weight": 7
-          }
+        "templates": [
+          "{function}机器人",
+          "{function}助手",
+          "{adj}{function}助手",
+          "{adj}{function}器"
         ],
-        "roots": [
-          {
-            "value": "Assistant",
-            "weight": 10
-          },
-          {
-            "value": "Helper",
-            "weight": 8
-          },
-          {
-            "value": "Agent",
-            "weight": 9
-          },
-          {
-            "value": "Manager",
-            "weight": 7
-          },
-          {
-            "value": "Coordinator",
-            "weight": 6
-          },
-          {
-            "value": "Advisor",
-            "weight": 7
-          },
-          {
-            "value": "Support",
-            "weight": 8
-          },
-          {
-            "value": "Guide",
-            "weight": 7
-          },
-          {
-            "value": "Partner",
-            "weight": 6
-          },
-          {
-            "value": "Bot",
-            "weight": 9
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "Pro",
-            "weight": 9
-          },
-          {
-            "value": "Plus",
-            "weight": 7
-          },
-          {
-            "value": "360",
-            "weight": 6
-          },
-          {
-            "value": "AI",
-            "weight": 8
-          },
-          {
-            "value": "X",
-            "weight": 6
-          },
-          {
-            "value": "Hub",
-            "weight": 7
-          },
-          {
-            "value": "Suite",
-            "weight": 5
-          },
-          {
-            "value": "One",
-            "weight": 7
-          },
-          {
-            "value": "",
-            "weight": 10
-          }
-        ]
+        "vocabulary": {
+          "function": [
+            {
+              "value": "代码",
+              "weight": 10
+            },
+            {
+              "value": "部署",
+              "weight": 10
+            },
+            {
+              "value": "测试",
+              "weight": 10
+            },
+            {
+              "value": "审查",
+              "weight": 9
+            },
+            {
+              "value": "构建",
+              "weight": 9
+            },
+            {
+              "value": "发布",
+              "weight": 9
+            },
+            {
+              "value": "监控",
+              "weight": 9
+            },
+            {
+              "value": "通知",
+              "weight": 8
+            },
+            {
+              "value": "集成",
+              "weight": 8
+            },
+            {
+              "value": "文档",
+              "weight": 8
+            },
+            {
+              "value": "报告",
+              "weight": 7
+            },
+            {
+              "value": "工作流",
+              "weight": 7
+            },
+            {
+              "value": "安全",
+              "weight": 7
+            },
+            {
+              "value": "性能",
+              "weight": 6
+            },
+            {
+              "value": "容器",
+              "weight": 6
+            },
+            {
+              "value": "日志",
+              "weight": 6
+            },
+            {
+              "value": "数据",
+              "weight": 6
+            },
+            {
+              "value": "接口",
+              "weight": 5
+            },
+            {
+              "value": "数据库",
+              "weight": 5
+            }
+          ],
+          "adj": [
+            {
+              "value": "智能",
+              "weight": 10
+            },
+            {
+              "value": "自动化",
+              "weight": 10
+            },
+            {
+              "value": "持续集成",
+              "weight": 8
+            },
+            {
+              "value": "代码审查",
+              "weight": 7
+            },
+            {
+              "value": "代码质量",
+              "weight": 7
+            },
+            {
+              "value": "安全扫描",
+              "weight": 6
+            },
+            {
+              "value": "性能监控",
+              "weight": 6
+            },
+            {
+              "value": "日志分析",
+              "weight": 5
+            }
+          ]
+        }
       },
       "examples": [
-        "BusinessAssistantPro",
-        "WorkflowAgentAI",
-        "TeamHelper",
-        "ProSupportBot",
-        "EnterpriseGuide360"
+        "代码机器人",
+        "部署机器人",
+        "测试助手",
+        "智能代码助手",
+        "自动化测试助手",
+        "代码审查助手"
+      ]
+    },
+    {
+      "id": "professional-en-corporate",
+      "version": "3.0.0",
+      "name": {
+        "en": "Professional English",
+        "zh": "专业英文版"
+      },
+      "description": {
+        "en": "Real-world professional bot names based on GitHub, Probot, and enterprise tools (2-4 words)",
+        "zh": "基于GitHub、Probot等真实企业工具的专业机器人命名（2-4个单词）"
+      },
+      "style": "professional",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "template",
+      "platformOptimized": [
+        "slack",
+        "github",
+        "gitlab",
+        "teams"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "professional",
+        "development",
+        "devops",
+        "github",
+        "probot"
+      ],
+      "data": {
+        "templates": [
+          "{function} {type}",
+          "{adj} {function} {type}",
+          "{function} {action}",
+          "{adj} {function} {action}"
+        ],
+        "vocabulary": {
+          "function": [
+            {
+              "value": "Code",
+              "weight": 10
+            },
+            {
+              "value": "Deploy",
+              "weight": 10
+            },
+            {
+              "value": "Test",
+              "weight": 10
+            },
+            {
+              "value": "Release",
+              "weight": 9
+            },
+            {
+              "value": "Build",
+              "weight": 9
+            },
+            {
+              "value": "Merge",
+              "weight": 9
+            },
+            {
+              "value": "Review",
+              "weight": 9
+            },
+            {
+              "value": "Issue",
+              "weight": 8
+            },
+            {
+              "value": "PR",
+              "weight": 8
+            },
+            {
+              "value": "Security",
+              "weight": 8
+            },
+            {
+              "value": "Performance",
+              "weight": 7
+            },
+            {
+              "value": "Container",
+              "weight": 7
+            },
+            {
+              "value": "API",
+              "weight": 7
+            },
+            {
+              "value": "Database",
+              "weight": 7
+            },
+            {
+              "value": "Log",
+              "weight": 6
+            },
+            {
+              "value": "CI",
+              "weight": 6
+            },
+            {
+              "value": "Pipeline",
+              "weight": 6
+            },
+            {
+              "value": "Branch",
+              "weight": 6
+            },
+            {
+              "value": "Workflow",
+              "weight": 6
+            },
+            {
+              "value": "Team",
+              "weight": 5
+            }
+          ],
+          "type": [
+            {
+              "value": "Bot",
+              "weight": 10
+            },
+            {
+              "value": "Helper",
+              "weight": 9
+            },
+            {
+              "value": "Assistant",
+              "weight": 9
+            },
+            {
+              "value": "Runner",
+              "weight": 8
+            },
+            {
+              "value": "Manager",
+              "weight": 7
+            },
+            {
+              "value": "Monitor",
+              "weight": 7
+            },
+            {
+              "value": "Checker",
+              "weight": 6
+            },
+            {
+              "value": "Scanner",
+              "weight": 6
+            },
+            {
+              "value": "Agent",
+              "weight": 5
+            }
+          ],
+          "action": [
+            {
+              "value": "Review",
+              "weight": 10
+            },
+            {
+              "value": "Drafter",
+              "weight": 9
+            },
+            {
+              "value": "Checker",
+              "weight": 9
+            },
+            {
+              "value": "Runner",
+              "weight": 8
+            },
+            {
+              "value": "Triage",
+              "weight": 8
+            },
+            {
+              "value": "Labeler",
+              "weight": 7
+            },
+            {
+              "value": "Assigner",
+              "weight": 7
+            },
+            {
+              "value": "Analyzer",
+              "weight": 6
+            },
+            {
+              "value": "Detector",
+              "weight": 6
+            }
+          ],
+          "adj": [
+            {
+              "value": "Smart",
+              "weight": 10
+            },
+            {
+              "value": "Auto",
+              "weight": 10
+            },
+            {
+              "value": "Automated",
+              "weight": 9
+            },
+            {
+              "value": "Continuous",
+              "weight": 7
+            },
+            {
+              "value": "Quick",
+              "weight": 6
+            },
+            {
+              "value": "Fast",
+              "weight": 6
+            }
+          ]
+        }
+      },
+      "examples": [
+        "Code Review",
+        "Deploy Bot",
+        "Test Runner",
+        "Release Drafter",
+        "Smart Code Assistant",
+        "Auto Merge Bot",
+        "Automated Test Runner"
       ]
     },
     {
       "id": "minimal-zh-basic",
-      "version": "1.0.0",
+      "version": "2.2.0",
       "name": {
-        "en": "Minimal Chinese Basic",
-        "zh": "极简中文基础版"
+        "en": "Minimal Chinese",
+        "zh": "极简中文版"
       },
       "description": {
-        "en": "Clean and minimal bot names in Chinese",
-        "zh": "简洁的中文极简风格机器人名称"
+        "en": "Ultra-minimal Chinese bot names with natural 2-character words",
+        "zh": "极简自然的中文机器人名称，使用常见2字词汇"
       },
       "style": "minimal",
       "languages": [
         "zh"
       ],
-      "algorithm": "combination",
+      "algorithm": "template",
       "platformOptimized": [
         "weixin",
         "wecom",
@@ -693,109 +961,126 @@
       "tags": [
         "minimal",
         "chinese",
-        "clean",
-        "simple"
+        "simple",
+        "clean"
       ],
       "data": {
-        "prefixes": [
-          {
-            "value": "简",
-            "weight": 10
-          },
-          {
-            "value": "小",
-            "weight": 9
-          },
-          {
-            "value": "一",
-            "weight": 8
-          },
-          {
-            "value": "轻",
-            "weight": 7
-          },
-          {
-            "value": "快",
-            "weight": 6
-          },
-          {
-            "value": "纯",
-            "weight": 7
-          }
+        "templates": [
+          "{word}",
+          "{word}{word}"
         ],
-        "roots": [
-          {
-            "value": "助手",
-            "weight": 10
-          },
-          {
-            "value": "机器人",
-            "weight": 8
-          },
-          {
-            "value": "工具",
-            "weight": 9
-          },
-          {
-            "value": "帮手",
-            "weight": 7
-          },
-          {
-            "value": "伙伴",
-            "weight": 6
-          },
-          {
-            "value": "代理",
-            "weight": 5
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "",
-            "weight": 10
-          },
-          {
-            "value": "一号",
-            "weight": 5
-          },
-          {
-            "value": "版",
-            "weight": 4
-          },
-          {
-            "value": "Pro",
-            "weight": 3
-          },
-          {
-            "value": "精简版",
-            "weight": 2
-          }
-        ]
+        "vocabulary": {
+          "word": [
+            {
+              "value": "答答",
+              "weight": 10
+            },
+            {
+              "value": "问问",
+              "weight": 10
+            },
+            {
+              "value": "助助",
+              "weight": 9
+            },
+            {
+              "value": "应答",
+              "weight": 9
+            },
+            {
+              "value": "快答",
+              "weight": 9
+            },
+            {
+              "value": "易答",
+              "weight": 8
+            },
+            {
+              "value": "轻助",
+              "weight": 8
+            },
+            {
+              "value": "简应",
+              "weight": 8
+            },
+            {
+              "value": "明答",
+              "weight": 7
+            },
+            {
+              "value": "清语",
+              "weight": 7
+            },
+            {
+              "value": "纯言",
+              "weight": 7
+            },
+            {
+              "value": "速答",
+              "weight": 7
+            },
+            {
+              "value": "即答",
+              "weight": 6
+            },
+            {
+              "value": "秒回",
+              "weight": 6
+            },
+            {
+              "value": "即应",
+              "weight": 6
+            },
+            {
+              "value": "通达",
+              "weight": 6
+            },
+            {
+              "value": "直答",
+              "weight": 5
+            },
+            {
+              "value": "明语",
+              "weight": 5
+            },
+            {
+              "value": "简答",
+              "weight": 5
+            },
+            {
+              "value": "易问",
+              "weight": 5
+            }
+          ]
+        }
       },
       "examples": [
-        "简助手",
-        "小工具",
-        "一帮手",
-        "轻伙伴",
-        "纯代理"
+        "答答",
+        "问问",
+        "助助",
+        "应答",
+        "快答",
+        "易答",
+        "秒回",
+        "即答"
       ]
     },
     {
       "id": "minimal-en-basic",
-      "version": "1.0.0",
+      "version": "2.1.0",
       "name": {
-        "en": "Minimal English Basic",
-        "zh": "极简英文基础版"
+        "en": "Minimal English",
+        "zh": "极简英文版"
       },
       "description": {
-        "en": "Clean and minimal bot names in English",
-        "zh": "简洁的英文极简风格机器人名称"
+        "en": "Ultra-minimal English bot names with simple and abstract patterns (1-2 words)",
+        "zh": "极简抽象的英文机器人名称，简洁而现代（1-2个单词）"
       },
       "style": "minimal",
       "languages": [
         "en"
       ],
-      "algorithm": "combination",
+      "algorithm": "template",
       "platformOptimized": [
         "telegram",
         "discord",
@@ -808,120 +1093,178 @@
       "license": "MIT",
       "tags": [
         "minimal",
-        "clean",
+        "english",
         "simple",
-        "english"
+        "clean"
       ],
       "data": {
-        "prefixes": [
-          {
-            "value": "Bot",
-            "weight": 10
-          },
-          {
-            "value": "App",
-            "weight": 8
-          },
-          {
-            "value": "AI",
-            "weight": 9
-          },
-          {
-            "value": "One",
-            "weight": 7
-          },
-          {
-            "value": "Pro",
-            "weight": 6
-          },
-          {
-            "value": "Max",
-            "weight": 6
-          },
-          {
-            "value": "Mini",
-            "weight": 7
-          },
-          {
-            "value": "Zen",
-            "weight": 5
-          }
+        "templates": [
+          "{word}",
+          "{adj} {noun}",
+          "{noun} Bot"
         ],
-        "roots": [
-          {
-            "value": "Helper",
-            "weight": 10
-          },
-          {
-            "value": "Agent",
-            "weight": 9
-          },
-          {
-            "value": "Tool",
-            "weight": 8
-          },
-          {
-            "value": "Hub",
-            "weight": 7
-          },
-          {
-            "value": "Core",
-            "weight": 8
-          },
-          {
-            "value": "Base",
-            "weight": 7
-          },
-          {
-            "value": "Link",
-            "weight": 6
-          },
-          {
-            "value": "Node",
-            "weight": 7
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "",
-            "weight": 10
-          },
-          {
-            "value": "1",
-            "weight": 5
-          },
-          {
-            "value": "X",
-            "weight": 4
-          },
-          {
-            "value": "Plus",
-            "weight": 3
-          },
-          {
-            "value": "Pro",
-            "weight": 4
-          }
-        ]
+        "vocabulary": {
+          "word": [
+            {
+              "value": "Echo",
+              "weight": 10
+            },
+            {
+              "value": "Beam",
+              "weight": 10
+            },
+            {
+              "value": "Drift",
+              "weight": 9
+            },
+            {
+              "value": "Flux",
+              "weight": 9
+            },
+            {
+              "value": "Glide",
+              "weight": 9
+            },
+            {
+              "value": "Pivot",
+              "weight": 8
+            },
+            {
+              "value": "Trace",
+              "weight": 8
+            },
+            {
+              "value": "Prism",
+              "weight": 8
+            },
+            {
+              "value": "Clarity",
+              "weight": 7
+            },
+            {
+              "value": "Simplify",
+              "weight": 7
+            },
+            {
+              "value": "Aide",
+              "weight": 7
+            },
+            {
+              "value": "Prompt",
+              "weight": 6
+            },
+            {
+              "value": "Brief",
+              "weight": 6
+            }
+          ],
+          "adj": [
+            {
+              "value": "Quick",
+              "weight": 10
+            },
+            {
+              "value": "Smart",
+              "weight": 10
+            },
+            {
+              "value": "Pure",
+              "weight": 9
+            },
+            {
+              "value": "Clean",
+              "weight": 9
+            },
+            {
+              "value": "Swift",
+              "weight": 8
+            },
+            {
+              "value": "Clear",
+              "weight": 8
+            },
+            {
+              "value": "Plain",
+              "weight": 7
+            },
+            {
+              "value": "Neat",
+              "weight": 7
+            },
+            {
+              "value": "Calm",
+              "weight": 6
+            },
+            {
+              "value": "Crisp",
+              "weight": 6
+            }
+          ],
+          "noun": [
+            {
+              "value": "Help",
+              "weight": 10
+            },
+            {
+              "value": "Aid",
+              "weight": 10
+            },
+            {
+              "value": "Guide",
+              "weight": 9
+            },
+            {
+              "value": "Assist",
+              "weight": 9
+            },
+            {
+              "value": "Reply",
+              "weight": 8
+            },
+            {
+              "value": "Answer",
+              "weight": 8
+            },
+            {
+              "value": "Talk",
+              "weight": 7
+            },
+            {
+              "value": "Chat",
+              "weight": 7
+            },
+            {
+              "value": "Link",
+              "weight": 6
+            },
+            {
+              "value": "Task",
+              "weight": 6
+            }
+          ]
+        }
       },
       "examples": [
-        "BotHelper",
-        "AIAgent",
-        "OneCore",
-        "AppTool",
-        "MiniHub"
+        "Echo",
+        "Beam",
+        "Drift",
+        "Quick Help",
+        "Smart Aid",
+        "Pure Guide",
+        "Help Bot",
+        "Chat Bot"
       ]
     },
     {
       "id": "geek-zh-basic",
-      "version": "1.0.0",
+      "version": "2.0.0",
       "name": {
-        "en": "Geek Chinese Basic",
-        "zh": "极客中文基础版"
+        "en": "Geek Chinese",
+        "zh": "极客中文版"
       },
       "description": {
-        "en": "Geeky tech-style bot names in Chinese",
-        "zh": "极客科技风格的中文机器人名称"
+        "en": "Real Chinese programmer culture names with memes and tech humor (2-4 chars)",
+        "zh": "真实的中国程序员文化命名，包含梗和技术幽默（2-4个字）"
       },
       "style": "geek",
       "languages": [
@@ -929,8 +1272,8 @@
       ],
       "algorithm": "combination",
       "platformOptimized": [
+        "github",
         "discord",
-        "slack",
         "telegram"
       ],
       "author": {
@@ -940,9 +1283,9 @@
       "license": "MIT",
       "tags": [
         "geek",
+        "programmer",
         "chinese",
-        "tech",
-        "programming"
+        "meme"
       ],
       "data": {
         "prefixes": [
@@ -951,20 +1294,56 @@
             "weight": 10
           },
           {
+            "value": "代码",
+            "weight": 9
+          },
+          {
             "value": "算法",
             "weight": 9
           },
           {
-            "value": "技术",
+            "value": "调试",
             "weight": 8
           },
           {
-            "value": "开源",
+            "value": "性能",
             "weight": 7
           },
           {
-            "value": "数据",
+            "value": "内存",
+            "weight": 7
+          },
+          {
+            "value": "线程",
             "weight": 6
+          },
+          {
+            "value": "并发",
+            "weight": 6
+          },
+          {
+            "value": "异步",
+            "weight": 6
+          },
+          {
+            "value": "递归",
+            "weight": 5
+          },
+          {
+            "value": "正则",
+            "weight": 5
+          },
+          {
+            "value": "重构",
+            "weight": 5
+          },
+          {
+            "value": "开源",
+            "weight": 5
+          },
+          {
+            "value": "二进制",
+            "weight": 4
           }
         ],
         "roots": [
@@ -973,20 +1352,44 @@
             "weight": 10
           },
           {
+            "value": "侠",
+            "weight": 9
+          },
+          {
             "value": "君",
             "weight": 9
           },
           {
-            "value": "猫",
+            "value": "师",
             "weight": 8
           },
           {
-            "value": "师",
+            "value": "王",
             "weight": 7
           },
           {
-            "value": "X",
+            "value": "帝",
+            "weight": 7
+          },
+          {
+            "value": "狗",
             "weight": 6
+          },
+          {
+            "value": "喵",
+            "weight": 6
+          },
+          {
+            "value": "猿",
+            "weight": 6
+          },
+          {
+            "value": "农",
+            "weight": 5
+          },
+          {
+            "value": "宅",
+            "weight": 5
           }
         ],
         "suffixes": [
@@ -995,21 +1398,330 @@
             "weight": 10
           },
           {
-            "value": "喵",
+            "value": "达人",
+            "weight": 8
+          },
+          {
+            "value": "大师",
             "weight": 7
           },
           {
-            "value": "版",
+            "value": "专家",
+            "weight": 7
+          },
+          {
+            "value": "高手",
             "weight": 6
+          },
+          {
+            "value": "勇士",
+            "weight": 5
+          },
+          {
+            "value": "魔王",
+            "weight": 5
+          },
+          {
+            "value": "狂魔",
+            "weight": 4
+          },
+          {
+            "value": "狂人",
+            "weight": 4
+          },
+          {
+            "value": "诗人",
+            "weight": 4
+          },
+          {
+            "value": "刺客",
+            "weight": 4
+          },
+          {
+            "value": "杀手",
+            "weight": 4
           }
         ]
       },
       "examples": [
         "码神",
-        "算法君",
-        "技术猫",
-        "开源师",
-        "数据X"
+        "算法侠",
+        "代码君",
+        "调试师",
+        "性能王",
+        "内存刺客",
+        "正则狂魔"
+      ]
+    },
+    {
+      "id": "geek-en-basic",
+      "version": "1.0.0",
+      "name": {
+        "en": "Geek English",
+        "zh": "极客英文版"
+      },
+      "description": {
+        "en": "Real programmer culture names with tech humor and memes (1-4 words)",
+        "zh": "真实的程序员文化命名，包含技术幽默和梗（1-4个单词）"
+      },
+      "style": "geek",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "template",
+      "platformOptimized": [
+        "github",
+        "discord",
+        "telegram"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "geek",
+        "programmer",
+        "hacker",
+        "meme"
+      ],
+      "data": {
+        "templates": [
+          "{word}",
+          "{tech} {role}",
+          "{action} {object}",
+          "{title} of {domain}"
+        ],
+        "vocabulary": {
+          "word": [
+            {
+              "value": "ninja",
+              "weight": 10
+            },
+            {
+              "value": "wizard",
+              "weight": 10
+            },
+            {
+              "value": "hacker",
+              "weight": 9
+            },
+            {
+              "value": "geek",
+              "weight": 9
+            },
+            {
+              "value": "guru",
+              "weight": 8
+            },
+            {
+              "value": "master",
+              "weight": 8
+            },
+            {
+              "value": "daemon",
+              "weight": 7
+            },
+            {
+              "value": "kernel",
+              "weight": 7
+            },
+            {
+              "value": "phantom",
+              "weight": 6
+            },
+            {
+              "value": "cipher",
+              "weight": 6
+            },
+            {
+              "value": "byte",
+              "weight": 6
+            },
+            {
+              "value": "pixel",
+              "weight": 5
+            },
+            {
+              "value": "ghost",
+              "weight": 5
+            }
+          ],
+          "tech": [
+            {
+              "value": "code",
+              "weight": 10
+            },
+            {
+              "value": "debug",
+              "weight": 9
+            },
+            {
+              "value": "git",
+              "weight": 9
+            },
+            {
+              "value": "stack",
+              "weight": 8
+            },
+            {
+              "value": "api",
+              "weight": 8
+            },
+            {
+              "value": "shell",
+              "weight": 7
+            },
+            {
+              "value": "terminal",
+              "weight": 7
+            },
+            {
+              "value": "regex",
+              "weight": 6
+            },
+            {
+              "value": "byte",
+              "weight": 6
+            },
+            {
+              "value": "bit",
+              "weight": 6
+            }
+          ],
+          "role": [
+            {
+              "value": "ninja",
+              "weight": 10
+            },
+            {
+              "value": "master",
+              "weight": 10
+            },
+            {
+              "value": "wizard",
+              "weight": 9
+            },
+            {
+              "value": "guru",
+              "weight": 8
+            },
+            {
+              "value": "monk",
+              "weight": 7
+            },
+            {
+              "value": "lord",
+              "weight": 7
+            },
+            {
+              "value": "god",
+              "weight": 6
+            }
+          ],
+          "action": [
+            {
+              "value": "bug",
+              "weight": 10
+            },
+            {
+              "value": "merge",
+              "weight": 9
+            },
+            {
+              "value": "commit",
+              "weight": 8
+            },
+            {
+              "value": "push",
+              "weight": 8
+            },
+            {
+              "value": "pull",
+              "weight": 7
+            },
+            {
+              "value": "deploy",
+              "weight": 7
+            }
+          ],
+          "object": [
+            {
+              "value": "slayer",
+              "weight": 10
+            },
+            {
+              "value": "hunter",
+              "weight": 9
+            },
+            {
+              "value": "master",
+              "weight": 9
+            },
+            {
+              "value": "wizard",
+              "weight": 8
+            },
+            {
+              "value": "king",
+              "weight": 7
+            }
+          ],
+          "title": [
+            {
+              "value": "lord",
+              "weight": 10
+            },
+            {
+              "value": "master",
+              "weight": 9
+            },
+            {
+              "value": "king",
+              "weight": 8
+            },
+            {
+              "value": "keeper",
+              "weight": 7
+            },
+            {
+              "value": "breaker",
+              "weight": 7
+            }
+          ],
+          "domain": [
+            {
+              "value": "code",
+              "weight": 10
+            },
+            {
+              "value": "bugs",
+              "weight": 9
+            },
+            {
+              "value": "stack",
+              "weight": 8
+            },
+            {
+              "value": "terminal",
+              "weight": 7
+            },
+            {
+              "value": "repo",
+              "weight": 7
+            }
+          ]
+        }
+      },
+      "examples": [
+        "ninja",
+        "wizard",
+        "code ninja",
+        "debug master",
+        "bug slayer",
+        "git master",
+        "lord of code",
+        "keeper of repo"
       ]
     },
     {
@@ -1048,40 +1760,56 @@
       "data": {
         "templates": [
           {
-            "value": "{animal}{animal}",
-            "weight": 10
+            "value": "{base}{base}",
+            "weight": 18
           },
           {
-            "value": "小{animal}",
-            "weight": 9
+            "value": "小{base}",
+            "weight": 12
           },
           {
-            "value": "{animal}{suffix}",
-            "weight": 8
+            "value": "{base}{suffix}",
+            "weight": 15
           },
           {
-            "value": "{adjective}{animal}",
-            "weight": 7
+            "value": "{adjective}{base}",
+            "weight": 12
           }
         ],
         "vocabulary": {
           "adjective": [
             {
-              "value": "萌",
+              "value": "软",
               "weight": 10
             },
             {
-              "value": "软",
+              "value": "甜",
+              "weight": 10
+            },
+            {
+              "value": "糯",
               "weight": 9
             },
             {
-              "value": "甜",
+              "value": "萌",
               "weight": 8
+            },
+            {
+              "value": "粉",
+              "weight": 8
+            },
+            {
+              "value": "小",
+              "weight": 9
             }
           ],
-          "animal": [
+          "base": [
             {
-              "value": "喵",
+              "value": "团",
+              "weight": 10
+            },
+            {
+              "value": "糖",
               "weight": 10
             },
             {
@@ -1089,48 +1817,115 @@
               "weight": 10
             },
             {
-              "value": "团",
+              "value": "喵",
+              "weight": 10
+            },
+            {
+              "value": "熊",
               "weight": 9
+            },
+            {
+              "value": "柚",
+              "weight": 9
+            },
+            {
+              "value": "桃",
+              "weight": 9
+            },
+            {
+              "value": "莓",
+              "weight": 9
+            },
+            {
+              "value": "云",
+              "weight": 9
+            },
+            {
+              "value": "星",
+              "weight": 8
+            },
+            {
+              "value": "豆",
+              "weight": 8
             },
             {
               "value": "球",
               "weight": 8
             },
             {
-              "value": "熊",
+              "value": "鹅",
               "weight": 8
             },
             {
-              "value": "鹅",
+              "value": "奶茶",
+              "weight": 9
+            },
+            {
+              "value": "蛋挞",
+              "weight": 8
+            },
+            {
+              "value": "布丁",
+              "weight": 9
+            },
+            {
+              "value": "麻薯",
+              "weight": 8
+            },
+            {
+              "value": "团子",
+              "weight": 9
+            },
+            {
+              "value": "糯米",
               "weight": 7
             },
             {
-              "value": "狐",
+              "value": "奶油",
               "weight": 7
+            },
+            {
+              "value": "云朵",
+              "weight": 8
             }
           ],
           "suffix": [
             {
-              "value": "喵",
+              "value": "酱",
               "weight": 10
             },
             {
-              "value": "酱",
+              "value": "宝",
               "weight": 9
+            },
+            {
+              "value": "仔",
+              "weight": 9
+            },
+            {
+              "value": "子",
+              "weight": 8
             },
             {
               "value": "儿",
               "weight": 8
+            },
+            {
+              "value": "uu",
+              "weight": 7
             }
           ]
         }
       },
       "examples": [
-        "喵喵",
         "团团",
-        "小兔",
-        "软软",
-        "甜心"
+        "糖糖",
+        "柚柚",
+        "小团子",
+        "甜糖酱",
+        "奶茶宝",
+        "软糯仔",
+        "云云儿"
       ]
     },
     {
@@ -1168,42 +1963,114 @@
       "data": {
         "prefixes": [
           {
-            "value": "Sweet",
+            "value": "Soft",
             "weight": 10
           },
           {
-            "value": "Cute",
+            "value": "Dreamy",
             "weight": 10
-          },
-          {
-            "value": "Little",
-            "weight": 9
-          },
-          {
-            "value": "Tiny",
-            "weight": 8
-          },
-          {
-            "value": "Baby",
-            "weight": 8
-          },
-          {
-            "value": "Mini",
-            "weight": 7
           },
           {
             "value": "Fluffy",
+            "weight": 10
+          },
+          {
+            "value": "Cozy",
             "weight": 9
           },
           {
-            "value": "Happy",
+            "value": "Bubbly",
+            "weight": 9
+          },
+          {
+            "value": "Starry",
+            "weight": 9
+          },
+          {
+            "value": "Milky",
+            "weight": 9
+          },
+          {
+            "value": "Peachy",
+            "weight": 9
+          },
+          {
+            "value": "Honey",
+            "weight": 10
+          },
+          {
+            "value": "Sugar",
+            "weight": 9
+          },
+          {
+            "value": "Mochi",
+            "weight": 9
+          },
+          {
+            "value": "Boba",
+            "weight": 9
+          },
+          {
+            "value": "Cookie",
+            "weight": 9
+          },
+          {
+            "value": "Peach",
+            "weight": 9
+          },
+          {
+            "value": "Cloud",
+            "weight": 10
+          },
+          {
+            "value": "Moon",
+            "weight": 9
+          },
+          {
+            "value": "Star",
+            "weight": 9
+          },
+          {
+            "value": "Daisy",
+            "weight": 8
+          },
+          {
+            "value": "Petal",
+            "weight": 8
+          },
+          {
+            "value": "Tiny",
             "weight": 8
           }
         ],
         "roots": [
           {
-            "value": "Bot",
+            "value": "Bun",
             "weight": 10
+          },
+          {
+            "value": "Bean",
+            "weight": 10
+          },
+          {
+            "value": "Bee",
+            "weight": 10
+          },
+          {
+            "value": "Pup",
+            "weight": 9
+          },
+          {
+            "value": "Fox",
+            "weight": 9
+          },
+          {
+            "value": "Cub",
+            "weight": 9
+          },
+          {
+            "value": "Bear",
+            "weight": 9
           },
           {
             "value": "Bunny",
@@ -1211,316 +2078,79 @@
           },
           {
             "value": "Kitty",
-            "weight": 10
-          },
-          {
-            "value": "Puppy",
-            "weight": 8
-          },
-          {
-            "value": "Angel",
-            "weight": 7
-          },
-          {
-            "value": "Helper",
-            "weight": 8
-          },
-          {
-            "value": "Friend",
             "weight": 9
           },
           {
-            "value": "Buddy",
-            "weight": 8
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "ie",
-            "weight": 9
-          },
-          {
-            "value": "y",
+            "value": "Cake",
             "weight": 8
           },
           {
-            "value": "Bear",
-            "weight": 7
-          },
-          {
-            "value": "Chan",
-            "weight": 6
-          },
-          {
-            "value": "Paw",
-            "weight": 5
-          }
-        ]
-      },
-      "examples": [
-        "SweetBotie",
-        "CuteKittyy",
-        "LittleHelperBear",
-        "TinyBuddy",
-        "FluffyFriend"
-      ]
-    },
-    {
-      "id": "anime-zh-basic",
-      "version": "1.0.0",
-      "name": {
-        "en": "Anime Chinese Basic",
-        "zh": "动漫中文基础版"
-      },
-      "description": {
-        "en": "Anime-style bot names in Chinese",
-        "zh": "动漫风格的中文机器人名称"
-      },
-      "style": "anime",
-      "languages": [
-        "zh"
-      ],
-      "algorithm": "combination",
-      "platformOptimized": [
-        "telegram",
-        "discord",
-        "qq"
-      ],
-      "author": {
-        "name": "Bot Name Generator Team",
-        "github": "pick-bot-name"
-      },
-      "license": "MIT",
-      "tags": [
-        "anime",
-        "chinese",
-        "cute",
-        "cartoon"
-      ],
-      "data": {
-        "prefixes": [
-          {
-            "value": "小",
-            "weight": 10
-          },
-          {
-            "value": "萌",
-            "weight": 9
-          },
-          {
-            "value": "樱",
+            "value": "Puff",
             "weight": 8
           },
           {
-            "value": "星",
-            "weight": 7
-          },
-          {
-            "value": "月",
-            "weight": 6
-          }
-        ],
-        "roots": [
-          {
-            "value": "喵",
-            "weight": 10
-          },
-          {
-            "value": "兔",
-            "weight": 9
-          },
-          {
-            "value": "天使",
+            "value": "Blossom",
             "weight": 8
-          },
-          {
-            "value": "精灵",
-            "weight": 7
-          },
-          {
-            "value": "子",
-            "weight": 6
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "酱",
-            "weight": 10
-          },
-          {
-            "value": "喵",
-            "weight": 9
-          },
-          {
-            "value": "君",
-            "weight": 8
-          },
-          {
-            "value": "",
-            "weight": 7
-          }
-        ]
-      },
-      "examples": [
-        "樱酱",
-        "小喵",
-        "星子",
-        "萌兔",
-        "月君"
-      ]
-    },
-    {
-      "id": "anime-en-basic",
-      "version": "1.0.0",
-      "name": {
-        "en": "Anime English Basic",
-        "zh": "动漫英文基础版"
-      },
-      "description": {
-        "en": "Anime-style bot names in English",
-        "zh": "动漫风格的英文机器人名称"
-      },
-      "style": "anime",
-      "languages": [
-        "en"
-      ],
-      "algorithm": "combination",
-      "platformOptimized": [
-        "discord",
-        "telegram",
-        "line"
-      ],
-      "author": {
-        "name": "Bot Name Generator Team",
-        "github": "pick-bot-name"
-      },
-      "license": "MIT",
-      "tags": [
-        "anime",
-        "english",
-        "cartoon",
-        "manga"
-      ],
-      "data": {
-        "prefixes": [
-          {
-            "value": "Magical",
-            "weight": 10
-          },
-          {
-            "value": "Anime",
-            "weight": 9
-          },
-          {
-            "value": "Manga",
-            "weight": 8
-          },
-          {
-            "value": "Sparkle",
-            "weight": 8
-          },
-          {
-            "value": "Dream",
-            "weight": 7
-          },
-          {
-            "value": "Star",
-            "weight": 7
-          },
-          {
-            "value": "Moon",
-            "weight": 6
-          },
-          {
-            "value": "Cherry",
-            "weight": 8
-          }
-        ],
-        "roots": [
-          {
-            "value": "Girl",
-            "weight": 9
-          },
-          {
-            "value": "Boy",
-            "weight": 8
-          },
-          {
-            "value": "Helper",
-            "weight": 10
-          },
-          {
-            "value": "Guardian",
-            "weight": 7
           },
           {
             "value": "Fairy",
             "weight": 8
-          },
-          {
-            "value": "Spirit",
-            "weight": 7
-          },
-          {
-            "value": "Angel",
-            "weight": 6
-          },
-          {
-            "value": "Bot",
-            "weight": 8
           }
         ],
         "suffixes": [
           {
-            "value": "Chan",
+            "value": "",
+            "weight": 15
+          },
+          {
+            "value": "y",
             "weight": 10
           },
           {
-            "value": "Kun",
+            "value": "ie",
             "weight": 8
           },
           {
-            "value": "San",
-            "weight": 7
-          },
-          {
-            "value": "Senpai",
+            "value": "Boo",
             "weight": 6
           },
           {
-            "value": "Sama",
+            "value": "Bot",
             "weight": 5
           }
         ]
       },
       "examples": [
-        "MagicalHelperChan",
-        "AnimeGuardianKun",
-        "SparkleBotan",
-        "DreamFairySenpai",
-        "StarAngelSama"
+        "SoftBean",
+        "DreamyBun",
+        "FluffyBee",
+        "CloudPup",
+        "HoneyFox",
+        "MochiCub",
+        "PeachyBunny",
+        "StarryKitty"
       ]
     },
     {
-      "id": "acgn-zh-basic",
-      "version": "1.0.0",
+      "id": "anime-zh-basic",
+      "version": "2.0.0",
       "name": {
-        "en": "ACGN Chinese Basic",
-        "zh": "二次元中文基础版"
+        "en": "Anime Chinese",
+        "zh": "动漫中文版"
       },
       "description": {
-        "en": "ACGN (Anime, Comic, Game, Novel) style bot names in Chinese",
-        "zh": "二次元(动画、漫画、游戏、小说)风格的中文机器人名称"
+        "en": "Real anime/manga character naming patterns from Chinese anime, VTubers, and manga translations (2-4 chars)",
+        "zh": "基于中国动漫、虚拟UP主、漫画角色的真实命名模式（2-4个字）"
       },
-      "style": "acgn",
+      "style": "anime",
       "languages": [
         "zh"
       ],
-      "algorithm": "combination",
+      "algorithm": "template",
       "platformOptimized": [
+        "bilibili",
         "qq",
-        "qqbot",
-        "bilibili"
+        "discord"
       ],
       "author": {
         "name": "Bot Name Generator Team",
@@ -1528,99 +2158,353 @@
       },
       "license": "MIT",
       "tags": [
-        "acgn",
-        "chinese",
         "anime",
-        "otaku"
+        "chinese",
+        "vtuber",
+        "manga"
       ],
       "data": {
-        "prefixes": [
-          {
-            "value": "萌",
-            "weight": 10
-          },
-          {
-            "value": "元气",
-            "weight": 9
-          },
-          {
-            "value": "治愈",
-            "weight": 8
-          },
-          {
-            "value": "宅",
-            "weight": 7
-          },
-          {
-            "value": "二次元",
-            "weight": 6
-          }
+        "templates": [
+          "{name}{name}",
+          "{prefix}{name}",
+          "{name}{suffix}",
+          "{color}{nature}"
         ],
-        "roots": [
-          {
-            "value": "酱",
-            "weight": 10
-          },
-          {
-            "value": "喵",
-            "weight": 9
-          },
-          {
-            "value": "君",
-            "weight": 8
-          },
-          {
-            "value": "姬",
-            "weight": 7
-          },
-          {
-            "value": "娘",
-            "weight": 6
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "",
-            "weight": 10
-          },
-          {
-            "value": "喵",
-            "weight": 8
-          },
-          {
-            "value": "呆",
-            "weight": 7
-          }
-        ]
+        "vocabulary": {
+          "name": [
+            {
+              "value": "星",
+              "weight": 10
+            },
+            {
+              "value": "月",
+              "weight": 10
+            },
+            {
+              "value": "雪",
+              "weight": 9
+            },
+            {
+              "value": "樱",
+              "weight": 9
+            },
+            {
+              "value": "羽",
+              "weight": 9
+            },
+            {
+              "value": "瞳",
+              "weight": 8
+            },
+            {
+              "value": "晴",
+              "weight": 8
+            },
+            {
+              "value": "晨",
+              "weight": 8
+            },
+            {
+              "value": "夜",
+              "weight": 7
+            },
+            {
+              "value": "霞",
+              "weight": 7
+            },
+            {
+              "value": "梦",
+              "weight": 7
+            },
+            {
+              "value": "诗",
+              "weight": 6
+            },
+            {
+              "value": "语",
+              "weight": 6
+            },
+            {
+              "value": "音",
+              "weight": 6
+            }
+          ],
+          "prefix": [
+            {
+              "value": "小",
+              "weight": 10
+            },
+            {
+              "value": "阿",
+              "weight": 8
+            }
+          ],
+          "suffix": [
+            {
+              "value": "酱",
+              "weight": 10
+            },
+            {
+              "value": "喵",
+              "weight": 9
+            },
+            {
+              "value": "君",
+              "weight": 8
+            },
+            {
+              "value": "子",
+              "weight": 7
+            },
+            {
+              "value": "儿",
+              "weight": 6
+            }
+          ],
+          "color": [
+            {
+              "value": "白",
+              "weight": 10
+            },
+            {
+              "value": "青",
+              "weight": 9
+            },
+            {
+              "value": "紫",
+              "weight": 9
+            },
+            {
+              "value": "银",
+              "weight": 8
+            },
+            {
+              "value": "金",
+              "weight": 8
+            },
+            {
+              "value": "翠",
+              "weight": 7
+            }
+          ],
+          "nature": [
+            {
+              "value": "月",
+              "weight": 10
+            },
+            {
+              "value": "雪",
+              "weight": 10
+            },
+            {
+              "value": "风",
+              "weight": 9
+            },
+            {
+              "value": "云",
+              "weight": 9
+            },
+            {
+              "value": "霞",
+              "weight": 8
+            },
+            {
+              "value": "露",
+              "weight": 8
+            }
+          ]
+        }
       },
       "examples": [
-        "萌酱",
-        "元气喵",
-        "治愈君",
-        "宅姬",
-        "二次元娘"
+        "星星",
+        "月月",
+        "小雪",
+        "阿樱",
+        "瞳酱",
+        "晴喵",
+        "白月",
+        "青雪"
       ]
     },
     {
-      "id": "acgn-en-basic",
-      "version": "1.0.0",
+      "id": "anime-en-basic",
+      "version": "2.0.0",
       "name": {
-        "en": "ACGN English Basic",
-        "zh": "二次元英文基础版"
+        "en": "Anime English",
+        "zh": "动漫英文版"
       },
       "description": {
-        "en": "ACGN (Anime, Comic, Game, Novel) style bot names in English",
-        "zh": "二次元(动画、漫画、游戏、小说)风格的英文机器人名称"
+        "en": "Real anime/manga character naming patterns from popular anime, VTubers, and mascots (1-4 words)",
+        "zh": "基于热门动漫、VTuber、吉祥物的真实角色命名模式（1-4个单词）"
       },
-      "style": "acgn",
+      "style": "anime",
       "languages": [
         "en"
       ],
-      "algorithm": "combination",
+      "algorithm": "template",
       "platformOptimized": [
         "discord",
-        "telegram",
-        "line"
+        "twitch",
+        "youtube"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "anime",
+        "vtuber",
+        "mascot",
+        "japanese"
+      ],
+      "data": {
+        "templates": [
+          "{name}",
+          "{name} {suffix}",
+          "{adj} {name}",
+          "{name} {name}"
+        ],
+        "vocabulary": {
+          "name": [
+            {
+              "value": "Luna",
+              "weight": 10
+            },
+            {
+              "value": "Stella",
+              "weight": 10
+            },
+            {
+              "value": "Nova",
+              "weight": 9
+            },
+            {
+              "value": "Kira",
+              "weight": 9
+            },
+            {
+              "value": "Hoshi",
+              "weight": 9
+            },
+            {
+              "value": "Yuki",
+              "weight": 9
+            },
+            {
+              "value": "Sora",
+              "weight": 8
+            },
+            {
+              "value": "Aoi",
+              "weight": 8
+            },
+            {
+              "value": "Mochi",
+              "weight": 8
+            },
+            {
+              "value": "Neko",
+              "weight": 8
+            },
+            {
+              "value": "Mimi",
+              "weight": 7
+            },
+            {
+              "value": "Coco",
+              "weight": 7
+            },
+            {
+              "value": "Nana",
+              "weight": 7
+            },
+            {
+              "value": "Riri",
+              "weight": 7
+            },
+            {
+              "value": "Chibi",
+              "weight": 6
+            },
+            {
+              "value": "Fuwa",
+              "weight": 6
+            }
+          ],
+          "suffix": [
+            {
+              "value": "chan",
+              "weight": 10
+            },
+            {
+              "value": "kun",
+              "weight": 8
+            },
+            {
+              "value": "san",
+              "weight": 6
+            }
+          ],
+          "adj": [
+            {
+              "value": "Star",
+              "weight": 10
+            },
+            {
+              "value": "Moon",
+              "weight": 9
+            },
+            {
+              "value": "Dream",
+              "weight": 8
+            },
+            {
+              "value": "Sweet",
+              "weight": 8
+            },
+            {
+              "value": "Cute",
+              "weight": 7
+            },
+            {
+              "value": "Magic",
+              "weight": 7
+            }
+          ]
+        }
+      },
+      "examples": [
+        "Luna",
+        "Stella",
+        "Kira",
+        "Luna chan",
+        "Yuki kun",
+        "Star Nova",
+        "Mochi Neko",
+        "Sweet Mimi"
+      ]
+    },
+    {
+      "id": "acgn-zh-basic",
+      "version": "2.0.0",
+      "name": {
+        "en": "ACGN Chinese",
+        "zh": "二次元中文版"
+      },
+      "description": {
+        "en": "Real ACGN character naming patterns from anime, games, visual novels, and VTubers (2-4 chars)",
+        "zh": "基于动漫、游戏、视觉小说、虚拟主播的真实二次元角色命名（2-4个字）"
+      },
+      "style": "acgn",
+      "languages": [
+        "zh"
+      ],
+      "algorithm": "template",
+      "platformOptimized": [
+        "qq",
+        "bilibili",
+        "discord"
       ],
       "author": {
         "name": "Bot Name Generator Team",
@@ -1631,110 +2515,350 @@
         "acgn",
         "anime",
         "otaku",
-        "english"
+        "vtuber"
       ],
       "data": {
-        "prefixes": [
-          {
-            "value": "Tsundere",
-            "weight": 9
-          },
-          {
-            "value": "Kuudere",
-            "weight": 7
-          },
-          {
-            "value": "Yandere",
-            "weight": 6
-          },
-          {
-            "value": "Kawaii",
-            "weight": 10
-          },
-          {
-            "value": "Moe",
-            "weight": 8
-          },
-          {
-            "value": "Senpai",
-            "weight": 7
-          },
-          {
-            "value": "Otaku",
-            "weight": 6
-          },
-          {
-            "value": "Neko",
-            "weight": 8
-          }
+        "templates": [
+          "{name}",
+          "{name}{suffix}",
+          "{prefix}{name}",
+          "{trait}{role}"
         ],
-        "roots": [
-          {
-            "value": "Chan",
-            "weight": 10
-          },
-          {
-            "value": "Kun",
-            "weight": 8
-          },
-          {
-            "value": "Bot",
-            "weight": 9
-          },
-          {
-            "value": "AI",
-            "weight": 7
-          },
-          {
-            "value": "Helper",
-            "weight": 6
-          },
-          {
-            "value": "Waifu",
-            "weight": 7
-          },
-          {
-            "value": "Idol",
-            "weight": 6
-          },
-          {
-            "value": "Magical",
-            "weight": 5
-          }
-        ],
-        "suffixes": [
-          {
-            "value": "Desu",
-            "weight": 8
-          },
-          {
-            "value": "Nya",
-            "weight": 9
-          },
-          {
-            "value": "Sama",
-            "weight": 6
-          },
-          {
-            "value": "Senpai",
-            "weight": 7
-          },
-          {
-            "value": "2D",
-            "weight": 5
-          },
-          {
-            "value": "Moe",
-            "weight": 6
-          }
-        ]
+        "vocabulary": {
+          "name": [
+            {
+              "value": "星音",
+              "weight": 10
+            },
+            {
+              "value": "雪姬",
+              "weight": 10
+            },
+            {
+              "value": "樱乃",
+              "weight": 9
+            },
+            {
+              "value": "月夜",
+              "weight": 9
+            },
+            {
+              "value": "晴空",
+              "weight": 9
+            },
+            {
+              "value": "灵梦",
+              "weight": 8
+            },
+            {
+              "value": "真白",
+              "weight": 8
+            },
+            {
+              "value": "千寻",
+              "weight": 8
+            },
+            {
+              "value": "凛音",
+              "weight": 8
+            },
+            {
+              "value": "优奈",
+              "weight": 7
+            },
+            {
+              "value": "绘梨",
+              "weight": 7
+            },
+            {
+              "value": "心羽",
+              "weight": 7
+            },
+            {
+              "value": "诗乃",
+              "weight": 7
+            },
+            {
+              "value": "花音",
+              "weight": 6
+            },
+            {
+              "value": "美咲",
+              "weight": 6
+            }
+          ],
+          "suffix": [
+            {
+              "value": "酱",
+              "weight": 10
+            },
+            {
+              "value": "喵",
+              "weight": 9
+            },
+            {
+              "value": "君",
+              "weight": 8
+            },
+            {
+              "value": "姬",
+              "weight": 7
+            },
+            {
+              "value": "娘",
+              "weight": 6
+            },
+            {
+              "value": "呆",
+              "weight": 5
+            }
+          ],
+          "prefix": [
+            {
+              "value": "小",
+              "weight": 10
+            },
+            {
+              "value": "萌",
+              "weight": 8
+            },
+            {
+              "value": "阿",
+              "weight": 7
+            }
+          ],
+          "trait": [
+            {
+              "value": "元气",
+              "weight": 10
+            },
+            {
+              "value": "治愈",
+              "weight": 9
+            },
+            {
+              "value": "傲娇",
+              "weight": 8
+            },
+            {
+              "value": "天然",
+              "weight": 7
+            },
+            {
+              "value": "软萌",
+              "weight": 7
+            },
+            {
+              "value": "呆萌",
+              "weight": 6
+            }
+          ],
+          "role": [
+            {
+              "value": "偶像",
+              "weight": 10
+            },
+            {
+              "value": "歌姬",
+              "weight": 9
+            },
+            {
+              "value": "少女",
+              "weight": 8
+            },
+            {
+              "value": "魔女",
+              "weight": 7
+            }
+          ]
+        }
       },
       "examples": [
-        "KawaiiChanNya",
-        "TsundereBotDesu",
-        "MoeHelperSama",
-        "NekoAISenpai",
-        "SenpaiIdol2D"
+        "星音",
+        "雪姬",
+        "星音酱",
+        "樱乃喵",
+        "小月夜",
+        "萌灵梦",
+        "元气偶像",
+        "治愈歌姬"
+      ]
+    },
+    {
+      "id": "acgn-en-basic",
+      "version": "2.0.0",
+      "name": {
+        "en": "ACGN English",
+        "zh": "二次元英文版"
+      },
+      "description": {
+        "en": "Real ACGN character naming patterns from anime, games, visual novels, and VTubers (1-4 words)",
+        "zh": "基于动漫、游戏、视觉小说、虚拟主播的真实二次元角色命名（1-4个单词）"
+      },
+      "style": "acgn",
+      "languages": [
+        "en"
+      ],
+      "algorithm": "template",
+      "platformOptimized": [
+        "discord",
+        "twitch",
+        "youtube"
+      ],
+      "author": {
+        "name": "Bot Name Generator Team",
+        "github": "pick-bot-name"
+      },
+      "license": "MIT",
+      "tags": [
+        "acgn",
+        "anime",
+        "otaku",
+        "vtuber"
+      ],
+      "data": {
+        "templates": [
+          "{name}",
+          "{name} {suffix}",
+          "{trait} {name}",
+          "{name} {role}"
+        ],
+        "vocabulary": {
+          "name": [
+            {
+              "value": "Hoshino",
+              "weight": 10
+            },
+            {
+              "value": "Yukina",
+              "weight": 10
+            },
+            {
+              "value": "Sakura",
+              "weight": 9
+            },
+            {
+              "value": "Tsuki",
+              "weight": 9
+            },
+            {
+              "value": "Haruka",
+              "weight": 9
+            },
+            {
+              "value": "Rin",
+              "weight": 8
+            },
+            {
+              "value": "Yui",
+              "weight": 8
+            },
+            {
+              "value": "Mio",
+              "weight": 8
+            },
+            {
+              "value": "Nana",
+              "weight": 8
+            },
+            {
+              "value": "Akari",
+              "weight": 7
+            },
+            {
+              "value": "Shiro",
+              "weight": 7
+            },
+            {
+              "value": "Hana",
+              "weight": 7
+            },
+            {
+              "value": "Ai",
+              "weight": 7
+            },
+            {
+              "value": "Mei",
+              "weight": 6
+            },
+            {
+              "value": "Nene",
+              "weight": 6
+            }
+          ],
+          "suffix": [
+            {
+              "value": "chan",
+              "weight": 10
+            },
+            {
+              "value": "kun",
+              "weight": 8
+            },
+            {
+              "value": "sama",
+              "weight": 6
+            },
+            {
+              "value": "senpai",
+              "weight": 5
+            }
+          ],
+          "trait": [
+            {
+              "value": "Tsundere",
+              "weight": 10
+            },
+            {
+              "value": "Yandere",
+              "weight": 8
+            },
+            {
+              "value": "Kuudere",
+              "weight": 7
+            },
+            {
+              "value": "Dandere",
+              "weight": 6
+            },
+            {
+              "value": "Genki",
+              "weight": 8
+            },
+            {
+              "value": "Kawaii",
+              "weight": 9
+            }
+          ],
+          "role": [
+            {
+              "value": "Idol",
+              "weight": 10
+            },
+            {
+              "value": "Mage",
+              "weight": 8
+            },
+            {
+              "value": "Knight",
+              "weight": 7
+            },
+            {
+              "value": "Priestess",
+              "weight": 6
+            }
+          ]
+        }
+      },
+      "examples": [
+        "Hoshino",
+        "Yukina",
+        "Sakura chan",
+        "Rin kun",
+        "Tsundere Hana",
+        "Kawaii Yui",
+        "Haruka Idol",
+        "Ai Mage"
       ]
     }
   ]

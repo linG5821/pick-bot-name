@@ -1,38 +1,16 @@
 /**
- * Anime头像API加载器 - 集成多个免费API
+ * Anime头像API加载器 - 通过外部API获取真实二次元插画
+ *
+ * 方案：开发和生产环境完全一致，都直接调用外部 waifu.pics API
  */
 
-// 可用的anime头像API列表
-const isDev = import.meta.env.DEV;
-
-const ANIME_APIS = isDev ? [
-  {
-    name: 'waifu.pics',
-    endpoint: '/api/waifu/sfw/waifu',
-    type: 'json',
-    getUrl: (data: any) => {
-      const url = data.url;
-      // 将外部图片URL转换为代理URL
-      if (url && url.includes('i.waifu.pics')) {
-        const fileName = url.split('/').pop();
-        return `/proxy/waifu-img/${fileName}`;
-      }
-      return url;
-    },
-  },
-  {
-    name: 'waifu.im',
-    endpoint: '/api/waifu-im/search/?included_tags=waifu&height=>=256',
-    type: 'json',
-    getUrl: (data: any) => data.images?.[0]?.url,
-  },
-] : [
-  // 生产环境直接调用API，直接使用图片URL（不需要CORS因为移除了crossOrigin）
+// 可用的anime头像API列表（开发和生产环境完全一致）
+const ANIME_APIS = [
   {
     name: 'waifu.pics',
     endpoint: 'https://api.waifu.pics/sfw/waifu',
     type: 'json',
-    getUrl: (data: any) => data.url, // 直接使用返回的URL
+    getUrl: (data: any) => data.url, // 直接使用返回的图片URL
   },
   {
     name: 'waifu.im',
@@ -103,15 +81,10 @@ export async function getAnimeAvatarUrl(seed: string): Promise<string> {
 
 /**
  * 预加载多个anime头像到缓存
+ * 开发和生产环境都会预加载，提升首次生成体验
  */
-export async function preloadAnimeAvatars(count: number = 10): Promise<void> {
-  // 在生产环境中跳过预加载，因为使用静态资源
-  if (!isDev) {
-    console.log('Production mode: using static anime avatars, skipping preload');
-    return;
-  }
-
-  console.log(`Preloading ${count} anime avatars...`);
+export async function preloadAnimeAvatars(count: number = 5): Promise<void> {
+  console.log(`Preloading ${count} anime avatars from external API...`);
 
   const promises = Array.from({ length: count }, async (_, i) => {
     try {
@@ -125,7 +98,7 @@ export async function preloadAnimeAvatars(count: number = 10): Promise<void> {
   });
 
   await Promise.all(promises);
-  console.log(`Preloaded ${localAnimeCache.size} anime avatars`);
+  console.log(`✓ Preloaded ${localAnimeCache.size} anime avatars to cache`);
 }
 
 /**

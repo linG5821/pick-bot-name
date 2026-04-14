@@ -1,53 +1,104 @@
-# 🌸 二次元头像实现方案总结
+# 🌸 二次元头像实现方案
 
-## ✅ 已完成
+## 📖 方案说明
 
-### 方案A：在线API集成 ✅
+本项目使用 **外部 API** 获取真实的二次元插画作为头像。
 
-实现了真正的高质量anime头像加载：
+**开发和生产环境完全一致** - 都直接调用外部 API，无需代理。
 
-**使用的API**：
+---
+
+## ✅ 实现方案：外部 API 集成
+
+### 使用的 API
+
 - ✅ **waifu.pics** - 主API（免费、无需密钥）
+  - 地址：`https://api.waifu.pics/sfw/waifu`
 - ✅ **waifu.im** - 备用API
-- ✅ **corsproxy.io** - CORS代理（生产环境图片加载）
+  - 地址：`https://api.waifu.im/search/?included_tags=waifu&height=>=256`
 
-**核心功能**：
+### 核心功能
+
+**文件位置**：`src/core/avatar/anime-api-loader.ts`
+
 ```typescript
-// src/core/avatar/anime-api-loader.ts
-- getAnimeAvatarUrl(seed) - 根据seed获取anime头像URL
-- preloadAnimeAvatars(count) - 预加载多个头像到缓存
-- clearAnimeCache() - 清空缓存
-- getAnimeCacheStats() - 获取缓存统计
+// 主要导出函数
+- getAnimeAvatarUrl(seed: string): Promise<string>
+  根据 seed 获取 anime 头像 URL（带缓存）
+
+- preloadAnimeAvatars(count: number = 5): Promise<void>
+  预加载多个头像到缓存，提升首次生成体验
+
+- clearAnimeCache(): void
+  清空缓存
+
+- getAnimeCacheStats(): { size: number; seeds: string[] }
+  获取缓存统计信息
 ```
 
-**特点**：
+### 特点
+
 - 🎨 **真实的高质量插画** - 来自专业画师作品
-- 💾 **智能缓存** - 每个seed对应唯一头像，避免重复请求
+- 💾 **智能缓存** - 每个 seed 对应唯一头像，避免重复请求
 - 🚀 **预加载机制** - 启动时自动加载5张，提升体验
-- 🔄 **自动降级** - 多个API互为备份
-- 🛡️ **错误处理** - API失败时显示fallback
+- 🔄 **自动降级** - 多个 API 互为备份
+- 🛡️ **错误处理** - API 失败时显示 fallback
 
-### 方案B：本地素材准备 ✅
+---
 
-提供了本地素材的基础设施：
+## 🔧 环境说明
 
-**目录结构**：
+### 开发和生产环境（完全一致）
+
+- **直接调用外部 API** - 浏览器直接请求
+- **无需代理** - 不使用 Vite proxy
+- **无 CORS 问题** - waifu.pics API 支持跨域
+
+```typescript
+// 统一的 API 配置
+const ANIME_APIS = [
+  {
+    name: 'waifu.pics',
+    endpoint: 'https://api.waifu.pics/sfw/waifu',
+    getUrl: (data) => data.url,
+  },
+  {
+    name: 'waifu.im',
+    endpoint: 'https://api.waifu.im/search/?included_tags=waifu&height=>=256',
+    getUrl: (data) => data.images?.[0]?.url,
+  },
+];
 ```
-public/avatars/anime/
-├── README.md          # 详细的素材添加指南
-├── fallback.svg       # API失败时的占位符
-├── girl-01.svg        # 示例头像（简化版）
-├── boy-01.svg
-├── cat-girl-01.svg
-├── magical-girl-01.svg
-├── cool-boy-01.svg
-└── chibi-01.svg
+
+---
+
+## 🛡️ 降级策略
+
+当所有 API 都失败时，显示 fallback 占位符：
+
+```
+public/avatars/anime/fallback.svg
 ```
 
-**添加素材说明**：
-- 📖 详细的README，包含版权注意事项
-- 🎨 推荐的开源素材资源
-- 💻 如何切换到纯本地模式的代码示例
+---
+
+## ⚠️ 注意事项
+
+1. **依赖外部 API**
+   - 项目依赖 waifu.pics 和 waifu.im 的可用性
+   - 如果 API 不可用，头像加载会失败并显示 fallback
+
+2. **网络延迟**
+   - 首次加载可能有延迟（API 响应时间 0.5-2秒）
+   - 已通过预加载机制优化（启动时预加载5张）
+
+3. **缓存策略**
+   - 使用内存缓存（刷新页面会清空）
+   - 每个 seed 对应唯一 URL，确保一致性
+
+4. **无限流限制**
+   - 不对外部 API 调用做限流（由浏览器和 API 服务器控制）
+   - 本地开发 API（`/api/pick-bot-name`）有限流：每分钟30次
 
 ## 🎯 用户体验流程
 

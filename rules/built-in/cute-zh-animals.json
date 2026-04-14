@@ -34,49 +34,72 @@
   "data": {
     "templates": [
       {
-        "value": "{animal}{animal}",
-        "weight": 10
+        "value": "{base}{base}",
+        "weight": 18
       },
       {
-        "value": "小{animal}",
-        "weight": 9
+        "value": "小{base}",
+        "weight": 12
       },
       {
-        "value": "{animal}{suffix}",
-        "weight": 8
+        "value": "{base}{suffix}",
+        "weight": 15
       },
       {
-        "value": "{adjective}{animal}",
-        "weight": 7
+        "value": "{adjective}{base}",
+        "weight": 12
       }
     ],
     "vocabulary": {
       "adjective": [
-        { "value": "萌", "weight": 10 },
-        { "value": "软", "weight": 9 },
-        { "value": "甜", "weight": 8 }
+        { "value": "软", "weight": 10 },
+        { "value": "甜", "weight": 10 },
+        { "value": "糯", "weight": 9 },
+        { "value": "萌", "weight": 8 },
+        { "value": "粉", "weight": 8 },
+        { "value": "小", "weight": 9 }
       ],
-      "animal": [
-        { "value": "喵", "weight": 10 },
+      "base": [
+        { "value": "团", "weight": 10 },
+        { "value": "糖", "weight": 10 },
         { "value": "兔", "weight": 10 },
-        { "value": "团", "weight": 9 },
+        { "value": "喵", "weight": 10 },
+        { "value": "熊", "weight": 9 },
+        { "value": "柚", "weight": 9 },
+        { "value": "桃", "weight": 9 },
+        { "value": "莓", "weight": 9 },
+        { "value": "云", "weight": 9 },
+        { "value": "星", "weight": 8 },
+        { "value": "豆", "weight": 8 },
         { "value": "球", "weight": 8 },
-        { "value": "熊", "weight": 8 },
-        { "value": "鹅", "weight": 7 },
-        { "value": "狐", "weight": 7 }
+        { "value": "鹅", "weight": 8 },
+        { "value": "奶茶", "weight": 9 },
+        { "value": "蛋挞", "weight": 8 },
+        { "value": "布丁", "weight": 9 },
+        { "value": "麻薯", "weight": 8 },
+        { "value": "团子", "weight": 9 },
+        { "value": "糯米", "weight": 7 },
+        { "value": "奶油", "weight": 7 },
+        { "value": "云朵", "weight": 8 }
       ],
       "suffix": [
-        { "value": "喵", "weight": 10 },
-        { "value": "酱", "weight": 9 },
-        { "value": "儿", "weight": 8 }
+        { "value": "酱", "weight": 10 },
+        { "value": "宝", "weight": 9 },
+        { "value": "仔", "weight": 9 },
+        { "value": "子", "weight": 8 },
+        { "value": "儿", "weight": 8 },
+        { "value": "uu", "weight": 7 }
       ]
     }
   },
   "examples": [
-    "喵喵",
     "团团",
-    "小兔",
-    "软软",
-    "甜心"
+    "糖糖",
+    "柚柚",
+    "小团子",
+    "甜糖酱",
+    "奶茶宝",
+    "软糯仔",
+    "云云儿"
   ]
 }

@@ -58,44 +58,48 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
   };
 
   return (
-    <div className="space-y-4">
-      {/* 平台选择Tabs */}
-      <Tabs
-        tabs={tabs}
-        activeTab={activePlatform}
-        onChange={(tabId) => setActivePlatform(tabId as PlatformId)}
-      />
+    <div className="space-y-4 w-full overflow-x-hidden">
+      {/* 平台选择Tabs - 移动端可横向滚动 */}
+      <div className="overflow-x-auto -mx-3 md:mx-0 px-3 md:px-0">
+        <Tabs
+          tabs={tabs}
+          activeTab={activePlatform}
+          onChange={(tabId) => setActivePlatform(tabId as PlatformId)}
+        />
+      </div>
 
       {/* 平台信息卡片 */}
       <Card glow>
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6 w-full overflow-x-hidden">
           {/* 平台头部 */}
-          <div className="flex items-center gap-3 border-b border-gray-200 dark:border-gray-700 pb-4">
-            <div className="w-12 h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-lg">
-              <PlatformIcon platform={activePlatform} size={32} className="text-gray-700 dark:text-gray-300" />
+          <div className="flex items-center gap-2 md:gap-3 border-b border-gray-200 dark:border-gray-700 pb-3 md:pb-4">
+            <div className="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center bg-gray-100 dark:bg-gray-700 rounded-lg">
+              <PlatformIcon platform={activePlatform} size={24} className="text-gray-700 dark:text-gray-300 md:w-8 md:h-8" />
             </div>
             <div>
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-white">
+              <h3 className="text-lg md:text-2xl font-bold text-gray-800 dark:text-white">
                 {t(`platform.${activePlatform}`)}
               </h3>
             </div>
           </div>
 
-          {/* 显示名称 */}
+          {/* 机器人名称 */}
           <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            <label className="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">
               {t('platformGuide.displayName')}
             </label>
-            <div className="flex gap-2">
-              <div className="flex-1 px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-xl font-bold text-gray-900 dark:text-white">
+            <div className="flex items-stretch gap-2">
+              <div className="flex-1 px-3 py-2.5 md:px-4 md:py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-base md:text-xl font-bold text-gray-900 dark:text-white break-words flex items-center">
                 {currentPlatform.displayName}
               </div>
               <Button
                 variant="secondary"
+                size="sm"
                 onClick={handleCopyName}
                 icon="📋"
+                className="px-3 md:px-4"
               >
-                {t('common.copy')}
+                <span className="hidden sm:inline">{t('common.copy')}</span>
               </Button>
             </div>
           </div>
@@ -103,24 +107,26 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
           {/* 机器人ID（如果平台需要） */}
           {currentPlatform.needsUsername && (
             <div className="space-y-2">
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+              <label className="block text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">
                 {t('platformGuide.botId')}
               </label>
               {currentPlatform.username ? (
-                <div className="flex gap-2">
-                  <div className="flex-1 px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-lg font-mono text-gray-900 dark:text-white">
+                <div className="flex items-stretch gap-2">
+                  <div className="flex-1 px-3 py-2.5 md:px-4 md:py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg text-sm md:text-lg font-mono text-gray-900 dark:text-white break-all flex items-center">
                     {currentPlatform.username}
                   </div>
                   <Button
                     variant="secondary"
+                    size="sm"
                     onClick={handleCopyUsername}
                     icon="📋"
+                    className="px-3 md:px-4"
                   >
-                    {t('common.copy')}
+                    <span className="hidden sm:inline">{t('common.copy')}</span>
                   </Button>
                 </div>
               ) : (
-                <div className="px-4 py-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 rounded-lg text-yellow-800 dark:text-yellow-200">
+                <div className="px-3 py-2 md:px-4 md:py-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700 rounded-lg text-xs md:text-sm text-yellow-800 dark:text-yellow-200">
                   {currentPlatform.metadata.usernameGeneratedBySystem
                     ? '⚠️ ' + (t('platformGuide.systemGenerated') || '系统生成')
                     : '⚠️ ' + (t('platformGuide.needsUsername') || '需要用户名')}
@@ -143,12 +149,13 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
 
           {/* 官方链接 */}
           {currentConfig.officialUrl && (
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => window.open(currentConfig.officialUrl, '_blank')}
                 icon="🔗"
+                className="flex-1 sm:flex-initial"
               >
                 {t('platformGuide.officialDocs')}
               </Button>
@@ -158,6 +165,7 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
                   size="sm"
                   onClick={() => window.open(currentConfig.docsUrl, '_blank')}
                   icon="📚"
+                  className="flex-1 sm:flex-initial"
                 >
                   API Docs
                 </Button>
@@ -168,10 +176,11 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
           {/* 创建步骤 */}
           {currentConfig.creationSteps && currentConfig.creationSteps.length > 0 && (
             <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
-                📝 {t('platformGuide.creationSteps') || '创建步骤'}
+              <h4 className="text-base md:text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
+                <span className="text-xl">📝</span>
+                <span>{t('platformGuide.creationSteps') || '创建步骤'}</span>
               </h4>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {currentConfig.creationSteps.map((step) => {
                   const title = typeof step.title === 'string' ? step.title : step.title[t('language') as 'zh' | 'en'] || step.title.zh;
                   const description = typeof step.description === 'string' ? step.description : step.description[t('language') as 'zh' | 'en'] || step.description.zh;
@@ -179,47 +188,28 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
                   return (
                     <div
                       key={step.order}
-                      className="flex gap-3 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+                      className="relative pl-10 md:pl-12 pb-4 last:pb-0"
                     >
+                      {/* 步骤连接线 */}
+                      {step.order < currentConfig.creationSteps.length && (
+                        <div className="absolute left-4 md:left-5 top-8 bottom-0 w-0.5 bg-gray-200 dark:bg-gray-700" />
+                      )}
+
                       {/* 步骤序号 */}
-                      <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-blue-500 text-white rounded-full font-bold text-sm">
+                      <div className="absolute left-0 top-0 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center bg-blue-500 text-white rounded-full font-bold text-sm md:text-base shadow-sm z-10">
                         {step.order}
                       </div>
 
                       {/* 步骤内容 */}
-                      <div className="flex-1 min-w-0">
-                        <h5 className="font-semibold text-gray-900 dark:text-white mb-1">
-                          {title}
-                        </h5>
-                        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                          {description}
-                        </p>
-
-                        {/* 命令 */}
-                        {step.command && (
-                          <div className="mt-2 px-3 py-2 bg-gray-900 dark:bg-gray-800 rounded border border-gray-700 font-mono text-sm text-green-400">
-                            {step.command}
-                          </div>
-                        )}
-
-                        {/* URL链接 */}
-                        {step.url && (
-                          <a
-                            href={step.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-2 inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                          >
-                            <span>🔗</span>
-                            <span>{step.url}</span>
-                          </a>
-                        )}
-
-                        {/* 步骤类型标签 */}
-                        {step.type && (
-                          <div className="mt-2">
+                      <div className="space-y-2">
+                        {/* 标题和类型标签 */}
+                        <div className="flex items-start justify-between gap-2 flex-wrap">
+                          <h5 className="font-semibold text-sm md:text-base text-gray-900 dark:text-white flex-1">
+                            {title}
+                          </h5>
+                          {step.type && (
                             <span className={`
-                              inline-flex items-center px-2 py-1 text-xs font-medium rounded
+                              inline-flex items-center px-2 py-0.5 text-xs font-medium rounded flex-shrink-0
                               ${step.type === 'credential' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400' : ''}
                               ${step.type === 'input' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400' : ''}
                               ${step.type === 'action' ? 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400' : ''}
@@ -237,7 +227,32 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
                               {step.type === 'configuration' && '⚙️ 配置'}
                               {step.type === 'info' && 'ℹ️ 信息'}
                             </span>
+                          )}
+                        </div>
+
+                        {/* 描述 */}
+                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                          {description}
+                        </p>
+
+                        {/* 命令 */}
+                        {step.command && (
+                          <div className="mt-2 px-3 py-2 bg-gray-900 dark:bg-gray-800 rounded border border-gray-700 font-mono text-xs text-green-400 overflow-x-auto">
+                            <code className="block whitespace-pre-wrap break-all">{step.command}</code>
                           </div>
+                        )}
+
+                        {/* URL链接 */}
+                        {step.url && (
+                          <a
+                            href={step.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mt-2 inline-flex items-start gap-1.5 text-xs md:text-sm text-blue-600 dark:text-blue-400 hover:underline group"
+                          >
+                            <span className="flex-shrink-0 mt-0.5">🔗</span>
+                            <span className="break-all group-hover:text-blue-700 dark:group-hover:text-blue-300">{step.url}</span>
+                          </a>
                         )}
                       </div>
                     </div>
@@ -250,8 +265,9 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
           {/* 所需凭证 */}
           {currentConfig.credentials && currentConfig.credentials.length > 0 && (
             <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
-              <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
-                🔐 {t('platformGuide.requiredCredentials') || '所需凭证'}
+              <h4 className="text-base md:text-lg font-semibold text-gray-800 dark:text-white mb-4 flex items-center gap-2">
+                <span className="text-xl">🔐</span>
+                <span>{t('platformGuide.requiredCredentials') || '所需凭证'}</span>
               </h4>
               <div className="space-y-3">
                 {currentConfig.credentials.map((cred) => {
@@ -265,34 +281,40 @@ export const PlatformDisplay: React.FC<PlatformDisplayProps> = ({
                   return (
                     <div
                       key={cred.key}
-                      className="p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg border border-gray-200 dark:border-gray-600"
+                      className="p-3 md:p-4 border-l-4 border-blue-500 bg-gray-50 dark:bg-gray-700/30 rounded-r-lg"
                     >
-                      <div className="flex items-start justify-between gap-2">
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="font-semibold text-gray-900 dark:text-white">
-                              {name}
+                      <div className="space-y-2">
+                        {/* 凭证名称和标签 */}
+                        <div className="flex items-center gap-2 flex-wrap">
+                          <span className="font-semibold text-sm md:text-base text-gray-900 dark:text-white">
+                            {name}
+                          </span>
+                          {cred.required && (
+                            <span className="px-2 py-0.5 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium rounded">
+                              {t('common.required') || '必需'}
                             </span>
-                            {cred.required && (
-                              <span className="px-2 py-0.5 bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 text-xs font-medium rounded">
-                                {t('common.required') || '必需'}
-                              </span>
-                            )}
-                            {cred.sensitive && (
-                              <span className="px-2 py-0.5 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 text-xs font-medium rounded">
-                                🔒 {t('common.sensitive') || '敏感'}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-sm text-gray-600 dark:text-gray-400">
-                            {description}
-                          </p>
-                          {cred.example && (
-                            <div className="mt-2 px-3 py-2 bg-gray-100 dark:bg-gray-800 rounded border border-gray-300 dark:border-gray-600 font-mono text-xs text-gray-700 dark:text-gray-300">
-                              {t('common.example') || '示例'}: {cred.example}
-                            </div>
+                          )}
+                          {cred.sensitive && (
+                            <span className="px-2 py-0.5 bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400 text-xs font-medium rounded">
+                              🔒 {t('common.sensitive') || '敏感'}
+                            </span>
                           )}
                         </div>
+
+                        {/* 描述 */}
+                        {description && (
+                          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            {description}
+                          </p>
+                        )}
+
+                        {/* 示例 */}
+                        {cred.example && (
+                          <div className="mt-2 px-3 py-2 bg-gray-900 dark:bg-gray-800 rounded border border-gray-700 font-mono text-xs text-gray-300 dark:text-gray-400">
+                            <div className="text-gray-500 dark:text-gray-500 mb-1">{t('common.example') || '示例'}:</div>
+                            <code className="text-green-400 dark:text-green-400 break-all">{cred.example}</code>
+                          </div>
+                        )}
                       </div>
                     </div>
                   );

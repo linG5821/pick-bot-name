@@ -20,23 +20,11 @@ const requestStore = new Map<string, RequestRecord>();
 
 // 预定义的限流规则
 export const RATE_LIMIT_RULES = {
-  // 普通 API：每分钟 30 次
+  // 开发API：每分钟 30 次
   default: {
     windowMs: 60 * 1000,
     maxRequests: 30,
     message: 'Too many requests, please try again later',
-  },
-  // 二次元图片 API：每分钟 10 次（比较慢，限制更严格）
-  anime: {
-    windowMs: 60 * 1000,
-    maxRequests: 10,
-    message: 'Too many anime avatar requests, please try again later',
-  },
-  // 代理图片：每分钟 15 次
-  proxy: {
-    windowMs: 60 * 1000,
-    maxRequests: 15,
-    message: 'Too many image proxy requests, please try again later',
   },
 } as const;
 
@@ -222,17 +210,10 @@ export function rateLimitMiddleware(
 }
 
 /**
- * 根据请求路径选择限流规则
+ * 获取限流规则配置
+ * 目前所有开发API端点使用统一限流规则
  */
-export function selectRateLimitConfig(url: string): RateLimitConfig {
-  if (url.startsWith('/api/waifu')) {
-    return RATE_LIMIT_RULES.anime;
-  }
-
-  if (url.startsWith('/proxy/waifu-img')) {
-    return RATE_LIMIT_RULES.proxy;
-  }
-
+export function selectRateLimitConfig(): RateLimitConfig {
   return RATE_LIMIT_RULES.default;
 }
 

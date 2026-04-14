@@ -1,19 +1,19 @@
 {
   "id": "minimal-zh-basic",
-  "version": "1.0.0",
+  "version": "2.2.0",
   "name": {
-    "en": "Minimal Chinese Basic",
-    "zh": "极简中文基础版"
+    "en": "Minimal Chinese",
+    "zh": "极简中文版"
   },
   "description": {
-    "en": "Clean and minimal bot names in Chinese",
-    "zh": "简洁的中文极简风格机器人名称"
+    "en": "Ultra-minimal Chinese bot names with natural 2-character words",
+    "zh": "极简自然的中文机器人名称，使用常见2字词汇"
   },
   "style": "minimal",
   "languages": [
     "zh"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
     "weixin",
     "wecom",
@@ -27,90 +27,47 @@
   "tags": [
     "minimal",
     "chinese",
-    "clean",
-    "simple"
+    "simple",
+    "clean"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "简",
-        "weight": 10
-      },
-      {
-        "value": "小",
-        "weight": 9
-      },
-      {
-        "value": "一",
-        "weight": 8
-      },
-      {
-        "value": "轻",
-        "weight": 7
-      },
-      {
-        "value": "快",
-        "weight": 6
-      },
-      {
-        "value": "纯",
-        "weight": 7
-      }
+    "templates": [
+      "{word}",
+      "{word}{word}"
     ],
-    "roots": [
-      {
-        "value": "助手",
-        "weight": 10
-      },
-      {
-        "value": "机器人",
-        "weight": 8
-      },
-      {
-        "value": "工具",
-        "weight": 9
-      },
-      {
-        "value": "帮手",
-        "weight": 7
-      },
-      {
-        "value": "伙伴",
-        "weight": 6
-      },
-      {
-        "value": "代理",
-        "weight": 5
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "",
-        "weight": 10
-      },
-      {
-        "value": "一号",
-        "weight": 5
-      },
-      {
-        "value": "版",
-        "weight": 4
-      },
-      {
-        "value": "Pro",
-        "weight": 3
-      },
-      {
-        "value": "精简版",
-        "weight": 2
-      }
-    ]
+    "vocabulary": {
+      "word": [
+        { "value": "答答", "weight": 10 },
+        { "value": "问问", "weight": 10 },
+        { "value": "助助", "weight": 9 },
+        { "value": "应答", "weight": 9 },
+        { "value": "快答", "weight": 9 },
+        { "value": "易答", "weight": 8 },
+        { "value": "轻助", "weight": 8 },
+        { "value": "简应", "weight": 8 },
+        { "value": "明答", "weight": 7 },
+        { "value": "清语", "weight": 7 },
+        { "value": "纯言", "weight": 7 },
+        { "value": "速答", "weight": 7 },
+        { "value": "即答", "weight": 6 },
+        { "value": "秒回", "weight": 6 },
+        { "value": "即应", "weight": 6 },
+        { "value": "通达", "weight": 6 },
+        { "value": "直答", "weight": 5 },
+        { "value": "明语", "weight": 5 },
+        { "value": "简答", "weight": 5 },
+        { "value": "易问", "weight": 5 }
+      ]
+    }
   },
   "examples": [
-    "简助手",
-    "小工具",
-    "一帮手",
-    "轻伙伴",
-    "纯代理"
+    "答答",
+    "问问",
+    "助助",
+    "应答",
+    "快答",
+    "易答",
+    "秒回",
+    "即答"
   ]
 }

@@ -1,23 +1,23 @@
 {
   "id": "acgn-zh-basic",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": {
-    "en": "ACGN Chinese Basic",
-    "zh": "二次元中文基础版"
+    "en": "ACGN Chinese",
+    "zh": "二次元中文版"
   },
   "description": {
-    "en": "ACGN (Anime, Comic, Game, Novel) style bot names in Chinese",
-    "zh": "二次元(动画、漫画、游戏、小说)风格的中文机器人名称"
+    "en": "Real ACGN character naming patterns from anime, games, visual novels, and VTubers (2-4 chars)",
+    "zh": "基于动漫、游戏、视觉小说、虚拟主播的真实二次元角色命名（2-4个字）"
   },
   "style": "acgn",
   "languages": [
     "zh"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
     "qq",
-    "qqbot",
-    "bilibili"
+    "bilibili",
+    "discord"
   ],
   "author": {
     "name": "Bot Name Generator Team",
@@ -26,75 +26,72 @@
   "license": "MIT",
   "tags": [
     "acgn",
-    "chinese",
     "anime",
-    "otaku"
+    "otaku",
+    "vtuber"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "萌",
-        "weight": 10
-      },
-      {
-        "value": "元气",
-        "weight": 9
-      },
-      {
-        "value": "治愈",
-        "weight": 8
-      },
-      {
-        "value": "宅",
-        "weight": 7
-      },
-      {
-        "value": "二次元",
-        "weight": 6
-      }
+    "templates": [
+      "{name}",
+      "{name}{suffix}",
+      "{prefix}{name}",
+      "{trait}{role}"
     ],
-    "roots": [
-      {
-        "value": "酱",
-        "weight": 10
-      },
-      {
-        "value": "喵",
-        "weight": 9
-      },
-      {
-        "value": "君",
-        "weight": 8
-      },
-      {
-        "value": "姬",
-        "weight": 7
-      },
-      {
-        "value": "娘",
-        "weight": 6
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "",
-        "weight": 10
-      },
-      {
-        "value": "喵",
-        "weight": 8
-      },
-      {
-        "value": "呆",
-        "weight": 7
-      }
-    ]
+    "vocabulary": {
+      "name": [
+        { "value": "星音", "weight": 10 },
+        { "value": "雪姬", "weight": 10 },
+        { "value": "樱乃", "weight": 9 },
+        { "value": "月夜", "weight": 9 },
+        { "value": "晴空", "weight": 9 },
+        { "value": "灵梦", "weight": 8 },
+        { "value": "真白", "weight": 8 },
+        { "value": "千寻", "weight": 8 },
+        { "value": "凛音", "weight": 8 },
+        { "value": "优奈", "weight": 7 },
+        { "value": "绘梨", "weight": 7 },
+        { "value": "心羽", "weight": 7 },
+        { "value": "诗乃", "weight": 7 },
+        { "value": "花音", "weight": 6 },
+        { "value": "美咲", "weight": 6 }
+      ],
+      "suffix": [
+        { "value": "酱", "weight": 10 },
+        { "value": "喵", "weight": 9 },
+        { "value": "君", "weight": 8 },
+        { "value": "姬", "weight": 7 },
+        { "value": "娘", "weight": 6 },
+        { "value": "呆", "weight": 5 }
+      ],
+      "prefix": [
+        { "value": "小", "weight": 10 },
+        { "value": "萌", "weight": 8 },
+        { "value": "阿", "weight": 7 }
+      ],
+      "trait": [
+        { "value": "元气", "weight": 10 },
+        { "value": "治愈", "weight": 9 },
+        { "value": "傲娇", "weight": 8 },
+        { "value": "天然", "weight": 7 },
+        { "value": "软萌", "weight": 7 },
+        { "value": "呆萌", "weight": 6 }
+      ],
+      "role": [
+        { "value": "偶像", "weight": 10 },
+        { "value": "歌姬", "weight": 9 },
+        { "value": "少女", "weight": 8 },
+        { "value": "魔女", "weight": 7 }
+      ]
+    }
   },
   "examples": [
-    "萌酱",
-    "元气喵",
-    "治愈君",
-    "宅姬",
-    "二次元娘"
+    "星音",
+    "雪姬",
+    "星音酱",
+    "樱乃喵",
+    "小月夜",
+    "萌灵梦",
+    "元气偶像",
+    "治愈歌姬"
   ]
 }

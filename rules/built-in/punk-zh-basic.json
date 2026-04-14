@@ -33,68 +33,183 @@
   "data": {
     "prefixes": [
       {
-        "value": "赛博",
+        "value": "幽灵",
         "weight": 10
       },
       {
-        "value": "量子",
+        "value": "幻影",
         "weight": 9
+      },
+      {
+        "value": "刀锋",
+        "weight": 10
+      },
+      {
+        "value": "暗影",
+        "weight": 9
+      },
+      {
+        "value": "游荡者",
+        "weight": 8
+      },
+      {
+        "value": "拾荒者",
+        "weight": 7
+      },
+      {
+        "value": "回声",
+        "weight": 8
+      },
+      {
+        "value": "先知",
+        "weight": 9
+      },
+      {
+        "value": "守望",
+        "weight": 8
+      },
+      {
+        "value": "哨兵",
+        "weight": 8
+      },
+      {
+        "value": "迷失",
+        "weight": 7
+      },
+      {
+        "value": "流浪",
+        "weight": 7
+      },
+      {
+        "value": "霓虹",
+        "weight": 8
+      },
+      {
+        "value": "密语",
+        "weight": 7
+      },
+      {
+        "value": "脉冲",
+        "weight": 8
+      },
+      {
+        "value": "虚空",
+        "weight": 7
+      },
+      {
+        "value": "义体",
+        "weight": 9
+      },
+      {
+        "value": "芯核",
+        "weight": 8
       },
       {
         "value": "神经",
         "weight": 8
       },
       {
-        "value": "数字",
+        "value": "数据流",
         "weight": 7
-      },
-      {
-        "value": "矩阵",
-        "weight": 6
       }
     ],
     "roots": [
       {
-        "value": "核",
+        "value": "行者",
         "weight": 10
       },
       {
-        "value": "网",
+        "value": "追踪",
         "weight": 9
       },
       {
-        "value": "脉",
+        "value": "骇客",
+        "weight": 10
+      },
+      {
+        "value": "猎手",
+        "weight": 9
+      },
+      {
+        "value": "守卫",
         "weight": 8
       },
       {
-        "value": "波",
+        "value": "编码",
+        "weight": 8
+      },
+      {
+        "value": "终端",
         "weight": 7
       },
       {
-        "value": "X",
+        "value": "链接",
+        "weight": 7
+      },
+      {
+        "value": "协议",
+        "weight": 7
+      },
+      {
+        "value": "节点",
+        "weight": 8
+      },
+      {
+        "value": "网络",
+        "weight": 8
+      },
+      {
+        "value": "矩阵",
+        "weight": 7
+      },
+      {
+        "value": "信号",
+        "weight": 7
+      },
+      {
+        "value": "载体",
         "weight": 6
+      },
+      {
+        "value": "系统",
+        "weight": 7
       }
     ],
     "suffixes": [
       {
         "value": "",
-        "weight": 10
+        "weight": 20
+      },
+      {
+        "value": "9号",
+        "weight": 7
+      },
+      {
+        "value": "零",
+        "weight": 6
       },
       {
         "value": "X",
         "weight": 8
       },
       {
+        "value": "改",
+        "weight": 5
+      },
+      {
         "value": "版",
-        "weight": 6
+        "weight": 5
       }
     ]
   },
   "examples": [
-    "赛博核",
-    "量子X",
-    "神经网",
-    "数字脉",
-    "矩阵波"
+    "幽灵行者",
+    "刀锋骇客",
+    "暗影猎手9号",
+    "先知终端",
+    "义体守卫",
+    "霓虹追踪零",
+    "虚空编码X",
+    "脉冲节点"
   ]
 }

@@ -1,19 +1,19 @@
 {
   "id": "minimal-en-basic",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "name": {
-    "en": "Minimal English Basic",
-    "zh": "极简英文基础版"
+    "en": "Minimal English",
+    "zh": "极简英文版"
   },
   "description": {
-    "en": "Clean and minimal bot names in English",
-    "zh": "简洁的英文极简风格机器人名称"
+    "en": "Ultra-minimal English bot names with simple and abstract patterns (1-2 words)",
+    "zh": "极简抽象的英文机器人名称，简洁而现代（1-2个单词）"
   },
   "style": "minimal",
   "languages": [
     "en"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
     "telegram",
     "discord",
@@ -26,107 +26,66 @@
   "license": "MIT",
   "tags": [
     "minimal",
-    "clean",
+    "english",
     "simple",
-    "english"
+    "clean"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "Bot",
-        "weight": 10
-      },
-      {
-        "value": "App",
-        "weight": 8
-      },
-      {
-        "value": "AI",
-        "weight": 9
-      },
-      {
-        "value": "One",
-        "weight": 7
-      },
-      {
-        "value": "Pro",
-        "weight": 6
-      },
-      {
-        "value": "Max",
-        "weight": 6
-      },
-      {
-        "value": "Mini",
-        "weight": 7
-      },
-      {
-        "value": "Zen",
-        "weight": 5
-      }
+    "templates": [
+      "{word}",
+      "{adj} {noun}",
+      "{noun} Bot"
     ],
-    "roots": [
-      {
-        "value": "Helper",
-        "weight": 10
-      },
-      {
-        "value": "Agent",
-        "weight": 9
-      },
-      {
-        "value": "Tool",
-        "weight": 8
-      },
-      {
-        "value": "Hub",
-        "weight": 7
-      },
-      {
-        "value": "Core",
-        "weight": 8
-      },
-      {
-        "value": "Base",
-        "weight": 7
-      },
-      {
-        "value": "Link",
-        "weight": 6
-      },
-      {
-        "value": "Node",
-        "weight": 7
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "",
-        "weight": 10
-      },
-      {
-        "value": "1",
-        "weight": 5
-      },
-      {
-        "value": "X",
-        "weight": 4
-      },
-      {
-        "value": "Plus",
-        "weight": 3
-      },
-      {
-        "value": "Pro",
-        "weight": 4
-      }
-    ]
+    "vocabulary": {
+      "word": [
+        { "value": "Echo", "weight": 10 },
+        { "value": "Beam", "weight": 10 },
+        { "value": "Drift", "weight": 9 },
+        { "value": "Flux", "weight": 9 },
+        { "value": "Glide", "weight": 9 },
+        { "value": "Pivot", "weight": 8 },
+        { "value": "Trace", "weight": 8 },
+        { "value": "Prism", "weight": 8 },
+        { "value": "Clarity", "weight": 7 },
+        { "value": "Simplify", "weight": 7 },
+        { "value": "Aide", "weight": 7 },
+        { "value": "Prompt", "weight": 6 },
+        { "value": "Brief", "weight": 6 }
+      ],
+      "adj": [
+        { "value": "Quick", "weight": 10 },
+        { "value": "Smart", "weight": 10 },
+        { "value": "Pure", "weight": 9 },
+        { "value": "Clean", "weight": 9 },
+        { "value": "Swift", "weight": 8 },
+        { "value": "Clear", "weight": 8 },
+        { "value": "Plain", "weight": 7 },
+        { "value": "Neat", "weight": 7 },
+        { "value": "Calm", "weight": 6 },
+        { "value": "Crisp", "weight": 6 }
+      ],
+      "noun": [
+        { "value": "Help", "weight": 10 },
+        { "value": "Aid", "weight": 10 },
+        { "value": "Guide", "weight": 9 },
+        { "value": "Assist", "weight": 9 },
+        { "value": "Reply", "weight": 8 },
+        { "value": "Answer", "weight": 8 },
+        { "value": "Talk", "weight": 7 },
+        { "value": "Chat", "weight": 7 },
+        { "value": "Link", "weight": 6 },
+        { "value": "Task", "weight": 6 }
+      ]
+    }
   },
   "examples": [
-    "BotHelper",
-    "AIAgent",
-    "OneCore",
-    "AppTool",
-    "MiniHub"
+    "Echo",
+    "Beam",
+    "Drift",
+    "Quick Help",
+    "Smart Aid",
+    "Pure Guide",
+    "Help Bot",
+    "Chat Bot"
   ]
 }

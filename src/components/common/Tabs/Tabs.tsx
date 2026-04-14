@@ -38,10 +38,10 @@ export const Tabs: React.FC<TabsProps> = ({
   };
 
   return (
-    <div className={`flex gap-2 border-b border-gray-200 dark:border-gray-700 overflow-x-auto ${className}`}>
+    <div className={`flex gap-1 md:gap-2 border-b border-gray-200 dark:border-gray-700 ${className}`}>
       {tabs.map((tab) => {
         const isActive = tab.id === activeTab;
-        const baseClasses = 'px-4 py-2 font-medium transition-all duration-200 relative whitespace-nowrap';
+        const baseClasses = 'px-2 md:px-4 py-2 text-xs md:text-sm font-medium transition-all duration-200 relative whitespace-nowrap';
         const activeClasses = isActive
           ? 'text-blue-600 dark:text-blue-400 border-b-2 border-blue-600 dark:border-blue-400'
           : 'text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-300';
@@ -56,9 +56,9 @@ export const Tabs: React.FC<TabsProps> = ({
             onClick={() => handleTabClick(tab.id, tab.disabled)}
             disabled={tab.disabled}
           >
-            <span className="flex items-center gap-2">
-              {tab.icon}
-              {tab.label}
+            <span className="flex items-center gap-1 md:gap-2">
+              {tab.icon && <span className="text-sm md:text-base">{tab.icon}</span>}
+              <span className="hidden sm:inline">{tab.label}</span>
             </span>
           </button>
         );

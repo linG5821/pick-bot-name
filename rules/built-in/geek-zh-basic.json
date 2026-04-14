@@ -1,13 +1,13 @@
 {
   "id": "geek-zh-basic",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": {
-    "en": "Geek Chinese Basic",
-    "zh": "极客中文基础版"
+    "en": "Geek Chinese",
+    "zh": "极客中文版"
   },
   "description": {
-    "en": "Geeky tech-style bot names in Chinese",
-    "zh": "极客科技风格的中文机器人名称"
+    "en": "Real Chinese programmer culture names with memes and tech humor (2-4 chars)",
+    "zh": "真实的中国程序员文化命名，包含梗和技术幽默（2-4个字）"
   },
   "style": "geek",
   "languages": [
@@ -15,8 +15,8 @@
   ],
   "algorithm": "combination",
   "platformOptimized": [
+    "github",
     "discord",
-    "slack",
     "telegram"
   ],
   "author": {
@@ -26,75 +26,62 @@
   "license": "MIT",
   "tags": [
     "geek",
+    "programmer",
     "chinese",
-    "tech",
-    "programming"
+    "meme"
   ],
   "data": {
     "prefixes": [
-      {
-        "value": "码",
-        "weight": 10
-      },
-      {
-        "value": "算法",
-        "weight": 9
-      },
-      {
-        "value": "技术",
-        "weight": 8
-      },
-      {
-        "value": "开源",
-        "weight": 7
-      },
-      {
-        "value": "数据",
-        "weight": 6
-      }
+      { "value": "码", "weight": 10 },
+      { "value": "代码", "weight": 9 },
+      { "value": "算法", "weight": 9 },
+      { "value": "调试", "weight": 8 },
+      { "value": "性能", "weight": 7 },
+      { "value": "内存", "weight": 7 },
+      { "value": "线程", "weight": 6 },
+      { "value": "并发", "weight": 6 },
+      { "value": "异步", "weight": 6 },
+      { "value": "递归", "weight": 5 },
+      { "value": "正则", "weight": 5 },
+      { "value": "重构", "weight": 5 },
+      { "value": "开源", "weight": 5 },
+      { "value": "二进制", "weight": 4 }
     ],
     "roots": [
-      {
-        "value": "神",
-        "weight": 10
-      },
-      {
-        "value": "君",
-        "weight": 9
-      },
-      {
-        "value": "猫",
-        "weight": 8
-      },
-      {
-        "value": "师",
-        "weight": 7
-      },
-      {
-        "value": "X",
-        "weight": 6
-      }
+      { "value": "神", "weight": 10 },
+      { "value": "侠", "weight": 9 },
+      { "value": "君", "weight": 9 },
+      { "value": "师", "weight": 8 },
+      { "value": "王", "weight": 7 },
+      { "value": "帝", "weight": 7 },
+      { "value": "狗", "weight": 6 },
+      { "value": "喵", "weight": 6 },
+      { "value": "猿", "weight": 6 },
+      { "value": "农", "weight": 5 },
+      { "value": "宅", "weight": 5 }
     ],
     "suffixes": [
-      {
-        "value": "",
-        "weight": 10
-      },
-      {
-        "value": "喵",
-        "weight": 7
-      },
-      {
-        "value": "版",
-        "weight": 6
-      }
+      { "value": "", "weight": 10 },
+      { "value": "达人", "weight": 8 },
+      { "value": "大师", "weight": 7 },
+      { "value": "专家", "weight": 7 },
+      { "value": "高手", "weight": 6 },
+      { "value": "勇士", "weight": 5 },
+      { "value": "魔王", "weight": 5 },
+      { "value": "狂魔", "weight": 4 },
+      { "value": "狂人", "weight": 4 },
+      { "value": "诗人", "weight": 4 },
+      { "value": "刺客", "weight": 4 },
+      { "value": "杀手", "weight": 4 }
     ]
   },
   "examples": [
     "码神",
-    "算法君",
-    "技术猫",
-    "开源师",
-    "数据X"
+    "算法侠",
+    "代码君",
+    "调试师",
+    "性能王",
+    "内存刺客",
+    "正则狂魔"
   ]
 }

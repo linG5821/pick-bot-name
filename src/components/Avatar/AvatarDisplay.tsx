@@ -11,12 +11,14 @@ import { Button, Card } from '@/components/common';
 
 export interface AvatarDisplayProps {
   avatar: AvatarInfo;
+  displayName?: string;
   onRegenerate?: () => void;
   showControls?: boolean;
 }
 
 export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
   avatar,
+  displayName,
   onRegenerate,
   showControls = true,
 }) => {
@@ -128,14 +130,19 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
   };
 
   return (
-    <Card className="space-y-4">
-      <h3 className="text-lg font-bold text-gray-800 dark:text-white">
-        {t('avatar.title')}
-      </h3>
+    <Card className="space-y-4 overflow-hidden">
+      {/* 名字显示 - 最醒目位置 */}
+      {displayName && (
+        <div className="text-center pb-4 border-b border-gray-200 dark:border-gray-700 overflow-hidden">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white break-words px-2 overflow-wrap-anywhere">
+            {displayName}
+          </h2>
+        </div>
+      )}
 
       {/* 头像预览 */}
-      <div className="flex justify-center">
-        <div className="relative w-64 h-64 border-2 border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-700 shadow-lg">
+      <div className="flex justify-center overflow-hidden">
+        <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 border-2 border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-700 shadow-lg max-w-full">
           {renderAvatar()}
         </div>
       </div>

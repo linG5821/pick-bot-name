@@ -1,23 +1,23 @@
 {
   "id": "anime-en-basic",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "name": {
-    "en": "Anime English Basic",
-    "zh": "动漫英文基础版"
+    "en": "Anime English",
+    "zh": "动漫英文版"
   },
   "description": {
-    "en": "Anime-style bot names in English",
-    "zh": "动漫风格的英文机器人名称"
+    "en": "Real anime/manga character naming patterns from popular anime, VTubers, and mascots (1-4 words)",
+    "zh": "基于热门动漫、VTuber、吉祥物的真实角色命名模式（1-4个单词）"
   },
   "style": "anime",
   "languages": [
     "en"
   ],
-  "algorithm": "combination",
+  "algorithm": "template",
   "platformOptimized": [
     "discord",
-    "telegram",
-    "line"
+    "twitch",
+    "youtube"
   ],
   "author": {
     "name": "Bot Name Generator Team",
@@ -26,107 +26,59 @@
   "license": "MIT",
   "tags": [
     "anime",
-    "english",
-    "cartoon",
-    "manga"
+    "vtuber",
+    "mascot",
+    "japanese"
   ],
   "data": {
-    "prefixes": [
-      {
-        "value": "Magical",
-        "weight": 10
-      },
-      {
-        "value": "Anime",
-        "weight": 9
-      },
-      {
-        "value": "Manga",
-        "weight": 8
-      },
-      {
-        "value": "Sparkle",
-        "weight": 8
-      },
-      {
-        "value": "Dream",
-        "weight": 7
-      },
-      {
-        "value": "Star",
-        "weight": 7
-      },
-      {
-        "value": "Moon",
-        "weight": 6
-      },
-      {
-        "value": "Cherry",
-        "weight": 8
-      }
+    "templates": [
+      "{name}",
+      "{name} {suffix}",
+      "{adj} {name}",
+      "{name} {name}"
     ],
-    "roots": [
-      {
-        "value": "Girl",
-        "weight": 9
-      },
-      {
-        "value": "Boy",
-        "weight": 8
-      },
-      {
-        "value": "Helper",
-        "weight": 10
-      },
-      {
-        "value": "Guardian",
-        "weight": 7
-      },
-      {
-        "value": "Fairy",
-        "weight": 8
-      },
-      {
-        "value": "Spirit",
-        "weight": 7
-      },
-      {
-        "value": "Angel",
-        "weight": 6
-      },
-      {
-        "value": "Bot",
-        "weight": 8
-      }
-    ],
-    "suffixes": [
-      {
-        "value": "Chan",
-        "weight": 10
-      },
-      {
-        "value": "Kun",
-        "weight": 8
-      },
-      {
-        "value": "San",
-        "weight": 7
-      },
-      {
-        "value": "Senpai",
-        "weight": 6
-      },
-      {
-        "value": "Sama",
-        "weight": 5
-      }
-    ]
+    "vocabulary": {
+      "name": [
+        { "value": "Luna", "weight": 10 },
+        { "value": "Stella", "weight": 10 },
+        { "value": "Nova", "weight": 9 },
+        { "value": "Kira", "weight": 9 },
+        { "value": "Hoshi", "weight": 9 },
+        { "value": "Yuki", "weight": 9 },
+        { "value": "Sora", "weight": 8 },
+        { "value": "Aoi", "weight": 8 },
+        { "value": "Mochi", "weight": 8 },
+        { "value": "Neko", "weight": 8 },
+        { "value": "Mimi", "weight": 7 },
+        { "value": "Coco", "weight": 7 },
+        { "value": "Nana", "weight": 7 },
+        { "value": "Riri", "weight": 7 },
+        { "value": "Chibi", "weight": 6 },
+        { "value": "Fuwa", "weight": 6 }
+      ],
+      "suffix": [
+        { "value": "chan", "weight": 10 },
+        { "value": "kun", "weight": 8 },
+        { "value": "san", "weight": 6 }
+      ],
+      "adj": [
+        { "value": "Star", "weight": 10 },
+        { "value": "Moon", "weight": 9 },
+        { "value": "Dream", "weight": 8 },
+        { "value": "Sweet", "weight": 8 },
+        { "value": "Cute", "weight": 7 },
+        { "value": "Magic", "weight": 7 }
+      ]
+    }
   },
   "examples": [
-    "MagicalHelperChan",
-    "AnimeGuardianKun",
-    "SparkleBotan",
-    "DreamFairySenpai",
-    "StarAngelSama"
+    "Luna",
+    "Stella",
+    "Kira",
+    "Luna chan",
+    "Yuki kun",
+    "Star Nova",
+    "Mochi Neko",
+    "Sweet Mimi"
   ]
 }

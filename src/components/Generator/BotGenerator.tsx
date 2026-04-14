@@ -231,19 +231,19 @@ export const BotGenerator: React.FC = () => {
         />
       )}
 
-      <div className="min-h-screen">
-        <div className="container mx-auto px-4 py-8">
+      <div className="min-h-screen overflow-x-hidden w-full">
+        <div className="w-full px-3 md:px-4 py-4 md:py-8 overflow-x-hidden">
         {/* 主内容区域 - 居中 */}
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-4xl mx-auto space-y-4 md:space-y-6 w-full overflow-x-hidden">
           {/* 标题 */}
-          <div className="text-center space-y-3">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white">
+          <div className="text-center space-y-2 md:space-y-3">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-800 dark:text-white">
               {t('app.title')}
             </h1>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-300">
               {t('app.subtitle')}
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">
+            <p className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
               {t('app.description')}
             </p>
           </div>
@@ -279,10 +279,10 @@ export const BotGenerator: React.FC = () => {
             <>
               {/* 控制面板 */}
               <Card>
-                <div className="space-y-6">
+                <div className="space-y-4 md:space-y-6">
                   {/* 风格选择器 - 上方 */}
                   <div>
-                    <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+                    <h3 className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 md:mb-3">
                       {t('generator.selectStyle')}
                     </h3>
                     <StyleSelector
@@ -292,10 +292,10 @@ export const BotGenerator: React.FC = () => {
                   </div>
 
                   {/* 语言选择和生成按钮 - 中间并排 */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
                     {/* 左边：语言选择 */}
                     <div>
-                      <h3 className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3">
+                      <h3 className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 md:mb-3">
                         {t('generator.selectLanguage')}
                       </h3>
                       <LanguageSelector
@@ -323,10 +323,11 @@ export const BotGenerator: React.FC = () => {
 
               {/* 生成结果 */}
               {generatedInfo ? (
-                <div className="space-y-6">
-                  {/* 头像 */}
+                <div className="space-y-4 md:space-y-6">
+                  {/* 头像和名字 */}
                   <AvatarDisplay
                     avatar={generatedInfo.avatar}
+                    displayName={generatedInfo.displayNames.primary}
                     onRegenerate={handleRegenerateAvatar}
                   />
 

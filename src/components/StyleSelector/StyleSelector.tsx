@@ -31,14 +31,14 @@ export const StyleSelector: React.FC<StyleSelectorProps> = ({
   const styles = Object.values(BotStyle);
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-2 md:gap-3">
       {styles.map((style) => {
         const isSelected = style === selectedStyle;
         return (
           <Card
             key={style}
             className={`
-              text-center cursor-pointer transition-all duration-200
+              text-center cursor-pointer transition-all duration-200 min-w-0
               ${isSelected
                 ? 'border-blue-500 dark:border-blue-400 ring-2 ring-blue-500 dark:ring-blue-400 scale-105 shadow-lg'
                 : 'border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600'}
@@ -46,8 +46,8 @@ export const StyleSelector: React.FC<StyleSelectorProps> = ({
             onClick={() => onStyleChange(style)}
             hoverable
           >
-            <div className="text-4xl mb-2">{STYLE_EMOJIS[style]}</div>
-            <div className={`text-sm font-medium ${isSelected ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'}`}>
+            <div className="text-2xl md:text-4xl mb-1 md:mb-2">{STYLE_EMOJIS[style]}</div>
+            <div className={`text-xs md:text-sm font-medium truncate ${isSelected ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'}`}>
               {t(`style.${style}`)}
             </div>
           </Card>

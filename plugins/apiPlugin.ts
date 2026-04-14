@@ -16,7 +16,7 @@ export function apiPlugin(): Plugin {
         }
 
         // 应用限流中间件
-        const rateLimitConfig = selectRateLimitConfig(req.url);
+        const rateLimitConfig = selectRateLimitConfig();
         const rateLimitHandler = rateLimitMiddleware(rateLimitConfig);
 
         // 使用 Promise 处理限流检查
