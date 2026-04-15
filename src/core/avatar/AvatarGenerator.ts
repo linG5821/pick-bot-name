@@ -76,6 +76,19 @@ export class AvatarGenerator {
       };
     }
 
+    // 如果是国风风格，返回占位符（实际在组件中加载本地国风图片）
+    if (botStyle === BotStyle.GUOFENG) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" data-static-guofeng="true" data-seed="${avatarSeed}">
+        <rect width="256" height="256" fill="#E8F5E9"/>
+        <text x="128" y="128" text-anchor="middle" font-size="24" fill="#2E7D32">Loading...</text>
+      </svg>`;
+      return {
+        svg,
+        style,
+        seed: avatarSeed,
+      };
+    }
+
     // 其他风格使用DiceBear
     const avatarStyle = AVATAR_STYLES[style as DiceBearStyle];
 

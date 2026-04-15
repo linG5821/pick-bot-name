@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { AvatarInfo } from '@/types';
 import { AvatarGenerator } from '@/core/avatar';
 import { getAnimeAvatarUrl } from '@/core/avatar/anime-api-loader';
+import { getGuofengAvatarUrl } from '@/core/avatar/guofeng-loader';
 import { Button, Card } from '@/components/common';
 
 export interface AvatarDisplayProps {
@@ -25,11 +26,13 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
   const { t } = useTranslation();
   const [isDownloading, setIsDownloading] = useState(false);
   const [animeImageUrl, setAnimeImageUrl] = useState<string | null>(null);
+  const [guofengImageUrl, setGuofengImageUrl] = useState<string | null>(null);
   const [isLoadingAnime, setIsLoadingAnime] = useState(false);
 
   // 检测并加载anime头像（来自API）
   useEffect(() => {
     const isAnimeAvatar = avatar.svg.includes('data-static-anime="true"');
+    const isGuofengAvatar = avatar.svg.includes('data-static-guofeng="true"');
 
     if (isAnimeAvatar) {
       setIsLoadingAnime(true);
@@ -43,8 +46,14 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
           setAnimeImageUrl(null);
           setIsLoadingAnime(false);
         });
+    } else if (isGuofengAvatar) {
+      // 国风头像直接从本地加载，无需异步
+      const url = getGuofengAvatarUrl(avatar.seed);
+      setGuofengImageUrl(url);
+      setAnimeImageUrl(null);
     } else {
       setAnimeImageUrl(null);
+      setGuofengImageUrl(null);
     }
   }, [avatar.svg, avatar.seed]);
 
@@ -57,6 +66,15 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
         const link = document.createElement('a');
         link.href = animeImageUrl;
         link.download = 'anime-avatar.jpg';
+        link.target = '_blank';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else if (guofengImageUrl) {
+        // 国风头像直接下载
+        const link = document.createElement('a');
+        link.href = guofengImageUrl;
+        link.download = 'guofeng-avatar.png';
         link.target = '_blank';
         document.body.appendChild(link);
         link.click();
@@ -74,9 +92,9 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
   };
 
   const handleDownloadSvg = () => {
-    // anime头像是PNG，不支持SVG下载
-    if (animeImageUrl) {
-      alert('Anime头像不支持SVG格式下载，请使用PNG下载');
+    // anime/guofeng头像是PNG，不支持SVG下载
+    if (animeImageUrl || guofengImageUrl) {
+      alert('此头像不支持SVG格式下载，请使用PNG下载');
       return;
     }
     AvatarGenerator.downloadAsSvg(avatar.svg, 'bot-avatar.svg');
@@ -114,6 +132,22 @@ export const AvatarDisplay: React.FC<AvatarDisplayProps> = ({
             console.error('Failed to load anime image');
             // 加载失败时显示fallback
             (e.target as HTMLImageElement).src = '/pick-bot-name/avatars/anime/fallback.svg';
+          }}
+        />
+      );
+    }
+
+    // 如果是国风头像，显示本地国风图片
+    if (guofengImageUrl) {
+      return (
+        <img
+          src={guofengImageUrl}
+          alt="Guofeng Avatar"
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            console.error('Failed to load guofeng image');
+            // 加载失败时显示占位符
+            (e.target as HTMLImageElement).src = dataUri;
           }}
         />
       );
